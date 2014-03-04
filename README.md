@@ -24,4 +24,29 @@ We use VDD for the local setup.  [Follow their tutorial](https://drupal.org/node
  1. ```git clone https://github.com/ua-snap/snap-drupal.git```
  1. ```mv snap-drupal all```
  1. Check the page again in your web browser.  If it loads, all is well and you can proceed to the next set of setup directions!
+
+### Editing files and connecting with Github
+
+Vagrant and VDD together configure the virtual machine so that your host OS can see the files that are running on the virtual machine, so that you can use your preferred editor to make changes and push them to Github as usual.
+
+The relevant directory where work happens is the Github repo we checked out in the directions above.  On your local machine, relative to the ```vdd``` directory, it's here:
+
+```bash
+vdd/data/drupal7/all/
+```
+
+So, you can configure your editor to have a project based in that directory and work with it normally.
+
+Since that's a normal Git repository, all the usual branch/push/pull operations happen as expected there.  In OSX Terminal:
+
+```bash
+cd vdd/data/drupal7/all
+git status
+git checkout -b new_branch
+git commit -am"made some changes"
+git push origin new_branch
+git pull
+```
+
+These types of operations should work as expected.  VDD/Vagrant are taking care of the magic so that your code is running in the VM while you can interact with it easily in your host OS.
  
