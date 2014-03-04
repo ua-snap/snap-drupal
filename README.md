@@ -9,9 +9,9 @@ We use VDD for the local setup.  [Follow their tutorial](https://drupal.org/node
  1. Download [the 7.x-1.3 version](http://ftp.drupal.org/files/projects/vdd-7.x-1.3.tar.gz) of the project.
  1. Move the file to wherever you keep other work projects/repositories, then unpack it: ```tar -zxvf vdd-7.x-1.3.tar.gz```
  1. Enter that directory, referred to hereafter as ```work/vdd```: ```cd work/vdd```
- 1. Download [this patchfile](https://drupal.org/files/issues/vdd-install-drush-master-2116195-10.patch.txt) to that directory. 
+ 1. Download [this patchfile](https://drupal.org/files/issues/vdd-install-drush-master-2116195-10.patch) to that directory. (Use the name here, or whatever name you gave the file when you saved it.)
  1. Apply the patch: ```patch -p 1 < vdd-install-drush-master-2116195-10.patch```
- 1. Disconnect from VPN if you are connecterd - Vagrant doesn't play well with VPN (3/4/14 - this issue may get fixed soon)
+ 1. Disconnect from VPN if you are connected - Vagrant doesn't play well with VPN (3/4/14 - this issue may get fixed soon)
  1. ```vagrant up```
  1. Get coffee.  When the image has launched...
  1. ```vagrant ssh```
