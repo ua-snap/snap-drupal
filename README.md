@@ -58,4 +58,4 @@ These types of operations should work as expected.  VDD/Vagrant are taking care 
 
  Editing SASS is done by adding new includes to ```themes/snap/sass/styles.scss``` as required, at the bottom of that file.
 
- Main site layout is in ```themes/snap/sass/layout.scss```.
+Main site variables (colors, fonts, etc) are controlled in the ```_init.scss``` file.
