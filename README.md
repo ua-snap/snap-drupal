@@ -4,7 +4,7 @@ This README contains first-time dev setup instructions as well as a narrative se
 
 ## Initial setup
 
-We use VDD for the local setup.  [Follow their tutorial](https://drupal.org/node/2008792), using [the 7.x-1.3 version](http://ftp.drupal.org/files/projects/vdd-7.x-1.3.tar.gz) (or newer) configuration.  There's some hiccups to overcome here due to some bugs in the VDD project at this time, though.  Here's the steps to follow:
+We use VDD for the local setup.  [Follow their tutorial](https://drupal.org/node/2008792), using [the 7.x-1.3 version](http://ftp.drupal.org/files/projects/vdd-7.x-1.3.tar.gz) configuration.  There's some hiccups to overcome here due to some bugs in the VDD project at this time, though.  Here's the steps to follow:
 
  1. Download [the 7.x-1.3 version](http://ftp.drupal.org/files/projects/vdd-7.x-1.3.tar.gz) of the project.
  1. Move the file to wherever you keep other work projects/repositories, then unpack it: ```tar -zxvf vdd-7.x-1.3.tar.gz```
@@ -24,6 +24,10 @@ We use VDD for the local setup.  [Follow their tutorial](https://drupal.org/node
  1. ```git clone https://github.com/ua-snap/snap-drupal.git```
  1. ```mv snap-drupal all```
  1. Check the page again in your web browser.  If it loads, all is well and you can proceed to the next set of setup directions!
+
+### Install Compass
+
+Compass is used for the SASS development.  On OSX, first [install Homebrew](http://brew.sh/) then ```brew install ruby```, then [install Compass](http://compass-style.org/install/).
 
 ### Editing files and connecting with Github
 
@@ -50,3 +54,8 @@ git pull
 
 These types of operations should work as expected.  VDD/Vagrant are taking care of the magic so that your code is running in the VM while you can interact with it easily in your host OS.
  
+ ### Editing SASS
+
+ Editing SASS is done by adding new includes to ```themes/snap/sass/styles.scss``` as required, at the bottom of that file.
+
+ Main site layout is in ```themes/snap/sass/layout.scss```.
