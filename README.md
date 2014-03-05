@@ -9,8 +9,9 @@ We use VDD for the local setup.  [Follow their tutorial](https://drupal.org/node
  1. Download [the 7.x-1.3 version](http://ftp.drupal.org/files/projects/vdd-7.x-1.3.tar.gz) of the project.
  1. Move the file to wherever you keep other work projects/repositories, then unpack it: ```tar -zxvf vdd-7.x-1.3.tar.gz```
  1. Enter that directory, referred to hereafter as ```work/vdd```: ```cd work/vdd```
- 1. Download [this patchfile](https://drupal.org/files/issues/vdd-install-drush-master-2116195-10.patch) to that directory. 
+ 1. Download [this patchfile](https://drupal.org/files/issues/vdd-install-drush-master-2116195-10.patch) to that directory. (Use the name here, or whatever name you gave the file when you saved it.)
  1. Apply the patch: ```patch -p 1 < vdd-install-drush-master-2116195-10.patch```
+ 1. Disconnect from VPN if you are connected - Vagrant doesn't play well with VPN (3/4/14 - this issue may get fixed soon)
  1. ```vagrant up```
  1. Get coffee.  When the image has launched...
  1. ```vagrant ssh```
@@ -21,7 +22,7 @@ We use VDD for the local setup.  [Follow their tutorial](https://drupal.org/node
  1. In a web browser on your host machine, go to ```192.168.44.44``` then click the ```drupal7``` link.  Verify that you get a Drupal site, then log in with user/password root/root.
  1. Now we hook up the Github repo for our SNAP work.  ```cd drupal7/sites/```
  1. ```rm -rf all/```
- 1. ```git clone https://github.com/ua-snap/snap-drupal.git```
+ 1. ```git clone https://github.com/ua-snap/snap-drupal.git```  (enter your Github username and password)
  1. ```mv snap-drupal all```
  1. Check the page again in your web browser.  If it loads, all is well and you can proceed to the next set of setup directions!
 
@@ -32,7 +33,7 @@ Vagrant and VDD together configure the virtual machine so that your host OS can 
 The relevant directory where work happens is the Github repo we checked out in the directions above.  On your local machine, relative to the ```vdd``` directory, it's here:
 
 ```bash
-vdd/data/drupal7/all/
+vdd/data/drupal7/sites/all/
 ```
 
 So, you can configure your editor to have a project based in that directory and work with it normally.
