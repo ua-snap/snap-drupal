@@ -13,7 +13,7 @@
 @import "normalize";
 
 /* Layout rules */
-@import "layouts/responsive";
+@import "layouts/fixed";
 
 /* Component (SMACSS module) rules */
 @import "components/misc";
@@ -23,6 +23,3 @@
 /* SMACSS theme rules */
 /* @import "theme-A"; */
 /* @import "theme-B"; */
-
-/* SNAP stuff */
-@import "layout.scss";
