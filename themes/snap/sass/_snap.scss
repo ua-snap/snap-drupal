@@ -1,0 +1,16 @@
+/**
+ * @file
+ * SNAP styling
+ *
+ * Custom styling for our SNAP theme goes here.
+ */
+
+/**
+ * By importing this CSS file as media "all", we allow this snap file to be
+ * aggregated with other stylesheets, for improved front-end performance.
+ */
+
+/* Underline all links. */
+#name-and-slogan a:link, #name-and-slogan a:visited {
+  color: #97a93a;
+}
