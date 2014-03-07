@@ -63,7 +63,7 @@ Main site variables (colors, fonts, etc) are controlled in the ```_init.scss``` 
 
 ### Apache Setup
 
-To allow Apache to use the .htaccess file that comes with Drupal, change the following line in Apache's httpd.conf file inside the <Directory "/var/www/snap"> section:
+To allow Apache to use the .htaccess file that comes with Drupal, change the following line in Apache's httpd.conf file inside the &lt;Directory "/var/www/snap"&gt; section:
 
 ```
 AllowOverride All
