@@ -44,3 +44,14 @@
        -o-border-radius: $radius;
           border-radius: $radius;
 }
+
+@mixin grey-bar-formatting() {
+    box-shadow: 2px 2px 2px #cccccc;
+    @include border-radius(3px);
+    background-color: $snapGrey;
+    padding: 1ex;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 1em;
+}
