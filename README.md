@@ -55,8 +55,40 @@ git pull
 
 These types of operations should work as expected.  VDD/Vagrant are taking care of the magic so that your code is running in the VM while you can interact with it easily in your host OS.
  
- ### Editing SASS
+### Editing SASS
 
- Editing SASS is done by adding new includes to ```themes/snap/sass/styles.scss``` as required, at the bottom of that file.
+Editing SASS is done by adding new includes to ```themes/snap/sass/styles.scss``` as required, at the bottom of that file.
 
 Main site variables (colors, fonts, etc) are controlled in the ```_init.scss``` file.
+
+### Apache Setup
+
+To allow Apache to use the .htaccess file that comes with Drupal, change the following line in Apache's httpd.conf file inside the <Directory "/var/www/snap"> section:
+
+```
+AllowOverride All
+```
+
+To:
+
+```
+AllowOverride None
+```
+
+Then restart Apache so this change takes effect:
+
+```bash
+sudo service httpd restart
+```
+
+### Enabling Clean URLs
+
+Clean URLs will not work unless the "AllowOverride All" directive has been set in the Apache configuration file. Refer to the Apache Setup step for more details. You can confirm that clean URLs are working by going to a Drupal page WITHOUT "?q=" in the URL. E.g.:
+
+http://cerberus.snap.uaf.edu/about
+
+After you have confirmed that you can access a page in this way, visit the following page WITHOUT "?q=" in the URL (or this won't work):
+
+http://cerberus.snap.uaf.edu/admin/config/search/clean-urls
+
+Check the "Enable clean URLs" box and click the "Save configuration" button. From now on, Drupal will use clean URLs by default.
