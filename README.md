@@ -92,3 +92,9 @@ After you have confirmed that you can access a page in this way, visit the follo
 http://cerberus.snap.uaf.edu/admin/config/search/clean-urls
 
 Check the "Enable clean URLs" box and click the "Save configuration" button. From now on, Drupal will use clean URLs by default.
+
+## Site structure and configuration notes
+
+### Navigation
+
+Move "navigation" block to the "header" section of the site layout.  Disable the title of the block by setting it to ```<none>```.
