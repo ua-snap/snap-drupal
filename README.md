@@ -119,8 +119,25 @@ The Media module also requires a particular version of the File Entity module. I
 
 Extract the Media and Chaos Tool Suite modules into the sites/all/modules directory. Then, move the "file_entity" directory outside of the "media" directory, directly into the "modules" directory. So, you should now have the following directories:
 
-sites/all/modules/media  
-sites/all/modules/ctools  
-sites/all/modules/file_entity
+- sites/all/modules/media  
+- sites/all/modules/ctools  
+- sites/all/modules/file_entity
 
 Enable each of these modules in the Drupal administrator interface. Then make sure all content type file and image fields use the Media file selector.
+
+### Setting up Date and Link modules
+
+Download the Date and Link modules from here:
+
+https://drupal.org/project/date
+https://drupal.org/project/link
+
+Extract them into the sites/all/modules directory and enable the following modules from the Modules page:
+
+- Date  
+- Date All Day  
+- Date Popup
+- Date Views
+- Link
+
+Date and Link will now be available field types when creating/editing a Drupal content type.
