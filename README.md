@@ -24,7 +24,13 @@ We use VDD for the local setup.  [Follow their tutorial](https://drupal.org/node
  1. ```rm -rf all/```
  1. ```git clone https://github.com/ua-snap/snap-drupal.git```  (enter your Github username and password)
  1. ```mv snap-drupal all```
- 1. Check the page again in your web browser.  If it loads, all is well and you can proceed to the next set of setup directions!
+ 1. By default, the VDD project makes a few extra directories in the web root that we don't need.  To change this:
+   1. Continue working inside the VM as per previous steps, or ```vagrant ssh```.
+   1. ```nano /etc/apache2/sites-enabled/localhost.conf```
+   1. Change the 2nd line to: ```DocumentRoot /var/www/drupal7/```
+   1. ```control-o``` to save then ```control-x``` to exit
+   1. ```sudo /etc/init.d/apache2 reload```
+ 1. Check the page again in your web browser.  If it loads the Drupal page, all is well and you can proceed to the next set of setup directions!
 
 ### Install Compass
 
