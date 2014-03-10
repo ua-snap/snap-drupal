@@ -98,3 +98,23 @@ Check the "Enable clean URLs" box and click the "Save configuration" button. Fro
 ### Navigation
 
 Move "navigation" block to the "header" section of the site layout.  Disable the title of the block by setting it to ```<none>```.
+
+### Setting up Media module
+
+Download version 7.x-1.4 of the Media module here:
+
+https://drupal.org/project/media
+
+Download version 7.x-1.4 of the Chaos Tool Suite here:
+
+https://drupal.org/project/ctools
+
+The Media module also requires a particular version of the File Entity module. It comes packaged with the version of the File Entity module it requires.
+
+Extract the Media and Chaos Tool Suite modules into the sites/all/modules directory. Then, move the "file_entity" directory outside of the "media" directory, directly into the "modules" directory. So, you should now have the following directories:
+
+sites/all/modules/media
+sites/all/modules/ctools
+sites/all/modules/file_entity
+
+Enable each of these modules in the Drupal administrator interface. Then make sure all content type file and image fields use the Media file selector.
