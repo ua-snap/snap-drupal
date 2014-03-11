@@ -162,3 +162,19 @@ Also, this is not related to the IMCE module, but I removed the image button fro
 CKEditor -> Profiles -> Filtered HTML -> edit -> Editor Appearance -> Toolbar
 
 And moved the image button from the "Used buttons" section down to the "All buttons" section.
+
+### Configuring Collaborators view
+
+Create a block-level view that displays all content of type Organization.  Then, configure the view this way to get the logos displayed as links:
+
+ * Remove Title from Fields,
+ * Add Collaborator Logo as a field, disable label for it
+ * Add Website as a field, disable label, and configure that field to display hidden and with the "plain text" formatter,
+ * Rearrange the fields so that Website is on top (so we can use values from it below),
+ * Reconfigure Collaborator Logo, open Rewrite Results, check "Rewrite Output of This Field", then enter the below into that field:
+
+```html
+<a href="[field_website]" rel="external" class="collaborator">[field_image]</a>
+```
+
+Then, you can add the block to the relevant page.
