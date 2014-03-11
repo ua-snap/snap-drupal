@@ -141,3 +141,24 @@ Extract them into the sites/all/modules directory and enable the following modul
 - Link
 
 Date and Link will now be available field types when creating/editing a Drupal content type.
+
+### Setting up IMCE file browser module
+
+Download IMCE module, extract it into sites/all/modules, and enable it from the Modules page. Then from the Configuration page, change the following settings:
+
+CKEditor -> Profiles -> Advanced -> edit -> File Browser Settings:
+
+File browser type (Link dialog window): None
+File browser type (Image dialog window): IMCE
+File browser type (Flash dialog window): None
+
+CKEditor -> Profiles -> Full -> edit -> File Browser Settings:
+
+File browser type (Link dialog window): None
+File browser type (Image dialog window): IMCE
+File browser type (Flash dialog window): None
+
+IMCE -> Role-profile assignments:
+
+administrator: User-1
+authenticated user: User-1
