@@ -142,23 +142,23 @@ Extract them into the sites/all/modules directory and enable the following modul
 
 Date and Link will now be available field types when creating/editing a Drupal content type.
 
-### Setting up IMCE file browser module
+### Setting up IMCE file browser module and configuring CKEditor image button
 
 Download IMCE module, extract it into sites/all/modules, and enable it from the Modules page. Then from the Configuration page, change the following settings:
 
-CKEditor -> Profiles -> Advanced -> edit -> File Browser Settings:
+CKEditor -> Profiles -> Full HTML -> edit -> File Browser Settings:
 
-File browser type (Link dialog window): None
-File browser type (Image dialog window): IMCE
-File browser type (Flash dialog window): None
-
-CKEditor -> Profiles -> Full -> edit -> File Browser Settings:
-
-File browser type (Link dialog window): None
-File browser type (Image dialog window): IMCE
-File browser type (Flash dialog window): None
+File browser type (Link dialog window): None  
+File browser type (Image dialog window): IMCE  
+File browser type (Flash dialog window): IMCE  
 
 IMCE -> Role-profile assignments:
 
-administrator: User-1
-authenticated user: User-1
+administrator: User-1  
+authenticated user: User-1  
+
+Also, this is not related to the IMCE module, but I removed the image button from CKEditor's Filtered HTML profile since the Filtered HTML input format is not currently able to embed images. I disabled the image button by going to the following from the Configuration page:
+
+CKEditor -> Profiles -> Filtered HTML -> edit -> Editor Appearance -> Toolbar
+
+And moved the image button from the "Used buttons" section down to the "All buttons" section.
