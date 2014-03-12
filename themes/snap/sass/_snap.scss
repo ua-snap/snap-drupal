@@ -127,3 +127,32 @@ footer {
 }
 
 }
+
+.page-container {
+  @include zen-grid-container; // Apply this mixin to the container.
+}
+.leftcol {
+  @include zen-grid-item(3, 1);  //main body of page
+    border-radius: $border-radius;
+    border: $border;
+}
+.rightcol {
+  @include zen-grid-item(1, 5, right);  //1-column sidebar
+    border: 1px solid $snapGreen;
+    padding: 5px 10px 5px 10px;
+    margin: 0 -15px 15px 15px;
+    border-radius: $border-radius;
+    border: $border;
+    
+    rightcol2 {
+        @include zen-grid-item (2, 4, right);    //2-column sidebar
+    }
+
+}
+
+.spancol {
+  @include zen-clear(both);  //column spans the entire width of page
+  @include zen-grid-item(3, 1);
+    border-radius: $border-radius;
+    border: $border;
+}
