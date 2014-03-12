@@ -135,13 +135,17 @@ footer {
     border-radius: $border-radius;
     border: $border;
 }
-.rightcol1 {
-  @include zen-grid-item(2, 4, right);  //sidebar
+.rightcol {
+  @include zen-grid-item(1, 5, right);  //1-column sidebar
     border: 1px solid $snapGreen;
     padding: 5px 10px 5px 10px;
-    margin: 0 0 15px 15px;
+    margin: 0 -15px 15px 15px;
     border-radius: $border-radius;
     border: $border;
+    
+    rightcol2 {
+        @include zen-grid-item (2, 4, right);    //2-column sidebar
+    }
 
 }
 
