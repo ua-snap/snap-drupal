@@ -1,0 +1,25 @@
+/* Header */
+#header {
+    margin: 3rem 0;
+    position: relative;
+
+    #logo {
+        img {
+            height: 6rem;
+        }
+    }
+
+    h1 {
+        position: absolute;
+        right: 0;
+        top: 2.1rem;
+
+        a {
+            color: $snapDarkGrey;
+            font: $lato;
+            :hover {
+                text-decoration:none;
+            }
+        }
+    }
+}
