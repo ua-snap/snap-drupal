@@ -87,12 +87,13 @@ $courier:         "Courier New", "DejaVu Sans Mono", monospace, sans-serif;
 
 // For SNAP:
 @import url(http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
-$lato: "Lato", sans-serif;
+$lato: "Lato", "Arial", "Helvetica", "Lucida Grande", "Gill Sans", "Verdana", sans-serif;
+$lekton: "Lekton", Menlo, Courier New, Courier, Mono, monospace; 
 
 // Now create some variables for the font stacks we want to use on this site.
 $base-font-family: $lato; // The font family set on the html element.
 $font-body:        $lato;
-$font-monospace:   $courier;
+$font-monospace:   $lekton;
 
 
 //
