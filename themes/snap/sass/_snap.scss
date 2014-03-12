@@ -106,11 +106,18 @@ footer {
 }
 
 }
+<<<<<<< Updated upstream
+=======
+/* 3-column container with sidebars */
+$zen-column-count: 3; // Set the total number of columns in the grid.
+$zen-gutter-width: 10px;
+>>>>>>> Stashed changes
 
 .page-container {
   @include zen-grid-container; // Apply this mixin to the container.
 }
 .leftcol {
+<<<<<<< Updated upstream
   @include zen-grid-item(3, 1);  //main body of page
     border-radius: $border-radius;
     border: $border;
@@ -129,9 +136,32 @@ footer {
 
 }
 
+=======
+  @include zen-grid-item(2, 1);  //main body of page
+    border-radius: $border-radius;
+}
+.rightcol1 {
+  @include zen-grid-item(1, 1, right);  //sidebar
+    border: 1px solid $snapGreen;
+    padding: 5px 10px 5px 10px;
+    margin: 0 0 15px 15px;
+    border-radius: $border-radius;
+
+}
+.rightcol2 {
+  @include zen-clear(right);
+  @include zen-grid-item(1, 1, right);  //sidebar
+    border-radius: $border-radius;
+
+}
+>>>>>>> Stashed changes
 .spancol {
   @include zen-clear(both);  //column spans the entire width of page
   @include zen-grid-item(3, 1);
     border-radius: $border-radius;
+<<<<<<< Updated upstream
     border: $border;
+=======
+
+>>>>>>> Stashed changes
 }
