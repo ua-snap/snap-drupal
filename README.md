@@ -187,10 +187,6 @@ Create a block-level view that displays all content of type Organization.  Then,
  * Add Collaborator Logo as a field, disable label for it
  * Add Website as a field, disable label, and configure that field to display hidden and with the "plain text" formatter,
  * Rearrange the fields so that Website is on top (so we can use values from it below),
- * Reconfigure Collaborator Logo, open Rewrite Results, check "Rewrite Output of This Field", then enter the below into that field:
-
-```html
-<a href="[field_website]" rel="external" class="collaborator">[field_image]</a>
-```
+ * Reconfigure Collaborator Logo, open Rewrite Results, check "Output this field as a link", put [field_website] in the "Link path" and check "External server URL".
 
 Then, you can add the block to the relevant page.
