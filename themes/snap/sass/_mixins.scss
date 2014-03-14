@@ -55,3 +55,81 @@
     font-size: 18px;
     margin-bottom: 1em;
 }
+
+
+// Links
+@mixin link-transition {
+    -webkit-transition: all 0.3s ease-in-out;
+ 	-moz-transition: all 0.3s ease-in-out;
+ 	-o-transition: all 0.3s ease-in-out;
+ 	transition: all 0.3s ease-in-out; 
+}
+
+// Bullet lists
+@mixin no-bullet {   //Turn off the bullet for an element of a list
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0;
+}
+
+@mixin no-bullets {  // Turns off the bullets for an entire list
+  list-style: none;
+  li {
+    @include no-bullet;
+  }
+} 
+
+// Tables
+@mixin table-scaffolding {
+  th {
+    text-align: center;
+    font-weight: bold;
+  }
+  td,
+  th {
+    padding: 2px;
+    &.numeric {
+      text-align: right;
+    }
+  td {
+	  text-align: left;
+  }
+  }
+}
+
+
+@mixin alternating-rows-and-columns($even-row-color, $snapGrey, $dark-intersection, $header-color: white, $footer-color: white) {    
+	//for details and examples: http://compass-style.org/examples/compass/tables/striping/
+  th {
+    background-color: $snapGrey;
+    &.even, &:nth-child(2n) {
+      background-color: $header-color - $dark-intersection;
+    }
+  }
+  tr {
+    &.odd, &:nth-child(2n+1) {
+      td {
+        background-color: $snapGrey;
+        &.even, &:nth-child(2n) {
+          background-color: $odd-row-color - $dark-intersection;
+        }
+      }
+    }
+  }
+  tr.even {
+    td {
+      background-color: $footer-color;
+      &.even, &:nth-child(2n) {
+        background-color: $even-row-color - $dark-intersection;
+      }
+    }
+  }
+  tfoot {
+    th, td {
+      background-color: $footer-color;
+      &.even, &:nth-child(2n) {
+        background-color: $footer-color - $dark-intersection;
+      }
+    }
+  }
+}

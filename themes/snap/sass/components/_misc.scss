@@ -1,3 +1,5 @@
+ @import "snap_variables";
+
 /**
  * @file
  * SMACSS Modules
@@ -62,14 +64,15 @@
 #skip-link {
   margin: 0;
 
-  a,
-  a:visited {
+  a link  {
     display: block;
-    width: 100%;
-    padding: 2px 0 3px 0;
-    text-align: center;
-    background-color: #666;
-    color: #fff;
+   	text-decoration: none;
+    font-weight: bold;
+    color: $snaplink;
+    padding: 5px;  /* makes it easier to hover over link without squinting and pinpointing cursor */
+  }
+  a:visited {
+     color: $linkvisited;
   }
 }
 
@@ -97,21 +100,7 @@
 /* The name of the website. */
 .header__site-name {
   margin: 0;
-  @include adjust-font-size-to( $h1-font-size );
-}
-
-/* The link around the name of the website. */
-.header__site-link {
-  &:link,
-  &:visited {
-    color: #000;
-    text-decoration: none;
-  }
-
-  &:hover,
-  &:focus {
-    text-decoration: underline;
-  }
+  @include adjust-font-size-to( $h2-font-size );
 }
 
 /* The slogan (or tagline) of a website. */
