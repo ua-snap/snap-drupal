@@ -6,32 +6,12 @@
  */
  @import "snap_variables";
 @import "snap_collaborators";
+@import "header";
 
  a {
   text-decoration: none;
 }
 
-/* Header */
-#header {
-    margin: 3rem 0;
-    position: relative;
-
-    #logo {
-        img {
-            height: 6rem;
-        }
-    }
-
-    h1 {
-        position: absolute;
-        right: 0;
-        top: 2.1rem;
-
-        a {
-            color: $snapDarkGrey;
-        }
-    }
-}
 
 /* Navigation */
 /* Hide breadcrumb stuff */
@@ -97,18 +77,18 @@ footer {
   .socialbar {
     @include grey-bar-formatting();
     width: 100%;
-    ul {
-      display: inline;
-      list-style-type: none;
-      li {
-        font-weight: normal;
-        display: inline-block;
-        margin-left: 3rem;
-        a {
-          color: white;
-      }
-  }
-}
+        ul {
+          display: inline;
+          list-style-type: none;
+          li {
+            font-weight: normal;
+            display: inline-block;
+            margin-left: 3rem;
+            a {
+              color: white;
+			}
+		}
+	}
 }
 
 .left {
@@ -126,4 +106,30 @@ footer {
     @include zen-grid-item(1, 5);
 }
 
+}
+
+/* 3-column container with sidebars */
+$zen-column-count: 3; // Set the total number of columns in the grid.
+$zen-gutter-width: 10px;
+
+
+.page-container {
+  @include zen-grid-container; // Apply this mixin to the container.
+}
+.leftcol {
+  @include zen-grid-item(3, 1);  //main body of page
+    border-radius: $border-radius;
+    border: $border;
+}
+.rightcol {
+  @include zen-grid-item(1, 5, right);  //1-column sidebar
+    border: 1px solid $snapGreen;
+    padding: 5px 10px 5px 10px;
+    margin: 0 -15px 15px 15px;
+    border-radius: $border-radius;
+    border: $border;
+    
+    rightcol2 {
+        @include zen-grid-item (2, 4, right);    //2-column sidebar
+    }
 }

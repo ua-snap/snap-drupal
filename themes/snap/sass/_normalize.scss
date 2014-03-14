@@ -103,6 +103,9 @@ audio:not([controls]) {
  * 3. Correct text resizing oddly in IE 6/7 when body `font-size` is set using
  *    `em` units.
  */
+
+@import '_snap_variables.scss';
+
 html {
   font-family: $base-font-family; /* 1 */
   font-size: 100% * ($base-font-size / 16px); /* 3 */
@@ -135,13 +138,21 @@ body {
  * http://meyerweb.com/eric/thoughts/2007/06/11/who-ordered-the-link-states
  */
 a:link {
+    text-decoration: none;
+    font-weight: bold;
+    color: $snaplink;
+    padding: 5px;  /* makes it easier to hover over link without squinting and pinpointing cursor */
 }
 a:visited {
+    color: $linkvisited;
 }
 a:hover,
 a:focus {
+    @include link-transition;
+    color: $snapGreen;
 }
 a:active {
+    padding-top: 2px;
 }
 
 /* Address `outline` inconsistency between Chrome and other browsers. */
@@ -153,6 +164,7 @@ a:focus {
 a:active,
 a:hover {
   outline: 0;
+	padding-top: 5px;
 }
 
 /**
