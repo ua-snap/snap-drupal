@@ -1,0 +1,38 @@
+@import "snap_variables";
+
+/* Navigation */
+/* Hide breadcrumb stuff */
+#navigation {
+    display: none;
+}
+#content nav.breadcrumb {
+    display: none;
+}
+#block-system-navigation {
+   
+    margin: 0;
+    padding: 2.5em 0;
+    
+    border-top: .1em solid red;
+    border-bottom: .1em solid red;
+
+    ul.menu {
+        text-align: right;
+        text-transform: uppercase;
+
+        margin: 0;
+        padding: 0 2rem; 
+        
+        li.menu__item {
+
+            padding-right: 2em;
+            list-style-type: none;
+            display: inline-block;
+
+            a {
+                font-size: $base-font-size;
+                color: $snapDarkGrey;
+            }
+        }
+    }
+}

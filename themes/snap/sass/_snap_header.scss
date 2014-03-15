@@ -1,0 +1,33 @@
+@import "snap_variables";
+
+/* Header */
+#header {
+    text-align: center;
+    border: 10px dotted green;
+
+    .header__region {
+        background-color: #fff;
+        z-index: 1000;
+    }
+
+    /*
+    margin: 3rem 0;
+    position: relative;
+
+    #logo {
+        img {
+            height: 6rem;
+        }
+    }
+
+    h1 {
+        position: absolute;
+        right: 0;
+        top: 2.1rem;
+
+        a {
+            color: $snapDarkGrey;
+        }
+    }
+    */
+}
