@@ -128,21 +128,87 @@ footer {
 
 }
 
+
+/* typography  */
+h1, h2, h3, h4, h5, h6 {
+	color: $snapGreen;
+	margin: 2rem 0 .3rem 0;
+}
+
+h1, h2 {
+	line-height: 1.9rem;
+}
+
+h3, h4, h5, h6 {
+	line-height: 1.2rem;
+}
+
+h5, h6 {
+	color: black;
+	letter-spacing: .05rem;
+	text-transform: uppercase;
+	background-color: lighten($snapGreen, 40%);
+	padding: .05rem;
+}
+
+p {
+	color: $snapDarkGrey;
+	margin: 0 0 1rem 0;
+	line-height: 1.4rem;
+	font-size: .9rem;
+	
+	strong {
+		font-size: 1rem;
+		font-weight: bold;
+	}
+	&.code {
+		font-family: $lekton;
+		color: black;
+		font-size: .8rem;
+		background-color: lighten($snapGrey, 10%);
+		padding: .5rem;
+		display: inline;
+	}
+	abbr {
+		padding: 0 2px 0 2px;
+		background: lighten($snapGreen, 50%);
+	}
+}
+
+ul, ol {
+	font-size: .9rem;
+	color: $snapDarkGrey;
+	line-height: 1.2rem;
+	margin: 0 10rem 1rem 2rem;
+}
+
+blockquote {
+	border-left: 4px solid lighten($snapGreen, 20%);
+	margin: 0 3rem;
+	padding: 0 0 0 1rem;
+	font-style: italic;
+}
+
+
+
 /* Links  */
   a:link {
-	 text-decoration: none;
-     font-weight: bold;
-     color: $snaplink;
-     padding: 5px;  /* makes it easier to hover over link without squinting and pinpointing cursor */
-  }
-  a:visited {
-     color: $linkvisited;
-  }
-  a:hover,
-  a:focus {
-     @include link-transition;
-     color: $snapGreen;
-  }
-  a:active {
-     padding-top: 2px;
+	  text-decoration: none;
+	  font-weight: bold;
+	  color: $snaplink;
+	  padding: 2px;  /* makes it easier to hover over link without squinting and pinpointing cursor */
+	  
+	  &:visited {
+		  color: $linkvisited;
+	  }
+	  
+	  &:hover,
+	  &:focus {
+		  @include link-transition;
+		  color: $snapGreen;
+	  }
+	  
+	  &:active {
+		  padding-top: 2px;
+	  }
   }
