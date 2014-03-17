@@ -79,6 +79,14 @@
   }
 } 
 
+// Box-shadows
+@mixin shadow($x, $y, $blur, $shadow-color) {
+	-webkit-box-shadow: $x $y $blur $shadow-color;
+	-moz-box-shadow: $x $y $blur $shadow-color;
+	-o-box-shadow: $x $y $blur $shadow-color;
+	box-shadow: $x $y $blur $shadow-color;
+}
+
 // Tables
 @mixin table-scaffolding {
   th {
