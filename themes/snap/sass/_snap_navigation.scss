@@ -1,27 +1,30 @@
 @import "snap_variables";
 
-/* Navigation */
+/* Navigation.
+
+We display this block in the header to ease some of the styling issues,
+so some of the styles handling wrapping the navigation is in the header stylesheet.
+
+*/
+
 /* Hide breadcrumb stuff */
 #navigation {
     display: none;
 }
+
+
 #content nav.breadcrumb {
-    display: none;
+    //display: none;
 }
+
 #block-system-navigation {
-   
-    margin: 0;
-    padding: 2.5em 0;
-    
-    border-top: .1em solid red;
-    border-bottom: .1em solid red;
+    position: relative;
+    top: -3.5em; // ??
 
     ul.menu {
+
         text-align: right;
         text-transform: uppercase;
-
-        margin: 0;
-        padding: 0 2rem; 
         
         li.menu__item {
 

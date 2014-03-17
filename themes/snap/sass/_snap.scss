@@ -4,12 +4,19 @@
  *
  * Custom styling for our SNAP theme goes here.
  */
+
+
 @import "snap_variables";
 @import "snap_collaborators";
 @import "snap_navigation";
 @import "snap_header";
 @import "snap_footer";
+@import "snap_home";
 
- a {
+a {
   text-decoration: none;
+}
+
+#pageWrapper {
+  background-color: rgb(249, 250, 242);
 }
