@@ -80,9 +80,10 @@
 
     </div>
 
-    <?php print render($page['footer']); ?>
-
   </div>
+
+<?php print render($page['footer']); ?>
+
 
 <?php print render($page['bottom']); ?>
 

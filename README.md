@@ -61,11 +61,13 @@ git pull
 
 These types of operations should work as expected.  VDD/Vagrant are taking care of the magic so that your code is running in the VM while you can interact with it easily in your host OS.
  
-### Editing SASS
+### Editing SASS, coding standards
 
 Editing SASS is done by adding new includes to ```themes/snap/sass/styles.scss``` as required, at the bottom of that file.
 
 Main site variables (colors, fonts, etc) are controlled in the ```_init.scss``` file.
+
+Use the [guidelines on this page](git reset --hard remotes/origin/HEAD) regarding units for sizing fonts, etc.
 
 ### Apache Setup
 

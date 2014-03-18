@@ -3,36 +3,23 @@
 /* Footer */
 footer {
 
-  .socialbar {
-    @include grey-bar-formatting();
-    width: 100%;
-    ul {
-      display: inline;
-      list-style-type: none;
-      li {
-        font-weight: normal;
-        display: inline-block;
-        margin-left: 3rem;
-        a {
-          color: white;
-      }
+border-top: 1px solid rgb(242, 174, 156);
+background-color: #fff;
+
+  .left {
+      @include zen-grid-item(1, 1);
+      img {
+        height: 4rem;
+    }
   }
-}
-}
 
-.left {
-    @include zen-grid-item(1, 1);
-    img {
-      height: 4rem;
+  .middle {
+      @include zen-grid-item(3, 2);
+      text-align: center;
   }
-}
 
-.middle {
-    @include zen-grid-item(3, 2);
-}
-
-.right {
-    @include zen-grid-item(1, 5);
-}
+  .right {
+      @include zen-grid-item(1, 5);
+  }
 
 }
