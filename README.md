@@ -192,3 +192,7 @@ Create a block-level view that displays all content of type Organization.  Then,
  * Reconfigure Collaborator Logo, open Rewrite Results, check "Output this field as a link", put [field_website] in the "Link path" and check "External server URL".
 
 Then, you can add the block to the relevant page.
+
+### Configuration of home page content/template
+
+The home page overrides the theme default template, in ```templates/page--front.tpl.php```, and content that may be more dynamic is put into a block that is displayed in the "Content" section of the home page.
