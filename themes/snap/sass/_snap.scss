@@ -22,13 +22,13 @@ a {
 
 /* Links  */
   a:link {
-	 text-decoration: none;
+text-decoration: none;
      font-weight: bold;
      color: $snaplink;
      padding: 5px;  /* makes it easier to hover over link without squinting and pinpointing cursor */
   }
   a:visited {
-     color: $linkvisited;
+    color: $linkvisited;
   }
   a:hover,
   a:focus {
@@ -40,7 +40,7 @@ a {
   }
 
 /* images */
-img {
+#content img {
 	border: $border;
 	border-radius: $border-radius;
 	@include shadow($x, $y, $blur, $shadow-color);
