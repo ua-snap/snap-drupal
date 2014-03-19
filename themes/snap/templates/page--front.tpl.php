@@ -105,3 +105,16 @@
 
 </div>
 
+<script>
+  (function($) {
+    $().ready(function () {
+      var stickyPanelOptions = {
+        afterDetachCSSClass: "",
+        savePanelSpace: true,
+        onDetached: function (detachedPanel, spacerPanel) {},
+        onReAttached: function (detachedPanel) {},
+      };
+      $("header").stickyPanel(stickyPanelOptions);
+    });
+  }(jQuery));
+</script>
