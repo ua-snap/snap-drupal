@@ -10,6 +10,9 @@
 <div id="homeIntroPanel">
   <img src="<?php print drupal_get_path('theme', 'snap'); ?>/images/snap_color_lato.svg"/>
   <h1>Exploring our future in a changing Arctic</h1>
+	<h2>We develop plausible scenarios of future conditions</h2>
+	<p>through a diverse network of people and organizations.</p>
+	<p>Our research and collaborations enable robust planning for the future of Alaska and the Arctic.</p>
 </div>
 
 <header class="header" id="header" role="banner">
