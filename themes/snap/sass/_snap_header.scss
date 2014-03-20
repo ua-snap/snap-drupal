@@ -22,15 +22,11 @@
 
 /* Header */
 #header {
-
+    width: 100%;
     text-align: left;
-    // To avoid transparency.
-    background-color: #fff;
+    background-color: #fff;     // To avoid transparency.
     height: 6em;
     z-index: 10;
-
-    border-top: .1em solid rgb(235,137,104);
-    border-bottom: .1em solid red;
     padding: 1em 0;
 
     #navHomeLogo {
@@ -41,10 +37,15 @@
             height: 3em;
         }
     }
+}
 
-    // Hide Drupal's default logo/slogan elements so we can use other graphics.
-    #logo, #name-and-slogan {
-        display: none;
-    }
+body.front #header {
+    border-top: .1em solid rgb(235,137,104);
+    border-bottom: .1em solid red;
+}
 
+body.not-front #header {
+    position: fixed;
+    border-bottom: 1px solid #888;
+    box-shadow: 0 3px 3px 0 #888;
 }
