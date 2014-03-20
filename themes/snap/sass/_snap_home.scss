@@ -1,53 +1,65 @@
 @import "snap_variables";
 
-#block-block-4 {
-  padding-top: 2em;
-  text-align: center;
+/* This ID name (below) is a special case where our SCSS code needs to know what Drupal decided the ID should be. This is the ID that Drupal gave the block, so we need to use it here. DO NOT CHANGE.  */
+#block-block-4  {   
+	padding: 0;
+	margin: 0;
+	text-align: left;
 
-  h2 {
-    color: $snapDarkGrey;
-    line-height: 1.3;
-    font-weight: 300;
-    margin: 2em 0;
-    span {
-      font-weight: 400;
-      font-size: 2.5rem;
-      display: block;
-    }
-  }
+	.expertise {
+		width: auto;
+		margin: 0 0 1.5em 0;
+		background-color: white;
+		padding: 1em 4em 1em 4em;
+		min-height: 11.8em;
+		
+		h2 {
+			font-size: 2em;
+			color: $snapDarkGrey;
+			line-height: 1.2;
+			font-weight: 200;
+			margin: 0;
+		}
 
-  .blurb {
-    width: 22%;
-    margin: .5em;
-    border: 1px solid rgb(145, 150, 150);
-    background-color: white;
-    padding: .5em;
-    @include zen-float();
-    min-height: 25em;
-
-    p {
-      margin: 0;
-      text-align: left;
-      font-weight: 300;
-    }
-
-    h3 {
-      font-size: 1.2rem;
-      margin: .5em auto;
-    }
-
-    img {
-      border: none;
-      border-radius: none;
-      box-shadow: none;
-    }
-  }
-
-  h3 {
-    color: $snapDarkGrey;
-    font-weight: 400;
-    margin: 3em auto;
-    font-size: 2.5rem;
-    @include zen-clear();
+		p {
+			font-size: 1.15em;
+			margin: .3em 2.5em 0 0;
+			text-align: left;
+			font-weight: 200;
+		}
+		
+		.drop-shadow {
+			position: relative;
+			width: 90%;
+		}
+		
+		.drop-shadow:before,
+		.drop-shadow:after {
+			content: "";
+			position: absolute;
+			z-index: -1;
+			bottom: 15px;
+			left: 10px;
+			width: 50%;
+			height: 20%;
+			box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+			transform: rotate(-3deg);
+		}
+		
+		.drop-shadow:after {
+			right: 10px;
+			left: auto;
+			transform: rotate(3deg);
+		}
+	}
+	
+	.icon {
+		float: left;
+		padding: 0;
+		margin: .55em 2.5em 1em 0;
+		width: 15%;
+		height: auto;
+		text-align: center;
   }
 }
+		
