@@ -1,18 +1,35 @@
-#block-views-collaborators-block {
-  .view-content {
+#block-views-collaborators-block { 
+
+  .views-row {
+    text-align: center;
+    width: zen-grid-item-width(1);
+    @include zen-float();
     
-    display: table;
+    .field-content a {
 
-      .views-row {
-        display: table-cell;
-        height: 150px;
-
-        a.collaborator img {
-          vertical-align: middle;
-          margin: 2rem;
-        }
+      &:before {
+        content: '';
+        display: inline-block;
+        height: 100%; 
+        vertical-align: middle;
       }
 
+      margin: 0; padding: 0;
+      display: inline-block;
+      height: 200px;
+      
+      img {
+        display: inline-block;
+        vertical-align: middle;
+        width: 150px;
+        max-height: 180px;
+        border: none;
+        box-shadow: none;
+      }
+
+    }
+    
+
   }
-  
+
 }
