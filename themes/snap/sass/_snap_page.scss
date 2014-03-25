@@ -1,0 +1,28 @@
+article.node-page {
+  a {
+    &:focus, &:hover {
+      @include link-transition;
+    }
+    &:active, &:hover {
+      outline: 0;
+      padding: 5px;
+    }
+  }
+
+  img {
+    border: $border;
+    border-radius: $border-radius;
+    @include shadow($x, $y, $blur, $shadow-color);
+    padding: .5em;
+    
+    &.right {
+      float: right;
+      margin: 0 0 1em 2em;
+    }
+  
+    &.left {
+      float: left;
+      margin: 0 2em 1em 0;
+    }
+  }
+}
