@@ -104,8 +104,6 @@ audio:not([controls]) {
  *    `em` units.
  */
 
-@import '_snap_variables.scss';
-
 html {
   font-family: $base-font-family; /* 1 */
   font-size: 100% * ($base-font-size / 16px); /* 3 */
