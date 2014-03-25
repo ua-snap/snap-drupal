@@ -1,11 +1,22 @@
-.node-projects {
-  .field-name-field-project-image {
-    float: right;
-    clear: both;
+
+article.node-projects {
+  @include zen-nested-container;
+
+  .field-name-body {
+    @include zen-grid-item(3, 1);
+  }
+  
+  .group-right-sidebar {
+    @include zen-float(right);
+
+    .field-name-field-collaborators {
+      h2 {
+        display: none;
+      }
+      
+    }
+
   }
 
-  .field-name-field-collaborators {
-    float: right;
-    clear: both;
-  }
+
 }

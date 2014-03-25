@@ -172,14 +172,14 @@ Download IMCE module, extract it into sites/all/modules, and enable it from the 
 
 CKEditor -> Profiles -> Full HTML -> edit -> File Browser Settings:
 
-File browser type (Link dialog window): None  
-File browser type (Image dialog window): IMCE  
-File browser type (Flash dialog window): IMCE  
+File browser type (Link dialog window): None
+File browser type (Image dialog window): IMCE
+File browser type (Flash dialog window): IMCE
 
 IMCE -> Role-profile assignments:
 
-administrator: User-1  
-authenticated user: User-1  
+administrator: User-1
+authenticated user: User-1
 
 ### Configuring Collaborators view
 
@@ -199,8 +199,10 @@ The home page overrides the theme default template, in ```templates/page--front.
 
 ### Setting up Projects entity references
 
-First, we need to add a new display mode for the Collaborator content type.  Go to Structure &#x2192; Content Types &#x2192; Organizations &#x2192; "Manage Display" tab &#x2192; "Teaser" sub-tab (upper right).  Move the Logo to be displayed, and hide the other fields and the label.  Set Format to "Image Link Formatter", click the settings wrench and "Link image to" &#x2192 "Website (field_website)".
+First, we need to add a new display mode for the Collaborator content type.  Go to Structure &#x2192; Content Types &#x2192; Organizations &#x2192; "Manage Display" tab &#x2192; "Teaser" sub-tab (upper right).  Move the Logo to be displayed, and hide the other fields and the label.  Set Format to "Image Link Formatter", click the settings gear and "Link image to" &#x2192 "Website (field_website)".
 
 Next, edit the Projects content type.  Create a new field of type "entity reference", and when the screen pops up to configure that field, leave most things default but set the # of allowed values to (say) 10 and in the Entity Selection area, check "Organizations".
 
-On the "Manage Display" tab, change the Collaborators field to "Rendered Entity", then click the settings gear on that row.  Change the view mode to "Teaser" to match the configuration we did above, and uncheck "Display Links".
+On the "Manage Display" tab, change the Collaborators field to "Rendered Entity", then click the settings gear on that row.  Change the view mode to "Teaser" to match the configuration we did above, and uncheck "Display Links".  Save.
+
+Still in the "Manage Display" tab of Projects, create a new field group with label "Right Sidebar", label ```group_right_sidebar``` and format "Div".  Drag Image, Downloads, and Collaborators field under it (this is a bit slippery).  Click the settings gear and change "Fieldgroup settings" to "Open", Effect to "None", "Show Label" to "No".  Click Update, then Save.
