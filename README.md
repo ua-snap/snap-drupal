@@ -196,3 +196,11 @@ Then, you can add the block to the relevant page.
 ### Configuration of home page content/template
 
 The home page overrides the theme default template, in ```templates/page--front.tpl.php```, and content that may be more dynamic is put into a block that is displayed in the "Content" section of the home page.
+
+### Setting up Projects entity references
+
+First, we need to add a new display mode for the Collaborator content type.  Go to Structure &#x2192; Content Types &#x2192; Organizations &#x2192; "Manage Display" tab &#x2192; "Teaser" sub-tab (upper right).  Move the Logo to be displayed, and hide the other fields and the label.  Set Format to "Image Link Formatter", click the settings wrench and "Link image to" &#x2192 "Website (field_website)".
+
+Next, edit the Projects content type.  Create a new field of type "entity reference", and when the screen pops up to configure that field, leave most things default but set the # of allowed values to (say) 10 and in the Entity Selection area, check "Organizations".
+
+On the "Manage Display" tab, change the Collaborators field to "Rendered Entity", then click the settings gear on that row.  Change the view mode to "Teaser" to match the configuration we did above, and uncheck "Display Links".
