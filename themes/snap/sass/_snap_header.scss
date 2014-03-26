@@ -58,8 +58,8 @@
 }
 
 body.front #header {
-    border-top: .1em solid rgb(235,137,104);
-    border-bottom: .1em solid red;
+    border-top: .1em solid $snapGrey;
+    border-bottom: .1em solid $snapGrey;
 }
 
 body.not-front #header {
