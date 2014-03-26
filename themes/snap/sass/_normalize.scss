@@ -104,8 +104,6 @@ audio:not([controls]) {
  *    `em` units.
  */
 
-@import '_snap_variables.scss';
-
 html {
   font-family: $base-font-family; /* 1 */
   font-size: 100% * ($base-font-size / 16px); /* 3 */
@@ -137,34 +135,21 @@ body {
  * The order of link states are based on Eric Meyer's article:
  * http://meyerweb.com/eric/thoughts/2007/06/11/who-ordered-the-link-states
  */
-a:link {
-    text-decoration: none;
-    font-weight: bold;
-    color: $snaplink;
-}
-a:visited {
-    color: $linkvisited;
-}
-a:hover,
-a:focus {
-    @include link-transition;
-    color: $snapGreen;
-}
-a:active {
-    padding-top: 2px;
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+
+a {
+  background: transparent;
 }
 
-/* Address `outline` inconsistency between Chrome and other browsers. */
-a:focus {
-  outline: thin dotted;
-}
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
 
-/* Improve readability when focused and also mouse hovered in all browsers. */
 a:active,
 a:hover {
   outline: 0;
-	padding-top: 5px;
-  padding: 5px;
 }
 
 /**

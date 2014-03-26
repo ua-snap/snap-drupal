@@ -12,49 +12,28 @@
 @import "snap_footer";
 @import "snap_home";
 @import "snap_projects";
-
-a {
-  text-decoration: none;
-}
+@import "snap_page";
 
 #pageWrapper {
   background-color: lighten($snapGreen, 50%);
 }
 
 /* Links  */
-  a:link {
-text-decoration: none;
-     font-weight: bold;
-     color: $snaplink;
+a {
+  text-decoration: none;
+
+  &:link {
+    font-weight: bold;
+    color: $snaplink;
   }
-  a:visited {
+  
+  &:visited {
     color: $linkvisited;
   }
-  a:hover,
-  a:focus {
-     @include link-transition;
+  &:hover,
+  &:focus {
      color: $snapGreen;
   }
-  a:active {
-     padding-top: 2px;
-  }
-
-/* images */
-#content img {
-	border: $border;
-	border-radius: $border-radius;
-	@include shadow($x, $y, $blur, $shadow-color);
-	padding: .5em;
-	
-	&.right {
-		float: right;
-		margin: 0 0 1em 2em;
-	}
-	
-	&.left {
-		float: left;
-		margin: 0 2em 1em 0;
-	}
 }
 
 /* typography  */
