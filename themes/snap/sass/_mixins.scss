@@ -129,3 +129,26 @@
     }
   }
 }
+
+/* Vertically aligns floating dynamic height content.  */
+@mixin vertical-align-dynamic-content($wrapperHeight: 200px, $imageWidth: 150px) {
+  &:before {
+    content: '';
+    display: inline-block;
+    height: 100%; 
+    vertical-align: middle;
+  }
+
+  margin: 0; padding: 0;
+  display: inline-block;
+  height: $wrapperHeight;
+  
+  img {
+    display: inline-block;
+    vertical-align: middle;
+    width: $imageWidth;
+    max-height: $wrapperHeight * 0.9;
+    border: none;
+    box-shadow: none;
+  }
+}
