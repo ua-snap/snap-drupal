@@ -172,14 +172,14 @@ Download IMCE module, extract it into sites/all/modules, and enable it from the 
 
 CKEditor -> Profiles -> Full HTML -> edit -> File Browser Settings:
 
-File browser type (Link dialog window): None  
-File browser type (Image dialog window): IMCE  
-File browser type (Flash dialog window): IMCE  
+File browser type (Link dialog window): None
+File browser type (Image dialog window): IMCE
+File browser type (Flash dialog window): IMCE
 
 IMCE -> Role-profile assignments:
 
-administrator: User-1  
-authenticated user: User-1  
+administrator: User-1
+authenticated user: User-1
 
 ### Configuring Collaborators view
 
@@ -196,3 +196,17 @@ Then, you can add the block to the relevant page.
 ### Configuration of home page content/template
 
 The home page overrides the theme default template, in ```templates/page--front.tpl.php```, and content that may be more dynamic is put into a block that is displayed in the "Content" section of the home page.
+
+### Setting up Projects entity references
+
+First, we need to add a new display mode for the Collaborator content type.  Go to Structure &#x2192; Content Types &#x2192; Organizations &#x2192; "Manage Display" tab &#x2192; "Teaser" sub-tab (upper right).  Move the Logo to be displayed, and hide the other fields and the label.  Set Format to "Image Link Formatter", click the settings gear and "Link image to" &#x2192 "Website (field_website)".
+
+Next, edit the Projects content type.  Create a new field of type "entity reference", and when the screen pops up to configure that field, leave most things default but set the # of allowed values to (say) 10 and in the Entity Selection area, check "Organizations".
+
+On the "Manage Display" tab, change the Collaborators field to "Rendered Entity", then click the settings gear on that row.  Change the view mode to "Teaser" to match the configuration we did above, and uncheck "Display Links".  Save.
+
+Still in the "Manage Display" tab of Projects, create a new field group with label "Right Sidebar", label ```group_right_sidebar``` and format "Div".  Drag Image, Downloads, and Collaborators field under it (this is a bit slippery).  Click the settings gear and change "Fieldgroup settings" to "Open", Effect to "None", "Show Label" to "No".  Click Update, then Save.
+
+Now we configure the "Teaser" view of the Project so it can be used on the page that lists all projects.  Structure &#x2192; Content Types &#x2192; edit Projects &#x2192; Manage Display tab &#x2192; Teaser subtab button.  Drag Project Image field above Description, change "Label" to Hidden, change format to Image Link formatter, click the settings gear, change "Link image to" Content, click Update then Save.
+
+Finally, we create the view for the projects page.  Go to Structure &#x2192; Views &#x2192; Add new view.  View name "Projects", show content of type Project sorted by title, uncheck "Create a Page", check Create a Block, display format Teaser with links / without comments, 100 items per page, don't enable the pager.  Add it to the existing Projects page by going to the admin menu Structure &#x2192; Blocks and drag the View: Projects block into the Content area; click to edit it and put &lt;none&gt; for the title, then change it to only display on page 'projects'.  Save.

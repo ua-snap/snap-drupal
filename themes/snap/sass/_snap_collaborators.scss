@@ -6,30 +6,7 @@
     @include zen-float();
     
     .field-content a {
-
-      &:before {
-        content: '';
-        display: inline-block;
-        height: 100%; 
-        vertical-align: middle;
-      }
-
-      margin: 0; padding: 0;
-      display: inline-block;
-      height: 200px;
-      
-      img {
-        display: inline-block;
-        vertical-align: middle;
-        width: 150px;
-        max-height: 180px;
-        border: none;
-        box-shadow: none;
-      }
-
+      @include vertical-align-dynamic-content(200px, 150px);
     }
-    
-
   }
-
 }

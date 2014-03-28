@@ -11,11 +11,18 @@
 @import "snap_header";
 @import "snap_footer";
 @import "snap_home";
+@import "snap_projects";
 @import "snap_page";
 
+/* A few layout-type things that don't fit elsewhere yet, refactor away as needed. */
 #pageWrapper {
   background-color: lighten($snapGreen, 50%);
 }
+
+#content {
+  padding-top: 6em;
+}
+
 
 /* Links  */
 a {

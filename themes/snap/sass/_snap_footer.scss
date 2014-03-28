@@ -3,23 +3,64 @@
 /* Footer */
 footer {
 
-border-top: 1px solid rgb(242, 174, 156);
-background-color: #fff;
+padding: 1em 20em .5em 0;
+border-top: 3px solid white;
+border-bottom: 20px solid $snapGreen;
+background-color: lighten($snapDarkGrey,45%);
 
   .left {
-      @include zen-grid-item(1, 1);
-      img {
-        height: 4rem;
-    }
+      @include zen-grid-item(3, 1);
+	  text-align: left;
+	  padding: 0 3.5em 0 2.5em;
+		  
+	  p {
+		  font-size: .82em;
+		  letter-spacing: .05em;
+		  line-height: 1.5em;
+		  color: $snapDarkGrey;
+	  }
+	  
+	  .tagline {
+		  font-size: 2em;
+		  color: $snapDarkGrey;
+		  font-weight: 300;
+		  line-height: 1em;
+		  margin: 0 0 .2em 0;
+		  }
+	  
+	  ul {
+		  margin-left: -2em;
+	  }
+	  
+	  li {
+		  list-style-type: none;
+		  display: inline;
+		  margin: 0;
+		  padding: 0;
+		  
+		  img {
+			  margin: 0;
+			  padding: 0 1.5em 0 0;
+			  float: left;
+		  }
+	  }
   }
 
-  .middle {
-      @include zen-grid-item(3, 2);
-      text-align: center;
-  }
 
   .right {
-      @include zen-grid-item(1, 5);
-  }
+      @include zen-grid-item(2, 4);
+	  padding: 0 -10em 1em 1em;
+	  
+	  li {
+		  list-style-type: none;
+		  display: inline;
+		  margin-right: -20em;
 
+	  img {
+		  margin: 0;
+		  padding: 0 1.5em .5em 0;
+		  float: right;
+	  }
+  }
+}
 }
