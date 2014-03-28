@@ -1,0 +1,22 @@
+@import "snap_variables";
+
+/* Footer */
+footer {
+
+border-top: 1px solid rgb(242, 174, 156);
+background-color: #fff;
+
+  .left {
+      img {
+        height: 4rem;
+    }
+  }
+
+  .middle {
+      text-align: center;
+  }
+
+  .right {
+  }
+
+}

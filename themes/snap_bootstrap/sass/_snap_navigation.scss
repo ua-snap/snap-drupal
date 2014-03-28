@@ -1,0 +1,41 @@
+/* Only on the front page, deal with certain styles for the sticky bar. */
+body.front {
+
+    .navbar-form input, .form-inline input {
+        width:auto;
+    }
+
+    #navbar-sticky {
+        padding: 0; margin: 0;
+        background-color: white;
+        border-top: 1px solid #888;
+        border-bottom: 1px solid #888;
+        &.affix {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index:10;
+        }    
+    }
+}
+
+a.name.navbar-brand { display: none; }
+
+a.logo img {
+    height: 3em;
+}
+
+header#navbar {
+    nav {
+        padding: 1ex 0 0 0; // Keeps it centered.
+        margin: 0;
+        ul.menu.nav {
+            @extend .pull-right;
+            li {
+                font-size: $font-size-base;
+                text-transform: uppercase;
+            }
+        }
+    }
+}
+

@@ -1,0 +1,34 @@
+#masthead {
+    text-align: center;
+    background-color: lighten($snapGrey, 15%);
+    padding: 2em 0;
+    background-image: url(../images/SNAP_symbol_white.svg);
+    background-repeat: no-repeat;
+    background-position: 48.2% center;
+    img {
+        width: 25em;
+    }
+    height: 450px;
+
+    h1 {
+        font-weight:  300;
+        padding: 0;
+        margin: .25em 0 0 0;
+        color: $snapDarkGrey;
+        font-size: floor(($font-size-base * 3.5));
+    }
+
+    h2 {
+      font-weight: 400;
+      padding: 0;
+      margin: 0;
+      color: $snapGreen;
+  }
+
+  p {
+      color: $snapDarkGrey;
+      line-height: 1.4em;
+      margin: .25em 0 0 0;
+      font-size: $font-size-large;
+  }
+}

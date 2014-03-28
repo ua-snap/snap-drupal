@@ -2,3 +2,6 @@
 
 themes/snap/.sass-cache/
 themes/snap/css/
+themes/snap_bootstrap/bower_components
+themes/snap_bootstrap/css
+themes/snap_bootstrap/.sass-cache
