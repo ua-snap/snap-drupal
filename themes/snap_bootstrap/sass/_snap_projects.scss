@@ -1,0 +1,29 @@
+@import "snap_variables";
+
+/* Styles for project list page */
+#block-views-projects-block {
+  @extend .container;
+  .view-content {
+    @extend .row;
+  }
+  .views-row {
+    @extend .col-md-6;
+    &:nth-row(even) {
+      @extend .col-md-offset-6;
+    }
+  }
+}
+
+/* Styles for individual project */
+.node-projects:not(.node-teaser) {
+  @extend .container;
+  .content {
+    @extend .row;
+    .field-name-body {
+      @extend .col-md-8;
+    }
+    #node_projects_full_group_right_sidebar {
+      @extend .col-md-4;
+    }
+  }
+}
