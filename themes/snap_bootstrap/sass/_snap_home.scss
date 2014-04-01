@@ -60,4 +60,13 @@
 		text-align: center;
   }
 }
-		
+
+.front .page-wrapper {
+background-color: lighten($snapGreen, 50%);
+
+	// Hide the "Welcome to..." message.
+h1.page-header {
+	display: none;
+}
+  margin: 0; padding: 0;
+}	

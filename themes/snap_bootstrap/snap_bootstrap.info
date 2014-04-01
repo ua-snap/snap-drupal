@@ -1,4 +1,4 @@
-name = Bootstrap Sub-theme
+name = SNAP Bootstrap theme
 description = A Bootstrap Sub-theme.
 core = 7.x
 base theme = bootstrap
