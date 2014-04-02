@@ -11,6 +11,7 @@
 
 /* Styles for individual project */
 .node-projects:not(.node-teaser) {
+  h2 { display: none; } // hide title display
   @extend .container;
   .content {
     @extend .row;
