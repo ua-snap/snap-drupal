@@ -1,14 +1,11 @@
 /* Styles for project list page */
 #block-views-projects-block {
-  @extend .container;
-  .view-content {
-    @extend .row;
-  }
-  .views-row {
-    @extend .col-md-6;
-    &:nth-row(even) {
-      @extend .col-md-offset-6;
-    }
+  .node {
+    margin-bottom: 1em;
+    img {
+      float: left;
+      padding: 0 1em 0 0;
+    }  
   }
 }
 

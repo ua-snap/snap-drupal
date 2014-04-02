@@ -1,4 +1,4 @@
-article.node-page {
+div.node-page {
   a {
     &:focus, &:hover {
       @include link-transition;
@@ -14,15 +14,5 @@ article.node-page {
     border-radius: $border-radius;
     @include shadow($x, $y, $blur, $shadow-color);
     padding: .5em;
-    
-    &.right {
-      float: right;
-      margin: 0 0 1em 2em;
-    }
-  
-    &.left {
-      float: left;
-      margin: 0 2em 1em 0;
-    }
   }
 }

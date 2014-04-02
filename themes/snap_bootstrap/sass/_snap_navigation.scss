@@ -6,7 +6,6 @@ body.front {
     }
 
     #navbar-sticky {
-        padding: 0; margin: 0;
         background-color: white;
         border-top: 1px solid #888;
         border-bottom: 1px solid #888;
@@ -26,16 +25,29 @@ a.logo img {
 }
 
 header#navbar {
+    padding: 0;
+    margin: 1em auto 1em;
     nav {
-        padding: 1ex 0 0 0; // Keeps it centered.
-        margin: 0;
-        ul.menu.nav {
-            @extend .pull-right;
-            li {
-                font-size: $font-size-base;
-                text-transform: uppercase;
+        
+        ul {
+            margin-top: .75ex;
+            &.menu.nav {
+                @extend .pull-right;
+                li {
+                    font-size: $font-size-base;
+                    text-transform: uppercase;
+                }
+
+                // Hide the "My account/Logout" links.
+                &.secondary { display: none; }
+
+                ul.dropdown-menu li {
+                    text-transform: none;
+                }
             }
         }
     }
 }
 
+// HIde the breadcrumbs.
+ol.breadcrumb { display: none; }
