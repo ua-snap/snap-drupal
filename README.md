@@ -32,6 +32,15 @@ We use VDD for the local setup.  [Follow their tutorial](https://drupal.org/node
    1. ```sudo /etc/init.d/apache2 reload```
  1. Check the page again in your web browser.  If it loads the Drupal page, all is well and you can proceed to the next set of setup directions!
 
+#### Post-install steps
+
+The snap_bootstrap theme has external requirements on the ```bootstrap-sass``` project in Bower.  To install it:
+
+```bash
+cd /path/to/snap_bootstrap/
+bower install
+```
+
 ### Install Compass
 
 Compass is used for the SASS development.  On OSX, first [install Homebrew](http://brew.sh/) then ```brew install ruby```, then [install Compass](http://compass-style.org/install/).
@@ -199,9 +208,9 @@ The home page overrides the theme default template, in ```templates/page--front.
 
 ### Setting up Projects entity references
 
-First, we need to add a new display mode for the Collaborator content type.  Go to Structure &#x2192; Content Types &#x2192; Organizations &#x2192; "Manage Display" tab &#x2192; "Teaser" sub-tab (upper right).  Move the Logo to be displayed, and hide the other fields and the label.  Set Format to "Image Link Formatter", click the settings gear and "Link image to" &#x2192 "Website (field_website)".
+First, we need to add a new display mode for the Collaborator content type.  Go to Structure &#x2192; Content Types &#x2192; Organizations &#x2192; "Manage Display" tab &#x2192; "Teaser" sub-tab (upper right).  Move the Collaborator Logo to be displayed, and hide the other fields and the label.  Set Format to "Image Link Formatter", click the settings gear and "Link image to" &#x2192 "Website (field_website)".
 
-Next, edit the Projects content type.  Create a new field of type "entity reference", and when the screen pops up to configure that field, leave most things default but set the # of allowed values to (say) 10 and in the Entity Selection area, check "Organizations".
+Next, edit the Projects content type.  Create a new field of type "entity reference", name "Collaborators", and when the screen pops up to configure that field, leave most things default but set the # of allowed values to (say) 10, choose type "Select List", and in the Entity Selection area, check "Organizations".
 
 On the "Manage Display" tab, change the Collaborators field to "Rendered Entity", then click the settings gear on that row.  Change the view mode to "Teaser" to match the configuration we did above, and uncheck "Display Links".  Save.
 
@@ -209,4 +218,4 @@ Still in the "Manage Display" tab of Projects, create a new field group with lab
 
 Now we configure the "Teaser" view of the Project so it can be used on the page that lists all projects.  Structure &#x2192; Content Types &#x2192; edit Projects &#x2192; Manage Display tab &#x2192; Teaser subtab button.  Drag Project Image field above Description, change "Label" to Hidden, change format to Image Link formatter, click the settings gear, change "Link image to" Content, click Update then Save.
 
-Finally, we create the view for the projects page.  Go to Structure &#x2192; Views &#x2192; Add new view.  View name "Projects", show content of type Project sorted by title, uncheck "Create a Page", check Create a Block, display format Teaser with links / without comments, 100 items per page, don't enable the pager.  Add it to the existing Projects page by going to the admin menu Structure &#x2192; Blocks and drag the View: Projects block into the Content area; click to edit it and put &lt;none&gt; for the title, then change it to only display on page 'projects'.  Save.
+Finally, we create the view for the projects page.  Go to Structure &#x2192; Views &#x2192; Add new view.  View name "Projects", show content of type Project sorted by title, uncheck "Create a Page", check Create a Block, display format Teaser with links / without comments, 100 items per page, don't enable the pager.  On the next configuration page, under the "Fields" section, verify that it shows both "Website" and "Collaborator Logo" fields; click the "Website" field and configure it to be "Hidden," save, then click the "Collaborator Logo" field and change the Formatter to "Image Link Formatter".  Add it to the existing Projects page by going to the admin menu Structure &#x2192; Blocks and drag the View: Projects block into the Content area; click to edit it and put &lt;none&gt; for the title, then change it to only display on page 'projects'.  Save.

@@ -1,0 +1,25 @@
+/* Styles for project list page */
+#block-views-projects-block {
+  .node {
+    margin-bottom: 1em;
+    img {
+      float: left;
+      padding: 0 1em 0 0;
+    }  
+  }
+}
+
+/* Styles for individual project */
+.node-projects:not(.node-teaser) {
+  h2 { display: none; } // hide title display
+  @extend .container;
+  .content {
+    @extend .row;
+    .field-name-body {
+      @extend .col-md-8;
+    }
+    #node_projects_full_group_right_sidebar {
+      @extend .col-md-4;
+    }
+  }
+}

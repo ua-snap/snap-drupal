@@ -1,0 +1,33 @@
+/* Footer */
+.footer-wrapper {
+  border-top: 3px solid #fff;
+  border-bottom: 1em solid $snapGreen;
+  
+  background-color: rgb(224, 225, 226);
+  
+  footer {
+    padding: 0 0 4em;
+    ul {
+      margin: 0; padding: 0;
+      list-style-type: none;
+      display: inline;
+
+      li {
+        margin: 0; padding: 0 1em 0 0;
+        display: inline-block;
+      }
+    }
+
+    .logos ul li {
+     padding: 0 2em 0 0;
+    }
+
+    h3 {
+      margin: 0 0 1ex 0; padding: 0;
+      color: $snapDarkGrey;
+      font-weight: 300;
+
+    }
+  }
+
+}
