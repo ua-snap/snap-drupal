@@ -109,23 +109,17 @@ Move "navigation" block to the "header" section of the site layout.  Disable the
 
 ### Setting up Media module
 
-Download version 7.x-1.4 of the Media module here:
+It turned out to be very important to install a particular version of the Media module (7.x-2.x-dev). The recommended release on the module's page is 7.x-1.4, but this version requires an old version of the File Entity module to work properly, and this older version of File Entity lacked the ability to set custom link labels in Media fields. So:
+
+Download version 7.x-2.x-dev of the Media module here:
 
 https://drupal.org/project/media
 
-Download version 7.x-1.4 of the Chaos Tool Suite here:
+Download version 7.x-2.0-alpha3 of the File Entity module here:
 
-https://drupal.org/project/ctools
+https://drupal.org/project/file_entity
 
-The Media module also requires a particular version of the File Entity module. It comes packaged with the version of the File Entity module it requires.
-
-Extract the Media and Chaos Tool Suite modules into the sites/all/modules directory. Then, move the "file_entity" directory outside of the "media" directory, directly into the "modules" directory. So, you should now have the following directories:
-
-- sites/all/modules/media  
-- sites/all/modules/ctools  
-- sites/all/modules/file_entity
-
-Enable each of these modules in the Drupal administrator interface. Then make sure all content type file and image fields use the Media file selector.
+And download and install any other dependencies as needed.
 
 ### Setting up Date and Link modules
 
