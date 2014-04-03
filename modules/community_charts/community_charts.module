@@ -1,0 +1,87 @@
+<?php
+/**
+* @file
+* A block module that wraps up the SNAP Community Charts tool.
+*/
+
+/**
+ * Implements hook_block_info().
+ */
+function community_charts_block_info() {
+  $blocks['community_charts'] = array(
+    // The name that will appear in the block list.
+    'info' => t('Community Charts'),
+    // Default setting.
+    'cache' => DRUPAL_CACHE_PER_ROLE,
+  );
+  return $blocks;
+}
+
+function community_charts_block_view($delta = '') {
+  switch ($delta) {
+    case 'community_charts':
+      
+      $block['content'] = <<<html
+
+      <div id="variable_selections">
+
+        <div id="comm_select_wrapper">
+          <p>To load a chart, type your community&rsquo;s name:</p>
+          <div>
+            <input type="hidden" id="comm_select_id" value="" name="comm_select_id" />
+            <input id="comm_select" name="community_selector" type="text" value="" placeholder="Type your community name..." />
+          </div>
+        </div>
+
+        <div>
+
+          <div>
+            <div class="btn-group" data-toggle="buttons">
+              <label class="btn btn-default active">
+                <input type="radio" name="dataset" value="1"/>Temperature
+              </label>
+              <label class="btn btn-default">
+                <input type="radio" name="dataset" value="2"/>Precipitation
+              </label>
+            </div>
+          </div>
+
+          <div>
+            <div class="btn-group" data-toggle="buttons">
+              <label class="btn btn-default active">
+                <input type="radio" name="units" value="standard"/>&deg;F
+              </label>
+              <label class="btn btn-default">
+                <input type="radio" name="units" value="metric"/>&deg;C
+              </label>
+            </div>
+          </div>
+            
+        </div>
+
+        <p>Emissions Scenario</p>
+        <div id="scenario_buttons" class="btn-group" data-toggle="buttons">
+          <button class="btn" id="scenario_b1" name="scenario" value="b1">Low (B1)</button>
+          <button class="btn" id="scenario_a1b" name="scenario" value="a1b">Medium (A1B)</button>
+          <button class="btn" id="scenario_a2" name="scenario" value="a2">High (A2)</button>
+        </div>
+
+        <div class="helpbuttons">
+          <button class="btn" id="dataset_help">About scenarios&hellip;</button>
+        </div>
+
+        <p>Inter&ndash;Model Variability</p>
+        <div id="variability_buttons" class="btn-group" data-toggle="buttons">
+          <button class="btn" id="variability_off" name="variability" value="0">Off</button>
+          <button class="btn" id="variability_on" name="variability" value="1">On</button>
+        </div>
+
+        <div class="helpbuttons">
+          <button class="btn" id="variability_help">About inter&ndash;model variability&hellip;</button>
+        </div>
+
+      </div>
+html;
+    }
+  return $block;
+}
