@@ -1,0 +1,20 @@
+{
+  "name": "snap_bootstrap",
+  "version": "0.0.0",
+  "homepage": "https://github.com/ua-snap/snap-drupal",
+  "authors": [
+    "Bruce Crevensten <bruce.crevensten@gmail.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "twbs/bootstrap-sass#~3.1.1"
+  }
+}

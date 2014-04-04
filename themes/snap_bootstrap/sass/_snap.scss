@@ -1,0 +1,78 @@
+/**
+ * @file
+ * SNAP styling
+ *
+ * Custom styling for our SNAP theme goes here.
+ */
+
+ @import "snap_variables";
+ @import "snap_projects";
+ @import "snap_collaborators";
+ @import "snap_navigation";
+ @import "snap_header";
+ @import "snap_footer";
+ @import "snap_home";
+ @import "snap_page";
+
+ #pageWrapper {
+  background-color: lighten($snapGreen, 50%);
+}
+
+html {
+  font-family: $lekton;
+}
+
+/* Links  */
+a {
+  text-decoration: none;
+
+  &:link {
+    font-weight: bold;
+    color: $snaplink;
+  }
+  
+  &:visited {
+    color: $linkvisited;
+  }
+  &:hover,
+  &:focus {
+   color: $snapGreen;
+ }
+}
+
+/* typography  */
+h1, h2, h3, h4, h5, h6 {
+  color: $snapGreen;
+}
+
+h5, h6 {
+	color: black;
+	letter-spacing: .05em;
+	text-transform: uppercase;
+	background-color: lighten($snapGreen, 40%);
+	padding: .05em;
+}
+
+p {
+	color: $snapDarkGrey;
+	
+	&.code {
+		font-family: $lekton;
+		color: black;
+		background-color: lighten($snapGrey, 12%);
+	}
+	abbr {
+		background: lighten($snapGreen, 50%);
+	}
+}
+
+ul, ol {
+	color: $snapDarkGrey;
+}
+
+blockquote {
+  font-size: $font-size-base;
+  border-left: 4px solid lighten($snapGreen, 20%);
+  margin: 2em 3em;
+  padding: 0 0 0 1em;
+}

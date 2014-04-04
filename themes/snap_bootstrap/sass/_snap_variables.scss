@@ -1,0 +1,30 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,400italic,700italic);
+$lato: "Lato", "Arial", "Helvetica", "Lucida Grande", "Gill Sans", "Verdana", sans-serif;
+$lekton: "Lekton", Menlo, "DejaVu Sans Mono", monospace, sans-serif;
+
+$font-family-sans-serif:  $lato;
+$font-family-serif:       Georgia, "Times New Roman", Times, serif !default;
+//** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
+$font-family-monospace:   $lekton;
+$font-family-base:        $font-family-sans-serif !default;
+
+$snapGrey: rgb(199,201,199);
+$snapGreen: rgb(150,167,58);
+$snapDarkGrey: rgb(106,112,114);
+
+$snaplink: rgb(156,0,255);
+$linkvisited: rgb(109,0,178);
+ 
+$border-radius: 3px;
+$border: 1px solid $snapGreen;
+
+// Shadow properties
+$x: .1rem;
+$y: .1rem;
+$blur: .2rem;
+$shadow-color: rgba(0,0,0,.5);
+
+// Navbar defaults.
+$navbar-default-color:             #777;
+$navbar-default-bg:                #fff;
+$navbar-default-border:            transparent;

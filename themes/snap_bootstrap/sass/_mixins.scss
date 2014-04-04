@@ -1,0 +1,131 @@
+// @file
+// Custom sass mixins
+//
+// Define the custom mixins for your project here.
+// http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#defining_a_mixin
+
+// Makes an element visually hidden, but accessible.
+// @see http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+@mixin element-invisible {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  @if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
+    clip: rect(1px 1px 1px 1px); // IE6 and IE7 use the wrong syntax.
+  }
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+// Turns off the element-invisible effect.
+@mixin element-invisible-off {
+  position: static !important;
+  clip: auto;
+  height: auto;
+  width: auto;
+  overflow: auto;
+}
+
+// Makes an element visually hidden by default, but visible when focused.
+@mixin element-focusable {
+  @include element-invisible;
+
+  &:active,
+  &:focus {
+    @include element-invisible-off;
+  }
+}
+
+// Making border radius nice again!
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+       -o-border-radius: $radius;
+          border-radius: $radius;
+}
+
+// Links
+@mixin link-transition {
+    -webkit-transition: all 0.3s ease-in-out;
+ 	-moz-transition: all 0.3s ease-in-out;
+ 	-o-transition: all 0.3s ease-in-out;
+ 	transition: all 0.3s ease-in-out; 
+}
+
+// Bullet lists
+@mixin no-bullet {   //Turn off the bullet for an element of a list
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0;
+}
+
+@mixin no-bullets {  // Turns off the bullets for an entire list
+  list-style: none;
+  li {
+    @include no-bullet;
+  }
+} 
+
+// Box-shadows
+@mixin shadow($x, $y, $blur, $shadow-color) {
+	-webkit-box-shadow: $x $y $blur $shadow-color;
+	-moz-box-shadow: $x $y $blur $shadow-color;
+	-o-box-shadow: $x $y $blur $shadow-color;
+	box-shadow: $x $y $blur $shadow-color;
+}
+
+// Tables
+@mixin table-scaffolding {
+  th {
+    text-align: center;
+    font-weight: bold;
+  }
+  td,
+  th {
+    padding: 2px;
+    &.numeric {
+      text-align: right;
+    }
+  td {
+	  text-align: left;
+  }
+  }
+}
+
+
+@mixin alternating-rows-and-columns($even-row-color, $snapGrey, $dark-intersection, $header-color: white, $footer-color: white) {    
+	//for details and examples: http://compass-style.org/examples/compass/tables/striping/
+  th {
+    background-color: $snapGrey;
+    &.even, &:nth-child(2n) {
+      background-color: $header-color - $dark-intersection;
+    }
+  }
+  tr {
+    &.odd, &:nth-child(2n+1) {
+      td {
+        background-color: $snapGrey;
+        &.even, &:nth-child(2n) {
+          background-color: $odd-row-color - $dark-intersection;
+        }
+      }
+    }
+  }
+  tr.even {
+    td {
+      background-color: $footer-color;
+      &.even, &:nth-child(2n) {
+        background-color: $even-row-color - $dark-intersection;
+      }
+    }
+  }
+  tfoot {
+    th, td {
+      background-color: $footer-color;
+      &.even, &:nth-child(2n) {
+        background-color: $footer-color - $dark-intersection;
+      }
+    }
+  }
+}
