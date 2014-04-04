@@ -236,5 +236,5 @@ Now we create block views for each staff category.  For each staff category: Str
 	4.	 Fields > Add widget, select Rearrange > drag Picture to be above Name.  Apply.
 	5.	 Save the view.	
 	6.	 Rinse and repeat: create a view for each of the other 4 staff category types (Faculty, Students, Staff, Alumni).
-	7.	 Once all 5 new views have been created: Structure > Blocks > move View: Staff Category [category] (all 5 of them) to Content block, Save Blocks then click Configure for that block, Block title: [category], Show Block On Specific Pages -- only the listed page: [target page for people].
+	7.	 Once all 5 new views have been created: Structure > Blocks > move View: Staff Category [category] (all 5 of them) to Content block, Save Blocks then click Configure for that block, Block title: [category], Show Block On Specific Pages -- only the listed page: [target page for people], Content types / Show block for specific content types, choose people.
 
