@@ -1,0 +1,26 @@
+<?php
+
+function snap_data_downloads_block_info() {
+  $blocks['snap_data_downloads'] = array(
+    'info' => t('SNAP Data Downloads'),
+    'cache' => DRUPAL_CACHE_GLOBAL, // block is static for all people always.
+  );
+  return $blocks;
+}
+
+function snap_data_downloads_block_view($delta = '') {
+  switch($delta) {
+    case 'snap_data_downloads':
+      require_once('data_downloads.php'); // defines $snap_data_downloads_content, used below
+      $block = array(
+       'subject' => t('SNAP Data Downloads'),
+       'content' => array(
+          '#markup' => $snap_data_downloads_content,
+          '#attached' => array(
+            'js' => array(drupal_get_path('module', 'snap_data_downloads').'/data_downloads.js'),
+          ),
+        ),
+      );
+  }
+  return $block;
+}
