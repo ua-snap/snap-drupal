@@ -19,30 +19,32 @@
 }
 
 html {
-  font-family: $lekton;
+  font-family: $lato;
 }
 
 /* Links  */
 a {
-  text-decoration: none;
-
-  &:link {
-    font-weight: bold;
-    color: $snaplink;
-  }
-  
-  &:visited {
-    color: $linkvisited;
-  }
-  &:hover,
-  &:focus {
-   color: $snapGreen;
- }
+	text-decoration: none;
+	
+	&:link {
+		font-weight: bold;
+		color: $snaplink;
+	}
+	
+	&:visited {
+		color: $linkvisited;
+	}
+	
+	&:hover,
+	&:focus {
+		color: $snapGreen;
+	}
 }
 
 /* typography  */
-h1, h2, h3, h4, h5, h6 {
-  color: $snapGreen;
+h1, h2, h3, h4 {
+	color: $snapGreen;
+	margin-top: 1.5em;
 }
 
 h5, h6 {
@@ -51,28 +53,49 @@ h5, h6 {
 	text-transform: uppercase;
 	background-color: lighten($snapGreen, 40%);
 	padding: .05em;
+	margin-top: 2em;
 }
 
 p {
 	color: $snapDarkGrey;
+	font-size: 1.1em;
+	line-height: 1.5em;
 	
 	&.code {
 		font-family: $lekton;
 		color: black;
 		background-color: lighten($snapGrey, 12%);
+		display: inline;
+		font-size: .9em;
 	}
 	abbr {
 		background: lighten($snapGreen, 50%);
 	}
+
+	q {		//for short, inline quotes
+		color: $snapGreen;
+		font-style: italic;
+		font-size: 1.1em;
+	}
+}
+
+blockquote {
+	background: lighten($snapGrey, 20%);
+	border-left: 10px solid $snapGreen;
+	font-style: italic;
+	margin: 1em 2em 0 2em;
+	padding: 0.5em 10px;
+	color: red !important;
+}
+
+
+
+blockquote p {
+  display: inline;
 }
 
 ul, ol {
 	color: $snapDarkGrey;
 }
 
-blockquote {
-  font-size: $font-size-base;
-  border-left: 4px solid lighten($snapGreen, 20%);
-  margin: 2em 3em;
-  padding: 0 0 0 1em;
-}
+

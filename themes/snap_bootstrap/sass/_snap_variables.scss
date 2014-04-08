@@ -3,7 +3,6 @@ $lato: "Lato", "Arial", "Helvetica", "Lucida Grande", "Gill Sans", "Verdana", sa
 $lekton: "Lekton", Menlo, "DejaVu Sans Mono", monospace, sans-serif;
 
 $font-family-sans-serif:  $lato;
-$font-family-serif:       Georgia, "Times New Roman", Times, serif !default;
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 $font-family-monospace:   $lekton;
 $font-family-base:        $font-family-sans-serif !default;
@@ -25,6 +24,6 @@ $blur: .2rem;
 $shadow-color: rgba(0,0,0,.5);
 
 // Navbar defaults.
-$navbar-default-color:             #777;
+$navbar-default-color:             $snapDarkGrey;
 $navbar-default-bg:                #fff;
 $navbar-default-border:            transparent;
