@@ -1,0 +1,23 @@
+
+#charts {
+
+  .buttonset, .helpbuttons {
+    display: inline-block;
+  }
+
+  #variable_selections {
+    p {
+      margin: 0;
+      padding: 0;
+    }
+
+    #comm_select_wrapper {
+      padding-bottom: 1em;
+    }
+  }
+
+  .extent img {
+    width: 100%;
+  }
+
+}
