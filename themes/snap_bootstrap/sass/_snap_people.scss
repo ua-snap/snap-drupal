@@ -1,0 +1,12 @@
+/* People */
+h2.block-title {
+	color: $snapDarkGrey;
+	background-color: lighten($snapGrey, 15%);
+	padding-left: .1em;
+}
+
+a.username {
+	font-size: 1.2em;
+	font-weight: 300;
+	text-align: center;
+}

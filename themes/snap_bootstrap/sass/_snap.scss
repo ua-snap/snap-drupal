@@ -6,6 +6,7 @@
  */
 
  @import "snap_variables";
+@import "mixins";
  @import "snap_projects";
  @import "snap_collaborators";
  @import "snap_navigation";
@@ -13,6 +14,7 @@
  @import "snap_footer";
  @import "snap_home";
  @import "snap_page";
+@import "snap_people";
 
  #pageWrapper {
   background-color: lighten($snapGreen, 50%);
@@ -37,6 +39,7 @@ a {
 	
 	&:hover,
 	&:focus {
+		@include link-transition;
 		color: $snapGreen;
 	}
 }
@@ -85,17 +88,25 @@ blockquote {
 	font-style: italic;
 	margin: 1em 2em 0 2em;
 	padding: 0.5em 10px;
-	color: red !important;
-}
-
-
-
-blockquote p {
-  display: inline;
+	color: red;
 }
 
 ul, ol {
 	color: $snapDarkGrey;
+}
+
+img {
+	border: $border;
+	border-radius: $border-radius;
+	padding: .3em;
+
+	&.pull-left {
+		margin: 0 1.5em .5em 0;
+	}
+
+	&.pull-right {
+		margin: 0 0 .5em 1.5em;
+	}
 }
 
 

@@ -21,20 +21,21 @@ body.front {
 a.name.navbar-brand { display: none; }
 
 a.logo img {
-    height: 3em;
+    height: 4em;
+	border: none;
 }
 
 header#navbar {
     padding: 0;
-    margin: 1em auto 1em;
+    margin: .4em auto .4em;
     nav {
         
         ul {
-            margin-top: .75ex;
+            margin-top: 1.5ex;
             &.menu.nav {
                 @extend .pull-right;
                 li {
-                    font-size: $font-size-base;
+                    font-size: 1em;
                     text-transform: uppercase;
                 }
 
