@@ -1,12 +1,72 @@
-/* People */
+/* People -- styles for main page with the grid of everyone, and individual peeps' pages */
+
 h2.block-title {
 	color: $snapDarkGrey;
 	background-color: lighten($snapGrey, 15%);
 	padding-left: .1em;
+	font-weight: 300;
 }
 
 a.username {
 	font-size: 1.2em;
+}
+
+table.views-view-grid.cols-5 {
+	
+	td {
+		padding: 1em;
+		vertical-align: text-top;
+		
+		p {
+			line-height: 1.3em;
+			letter-spacing: .02em;
+			font-size: .94em;
+		}
+		
+		img {
+			border: $border;
+			border-radius: $border-radius;
+			@include shadow($x, $y, $blur, $shadow-color);
+			margin-bottom: .5em;
+		}
+	}
+}
+
+.profile img {	/*main square user picture */
+	border: $border;
+	border-radius: $border-radius;
+	@include shadow($x, $y, $blur, $shadow-color);
+	float: left;
+	margin: .8em 1.5em 1em 0;	
+	
+	&.biopic {	/*picture found within the biography section */
+		float: right;
+		margin: 0 0 1em 1.5em;
+	}
+}
+
+.field-name-field-title p {
+	font-size: 2em;
+	color: $snapDarkGrey;
 	font-weight: 300;
-	text-align: center;
+	margin-bottom: 1em;
+}
+
+.field-name-field-email,
+.field-name-feld-phone {
+	font-style: italic;
+	margin: 0;
+}
+
+.field-name-field-biography p {
+	margin: .8em 0 0 0;
+}
+
+.file img {	/*hides the file icon for downloadable CVs */
+	display: none;
+}
+
+.file a {
+	display: inline-block;
+	margin: 1em 0 0 0;
 }

@@ -1,14 +1,14 @@
-/* Only on the front page, deal with certain styles for the sticky bar. */
+/* body. front is only on the front page. Remainder of styles apply to nav on other pages. */
 body.front {
 
     .navbar-form input, .form-inline input {
         width:auto;
-    }
-
+	}
+	
     #navbar-sticky {
         background-color: white;
-        border-top: 1px solid #888;
-        border-bottom: 1px solid #888;
+        border-top: 1px solid $snapDarkGrey;
+        border-bottom: 1px solid $snapDarkGrey;
         &.affix {
             position: fixed;
             top: 0;
@@ -18,6 +18,8 @@ body.front {
     }
 }
 
+
+
 a.name.navbar-brand { display: none; }
 
 a.logo img {
@@ -26,8 +28,16 @@ a.logo img {
 }
 
 header#navbar {
-    padding: 0;
+	padding: 0;
     margin: .4em auto .4em;
+	
+	&.affix {
+		position: fixed;
+		top: 0;
+		width: 100%;
+		z-index:10;
+	} 
+	
     nav {
         
         ul {
