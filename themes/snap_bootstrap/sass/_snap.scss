@@ -15,9 +15,14 @@
  @import "snap_home";
  @import "snap_page";
 @import "snap_people";
+@import "snap_projects";
 
  #pageWrapper {
   background-color: lighten($snapGreen, 50%);
+}
+
+.main-container.container {
+	margin-bottom: 2em;
 }
 
 html {
@@ -45,25 +50,6 @@ a {
 }
 
 /* typography  */
-h1, h2, h3, h4 {
-	color: $snapGreen;
-	margin-top: 1.5em;
-	
-	&.page-header {
-		color: $snapGreen;
-		font-weight: 400;
-		margin: 1em 0 0 0;
-	}
-}
-
-h5, h6 {
-	color: black;
-	letter-spacing: .05em;
-	text-transform: uppercase;
-	background-color: lighten($snapGreen, 40%);
-	padding: .05em;
-	margin-top: 2em;
-}
 
 p {
 	color: $snapDarkGrey;
@@ -88,31 +74,11 @@ p {
 	}
 }
 
-blockquote {
-	background: lighten($snapGrey, 20%);
-	border-left: 10px solid $snapGreen;
-	font-style: italic;
-	margin: 1em 2em 0 2em;
-	padding: 0.5em 10px;
-	color: red;
-}
-
 ul, ol {
 	color: $snapDarkGrey;
 }
 
-img {
-	border: $border;
-	border-radius: $border-radius;
-	padding: .3em;
 
-	&.pull-left {
-		margin: 0 1.5em .5em 0;
-	}
 
-	&.pull-right {
-		margin: 0 0 .5em 1.5em;
-	}
-}
 
 

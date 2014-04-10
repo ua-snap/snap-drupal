@@ -11,6 +11,7 @@
 @import "snap_variables"; // must come before we import Bootstrap, to override its variables
 @import "mixins";
 @import "snap";
+@import "snap_page";
 @import "bootstrap.scss";
 @import "bootstrap_theme_overrides";
 

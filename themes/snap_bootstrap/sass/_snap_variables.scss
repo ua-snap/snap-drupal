@@ -27,3 +27,14 @@ $shadow-color: rgba(0,0,0,.5);
 $navbar-default-color:             $snapDarkGrey;
 $navbar-default-bg:                #fff;
 $navbar-default-border:            transparent;
+
+//Headings
+$font-size-h1: 2.4em;
+$font-size-h2: ($font-size-h1 * .85);
+$font-size-h3: ($font-size-h1 * .7);
+$font-size-h4: ($font-size-h1 * .65); 
+$font-size-h5: ($font-size-h1 * .4); 
+$font-size-h6: ($font-size-h1 * .35); 
+
+//Typography
+$line-height: 1.4em;
