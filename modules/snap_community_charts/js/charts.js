@@ -200,7 +200,6 @@ snapCharts = {
 
 	// Prepare the chart for export.  The `type` parameter is expected to be a mime-type.
 	exportChart: function(type) {
-console.log(snapCharts);
 		snapCharts.refreshState();
 		snapCharts.chart.exportChart({
 			type: type
@@ -436,7 +435,7 @@ console.log(snapCharts);
 		// Invoke the chart, interpolating some per-variable configs from above as needed
 		snapCharts.chart = new Highcharts.Chart({
 			
-			'font-family': 'Lucida-Grande',
+			'font-family': 'Lato',
 
 			yAxis: yAxis, // defined above
 			

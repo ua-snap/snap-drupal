@@ -2,6 +2,7 @@
 
 require_once 'src/Config.php';
 require_once 'src/ChartsExporter.php';
+error_reporting(E_ALL);
 
 try {
 	
