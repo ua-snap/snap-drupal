@@ -2,11 +2,11 @@
 .footer-wrapper {
   border-top: 3px solid #fff;
   border-bottom: 1em solid $snapGreen;
-  
-  background-color: rgb(224, 225, 226);
+  padding: 0 5em 0 5em;
+  background-color: lighten($snapGrey, 10%);
   
   footer {
-    padding: 0 0 4em;
+    padding: 0 0 5em;
     ul {
       margin: 0; padding: 0;
       list-style-type: none;

@@ -1,4 +1,7 @@
 /* Only on the front page, deal with certain styles for the sticky bar. */
+@import "_snap_variables.scss";
+@import "_mixins.scss";
+
 body.front {
 
     .navbar-form input, .form-inline input {
@@ -6,9 +9,9 @@ body.front {
     }
 
     #navbar-sticky {
-        background-color: white;
-        border-top: 1px solid #888;
-        border-bottom: 1px solid #888;
+		background-color: white;
+        border-top: 1px solid $snapDarkGrey;
+        border-bottom: 1px solid $snapDarkGrey;
         &.affix {
             position: fixed;
             top: 0;
@@ -21,16 +24,16 @@ body.front {
 a.name.navbar-brand { display: none; }
 
 a.logo img {
-    height: 3em;
+    height: 4em;
 }
 
 header#navbar {
     padding: 0;
-    margin: 1em auto 1em;
+    margin: .5em auto .5em;
     nav {
         
         ul {
-            margin-top: .75ex;
+            margin-top: 2ex;
             &.menu.nav {
                 @extend .pull-right;
                 li {
