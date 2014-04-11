@@ -392,10 +392,16 @@ snapCharts = {
 			min: snapCharts.unitConvertedData.minimum,
 			max: snapCharts.unitConvertedData.maximum,
 			title: {
-				text: snapCharts.yAxisTitle
+				text: snapCharts.yAxisTitle,
+				style: {
+					fontFamily: 'Lato'
+				}
 			},
 			labels: {
-				enabled: true
+				enabled: true,
+				style: {
+					fontFamily: 'Lato'
+				}
 			}
 		};
 
@@ -404,7 +410,10 @@ snapCharts = {
 		if(1 === snapCharts.data.dataset) {
 
 			Highcharts.setOptions({
-				colors: ['#999999', '#FECC5C', '#999999', '#FD8D3C', '#999999', '#F03B20', '#999999', '#BD0026', '#999999']
+				colors: ['#999999', '#FECC5C', '#999999', '#FD8D3C', '#999999', '#F03B20', '#999999', '#BD0026', '#999999'],
+				style: {
+					fontFamily:'Lato, Lato-Regular'
+				}
 			});
 
 			// Add a horizontal line indicating freezing point
@@ -417,6 +426,7 @@ snapCharts = {
 					text: snapCharts.unitConversionMapper(32) + '°',
 					align: 'right',
 					style: {
+						fontFamily: 'Lato',
 						fontSize: '10px'
 					}
 				}
@@ -427,15 +437,16 @@ snapCharts = {
 
 			// Precipitation
 			Highcharts.setOptions({
-				colors: ['#999999', '#BAE4BC', '#999999', '#7BCCC4', '#999999', '#43A2CA', '#999999', '#0868AC', '#999999']
+				colors: ['#999999', '#BAE4BC', '#999999', '#7BCCC4', '#999999', '#43A2CA', '#999999', '#0868AC', '#999999'],
+				style: {
+					fontFamily: 'Lato, Lato-Regular'
+				}
 			});
 
 		}
 
 		// Invoke the chart, interpolating some per-variable configs from above as needed
 		snapCharts.chart = new Highcharts.Chart({
-			
-			'font-family': 'Lato',
 
 			yAxis: yAxis, // defined above
 			
@@ -449,7 +460,7 @@ snapCharts = {
 
 			tooltip: {
 				formatter: function() {
-					return '<span style="color: #999;">' + this.x + ' ' + this.series.name + '</span><br/><span>' + this.y + ' ' + snapCharts.unitName + '</span>';
+					return '<span style="color: #999; font-family: Lato">' + this.x + ' ' + this.series.name + '</span><br/><span>' + this.y + ' ' + snapCharts.unitName + '</span>';
 				}
 			},
 			
@@ -462,6 +473,7 @@ snapCharts = {
 					align: 'center'
 				},
 				style: {
+					'fontFamily':'Lato, Lato-Regular',
 					'fontSize' : '9px',
 					'width': '750px',
 					'padding': '10px'
@@ -471,7 +483,11 @@ snapCharts = {
 			
 			legend: {
 				verticalAlign: top,
-				y: 40
+				y: 40,
+
+				labelFormatter: function() {
+					return '<span style="font-family: Lato; baseline-shift: .1ex">' + this.name + '</span>';
+				}
 			},
 			
 			plotOptions: {
@@ -489,16 +505,32 @@ snapCharts = {
 			
 			title: {
 				y: 10,
+				style: {
+					fontFamily: 'Lato'
+				},
 				text: snapCharts.data.title
 			},
 
 			subtitle: {
 				y: 30,
+				style: {
+					fontFamily: 'Lato'
+				},
 				text: snapCharts.data.subtitle
 			},
 
 			xAxis: {
-				categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+				categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+				labels: {
+					style: {
+						fontFamily: 'Lato'
+					}
+				},
+				title: {
+					style: {
+						fontFamily: 'Lato'
+					}
+				}
 			},
 
 			exporting: {
