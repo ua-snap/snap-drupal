@@ -213,3 +213,20 @@ Still in the "Manage Display" tab of Projects, create a new field group with lab
 Now we configure the "Teaser" view of the Project so it can be used on the page that lists all projects.  Structure &#x2192; Content Types &#x2192; edit Projects &#x2192; Manage Display tab &#x2192; Teaser subtab button.  Drag Project Image field above Description, change "Label" to Hidden, change format to Image Link formatter, click the settings gear, change "Link image to" Content, click Update then Save.
 
 Finally, we create the view for the projects page.  Go to Structure &#x2192; Views &#x2192; Add new view.  View name "Projects", show content of type Project sorted by title, uncheck "Create a Page", check Create a Block, display format Teaser with links / without comments, 100 items per page, don't enable the pager.  On the next configuration page, under the "Fields" section, verify that it shows both "Website" and "Collaborator Logo" fields; click the "Website" field and configure it to be "Hidden," save, then click the "Collaborator Logo" field and change the Formatter to "Image Link Formatter".  Add it to the existing Projects page by going to the admin menu Structure &#x2192; Blocks and drag the View: Projects block into the Content area; click to edit it and put &lt;none&gt; for the title, then change it to only display on page 'projects'.  Save.
+
+### Setting up People
+
+Set up the taxonomy for staff categories.  Main menu Structure > Taxonomy > Add Vocabulary.  Name it "Staff Categories".  Add four terms: Leaders, Faculty, Staff, Alumni.
+
+Go to Configuration > (People section) Account settings, then click on the "Manage Fields" tab at the upper-right.  Note, those tabs may be hidden by the Shortcuts toolbar; if so, disable the Shortcuts module.  Add a new field "Title", type Text, make it required & leave other settings default.  Add new field "Biography", type Long Text, make it required, change text processing to "Filtered Text" and leave other settings default.  Add a new field "Display Email", type Text, make it required and leave other settings default.  Add new field "Staff Category", type Term Reference, widget default (check box/etc); on next screen, configure field to Vocabulary Staff Categories; make field required and default to Staff for convenience; leave other settings default.  
+
+Switch to the "Manage Display" tab, ensure Title, Biography and Display Email are visible, and move the History and Staff Category blocks to Hidden.  Switch all labels to "Hidden."  Save.
+
+Now we create block views for each staff category.  For each staff category: Structure > Views > Create View.  Title "Staff Category - [category name]", ex. "Staff Category Leadership".  Show content of type Users, unsorted; create a block, not a page.  Save & Continue editing.  Configure the view this way:
+
+ 1. Title: set to [staff category], ex. Leadership.
+ 1. Filter Criteria > Add > User: Staff Category > Apply > Selection type Dropdown > Continue > Operator Is One Of, pick [staff category name], ex. Leadership, do not expose filter to visitors, Apply.
+ 1. Fields > Add > User: Picture > Apply.  Uncheck "Create a Label," leave other things default.  Apply. 
+ 1. Fields > Add widget, select Rearrange > drag Picture to be above Name.  Apply.
+ 1. Save the view.
+ 1. Structure > Blocks > move View: Staff Category [category] to Content block, Save Blocks then click Configure for that block, Show Block On Specific Pages -- only the listed page: [target page for people].
