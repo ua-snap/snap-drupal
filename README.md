@@ -222,6 +222,11 @@ Finally, we create the view for the projects page.  Go to Structure &#x2192; Vie
 
 ### Setting up Community Charts
 
-Community Charts is a standalone webapp that is set up to run from the ```modules``` directory, though it's *not* a Drupal module&mdash;it's there so it's in our source control.
+Community Charts is a standalone webapp that is set up to run from the ```modules``` directory, though it's *not* a Drupal module&mdash;it's there so it's in our source control; implementing as a Drupal module would conflict with a number of existing libraries and would require some reworking of the source.
 
- 1. 
+This non-module dwells in ```sites/all/modules/snap_community_charts```.  All steps below need to be done on the relevant Drupal server/Vagrant instance.
+
+ 1. Database: In MySQL, create a new database and user, then load the ```etc/charts.sql.bz2``` SQL dump into that user.  Assign sufficient permissions to the user to allow read access from localhost.
+ 1. Fonts: Unpack and copy all the TrueType fonts from ```etc/Lato.zip``` into the ```/usr/share/fonts``` directory, then run ```fc-cache``` to rebuild the font cache.  Use ```fc-list``` to verify that various Lato fonts have been installed.
+ 1. Scratch and web-visible directories: create directory/directories that will be used for scratch space as well as the location that Apache will serve the generated files from.  They can be the same directory.
+ 1. Configuration.  Copy the src/Config.php.example file and update the database configuration and the directory locations from the prior step.

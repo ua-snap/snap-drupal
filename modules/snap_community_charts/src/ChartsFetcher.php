@@ -84,7 +84,7 @@ class ChartsFetcher {
 		$res = $sth->fetch();
 
 		$title = (1 === $dataset) ? 'Average Monthly Temperature for ' : 'Average Monthly Precipitation for ';
-		$title .= $res['community'].', '.$res['region'];
+		$title .= utf8_encode($res['community']).', '.$res['region'];
 
 		$json = array(
 
@@ -92,7 +92,7 @@ class ChartsFetcher {
 			'dataset' => $dataset,
 			'scenario' => $scenario,
 			'communityId' => $community,
-			'communityName' => $res['community'],
+			'communityName' => utf8_encode($res['community']),
 			'communityRegion' => $res['region'],
 			'communityCountry' => $res['country'],
 			'yAxisTitle' => $yAxisTitle,

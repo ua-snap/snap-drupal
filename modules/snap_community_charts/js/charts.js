@@ -281,7 +281,6 @@ snapCharts = {
 				},
 
 				function(data) {
-
 					snapCharts.data = data;
 					$('#placeholderImage').remove();
 					$('#location').html(": " + snapCharts.data.communityName + ', ' + snapCharts.data.communityRegion);
