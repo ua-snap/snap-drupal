@@ -1,25 +1,70 @@
 /* Styles for project list page */
 #block-views-projects-block {
   .node {
-    margin-bottom: 1em;
-    img {
-      float: left;
-      padding: 0 1em 0 0;
-    }  
+	  margin: 0 0 1em 0;
+	  
+	  img {
+		  display: none;
+	  }
+	  
+	  ul {
+		  margin: .2em 0 0 0;
+	  }
+	  
+	  h2 {
+		font-size: 1.3em;
+		margin: 1.5em 0 0 0;
+		padding: 0;
+	  }
   }
 }
 
 /* Styles for individual project */
 .node-projects:not(.node-teaser) {
-  h2 { display: none; } // hide title display
-  @extend .container;
-  .content {
-    @extend .row;
-    .field-name-body {
-      @extend .col-md-8;
-    }
-    #node_projects_full_group_right_sidebar {
-      @extend .col-md-4;
-    }
-  }
+	
+	h2 { display: none; } // hide title display
+	
+	@extend .container;
+	
+	.content {
+		@extend .row;
+		
+		.field-name-body {
+			@extend .col-md-7;
+		}
+		
+		#node_projects_full_group_right_sidebar {
+			padding: 0 1em .5em 1em;
+			@extend .col-md-5;
+		}
+		
+		 a img {
+			 display: inline;
+			 
+		}
+		
+		table {
+			margin: .5em 0 0 0;
+			padding: 0;
+		
+			th {
+				display: none;
+			}
+			
+			td, td.file {
+				font-size: .9em;
+				padding: 0 .5em 0 .5em;
+				margin: 0;
+				vertical-align: middle;
+				
+				a {
+					margin: 0;
+				}
+			}
+		}
+	}
 }
+
+
+
+

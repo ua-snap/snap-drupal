@@ -6,6 +6,7 @@
  */
 
  @import "snap_variables";
+@import "mixins";
  @import "snap_projects";
  @import "snap_collaborators";
  @import "snap_navigation";
@@ -14,66 +15,66 @@
  @import "snap_home";
  @import "snap_page";
  @import "snap_data_downloads";
+@import "snap_people";
+@import "snap_projects";
 
  #pageWrapper {
   background-color: lighten($snapGreen, 50%);
 }
 
+.main-container.container {
+	margin-bottom: 2em;
+}
+
 html {
-  font-family: $lekton;
+  font-family: $lato;
 }
 
 /* Links  */
 a {
-  text-decoration: none;
-
-  &:link {
-    font-weight: bold;
-    color: $snaplink;
-  }
-  
-  &:visited {
-    color: $linkvisited;
-  }
-  &:hover,
-  &:focus {
-   color: $snapGreen;
- }
+	text-decoration: none;
+	
+	&:link {
+		font-weight: bold;
+		color: $snaplink;
+	}
+	
+	&:visited {
+		color: $linkvisited;
+	}
+	
+	&:hover,
+	&:focus {
+		@include link-transition;
+		color: $snapGreen;
+	}
 }
 
 /* typography  */
-h1, h2, h3, h4, h5, h6 {
-  color: $snapGreen;
-}
-
-h5, h6 {
-	color: black;
-	letter-spacing: .05em;
-	text-transform: uppercase;
-	background-color: lighten($snapGreen, 40%);
-	padding: .05em;
-}
 
 p {
 	color: $snapDarkGrey;
+	font-size: 1.1em;
+	line-height: 1.5em;
 	
 	&.code {
 		font-family: $lekton;
 		color: black;
 		background-color: lighten($snapGrey, 12%);
+		display: inline;
+		font-size: .9em;
 	}
 	abbr {
 		background: lighten($snapGreen, 50%);
+	}
+
+	q {		//for short, inline quotes
+		color: $snapGreen;
+		font-style: italic;
+		font-size: 1.1em;
 	}
 }
 
 ul, ol {
 	color: $snapDarkGrey;
-}
-
-blockquote {
-  font-size: $font-size-base;
-  border-left: 4px solid lighten($snapGreen, 20%);
-  margin: 2em 3em;
-  padding: 0 0 0 1em;
 }
