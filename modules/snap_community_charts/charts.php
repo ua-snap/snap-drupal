@@ -35,7 +35,8 @@
 
             ?>
 
-            <div class="container">
+            <!-- fixed width is important because otherwise variability bars break on chart resize. -->
+            <div class="container" style="width: 950px !important;">
 
                 <h1 id="chartsTitle">Community Charts<span id="location"></span></h1>
 
@@ -140,18 +141,19 @@
                     </p>
                 </div>
         </div>
+    </div>
 </div>
                 
         <div id="exportDialog" style="display: none;">
 
             <fieldset>
-                <legend>High&ndash;resolution image for print</legend>
-                <button id="export_hires_png">Download high-resolution PNG (600 dpi, 10" wide)</button>
+                <legend>Link</legend>
+                <input style="width: 100%" readonly="readonly" id="export_link" value="linky linky" />
             </fieldset>
 
             <fieldset>
-                <legend>Low&ndash;resolution image for web</legend>
-                <button id="export_lowres_png">Download low-resolution PNG (800&times;350px)</button>
+                <legend>High&ndash;resolution image for print</legend>
+                <button id="export_hires_png">Download high-resolution PNG (600 dpi, 10" wide)</button>
             </fieldset>
 
             <fieldset>

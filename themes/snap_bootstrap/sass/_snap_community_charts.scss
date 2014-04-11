@@ -6,9 +6,14 @@
   }
 
   #variable_selections {
+    font-size: $font-size-small;
     p {
       margin: 0;
       padding: 0;
+    }
+
+    #comm_select {
+      width: 100%;
     }
 
     #comm_select_wrapper {
@@ -18,6 +23,14 @@
 
   .extent img {
     width: 100%;
+  }
+
+  #exportDialog {
+    legend {
+      margin: 1em 0 0; padding: 1em 0 0;
+      border: none;
+      font-size: $font-size-h4;
+    }
   }
 
 }

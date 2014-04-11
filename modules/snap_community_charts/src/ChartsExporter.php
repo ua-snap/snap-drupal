@@ -15,18 +15,11 @@ class ChartsExporter {
 	// which is interpolated via sprintf() with the appropriate temp files / static overlay files.
 	public $featureMap = array(
 
-		'png/lowres' => array(
-			'mime' => 'image/png',
-			// source SVG, temp PNG => composite lowres gif + temp PNG => output
-			// %s %s %s %s %s => Config::$temp/[[md5sum]].svg Config::$temp/[[filename.png.src]] Config::$images Config::$temp[[filename.png]] Config::$charts/filename.png
-			'command' => 'convert %s -quality 90 -resize 800 %s; composite %s/charts_overlay_snap_acronym_lowres.gif -gravity NorthWest -geometry +9+299 %s %s',
-			'extension' => '_lowres.png'
-		),
 		'png/hires' => array(
 			'mime' => 'image/png',
 			// source SVG, temp PNG => composite hires gif + temp PNG => output
 			// %s %s %s %s %s => Config::$temp/[[md5sum]].svg Config::$temp/[[filename.png.src]] Config::$images Config::$temp[[filename.png]] Config::$charts/filename.png
-			'command' => 'convert -density 600 %s %s; composite %s/charts_overlay_snap_acronym_hires.gif -gravity Northwest -geometry +50+2895 %s %s',
+			'command' => 'convert -density 600 %s %s; composite %s/snap-hires.png -gravity Northwest -geometry +50+2895 %s %s',
 			'extension' => '_hires.png'
 	  	),
 	  	'svg' => array(
@@ -129,7 +122,6 @@ class ChartsExporter {
 			
 			switch($this->type) {
 				case 'png/hires': // fallthru
-				case 'png/lowres':
 					$command = sprintf($this->featureMap[$this->type]['command'], $tempSvg, $chartTemp, Config::$images, $chartTemp, $chart);
 					break;
 				

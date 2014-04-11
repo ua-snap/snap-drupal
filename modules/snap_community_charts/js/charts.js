@@ -107,9 +107,6 @@ $( function() {
 			});
 			snapCharts.exportChart('png/hires');
 		});
-		$('#export_lowres_png').button().click( function(e) {
-			snapCharts.exportChart('png/lowres');
-		});
 		$('#export_svg').button().click( function(e) {
 			snapCharts.exportChart('svg');
 		});
