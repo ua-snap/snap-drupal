@@ -1,0 +1,37 @@
+.dataAccordionWrapper .dataAccordion {
+  
+  font-weight: 400;
+  font-family: $lato;
+
+  .ui-accordion-content {
+    padding: 1ex;
+  }
+
+  h3 {
+    border: none;
+    background: #fff none;
+    padding: 1ex 0;
+    font-size: $font-size-h4;
+    font-weight: 300;
+
+    &.ui-accordion-header-active {
+      background-color: $brand-info;
+      span {
+        visibility: normal; 
+      }
+    }
+    span {
+      display: inline-block;  
+      visibility: hidden;  
+    }
+    a {
+    display: inline-block;
+    }
+    &:hover {
+      background-color: $brand-info;
+      span {
+        visibility: normal;
+      }
+    }
+  }
+}
