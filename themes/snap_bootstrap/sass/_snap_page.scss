@@ -1,4 +1,19 @@
 div.node-page {
+	ul, ol {
+		color: $color;
+		font-size: $font-size;
+		
+		li {
+			margin: 0 5em .5em 0;
+			
+			li {
+				margin: .5em 5em 0 0;
+			}
+		}
+	}
+	
+
+	
 	a {
 		&:focus, &:hover {
 		@include link-transition;
@@ -23,6 +38,27 @@ div.node-page {
 		&.pull-right {
 			margin: 0 0 .5em 1.5em;
 		}
+	}
+	
+	.panel.panel-info.pull-right {
+		width: 250px;
+		clear: right;
+		margin: 0 0 2em 2em;
+		padding: 1em;
+		border-radius: $border-radius;
+		border: $border;
+		background: lighten($snapGreen, 45%);
+		@include shadow($x, $y, $blur, $shadow-color);
+	}
+
+	.panel-info > .panel-heading {
+		color: lighten($snapGreen, 50%);
+		line-height: 1.2em;
+		font-size: 1.4em;
+		background-color: $snapGreen;
+		margin: 0 0 1em 0;
+		border-radius: $border-radius;
+		border: $border;
 	}
 }
 
@@ -59,3 +95,4 @@ table.expertise {
 		}
 	}
 }
+

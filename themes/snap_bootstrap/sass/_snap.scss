@@ -73,8 +73,11 @@ p {
 		font-style: italic;
 		font-size: 1.1em;
 	}
+	
+	&.intro {
+		font-weight: 300;
+		font-size: 1.5em;
+	}
 }
 
-ul, ol {
-	color: $snapDarkGrey;
-}
+

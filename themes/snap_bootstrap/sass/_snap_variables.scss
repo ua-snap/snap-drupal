@@ -22,19 +22,25 @@ $x: .1rem;
 $y: .1rem;
 $blur: .2rem;
 $shadow-color: rgba(0,0,0,.5);
+$box-shadow: $x $y $blur $shadow-color;
 
 // Navbar defaults.
 $navbar-default-color:             $snapDarkGrey;
 $navbar-default-bg:                #fff;
 $navbar-default-border:            transparent;
 
+//Typography
+$line-height: 1.4em;
+$font-size: 16px;		//make absolute unit to avoid nesting nightmares
+$color: $snapDarkGrey;
+
 //Headings
-$font-size-h1: 2.4em;
+$font-size-h1: 36px;
 $font-size-h2: ($font-size-h1 * .85);
 $font-size-h3: ($font-size-h1 * .7);
 $font-size-h4: ($font-size-h1 * .65); 
 $font-size-h5: ($font-size-h1 * .4); 
 $font-size-h6: ($font-size-h1 * .35); 
 
-//Typography
-$line-height: 1.4em;
+
+
