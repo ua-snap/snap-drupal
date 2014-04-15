@@ -1,0 +1,40 @@
+/*
+Customizations to override some styling of jQueryUI.
+
+This is done so that the accordion on the Data page is more readable, but without impacting
+the use of the standard theme on other pages where more "buttony" (as opposed to "texty")
+interactions are more appropriate.
+
+*/
+.ui-accordion h3.ui-accordion-header {
+	background: #fff !important;
+	border: none;
+}
+
+.ui-accordion h3.ui-accordion-header.ui-state-hover {
+	background-color: #fbffd0 !important;
+}
+
+.ui-accordion h3.ui-accordion-header.ui-state-active {
+	background-color: #fbffd0 !important;
+	border: 1px solid #eee;
+}
+
+.ui-accordion h3.ui-accordion-header a {
+	color: #000 !important;
+}
+
+.ui-accordion .ui-accordion-header a {
+	font: 16px "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Verdana, Tahoma, sans-serif;
+}
+.ui-accordion .ui-state-default.ui-state-focus a { 
+	color: #000 !important;
+}
+.ui-accordion .ui-accordion-content { 
+	border: none;
+	padding: 1em 3.3em;
+}
+.ui-accordion .ui-accordion-content-active { 
+	border: 1px solid #eee;
+	border-top: 1px solid #f8f8f8;
+}

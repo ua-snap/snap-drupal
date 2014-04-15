@@ -1,0 +1,305 @@
+#mapMenu {
+	color: #333333;
+}
+#mapMenu:hover {
+
+}
+#mapMenu a {
+	color: #454545;
+}
+#mapMenu a:hover {
+	color: #7a737c;
+}
+
+.menuOption:hover > .menuSpacer {
+	opacity: 1.0;
+}
+.menuSpacer {
+	margin: 0;
+	height: 10px;
+	border-top: 1px solid #707A7C;
+	opacity: 0.5;
+	background: transparent url("/images/map-field-triangle.png") center top no-repeat;
+}
+
+.menuSpacerToggle {
+	background-color: #707A7C;
+	background-image: none;
+	opacity: 1.0 !important;
+	z-index: 25;
+	height: 10px;
+}
+
+#map_wrapper {
+	position: relative; /* to position legend */
+	padding: 0 10px;
+}
+
+#map_canvas {
+	min-height: 350px;
+	margin: auto;
+	z-index: 0;
+	box-shadow: 0px 0px 4px #888;
+}
+
+#map_header {
+	margin: 15px auto 5px;
+	padding: 0 5px;
+	min-height: 80px;
+}
+
+#map_footer {
+	margin: auto;
+	padding: 0 5px 10px;
+}
+
+.map_bar {
+	padding-left: 1ex;
+	border-radius: 3px;
+	height: 36px;
+	background-color: #707a7c;
+	box-shadow: 2px 2px 2px #888;
+	z-index: 100;
+	line-height: 36px;
+	position:relative;
+}
+.map_bar a {
+	color: #ddd;
+}
+.map_bar a:hover {
+	color: #fff;
+}
+.map_bar img {
+	vertical-align: middle;
+}
+
+.map_bar .buttons a {
+	color: #ddd;
+	display: inline-block;
+	padding-left: 1em;
+	text-shadow: 1px 1px #333;
+}
+
+.map_bar .buttons a:hover {
+	color: white;
+}
+
+#legend_wrapper {
+	display: none;
+	font-size: 12px;
+	position: absolute;
+	top: 10px;
+	left: 20px;
+	border: 2px solid #888;
+	border-radius: 6px;
+	position: absolute;
+	background-color: rgba(255, 255, 255, .8);
+	padding: 1em;
+}
+
+#legend_wrapper table {
+	border-collapse: collapse;
+}
+
+#legend_wrapper h4 {
+	text-align: center;
+	padding: 1ex;
+	margin: 0 0 1ex 0;
+}
+
+#legend_wrapper td {
+	min-width: 2em;
+	vertical-align: middle;
+	white-space: nowrap;
+}
+
+#legend_wrapper td + td {
+	padding-left: 1ex;
+	white-space: nowrap;
+}
+
+#map_logo {
+	float: left;
+	display: inline-block;
+	padding: 0 0 0 7px;
+}
+
+#model_menu {
+	margin: 15px 0 0 175px;
+	padding: 10px 0;
+}
+
+#snap_name {
+	color: #505a5c; margin-left: 30px; font-size: 20px; margin-top: 40px;
+}
+
+#model_menu > p {
+	color: #444; font-size: 12px;
+	margin: 0;
+}
+
+#mapMenu h4 {
+	margin: 1ex 0 0;
+	padding: 0 0 .25ex 0;
+	font-size: 18px;
+	font-weight: normal;
+	cursor: pointer;
+}
+
+#mapMenu .wrapper {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.menuOptions {
+
+	position: absolute;
+	background: white;
+	z-index: 500;
+	border: 1px solid #666;
+	margin: 0 0 0 -40px;
+	padding: 0;
+	width: 600px;
+	display: none;
+	box-shadow: 0px 0px 2px #707A7C;
+	
+}
+
+.menuOptions .descriptions {
+	position: absolute;
+	right: 0;
+	width: 275px;
+	background: #eee;
+	height: 100%;
+	padding: 0;
+}
+
+.descriptions p {
+	padding: 8px;
+}
+
+.menuOptions ul {
+	padding: 5px;
+	width: 315px;
+	margin: 0;
+	list-style-type: none;
+	z-index: 1000;
+}
+
+.menuOptions li {
+	padding: 3px;
+	color: #06c;
+	cursor: pointer;
+}
+
+.menuOptions li.active {
+	background-color: #fbffd0;
+}
+
+.menuOptions li hr {
+	border: 1px solid #ccc;
+	color: #ccc;
+}
+
+.menuOptions li:hover {
+	background-color: #eee;
+}
+
+.menuOptions p a {
+	color: #0066cc !important;
+}
+
+#map_menu_bar {
+	clear: both;
+	margin: 0 5px;
+}
+
+#map_menu_bar .horiz_bar_right {
+	box-shadow: none;
+}
+
+#map_menu_bar .social {
+	z-index: 1000;
+	height: 36px;
+	padding: 10px !important;
+	line-height: 2;
+}
+
+#map_menu_bar .sharewrapper {
+	padding: 2px 8px 4px;
+}
+
+#textLinks {
+	float: left; margin-left: 20px; font-size: 20px;
+}
+
+
+
+
+#shareBlock {
+	float: right; margin-left: 20px; font-size: 20px; height: 38px; border-left: 4px solid #ffffff; background-color: #97A93A;
+}
+
+#shareBlock .addthis_button {
+	color: #fff;
+}
+
+#shareBlock img {
+	margin-left: 20px; margin-right: 20px;
+}
+
+
+
+
+#exportBlock {
+	float: right; margin-left: 20px; font-size: 14px;
+}
+
+#exportBlock span a {
+	color: #ddd;
+	text-shadow: 1px 1px #333;
+	margin-right: 15px;
+}
+
+#exportBlock span a:hover {
+	color: white;
+}
+
+#map_footer #helpBlock {
+	float: left; margin-left: 20px; color: #333333;
+}
+
+#map_footer .logoBlock {
+	position: relative;
+	top: -1px;
+	float: right; margin-right: 20px; color: #333333;
+}
+
+#historicalInterval_content p, #historical_content p {
+	margin: 1ex;
+}
+
+#printHeader {
+	display: none;
+}
+
+#printFooter {
+	display: none;
+}
+
+#printMapTitle {
+	display: none;
+}
+
+#link_box {
+	background-color: #fff;
+	padding: 1ex;
+	display: none;
+	position: absolute;
+	z-index: 100;
+	right: 10px;
+	border: 1px solid #aaa;
+}
+#link_box button {
+	float: right;
+}
