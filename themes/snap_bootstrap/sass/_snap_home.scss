@@ -10,12 +10,13 @@
 		background-color: white;
 		padding: 1em 4em 1em 4em;
 		min-height: 13.7em;
+		@include shadow($x, $y, $blur, $shadow-color);
 		
 		h2 {
 			font-size: 2em;
 			color: $snapDarkGrey;
 			line-height: 1.2;
-			font-weight: 200;
+			font-weight: 300;
 			margin: 0;
 		}
 
@@ -23,31 +24,7 @@
 			font-size: 1.15em;
 			margin: .3em 2.5em 0 0;
 			text-align: left;
-			font-weight: 200;
-		}
-		
-		.drop-shadow {
-			position: relative;
-			width: 90%;
-		}
-		
-		.drop-shadow:before,
-		.drop-shadow:after {
-			content: "";
-			position: absolute;
-			z-index: -1;
-			bottom: 15px;
-			left: 10px;
-			width: 50%;
-			height: 20%;
-			box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
-			transform: rotate(-3deg);
-		}
-		
-		.drop-shadow:after {
-			right: 10px;
-			left: auto;
-			transform: rotate(3deg);
+			font-weight: 300;
 		}
 	}
 	
