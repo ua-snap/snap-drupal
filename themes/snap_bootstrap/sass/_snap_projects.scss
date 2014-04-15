@@ -22,6 +22,23 @@
 /* Styles for individual project */
 .node-projects:not(.node-teaser) {
 	
+	ul, ol {
+	color: $color;
+	font-size: $font-size-base;
+
+	li {
+		margin: 0 5em .5em 0;
+
+		li {
+			margin: .5em 5em 0 0;
+		}
+	}
+}
+	
+	.field-items img {
+		margin: 0 0 1em 1em;
+	}
+	
 	h2 { display: none; } // hide title display
 	
 	@extend .container;
@@ -44,7 +61,7 @@
 		}
 		
 		table {
-			margin: .5em 0 0 0;
+			margin: .5em 0 0 1em;
 			padding: 0;
 		
 			th {
