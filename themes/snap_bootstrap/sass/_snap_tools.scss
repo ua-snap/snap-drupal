@@ -1,0 +1,34 @@
+/* Intro page for data visualization and analysis expertise page  */
+.tools {
+		width: auto;
+		margin: 0 0 1.5em 0;
+		padding: .5em 4em .5em .5em;
+		min-height: 9.5em;
+		@include shadow($x, $y, $blur, $shadow-color);
+		vertical-align: middle;
+		
+		h2 {
+			font-size: 2em;
+			color: $snapDarkGrey;
+			line-height: 1.2;
+			font-weight: 300;
+			margin: .15em 0 0 0;
+		}
+
+		p {
+			font-size: 1.15em;
+			margin: .3em 2.5em 0 0;
+			text-align: left;
+			font-weight: 300;
+		}
+	}
+	
+	.icon {
+		float: left;
+		padding: 0;
+		margin: .55em 0 0 0;
+		width: 15%;
+		height: auto;
+		text-align: center;
+  }
+	
