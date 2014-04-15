@@ -1,0 +1,4 @@
+name = SNAP Data Downloads block
+description = HTML wrapper around SNAP's data download page
+core = 7.x
+

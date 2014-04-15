@@ -9,9 +9,9 @@
 /* Import Sass mixins, variables, Compass modules, etc. */
 
 @import "snap_variables"; // must come before we import Bootstrap, to override its variables
+@import "mixins";
 @import "bootstrap.scss";
 @import "bootstrap_theme_overrides";
-@import "mixins";
 @import "snap";
 
 /* SMACSS theme rules */

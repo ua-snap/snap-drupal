@@ -118,23 +118,17 @@ Move "navigation" block to the "header" section of the site layout.  Disable the
 
 ### Setting up Media module
 
-Download version 7.x-1.4 of the Media module here:
+It turned out to be very important to install a particular version of the Media module (7.x-2.x-dev). The recommended release on the module's page is 7.x-1.4, but this version requires an old version of the File Entity module to work properly, and this older version of File Entity lacked the ability to set custom link labels in Media fields. So:
+
+Download version 7.x-2.x-dev of the Media module here:
 
 https://drupal.org/project/media
 
-Download version 7.x-1.4 of the Chaos Tool Suite here:
+Download version 7.x-2.0-alpha3 of the File Entity module here:
 
-https://drupal.org/project/ctools
+https://drupal.org/project/file_entity
 
-The Media module also requires a particular version of the File Entity module. It comes packaged with the version of the File Entity module it requires.
-
-Extract the Media and Chaos Tool Suite modules into the sites/all/modules directory. Then, move the "file_entity" directory outside of the "media" directory, directly into the "modules" directory. So, you should now have the following directories:
-
-- sites/all/modules/media  
-- sites/all/modules/ctools  
-- sites/all/modules/file_entity
-
-Enable each of these modules in the Drupal administrator interface. Then make sure all content type file and image fields use the Media file selector.
+And download and install any other dependencies as needed.
 
 ### Setting up Date and Link modules
 
@@ -230,3 +224,21 @@ This non-module dwells in ```sites/all/modules/snap_community_charts```.  All st
  1. Fonts: Unpack and copy all the TrueType fonts from ```etc/Lato.zip``` into the ```/usr/share/fonts``` directory, then run ```fc-cache``` to rebuild the font cache.  Use ```fc-list``` to verify that various Lato fonts have been installed.
  1. Scratch and web-visible directories: create directory/directories that will be used for scratch space as well as the location that Apache will serve the generated files from.  They can be the same directory.
  1. Configuration.  Copy the src/Config.php.example file and update the database configuration and the directory locations from the prior step.
+
+### Setting up People
+
+Set up the taxonomy for staff categories.  Main menu Structure > Taxonomy > Add Vocabulary.  Name it "Staff Categories".  Add 5 terms: Leaders, Faculty, Students, Staff, Alumni.
+
+Go to Configuration > (People section) Account settings, then click on the "Manage Fields" tab at the upper-right.  Note, those tabs may be hidden by the Shortcuts toolbar; if so, disable the Shortcuts module.  Add a new field "Title", type Text, make it required & leave other settings default.  Add new field "Biography", type Long Text, make it required, change text processing to "Filtered Text" and leave other settings default.  Add a new field "Display Email", type Text, make it required and leave other settings default.  Add new field "Staff Category", type Term Reference, widget default (check box/etc); on next screen, configure field to Vocabulary Staff Categories; make field required and default to Staff for convenience; leave other settings default.  
+
+Switch to the "Manage Display" tab, ensure Title, Biography and Display Email are visible, and move the History and Staff Category blocks to Hidden.  Switch all labels to "Hidden."  Save.
+
+Now we create block views for each staff category.  For each staff category: Structure > Views > Create View.  Title "Staff Category - [category name]", ex. "Staff Category Leadership".  Show: "Users" sorted by "Unsorted"; create a block, not a page.  Save & Continue editing.  Configure the view this way:
+
+	1.	 Title: set to [staff category], ex. Leadership.
+	2.	 Filter Criteria > Add > User: Staff Category > Apply > Selection type Dropdown > Continue > Operator Is One Of, pick [staff category name], ex. Leadership, do not expose filter to visitors, Apply.
+	3.	 Fields > Add > User: Picture > Apply.  Uncheck "Create a Label," leave other things default.  Apply. 
+	4.	 Fields > Add widget, select Rearrange > drag Picture to be above Name.  Apply.
+	5.	 Save the view.	
+	6.	 Rinse and repeat: create a view for each of the other 4 staff category types (Faculty, Students, Staff, Alumni).
+	7.	 Once all 5 new views have been created: Structure > Blocks > move View: Staff Category [category] (all 5 of them) to Content block, Save Blocks then click Configure for that block, Block title: [category], Show Block On Specific Pages -- only the listed page: [target page for people], Content types / Show block for specific content types, choose people.
