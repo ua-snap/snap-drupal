@@ -199,12 +199,20 @@ p:last-child {
 }
 
 blockquote {
-	background: lighten($snapGrey, 20%);
+	background: lighten($snapGrey, 15%);
 	padding: 0.5em 10px;
-	margin: 0 2em 0 2em;
+	margin: 1.5em 2em 1.5em 2em;
 	border-left: 7px solid $snapGreen;
 	font-style: italic;
 	font-size: 1.2em;
+	
+	p {
+		font-weight: 100;
+	}
+	
+	a {
+		font-size: .8em;
+	}
 }
 	
 	
@@ -334,6 +342,8 @@ table tr.error {
     padding-left: 0;
   }
 }
+
+
 .nav-tabs {
   margin-bottom: 10px;
 }

@@ -1,13 +1,22 @@
 /* Footer */
 .footer-wrapper {
-  border-top: 3px solid #fff;
+  border-top: 3px solid $snapDarkGrey;
   border-bottom: 1em solid $snapGreen;
   padding: 0 5em 0 5em;
   background-color: lighten($snapGrey, 10%);
+	
+	footer.footer.container {
+		margin: 1em 0 0 2em;
+	}
   
   footer {
-    padding: 0 0 5em;
-    ul {
+    padding: 0 0 2em 0;
+	  
+	  p {
+		  font-size: ($font-size-base * .8);
+	  }
+	  
+	  ul {
       margin: 0; padding: 0;
       list-style-type: none;
       display: inline;
@@ -19,7 +28,7 @@
     }
 
     .logos ul li {
-     padding: 0 2em 0 0;
+     padding: 0 0 0 2em;
     }
 
     h3 {
