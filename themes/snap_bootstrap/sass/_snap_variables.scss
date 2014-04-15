@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,400italic,700italic);
+@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700,400italic,700italic);
 $lato: "Lato", "Arial", "Helvetica", "Lucida Grande", "Gill Sans", "Verdana", sans-serif;
 $lekton: "Lekton", Menlo, "DejaVu Sans Mono", monospace, sans-serif;
 
@@ -30,12 +30,12 @@ $navbar-default-bg:                #fff;
 $navbar-default-border:            transparent;
 
 //Typography
-$line-height: 1.4em;
-$font-size: 16px;		//make absolute unit to avoid nesting nightmares
+$line-height-base: 1.42857;
+$font-size-base: 16px;		//make absolute unit to avoid nesting nightmares
 $color: $snapDarkGrey;
 
 //Headings
-$font-size-h1: 36px;
+$font-size-h1: 36px;		//make absolute unit to avoid nesting nightmares
 $font-size-h2: ($font-size-h1 * .85);
 $font-size-h3: ($font-size-h1 * .7);
 $font-size-h4: ($font-size-h1 * .65); 
