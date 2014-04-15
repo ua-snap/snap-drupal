@@ -214,6 +214,17 @@ Now we configure the "Teaser" view of the Project so it can be used on the page 
 
 Finally, we create the view for the projects page.  Go to Structure &#x2192; Views &#x2192; Add new view.  View name "Projects", show content of type Project sorted by title, uncheck "Create a Page", check Create a Block, display format Teaser with links / without comments, 100 items per page, don't enable the pager.  On the next configuration page, under the "Fields" section, verify that it shows both "Website" and "Collaborator Logo" fields; click the "Website" field and configure it to be "Hidden," save, then click the "Collaborator Logo" field and change the Formatter to "Image Link Formatter".  Add it to the existing Projects page by going to the admin menu Structure &#x2192; Blocks and drag the View: Projects block into the Content area; click to edit it and put &lt;none&gt; for the title, then change it to only display on page 'projects'.  Save.
 
+### Setting up Community Charts
+
+Community Charts is a standalone webapp that is set up to run from the ```modules``` directory, though it's *not* a Drupal module&mdash;it's there so it's in our source control; implementing as a Drupal module would conflict with a number of existing libraries and would require some reworking of the source.
+
+This non-module dwells in ```sites/all/modules/snap_community_charts```.  All steps below need to be done on the relevant Drupal server/Vagrant instance.
+
+ 1. Database: In MySQL, create a new database and user, then load the ```etc/charts.sql.bz2``` SQL dump into that user.  Assign sufficient permissions to the user to allow read access from localhost.
+ 1. Fonts: Unpack and copy all the TrueType fonts from ```etc/Lato.zip``` into the ```/usr/share/fonts``` directory, then run ```fc-cache``` to rebuild the font cache.  Use ```fc-list``` to verify that various Lato fonts have been installed.
+ 1. Scratch and web-visible directories: create directory/directories that will be used for scratch space as well as the location that Apache will serve the generated files from.  They can be the same directory.
+ 1. Configuration.  Copy the src/Config.php.example file and update the database configuration and the directory locations from the prior step.
+
 ### Setting up People
 
 Set up the taxonomy for staff categories.  Main menu Structure > Taxonomy > Add Vocabulary.  Name it "Staff Categories".  Add 5 terms: Leaders, Faculty, Students, Staff, Alumni.
@@ -231,4 +242,3 @@ Now we create block views for each staff category.  For each staff category: Str
 	5.	 Save the view.	
 	6.	 Rinse and repeat: create a view for each of the other 4 staff category types (Faculty, Students, Staff, Alumni).
 	7.	 Once all 5 new views have been created: Structure > Blocks > move View: Staff Category [category] (all 5 of them) to Content block, Save Blocks then click Configure for that block, Block title: [category], Show Block On Specific Pages -- only the listed page: [target page for people], Content types / Show block for specific content types, choose people.
-

@@ -5,6 +5,17 @@
  * Custom styling for our SNAP theme goes here.
  */
 
+<<<<<<< HEAD
+ @import "snap_variables";
+ @import "snap_projects";
+ @import "snap_collaborators";
+ @import "snap_navigation";
+ @import "snap_header";
+ @import "snap_footer";
+ @import "snap_home";
+ @import "snap_page";
+ @import "snap_community_charts";
+=======
 @import "snap_variables";
 @import "mixins";
 @import "snap_projects";
@@ -17,6 +28,7 @@
 @import "snap_data_downloads";
 @import "snap_people";
 @import "snap_projects";
+>>>>>>> master
 
  #pageWrapper {
   background-color: lighten($snapGreen, 50%);
