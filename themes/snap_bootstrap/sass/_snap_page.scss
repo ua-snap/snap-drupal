@@ -86,58 +86,7 @@ div.node-page {
 	}
 }
 
-table.texttable {		//for tables that are text only
-	margin-top: 1em;
-	width: auto;
-	border: 1px solid $snapGrey;
-	
-	th {
-		text-align: center;
-		background-color: $snapGreen;
-		color: white;
-		padding: .2em;
-		font-size: 1.2em;
-		letter-spacing: .05em;
-	}
-	
-	td {
-		vertical-align: text-top;
-		text-align: left;
-		padding: .2em 1em .2em 1em;
-		border: 1px dotted $snapGrey;
-		
-		h1 {
-			font-size: 1.3em;
-		}
-	}
-}
 
-table.imagetable {		//for tables with images in cells
-	margin-top: 1em;
-	width: 100%;
-	
-	th {
-		text-align: center;
-		color: white;
-		padding: .2em;
-		font-size: 1.2em;
-		letter-spacing: .05em;
-	}
-	
-	td {
-		vertical-align: text-top;
-		text-align: left;
-		padding: 0;
-		
-		h1 {
-			font-size: 1.3em;
-		}
-		
-		p {
-			margin-right: 3em;
-		}
-	}
-}
 
 
 
