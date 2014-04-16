@@ -21,6 +21,7 @@
 @import "snap_tools";
 @import "snap_tools_intro";
 @import "snap_tables";
+@import "snap_panels";
 
  #pageWrapper {
   background-color: lighten($snapGreen, 50%);
@@ -79,12 +80,15 @@ p {
 	}
 	
 	&.intro {
-		font-weight: 400;
-		font-size: 1.3em;
-		color: lighten($snapDarkGrey,10%);
+		font-weight: 300;
+		font-size: 1.25em;
 		
 		a {
 			font-weight: 400;
+		}
+		
+		em {
+			font-weight: 200;
 		}
 	}
 }
