@@ -2,19 +2,15 @@ div.node-page {
 	ul, ol {
 		color: $color;
 		font-size: $font-size-base;
-		
+
 		li {
 			margin: 0 5em .5em 0;
-			font-size: $font-size-base;
-			
+
 			li {
 				margin: .5em 5em 0 0;
 			}
 		}
 	}
-	
-
-	
 	a {
 		&:focus, &:hover {
 		@include link-transition;

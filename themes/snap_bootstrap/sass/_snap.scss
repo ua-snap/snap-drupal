@@ -54,9 +54,7 @@ a {
 /* typography  */
 
 p {
-	color: $snapDarkGrey;
-	font-size: 1.1em;
-	line-height: 1.5em;
+	margin: 0 0 1.25em 0;
 	
 	&.code {
 		font-family: $lekton;
