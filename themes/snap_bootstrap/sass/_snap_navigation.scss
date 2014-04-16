@@ -1,20 +1,42 @@
 /* body. front is only on the front page. Remainder of styles apply to nav on other pages. */
-body.front {
+body {
 
-    .navbar-form input, .form-inline input {
-        width:auto;
-	}
-	
-    #navbar-sticky {
-        background-color: white;
-        border-top: 1px solid $snapDarkGrey;
-        border-bottom: 1px solid $snapDarkGrey;
-        &.affix {
+    &.front {
+
+        .navbar-form input, .form-inline input {
+            width:auto;
+        }
+    	
+        #navbar-sticky {
+            background-color: white;
+            border-top: 1px solid $snapDarkGrey;
+            border-bottom: 1px solid $snapDarkGrey;
+            &.affix {
+                position: fixed;
+                top: 0;
+                width: 100%;
+                z-index:10;
+            }    
+        }
+    }
+
+    &.not-front {
+        @extend .container;
+        // This rule pushes the main body content down
+        // out of the way of the nav.
+        & > div.main-container.container {
+            padding-top: 5em;
+        }
+
+        header#navbar {
             position: fixed;
             top: 0;
-            width: 100%;
-            z-index:10;
-        }    
+            background-color: white;
+            z-index: 10;
+            margin: 0;
+            @include border-radius(0);
+            border-bottom: 1px solid $snapDarkGrey;
+        }
     }
 }
 
@@ -25,22 +47,10 @@ a.logo img {
     border: none;
 }
 
-#navbar-sticky {
-	background-color: white;
-	border-top: 1px solid $snapDarkGrey;
-	border-bottom: 1px solid $snapDarkGrey;
-	&.affix {
-		position: fixed;
-		top: 0;
-		width: 100%;
-		z-index:10;
-	}    
-}
-
 header#navbar {
     padding: 0;
     margin: .4em auto .4em; 
-	
+
     nav {
         
         ul {
@@ -62,8 +72,6 @@ header#navbar {
         }
     }
 }
-
-
 
 // HIde the breadcrumbs.
 ol.breadcrumb { display: none; }
