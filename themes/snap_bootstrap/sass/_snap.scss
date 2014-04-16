@@ -55,8 +55,8 @@ a {
 
 p {
 	color: $snapDarkGrey;
-	font-size: 1.1em;
-	line-height: 1.5em;
+	font-size: $font-size-base;
+	line-height: line-height-base;
 	
 	&.code {
 		font-family: $lekton;
@@ -77,7 +77,7 @@ p {
 	
 	&.intro {
 		font-weight: 300;
-		font-size: 1.5em;
+		font-size: 1.3em;
 		
 		a {
 			font-weight: 400;
