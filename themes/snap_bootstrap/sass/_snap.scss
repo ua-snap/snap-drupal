@@ -18,6 +18,7 @@
 @import "snap_people";
 @import "snap_projects";
 @import "snap_community_charts";
+@import "snap_tools";
 
  #pageWrapper {
   background-color: lighten($snapGreen, 50%);
@@ -76,6 +77,10 @@ p {
 	&.intro {
 		font-weight: 300;
 		font-size: 1.5em;
+		
+		a {
+			font-weight: 400;
+		}
 	}
 }
 
