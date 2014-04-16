@@ -93,6 +93,17 @@ body {
   }
 }
 
+//Dropdown styling
+.dropdown-menu > li > a {
+  display: block;
+  padding: 3px 20px;
+  clear: both;
+  font-weight: normal;
+  line-height: 1.42857;
+  color: $color;
+  white-space: nowrap;
+}
+
 // Adjust z-index of core components.
 #overlay-container,
 .overlay-modal-background,
