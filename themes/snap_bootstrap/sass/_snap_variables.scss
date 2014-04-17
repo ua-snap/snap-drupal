@@ -13,6 +13,8 @@ $snapDarkGrey: rgb(106,112,114);
 
 $snaplink: rgb(156,0,255);
 $linkvisited: rgb(109,0,178);
+
+$highlight: rgb(229,220,232);  //light purple highlight for accented text
  
 $border-radius: 3px;
 $border: 1px solid $snapGreen;
@@ -52,9 +54,9 @@ $btn-success-color: #fff;
 $btn-success-bg: $snapGreen;
 $btn-success-border: $snapDarkGrey;
 
-// Info appears as light gray
+// Info appears as light purple
 $btn-info-color:  #000;  
-$btn-info-bg: $snapGrey;
+$btn-info-bg: $highlight;
 $btn-info-border: $snapDarkGrey;
 
 // Warning appears as purple
