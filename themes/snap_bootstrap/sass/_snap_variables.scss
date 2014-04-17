@@ -42,5 +42,29 @@ $font-size-h4: ($font-size-h1 * .65);
 $font-size-h5: ($font-size-h1 * .4); 
 $font-size-h6: ($font-size-h1 * .35); 
 
+//Button colors
+$btn-default-color:  #fff;  
+$btn-default-bg: $snapDarkGrey;
+$btn-default-border: $snapGrey;
+
+// Success appears as green
+$btn-success-color: #fff;  
+$btn-success-bg: $snapGreen;
+$btn-success-border: $snapDarkGrey;
+
+// Info appears as light gray
+$btn-info-color:  #000;  
+$btn-info-bg: $snapGrey;
+$btn-info-border: $snapDarkGrey;
+
+// Warning appears as purple
+$btn-warning-color:  #fff;  
+$btn-warning-bg: $snaplink;
+$btn-warning-border: $snapDarkGrey;
+
+// Danger and error appear as red
+$btn-danger-color:  #fff;  
+$btn-danger-bg: red;
+$btn-danger-border: $snapDarkGrey;
 
 
