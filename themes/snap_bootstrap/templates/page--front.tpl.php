@@ -76,9 +76,8 @@
 <div id="masthead">
   <img src="<?php print drupal_get_path('theme', 'snap_bootstrap'); ?>/images/snap_color_lato.svg"/>
   <h1>Exploring our future in a changing Arctic</h1>
-  <h2>We develop plausible scenarios of future conditions</h2>
-  <p>through a diverse network of people and organizations.</p>
-  <p>Our research and collaborations enable robust planning for the future of Alaska and the Arctic.</p>
+  <h2>We work through a diverse network of people and organizations<br />
+  to develop plausible scenarios of potential conditions in a changing climate.</h2>
 </div>
 
 <div id="navbar-sticky">

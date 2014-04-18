@@ -15,24 +15,17 @@
     h1 {
         font-weight:  300;
         padding: 0;
-        margin: .25em 0 0 0;
+        margin: .5em 0 0 0;
         color: $snapDarkGrey;
         font-size: 2.2em;
     }
 
     h2 {
-      font-weight: 400;
+      font-weight: 300;
       padding: 0;
-      margin: .2em 0 0 0;
-      color: $snapGreen;
-		font-size: 1.6em;
-  }
-
-  p {
+      margin: 1em 0 0 0;
       color: $snapDarkGrey;
-      line-height: 1.4em;
-      margin: .25em 0 0 0;
-      font-size: 1.05em;
-	  letter-spacing: .02em;
+		font-size: 1.3em;
+		line-height: 1.4em;
   }
 }
