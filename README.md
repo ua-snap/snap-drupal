@@ -242,3 +242,21 @@ Now we create block views for each staff category.  For each staff category: Str
 	5.	 Save the view.	
 	6.	 Rinse and repeat: create a view for each of the other 4 staff category types (Faculty, Students, Staff, Alumni).
 	7.	 Once all 5 new views have been created: Structure > Blocks > move View: Staff Category [category] (all 5 of them) to Content block, Save Blocks then click Configure for that block, Block title: [category], Show Block On Specific Pages -- only the listed page: [target page for people], Content types / Show block for specific content types, choose people.
+
+## Updating the Drupal core
+
+Like modules, we will occasionally need to update the Drupal core when there is a security update available. Fortunately, we have been very careful to isolate all of our development work in the ```sites``` directory, which makes updating the Drupal core pretty easy.
+
+To update the Drupal core (these instructions are from memory; please be careful):
+
+1. Download and extract the Drupal core tar.gz file to /tmp.
+2. ```rm -fr /tmp/drupal-7.27/sites```
+3. ```sudo chown -R drupal:drupal /tmp/drupal-7.27```
+4. ```sudo mv /var/www/snap ~/snap_old```
+5. ```sudo mv /tmp/drupal-7.27 /var/www/snap```
+6. ```sudo mv ~/snap_old/sites /var/www/snap/```
+7. Run the Drupal update script: http://cerberus.snap.uaf.edu/update.php
+
+Steps 4-6 should be performed as quickly as possible, as the live Drupal site will be broken until they are finished.
+
+The main thing to look out for when updating the Drupal core is that the file permissions end up being the same as before. Note that the file permissions change a little bit for ```sites/default/files```. This directory has the group-write bit set so the web server can upload files there. But all of the permissions and file ownership should end up set correctly if you follow the above steps in the proper order.
