@@ -86,11 +86,15 @@ p {
 		a {
 			font-weight: 400;
 		}
-		
-		em {
-			font-weight: 200;
-		}
 	}
+}
+
+.highlight {
+	font-style: italic;
+	color: black;
+	background-color: $highlight;
+	display: inline-block;
+	padding: 0 .2em 0 .2em;
 }
 
 
