@@ -2,22 +2,27 @@
 .footer-wrapper {
   border-top: 3px solid $snapDarkGrey;
   border-bottom: 1em solid $snapGreen;
-  padding: 0 5em 0 5em;
+  padding: 0;
+	margin: 0;
   background-color: lighten($snapGrey, 10%);
 	
-	footer.footer.container {
-		margin: 1em 0 0 2em;
+	.container {
+		width: 100%;
+		padding: 1em .4em 1em 2em;
 	}
-  
-  footer {
-    padding: 0 0 2em 0;
+	
+	region.region-footer {
+    	padding: 0 0 2em 0;
+		border: 1px solid red;
+	}
 	  
 	  p {
-		  font-size: ($font-size-base * .8);
+		  font-size: ($font-size-base * .85);
 	  }
 	  
 	  ul {
-      margin: 0; padding: 0;
+      margin: 0; 
+		  padding: 0;
       list-style-type: none;
       display: inline;
 
@@ -38,5 +43,3 @@
 
     }
   }
-
-}
