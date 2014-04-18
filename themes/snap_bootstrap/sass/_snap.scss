@@ -20,6 +20,8 @@
 @import "snap_community_charts";
 @import "snap_tools";
 @import "snap_tools_intro";
+@import "snap_tables";
+@import "snap_panels";
 
  #pageWrapper {
   background-color: lighten($snapGreen, 50%);
@@ -57,7 +59,6 @@ a {
 
 p {
 	margin: 0 0 1.25em 0;
-	color: $snapDarkGrey;
 	font-size: $font-size-base;
 	line-height: line-height-base;
 	
@@ -80,10 +81,14 @@ p {
 	
 	&.intro {
 		font-weight: 300;
-		font-size: 1.3em;
+		font-size: 1.25em;
 		
 		a {
 			font-weight: 400;
+		}
+		
+		em {
+			font-weight: 200;
 		}
 	}
 }

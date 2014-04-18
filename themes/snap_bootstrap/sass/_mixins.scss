@@ -78,6 +78,13 @@
 	box-shadow: $x $y $blur $shadow-color;
 }
 
+@mixin noshadow($x, $y, $blur, $shadow-color) {
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	-o-box-shadow: none;
+	box-shadow: none;
+}
+
 // Tables
 @mixin table-scaffolding {
   th {

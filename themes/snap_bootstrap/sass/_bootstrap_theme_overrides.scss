@@ -13,7 +13,7 @@ html {
     }
   }
 }
-body {
+body {	
   // Fix horizontal scrolling on iOS devices.
   // http://drupal.org/node/1870076
   position: relative;
@@ -169,12 +169,16 @@ ul.secondary {
 }
 
 // Paragraphs and Headers.
+h1 { font-size: $font-size-h1; }
+h2 { font-size: $font-size-h2; }
+h3 { font-size: $font-size-h3; }
+h4 { font-size: $font-size-h4; }
+h5 { font-size: $font-size-h5; }
+h6 { font-size: $font-size-h6; }
 
 h1, h2, h3, h4 {
-	margin-top: 1.5em;
-	margin-bottom: .25em;
+	margin: 1.5em 0 .25em 0;
 	color: $snapGreen;
-	margin-top: 1.5em;
 	
 	&.page-header {
 	color: $snapDarkGrey;
@@ -197,13 +201,6 @@ h5, h6 {
 		font-size: 75%;
 	}
 }
-
-h1 { font-size: $font-size-h1; }
-h2 { font-size: $font-size-h2; }
-h3 { font-size: $font-size-h3; }
-h4 { font-size: $font-size-h4; }
-h5 { font-size: $font-size-h5; }
-h6 { font-size: $font-size-h6; }
 
 p:last-child {
   margin-bottom: 0;
