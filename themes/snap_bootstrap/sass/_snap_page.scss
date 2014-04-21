@@ -59,6 +59,11 @@ div.node-page {
 			margin: 0 0 .5em 1.5em;
 		}		
 	}
+	
+	.row h2 {
+		background: lighten($snapGreen, 45%);
+		padding-left: .2em;
+	}
 }
 	
 	
