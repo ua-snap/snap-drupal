@@ -32,6 +32,16 @@ table.views-view-grid.cols-5 {
 	}
 }
 
+table.views-table.cols-0.table td {		//alumnni table
+	padding: .2em 0 .2em .5em;
+	font-size: .9em;
+	border-bottom: 1px solid $snapGrey;
+	
+	a {
+		font-size: 1em;
+	}
+}
+
 .profile img {	/*main square user picture */
 	border: $border;
 	border-radius: $border-radius;
