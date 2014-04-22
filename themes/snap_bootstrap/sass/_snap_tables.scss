@@ -40,10 +40,10 @@ table.texttable {		//for tables that are text only
 	border: 1px solid $snapGrey;
 	
 	th {
-		text-align: center;
+		text-align: left;
 		background-color: $snapGreen;
 		color: white;
-		padding: .2em;
+		padding: .2em 1em .2em 1em;
 		font-size: 1.2em;
 		letter-spacing: .05em;
 	}
