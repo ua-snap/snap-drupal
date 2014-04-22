@@ -9,6 +9,11 @@
 		border: $border;
 		background: lighten($snapGreen, 45%);
 		@include shadow($x, $y, $blur, $shadow-color);
+		
+		h3 {
+			color: $snapDarkGrey;
+			font-size: 1.3em;
+		}
 	}
 
 	.panel-info > .panel-heading {
