@@ -14,6 +14,12 @@
 			color: $snapDarkGrey;
 			font-size: 1.3em;
 		}
+		
+		h4 {
+			font-size: 1.1em;
+			color: $snapDarkGrey;
+			background-color: lighten($snapGreen,35%);
+		}
 	}
 
 	.panel-info > .panel-heading {
