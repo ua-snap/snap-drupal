@@ -72,6 +72,9 @@ body {
       line-height: normal;
     }
   }
+	 .container, .node-projects:not(.node-teaser), body.not-front {
+   width: 100%;
+	 }
 }
 
 // Default navbar.
