@@ -186,10 +186,10 @@ ul.secondary {
   &,
   &:hover,
   &:focus {
-    color: $dropdown-link-active-color;
+    color: #fff;
     text-decoration: none;
     outline: 0;
-    background-color: $dropdown-link-active-bg;
+    background-color: lighten($snapGreen, 10%);
   }
 }
 
