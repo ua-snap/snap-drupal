@@ -21,16 +21,7 @@ body {
     }
 
     &.not-front {
-        @extend .container;
-        // This rule pushes the main body content down
-        // out of the way of the nav.
-        & > div.main-container.container {
-            padding-top: 5em;
-        }
-
         header#navbar {
-            position: fixed;
-            top: 0;
             background-color: white;
             z-index: 10;
             margin: 0;
