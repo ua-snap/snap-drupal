@@ -27,12 +27,6 @@
   background-color: lighten($snapGreen, 50%);
 }
 
-.main-container.container {
-	margin-bottom: 1em;
-	width: auto;
-	padding: 0;
-}
-
 html {
   font-family: $lato;
 }
@@ -58,6 +52,9 @@ a {
 }
 
 /* typography  */
+.page-header {
+	color: red;
+}
 
 p {
 	margin: 0 0 1.25em 0;
