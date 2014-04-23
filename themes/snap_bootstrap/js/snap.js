@@ -7,5 +7,19 @@
               top: $('#masthead').height()
             }
       });
+
+    $('body.not-front #navbar').affix({
+        offset: {
+          top: 0
+        }
+    });
+
+    $(window).resize(function () {
+        $('body.not-front #navbar').width($('body').width());
+    });
+    $(window).scroll(function () {
+        $('body.not-front #navbar').width($('body').width());
+    });
+
   });
 }(jQuery));
