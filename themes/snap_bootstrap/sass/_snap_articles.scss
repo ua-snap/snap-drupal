@@ -1,0 +1,44 @@
+//Styling for Articles content type, which are published on a temporary basis on the SNAP home page
+
+.node.node-article {	//for when the article is in full view, linked from home page
+	
+	img {
+		float: right;
+		border: $border;
+		border-radius: $border-radius;
+		@include shadow($x, $y, $blur, $shadow-color);
+		padding: .3em;
+		margin: 0 0 2em 2em;
+	}
+}
+
+.node.node-article.node-promoted.node-teaser {		//main box that holds the article on the home page
+	border: 3px solid $snapGreen;
+	margin: 0 0 1em 0;
+	padding: 1em;
+	background-color: lighten($snapGreen, 45%);
+	@include shadow($x, $y, $blur, $shadow-color);
+	@include border-radius($border-radius);
+	
+	h2 {
+		margin: 0 0 .5em 0;
+		font-size: 1.5em;
+		
+		a {
+			font-weight: 400;
+		}
+	}
+	
+	img {
+		float: right;
+		border: $border;
+		border-radius: $border-radius;
+		@include shadow($x, $y, $blur, $shadow-color);
+		padding: .3em;
+		margin: -2em 0 1em 2em;
+	}
+	
+	ul.list-inline {
+		margin: .5em 0 0 0;
+	}
+}
