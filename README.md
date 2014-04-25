@@ -260,3 +260,36 @@ To update the Drupal core (these instructions are from memory; please be careful
 Steps 4-6 should be performed as quickly as possible, as the live Drupal site will be broken until they are finished.
 
 The main thing to look out for when updating the Drupal core is that the file permissions end up being the same as before. Note that the file permissions change a little bit for ```sites/default/files```. This directory has the group-write bit set so the web server can upload files there. But all of the permissions and file ownership should end up set correctly if you follow the above steps in the proper order.
+
+## Setting up the Articles content type to enable publishing of "highlighted" items temporarily on the Home page
+
+Download the Drupal module Scheduler from drupal.org/project/scheduler. 
+Go to Modules and enable the new module.
+	⁃	Leave all of its configuration settings at their defaults - further settings can be made after installation when editing the Article content type.
+	⁃	Edit Permissions settings to allow Authenticated users to schedule content publication. Save settings.
+
+In Structure > Content types, edit the Article content type:
+Edit tab, lower left block:
+	-	Submission form settings: Add to explanation or submission guidelines the text, "This content type will be displayed on home page right underneath the main banner. You can choose a date/time to publish and unpublish this content."
+	⁃	Publishing options: uncheck "Published" (you will be choosing a publish date and time via Scheduler)
+	⁃	Display settings: Uncheck 'display author and date information"
+
+Scheduler: 
+	⁃	Publishing: check 'enable scheduled publishing for this content type,' 'change content creation time to match the scheduled publish time,' and 'require scheduled publishing.'
+	⁃	Unpublishing: Check 'enable scheduled unpublishing,' 'require scheduled unpublishing'
+	⁃	Node edit page layout: check 'separate fieldset'
+	⁃	Expand fieldset: choose 'always open the fieldset'
+	⁃	Manage Fields tab:
+	⁃	Add new field, Image (machine name: article_image), Field Type Image, Widget Image. Save, leave Field settings at defaults.
+
+Manage display tab, Default mode:
+	⁃	Reorder fields: Image, Body, Tags.
+	⁃	Change Image Label to <Hidden>.
+	⁃	Change Body Format to Default.
+	⁃	Save.
+Manage display tab, Teaser mode:
+	⁃	Change Image format to Image; move to top of Field list. Change label to <Hidden>.
+	⁃	Choose Image style: Medium (220 x 220); Link to nothing.
+	⁃	Save.
+	⁃	Change Body trim length to 350.
+	-	Save.
