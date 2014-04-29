@@ -12,12 +12,13 @@
 	}
 }
 
-.node.node-article.node-promoted.node-teaser {		//main box that holds the article on the home page
-	border: 3px solid $snapGreen;
-	margin: 0 0 1em 0;
+//Styling for main box that holds the article on the home page
+.node.node-article.node-promoted.node-teaser {		
+	border: none;
+	margin: 0 0 2em 0;
 	padding: 1em;
-	background-color: lighten($snapGreen, 45%);
-	@include shadow($x, $y, $blur, $shadow-color);
+	background-color: lighten($snapGreen,45%);
+	@include shadow(.2rem, .2rem, 1rem, $shadow-color);
 	@include border-radius($border-radius);
 	
 	h2 {
