@@ -223,6 +223,7 @@ This non-module dwells in ```sites/all/modules/snap_community_charts```.  All st
  1. Database: In MySQL, create a new database and user, then load the ```etc/charts.sql.bz2``` SQL dump into that user.  Assign sufficient permissions to the user to allow read access from localhost.
  1. Fonts: Unpack and copy all the TrueType fonts from ```etc/Lato.zip``` into the ```/usr/share/fonts``` directory, then run ```fc-cache``` to rebuild the font cache.  Use ```fc-list``` to verify that various Lato fonts have been installed.
  1. Scratch and web-visible directories: create directory/directories that will be used for scratch space as well as the location that Apache will serve the generated files from.  They can be the same directory.
+ 1. Make sure ImageMagick is installed for the chart export feature to work: ```sudo yum install ImageMagick```
  1. Configuration.  Copy the src/Config.php.example file and update the database configuration and the directory locations from the prior step.
 
 ### Setting up People
