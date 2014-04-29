@@ -1,6 +1,7 @@
-//Styling for Articles content type, which are published on a temporary basis on the SNAP home page
+//Styling for Articles content type, which are published on a temporary basis on the SNAP home page and on a page called SNAP stories, which lists archived articles as a View.
 
-.node.node-article {	//for when the article is in full view, linked from home page
+//Styling for when the article is in full view, linked from home page
+.node.node-article {	
 	
 	img {
 		float: right;
@@ -9,24 +10,41 @@
 		@include shadow($x, $y, $blur, $shadow-color);
 		padding: .3em;
 		margin: 0 0 2em 2em;
+		background-color: #fff;
+	}
+	
+	.date-display-single {
+		font-weight: bold;
+		font-style: italic;
+		margin-bottom: .5em;
+		background-color: $highlight;
+		display: inline;
+		padding: 0 .5em 0 .5em;
 	}
 }
 
-.node.node-article.node-promoted.node-teaser {		//main box that holds the article on the home page
-	border: 3px solid $snapGreen;
-	margin: 0 0 1em 0;
+//Styling for main box that holds the article on the home page
+.node.node-article.node-promoted.node-teaser {		
+	border: 3px dashed $snapGreen;
+	margin: 0 0 2em 0;
 	padding: 1em;
-	background-color: lighten($snapGreen, 45%);
-	@include shadow($x, $y, $blur, $shadow-color);
+	background-color: lighten($snapGreen,45%);
+	@include shadow(.2rem, .2rem, .4rem, $shadow-color);
 	@include border-radius($border-radius);
 	
 	h2 {
-		margin: 0 0 .5em 0;
-		font-size: 1.5em;
+		margin: 0 0 .25em 0;
+		font-size: 1.7em;
 		
 		a {
 			font-weight: 400;
 		}
+	}
+	
+	p {
+		font-size: 1.2em;
+		font-weight: 300;
+		margin-top: .5em;
 	}
 	
 	img {
@@ -35,10 +53,62 @@
 		border-radius: $border-radius;
 		@include shadow($x, $y, $blur, $shadow-color);
 		padding: .3em;
-		margin: -2em 0 1em 2em;
+		margin: 0 0 .5em 2em;
 	}
 	
 	ul.list-inline {
 		margin: .5em 0 0 0;
+	}
+	
+	.date-display-single {
+		font-weight: bold;
+		font-style: italic;
+		margin-bottom: .5em;
+	}
+}
+
+//Styling for ODD ROWS SNAP stories View page, which lists articles in Teaser view
+.view-content .views-row.views-row-odd .node.node-article {	
+	background-color: lighten($snapGreen, 48%);
+	padding: 0;
+	margin: .5em 0 1.5em 0;
+	border: none;
+	@include box-shadow(none);
+	
+	h2 {
+		font-size: 1.7em;
+		margin: .25em 0 .25em 0;
+	}
+	
+	img {
+		margin: 0 .5em .5em 2em;
+	}
+	
+	p {
+		font-size: $font-size-base;
+		font-weight: normal;
+	}
+}
+
+//Styling for EVEN ROWS SNAP stories View page, which lists articles in Teaser view
+.view-content .views-row.views-row-even .node.node-article {
+	background-color: lighten($snapGreen, 52%);
+	padding: 0;
+	margin: .5em 0 1.5em 0;
+	border: none;
+	@include box-shadow(none);
+	
+	h2 {
+		font-size: 1.7em;
+		margin: .25em 0 .25em 0;
+	}
+	
+	img {
+		margin: 0 .5em .5em 2em;
+	}
+	
+	p {
+		font-size: $font-size-base;
+		font-weight: normal;
 	}
 }
