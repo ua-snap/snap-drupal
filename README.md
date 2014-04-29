@@ -260,3 +260,14 @@ To update the Drupal core (these instructions are from memory; please be careful
 Steps 4-6 should be performed as quickly as possible, as the live Drupal site will be broken until they are finished.
 
 The main thing to look out for when updating the Drupal core is that the file permissions end up being the same as before. Note that the file permissions change a little bit for ```sites/default/files```. This directory has the group-write bit set so the web server can upload files there. But all of the permissions and file ownership should end up set correctly if you follow the above steps in the proper order.
+
+## Add Module: Menu Target
+
+The menu module allows on-the-fly creation of menu links in the content authoring forms. Configuration is simple:
+
+1. Download and extract the Menu target tar.gz file to /modules.
+2. Source for the Main links: Main menu
+3. Source for the Secondary links: Main menu
+4. Menu target type: XHTML Valid
+5. Save.
+6. Now, when editing Menu items, there will be a choice to open link in a new window.
