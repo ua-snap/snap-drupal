@@ -25,11 +25,11 @@
 
 //Styling for main box that holds the article on the home page
 .node.node-article.node-promoted.node-teaser {		
-	border: 3px dashed $snapGreen;
+	border: 2px solid #fff;
 	margin: 0 0 2em 0;
 	padding: 1em;
-	background-color: lighten($snapGreen,45%);
-	@include shadow(.2rem, .2rem, .4rem, $shadow-color);
+	background-color: lighten($snapGreen,42%);
+	@include shadow(.2rem, .2rem, 1rem, $shadow-color);
 	@include border-radius($border-radius);
 	
 	h2 {
