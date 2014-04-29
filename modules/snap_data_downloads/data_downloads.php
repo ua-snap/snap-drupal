@@ -16,24 +16,7 @@ html;
 
 $snap_data_downloads_content = <<<html
 
-<p>SNAP data includes downscaled historically observed, modeled historical, as well as modeled projected data out to 2100 across several top ranked GCM's and scenarios (SRES or RCPs). Data is produced on a project specific basis, but when time and feasibility allows, we try and extend analyses to the greatest spatial and temporal extent possible to allow the greatest applicability to other projects as well. In the broadest sense, our data extends from the mid&ndash;1800s to 2100, across multiple spatial extents including: Alaska, Alaska-Western Canada, Polar, and worldwide.
-</p>
 
-<p>The list of variables is always expanding, so please explore below to see what we currently have available.</p>
-
-<p>All of our downloadable data is provided in GeoTIFF format. We've standardized on geotiff thus far because it is a stable and compressed format that can be easily read by many open source and commercial GIS and data manipulation programs including ArcGIS, QGIS, R (raster package recommended), GDAL, GRASS, and many others.</p>
-
-<p>While it&rsquo;s hard to have a completely static file naming scheme, we make every attempt to keep some consistency across our various datasets. This naming scheme outlined below is our general guide, although it does vary depending upon each dataset. Please refer to the full metadata for details on specific datasets.</p>
-
-<p><pre>[variable][metric][units][format][assessmentReport][group][model][scenario][timeFrame].[fileFormat]</pre></p>
-
-<div class="panel panel-info">
-  <div class="panel-heading">License information</div>
-  <div class="panel-body"> 
-  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img alt="Creative Commons License" style="border-width:0; float: left; padding: 1px 1em 0 0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png"></a>
-All information produced by the Scenarios Network for Alaska and Arctic Planning is licensed under a <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License</a>. Attribution text provided on our <a href="/about/faq">FAQ page</a>.  If you are interested in commercialization opportunities and/or collaborative R&amp;D activities please contact us.
-</div>
-</div>
 
 <h3 id="Projected">Modeled Historical and Projected Data</h3>
 </div>
