@@ -3387,7 +3387,7 @@ Although the equations developed here provide a reasonable fit to the data, mode
 <h3>Research data</div>
 </div>
 
-<p class="intro"><img src="${imagePath}IEM_web_thumbnail.png" style="width: 400px;" />We are developing data specifically for several broad scale modeling projects. Learn more about the projects related to these data (including collaborators and funding sources) on respective project pages.</p>
+<p class="intro"><img class="pull-right" src="${imagePath}IEM_web_thumbnail.png" style="width: 400px;" />We are developing data specifically for several broad scale modeling projects. Learn more about the projects related to these data (including collaborators and funding sources) on respective project pages.</p>
   
 <p>Data are preliminary and are constantly being vetted and updated by our research group. Their use should be limited to these modeling projects, but are shared here for stakeholder review and general communication of our data efforts. Data used in these broad-scale modeling projects must:</p>
 <ul>
