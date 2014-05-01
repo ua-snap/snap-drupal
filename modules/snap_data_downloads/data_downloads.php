@@ -19,11 +19,12 @@ $snap_data_downloads_content = <<<html
 
 
 <h3 id="Projected">Modeled historical and projected data</h3>
-</div>
+
 <div class="dataAccordionWrapper">
 
 <div class="dataAccordion">
-<p><a href="#dataset=Historical_Estimates_and_Projections_of_Sea_Ice_Concentration">Historical estimates and projections of sea ice concentration &ndash; 0.4&deg; CMIP5/AR5</a></p>
+
+<h3><a href="#dataset=Historical_Estimates_and_Projections_of_Sea_Ice_Concentration">Historical estimates and projections of sea ice concentration &ndash; 0.4&deg; CMIP5/AR5</a></h3>
 <div>
 <p><img src="${imagePath}polar_extent.png" alt="polar extent" />This set of files includes modeled historical estimates and future projections of monthly sea ice concentration (in percent cover, 0&ndash;100) for each month of every year from January 1860&ndash;December 2100* at 0.4 x 0.4&deg; spatial resolution from 5 top ranking CMIP5 global climate models (GCMs). Each file represents a single month in a given year.</p>
 <table class="overview">
@@ -45,8 +46,9 @@ $snap_data_downloads_content = <<<html
 </div>
 </div>
 
+<div class="dataAccordionWrapper">
 <div class="dataAccordion">
-<p><a href="#dataset=Historical_Daily_Mean_Quantile_Mapped_Temperatures">Historical daily mean quantile mapped temperatures &ndash; 2.5&deg; CMIP5/AR5</a></p>
+<h3><a href="#dataset=Historical_Daily_Mean_Quantile_Mapped_Temperatures">Historical daily mean quantile mapped temperatures &ndash; 2.5&deg; CMIP5/AR5</a></h3>
 <div>
 <p><img src="${imagePath}worldwide_extent.png" alt="worldwide extent" />These data include quantile&ndash;mapped historical model runs of AR5 daily mean temperature (tas,&deg; C) for each day of every year from 1958&ndash;2005 at 2.5 x 2.5 degree spatial resolution across 3 AR5 models utilizing the “historical” GCM model run. They are 365 multi&ndash;band geoTIFF files, one file per year, each band representing one day of the year, with no leap years.</p>
 <table class="overview">
@@ -64,8 +66,9 @@ $snap_data_downloads_content = <<<html
 </div>
 </div>
 
+<div class="dataAccordionWrapper">
 <div class="dataAccordion">
-<p><a href="#dataset=Projected_Daily_Mean_Quantile_Mapped_Temperatures">Projected daily mean quantile mapped temperatures &ndash; 2.5&deg; CMIP5/AR5</a></p>
+<h3><a href="#dataset=Projected_Daily_Mean_Quantile_Mapped_Temperatures">Projected daily mean quantile mapped temperatures &ndash; 2.5&deg; CMIP5/AR5</a></h3>
 <div>
 <p><img src="${imagePath}worldwide_extent.png" alt="worldwide extent" />These data include quantile&ndash;mapped historical model runs of AR5 daily mean temperature (tas,&deg; C) for each day of every year from 2006&ndash;2100 at 2.5 x 2.5 degree spatial resolution across 3 AR5 models and 2 RCPs. They are 365 multi&ndash;band geoTIFF files, one file per year, each band representing one day of the year, with no leap years.</p>
 <table class="overview">
@@ -87,8 +90,9 @@ $snap_data_downloads_content = <<<html
 </div>
 </div>
 
+<div class="dataAccordionWrapper">
 <div class="dataAccordion">
-<p><a href="#dataset=Historical_Daily_Quantile_Mapped_Near_Surface_Wind_Velocity">Historical daily quantile mapped near surface wind velocity &ndash; 2.5&deg; CMIP5/AR5</a></p>
+<h3><a href="#dataset=Historical_Daily_Quantile_Mapped_Near_Surface_Wind_Velocity">Historical daily quantile mapped near surface wind velocity &ndash; 2.5&deg; CMIP5/AR5</a></h3>
 <div>
 <p><img src="${imagePath}worldwide_extent.png" alt="worldwide extent" />These data include quantile&ndash;mapped historical model runs of AR5 daily near surface wind velocity (uas: West/East component of wind, vas: North/South component, m/s) for each day of every year from 1958&ndash;2100 at 2.5 x 2.5 degree spatial resolution across 3 AR5 models utilizing the “historical” GCM model run. They are 365 multi&ndash;band geoTIFF files, one file per year, each band representing one day of the year, with no leap years.</p>
 <table class="overview">
@@ -110,8 +114,9 @@ $snap_data_downloads_content = <<<html
 </div>
 </div>
 
+<div class="dataAccordionWrapper">
 <div class="dataAccordion">
-<p><a href="#dataset=Projected_Daily_Quantile_Mapped_Near_Surface_Wind_Velocity">Projected daily quantile mapped near surface wind velocity &ndash; 2.5&deg; CMIP5/AR5</a></p>
+<h3><a href="#dataset=Projected_Daily_Quantile_Mapped_Near_Surface_Wind_Velocity">Projected daily quantile mapped near surface wind velocity &ndash; 2.5&deg; CMIP5/AR5</a></h3>
 <div>
 <p><img src="${imagePath}worldwide_extent.png" alt="worldwide extent" />These data include quantile&ndash;mapped projections of AR5 daily near surface wind velocity (uas: West/East component of wind, vas: North/South component, m/s) for each day of every year from 1958&ndash;2100 at 2.5 x 2.5 degree spatial resolution across 3 AR5 models and 2 RCPs. They are 365 multi&ndash;band geoTIFF files, one file per year, each band representing one day of the year, with no leap years.</p>
 <table class="overview">
@@ -139,8 +144,9 @@ $snap_data_downloads_content = <<<html
 <!-- AR5-uploads -->
 <br/>
 
+<div class="dataAccordionWrapper">
 <div class="dataAccordion">
-<p><a href="#dataset=projected_monthly_temperature_and_precipitation_2km_ar5">Projected monthly temperature and precipitation - 2km CMIP5/AR5</a></p>
+<h3><a href="#dataset=projected_monthly_temperature_and_precipitation_2km_ar5">Projected monthly temperature and precipitation - 2km CMIP5/AR5</a></h3>
 <div>
 <p><img src="${imagePath}akcanada_extent.png" alt="alaska-canada extent" />Projected (2006&ndash;2100: RCP 4.5, 6.0. 8.5 scenarios) monthly average temperature and total precipitation from 5 AR5 GCMs that perform best across Alaska and the Arctic, downscaled to 2km via the <a href="/methods/downscaling">delta method.</a> A 5&ndash;Model Average is also included.</p>
 <table class="overview">
@@ -272,7 +278,7 @@ $snap_data_downloads_content = <<<html
 <th scope="col" colspan="3">Scenario</th>
 </tr>
 <tr>
-<th scope="col" style="text-align: left;">Model</th>
+<th scope="col">Model</th>
 <th scope="col">RCP 4.5</th>
 <th scope="col">RCP 6.0</th>
 <th scope="col">RCP 8.5</th>
@@ -379,8 +385,9 @@ $snap_data_downloads_content = <<<html
 <!-- end first AR5 block -->
 <!-- second block -->
 
+<div class="dataAccordionWrapper">
 <div class="dataAccordion">
-<p><a href="#dataset=projected_derived_temperature_products_2km_ar5">Projected derived temperature products - 2km CMIP5/AR5</a></p>
+<h3><a href="#dataset=projected_derived_temperature_products_2km_ar5">Projected derived temperature products - 2km CMIP5/AR5</a></h3>
 <div>
 <p><img src="${imagePath}akcanada_extent.png" alt="alaska-canada extent" />Projected (2010&ndash;2100: RCP 4.5, 6.0. 8.5 scenarios) derived temperature products from 5 AR5 GCMs that perform best across Alaska and the Arctic, downscaled to 2km via the <a href="/methods/downscaling">delta method.</a> A 5&ndash;Model Average is also included.</p>
 <table class="overview">
@@ -617,9 +624,9 @@ $snap_data_downloads_content = <<<html
 <!-- end second block -->
 <!-- start third ar5 block -->
 
-
+<div class="dataAccordionWrapper">
 <div class="dataAccordion">
-<p><a href="#dataset=projected_derived_precipitation_products_2km_ar5">Projected derived precipitation products - 2km CMIP5/AR5</a></p>
+<h3><a href="#dataset=projected_derived_precipitation_products_2km_ar5">Projected derived precipitation products - 2km CMIP5/AR5</a></h3>
 <div>
 <p><img src="${imagePath}akcanada_extent.png" alt="alaska-canada extent" />Projected (2010&ndash;2100: historical run and RCP 4.5, 6.0. 8.5 scenarios) derived precipitation products from 5 AR5 GCMs that perform best across Alaska and the Arctic, downscaled to 2km via the <a href="/methods/downscaling">delta method.</a> A 5&ndash;Model Average is also included.</p>
 <table class="overview">
@@ -751,8 +758,9 @@ $snap_data_downloads_content = <<<html
 <!-- Start 771km AR5 -->
 <br/>
 
+<div class="dataAccordionWrapper">
 <div class="dataAccordion">
-<p><a href="#dataset=projected_monthly_temperature_and_precipitation_771m_ar5">Projected monthly temperature and precipitation &ndash; 771m CMIP5/AR5</a></p>
+<h3><a href="#dataset=projected_monthly_temperature_and_precipitation_771m_ar5">Projected monthly temperature and precipitation &ndash; 771m CMIP5/AR5</a></h3>
 <div>
 <p><img src="${imagePath}ak_extent.jpg" alt="alaska extent" />Projected (2006&ndash;2100: RCP 4.5, 6.0. 8.5 scenarios) monthly average temperature and total precipitation from 5 AR5 GCMs that perform best across Alaska and the Arctic, downscaled to 771m via the <a href="/methods/downscaling">delta method.</a> A 5&ndash;Model Average is also included.</p>
 
@@ -992,8 +1000,9 @@ $snap_data_downloads_content = <<<html
 <!-- end first 771m AR5 block -->
 <!-- second 771m block -->
 
+<div class="dataAccordionWrapper">
 <div class="dataAccordion">
-<p><a href="#dataset=projected_derived_temperature_products_771km_ar5">Projected derived temperature products &ndash; 771m CMIP5/AR5</a></p>
+<h3><a href="#dataset=projected_derived_temperature_products_771km_ar5">Projected derived temperature products &ndash; 771m CMIP5/AR5</a></h3>
 <div>
 <p><img src="${imagePath}ak_extent.jpg" alt="alaska extent" />Projected (2010&ndash;2100: historical run and RCP 4.5, 6.0. 8.5 scenarios) derived temperature products from 5 AR5 GCMs that perform best across Alaska and the Arctic, downscaled to 771m via the <a href="/methods/downscaling">delta method.</a> A 5&ndash;Model Average is also included.</p>
 
@@ -1232,9 +1241,9 @@ $snap_data_downloads_content = <<<html
 <!-- end second block -->
 <!-- start third ar5 block -->
 
-
+<div class="dataAccordionWrapper">
 <div class="dataAccordion">
-<p><a href="#dataset=projected_derived_precipitation_products_771m_ar5">Projected derived precipitation products &ndash; 771m CMIP5/AR5</a></p>
+<h3><a href="#dataset=projected_derived_precipitation_products_771m_ar5">Projected derived precipitation products &ndash; 771m CMIP5/AR5</a></h3>
 <div>
 <p><img src="${imagePath}ak_extent.jpg" alt="alaska extent" />Projected (2010&ndash;2100: historical run and RCP 4.5, 6.0. 8.5 scenarios) derived precipitation products from 5 AR5 GCMs that perform best across Alaska and the Arctic, downscaled to 771m via the <a href="/methods/downscaling">delta method.</a> A 5&ndash;Model Average is also included.</p>
 
@@ -1371,8 +1380,9 @@ $snap_data_downloads_content = <<<html
 
 <br/>
 
+<div class="dataAccordionWrapper">
 <div class="dataAccordion">
-<p><a href="#dataset=projected_monthly_temperature_and_precipitation_771m">Projected monthly temperature and precipitation - 771m CMIP3/AR4</a></p>
+<h3><a href="#dataset=projected_monthly_temperature_and_precipitation_771m">Projected monthly temperature and precipitation - 771m CMIP3/AR4</a></h3>
 <div>
 <p><img src="${imagePath}ak_extent.jpg" alt="alaska extent" />Projected (2001-2100: B1, A1B, and A2 scenarios) monthly average temperature and total precipitation from 5 AR4 GCMs that perform best across Alaska and the Arctic, downscaled to 771m via the <a href="/methods/downscaling">delta method.</a> A 5-Model Average is also included.</p>
 <table class="overview">
@@ -1562,10 +1572,13 @@ $snap_data_downloads_content = <<<html
 </tbody>
 </table>
 
-
+</div>
 </div>
 
-<p><a href="#dataset=projected_derived_temperature_771m">Projected derived temperature products - 771m CMIP3/AR4</a></p>
+
+<div class="dataAccordionWrapper">
+<div class="dataAccordion">
+<h3><a href="#dataset=projected_derived_temperature_771m">Projected derived temperature products - 771m CMIP3/AR4</a></h3>
 <div>
 
 <p><img src="${imagePath}ak_extent.jpg" alt="alaska extent" />Projected (2010&ndash;2100: B1, A1B, and A2 scenarios) derived temperature products from 5 AR4 GCMs that perform best across Alaska and the Arctic, downscaled to 771m via the <a href="/methods/downscaling">delta method.</a>  A 5-Model Average is also included.</p>
@@ -1784,8 +1797,11 @@ Estimated Julian days of freeze and thaw (dof, dot) are calculated by assuming a
 </table>
 
 </div>
+</div>
 
-<p><a href="#dataset=projected_derived_precipitation_771m">Projected derived precipitation products - 771m CMIP3/AR4</a></p>
+<div class="dataAccordionWrapper">
+<div class="dataAccordion">
+<h3><a href="#dataset=projected_derived_precipitation_771m">Projected derived precipitation products - 771m CMIP3/AR4</a></h3>
 <div>
 
 <p><img src="${imagePath}ak_extent.jpg" alt="alaska extent" />Projected (2010-2100: B1, A1B, and A2 scenarios) derived precipitation products from 5 AR4 GCMs that perform best across Alaska and the Arctic, downscaled to 771m via the <a href="/methods/downscaling">delta method.</a>  A 5-Model Average is also included.
@@ -1877,8 +1893,10 @@ Estimated Julian days of freeze and thaw (dof, dot) are calculated by assuming a
 </div>
 
 <br/>
+
+
 <div class="dataAccordion">
-<p><a href="#dataset=projected_monthly_temperature_and_precipitation_2km">Projected monthly temperature and precipitation - 2 km CMIP3/AR4</a></p>
+<h3><a href="#dataset=projected_monthly_temperature_and_precipitation_2km">Projected monthly temperature and precipitation - 2 km CMIP3/AR4</a></h3>
 <div>
 
 <p><img src="${imagePath}akcanada_extent.png" alt="alaska-canada extent" />Projected (2001&ndash;2100: B1, A1B, and A2 scenarios) monthly temperature and precipitation from 5 AR4 GCMs that perform best across Alaska and the Arctic, downscaled to 2 km via the <a href="/methods/downscaling">delta method.</a>  A 5-Model Average is also included.
@@ -2022,10 +2040,12 @@ Estimated Julian days of freeze and thaw (dof, dot) are calculated by assuming a
 </tbody>
 </table>
 
-
+</div>
 </div>
 
-<p><a href="#dataset=projected_derived_temperature_2km">Projected derived temperature products - 2 km CMIP3/AR4</a></p>
+<div class="dataAccordionWrapper">
+<div class="dataAccordion">
+<h3><a href="#dataset=projected_derived_temperature_2km">Projected derived temperature products - 2 km CMIP3/AR4</a></h3>
 <div>
 
 <p><img src="${imagePath}akcanada_extent.png" alt="alaska-canada extent" />
@@ -2252,7 +2272,11 @@ Estimated Julian days of freeze and thaw (dof, dot) are calculated by assuming a
 </table>
 
 </div>
-<p><a href="#dataset=projected_derived_precipitation_2km">Projected derived precipitation products - 2 km CMIP3/AR4</a></p>
+</div>
+
+<div class="dataAccordionWrapper">
+<div class="dataAccordion">
+<h3><a href="#dataset=projected_derived_precipitation_2km">Projected derived precipitation products - 2 km CMIP3/AR4</a></h3>
 <div>
 
 <p><img src="${imagePath}akcanada_extent.png" alt="alaska-canada extent" />
@@ -2345,10 +2369,11 @@ Projected (2010-2100: B1, A1B, and A2 scenarios) derived precipitation products 
 </div>
 
 <br/>
+
 <div class="dataAccordion">
 
 
-<p><a href="#dataset=projected_monthly_potential_evapostranspiration_2km">Projected monthly potential evapotranspiration -  2km CMIP3/AR4</a></p>
+<h3><a href="#dataset=projected_monthly_potential_evapostranspiration_2km">Projected monthly potential evapotranspiration -  2km CMIP3/AR4</a></h3>
 <div>
   <p><img src="${imagePath}ak_extent.jpg" alt="alaska extent" />Projected (2001-2099: A1B scenario) monthly total potential evapotranspiration from 5 AR4 GCMs that perform best across Alaska and the Arctic, utilizing 2km downscaled temperature as model inputs.
 </p>
@@ -2428,8 +2453,11 @@ Projected (2010-2100: B1, A1B, and A2 scenarios) derived precipitation products 
 </table>
 
 </div>
+</div>
 
-<p><a href="#dataset=projected_derived_potential_evapostranspiration_2km">Projected derived potential evapotranspiration -  2km CMIP3/AR4</a></p>
+<div class="dataAccordionWrapper">
+<div class="dataAccordion">
+<h3><a href="#dataset=projected_derived_potential_evapostranspiration_2km">Projected derived potential evapotranspiration -  2km CMIP3/AR4</a></h3>
 <div>
   <p><img src="${imagePath}ak_extent.jpg" alt="alaska extent" />Projected (2001-2099: A1B scenario) monthly total potential evapotranspiration from 5 AR4 GCMs that perform best across Alaska and the Arctic, utilizing 2km downscaled temperature as model inputs.
 </p>
@@ -2468,7 +2496,7 @@ Projected (2010-2100: B1, A1B, and A2 scenarios) derived precipitation products 
 <li><a href="#" class="metadataLink"  data-geonetwork-metadata-id="75">Projected decadal averages of seasonal total potential evapotranspiration 2km AR4</a></li>
 </ul>
 
-<p><strong>Equations used to derive data:</strong> <a href="attachments/Hamon_PET_equations.pdf">Hamon PET equations</a> (PDF, 597KB)</p>
+<p><strong>Equations used to derive data:</strong> <a href="attachments/Hamon_PET_equations.pdf">Hamon PET equations</a> (PDF)</p>
 
 <h4>Data</h4>
 
@@ -2525,7 +2553,7 @@ Projected (2010-2100: B1, A1B, and A2 scenarios) derived precipitation products 
 <div class="dataAccordion">
 
 
-<p><a href="#dataset=projected_monthly_snow_day_fraction_771m">Projected decadal averages of monthly snow-day fraction 771m CMIP3/AR4</a></p>
+<h3><a href="#dataset=projected_monthly_snow_day_fraction_771m">Projected decadal averages of monthly snow-day fraction 771m CMIP3/AR4</a></h3>
 <div>
   <p><img src="${imagePath}ak_extent.jpg" alt="alaska extent" />
   These snow-day fraction estimates were produced by applying equations relating decadal average monthly temperature to snow-day fraction to downscaled decadal average monthly temperature. Separate equations were used to model the relationship between decadal monthly average temperature and the fraction of wet days with snow for seven geographic regions in the state: Arctic, western Alaska, Interior, Cook Inlet, SW Islands, SW Interior, and the Gulf of Alaska coast.
@@ -2613,7 +2641,7 @@ Although the equations developed here provide a reasonable fit to the data, mode
 <div class="dataAccordionWrapper">
 <div class="dataAccordion">
 
-<p><a href="#dataset=historical_sea_ice_atlas">Historical Sea Ice Atlas: observed estimates of sea ice concentration in Alaska waters</a></p>
+<h3><a href="#dataset=historical_sea_ice_atlas">Historical Sea Ice Atlas: observed estimates of sea ice concentration in Alaska waters</a></h3>
 <div>
 
 <p><img src="${imagePath}sea-ice-atlas-extent.png" alt="" />
@@ -2654,7 +2682,7 @@ Data were compiled from several historical sea ice data sources into spatially a
 <div class="dataAccordionWrapper">
 <div class="dataAccordion">
 
-<p><a href="#dataset=historical_monthly_temperature_and_precipitation_771m_CRUTS30">Historical monthly temperature and precipitation - 771m CRU TS 3.0</a></p>
+<h3><a href="#dataset=historical_monthly_temperature_and_precipitation_771m_CRUTS30">Historical monthly temperature and precipitation - 771m CRU TS 3.0</a></h3>
 <div>
 
 <p><img src="${imagePath}ak_extent.jpg" alt="alaska extent" />
@@ -2698,9 +2726,11 @@ Historical (1901&ndash;2006) monthly average temperature and total precipitation
 </tbody>
 </table>
 </div>
+</div>
 
-
-<p><a href="#dataset=historical_monthly_temperature_and_precipitation_771m">Historical monthly temperature and precipitation - 771m CRU TS 3.1/3.1.01</a></p>
+<div class="dataAccordionWrapper">
+<div class="dataAccordion">
+<h3><a href="#dataset=historical_monthly_temperature_and_precipitation_771m">Historical monthly temperature and precipitation - 771m CRU TS 3.1/3.1.01</a></h3>
 <div>
 
 <p><img src="${imagePath}ak_extent.jpg" alt="alaska extent" />
@@ -2746,8 +2776,11 @@ Historical (1901&ndash;2009) monthly average temperature and total precipitation
 </tbody>
 </table>
 </div>
+</div>
 
-<p><a href="#dataset=historical_derived_temperature_771m_CRUTS30">Historical derived temperature products - 771m CRU TS 3.0</a></p>
+<div class="dataAccordionWrapper">
+<div class="dataAccordion">
+<h3><a href="#dataset=historical_derived_temperature_771m_CRUTS30">Historical derived temperature products - 771m CRU TS 3.0</a></h3>
 <div>
 
 <p><img src="${imagePath}ak_extent.jpg" alt="alaska extent" />
@@ -2808,8 +2841,11 @@ Estimated Julian days of freeze and thaw (dof, dot) are calculated by assuming a
 
 
 </div>
+</div>
 
-<p><a href="#dataset=historical_derived_temperature_771m">Historical derived temperature products - 771m CRU TS 3.1</a></p>
+<div class="dataAccordionWrapper">
+<div class="dataAccordion">
+<h3><a href="#dataset=historical_derived_temperature_771m">Historical derived temperature products - 771m CRU TS 3.1</a></h3>
 <div>
 
 
@@ -2874,8 +2910,11 @@ Estimated Julian days of freeze and thaw (dof, dot) are calculated by assuming a
 
 
 </div>
+</div>
 
-<p><a href="#dataset=historical_derived_precipitation_771m_CRUTS30">Historical derived precipitation products - 771m CRU TS 3.0</a></p>
+<div class="dataAccordionWrapper">
+<div class="dataAccordion">
+<h3><a href="#dataset=historical_derived_precipitation_771m_CRUTS30">Historical derived precipitation products - 771m CRU TS 3.0</a></h3>
 <div>
 
 
@@ -2909,7 +2948,7 @@ Historical (1910&ndash;1999) derived precipitation products from CRUTS 3.0 clima
 </pre>
 </div>
 
-<p><a href="#dataset=historical_derived_precipitation_771m">Historical derived precipitation products - 771m CRU TS 3.1.01</a></p>
+<h3><a href="#dataset=historical_derived_precipitation_771m">Historical derived precipitation products - 771m CRU TS 3.1.01</a></h3>
 <div>
 
 <p><img src="${imagePath}ak_extent.jpg" alt="alaska extent" />
@@ -2946,11 +2985,11 @@ Historical (1910-2009) derived precipitation products from CRU TS 3.1.01 climate
 </div>
 </div>
 <br/>
+
+<div class="dataAccordionWrapper">
 <div class="dataAccordion">
 
-
-
-<p><a href="#dataset=historical_monthly_temperature_and_precipitation_2km_CRUTS30">Historical monthly Temperature and Precipitation - 2 km CRU TS 3.0</a></p>
+<h3><a href="#dataset=historical_monthly_temperature_and_precipitation_2km_CRUTS30">Historical monthly Temperature and Precipitation - 2 km CRU TS 3.0</a></h3>
 <div>
 
 <p><img src="${imagePath}akcanada_extent.png" alt="alaska-canada extent" />
@@ -2993,8 +3032,11 @@ Historical (1901-2009) monthly average temperature and total precipitation from 
 </table>
 
 </div>
+</div>
 
-<p><a href="#dataset=historical_monthly_temperature_and_precipitation_2km">Historical monthly Temperature and Precipitation - 2 km CRU TS 3.1/3.1.01</a></p>
+<div class="dataAccordionWrapper">
+<div class="dataAccordion">
+<h3><a href="#dataset=historical_monthly_temperature_and_precipitation_2km">Historical monthly Temperature and Precipitation - 2 km CRU TS 3.1/3.1.01</a></h3>
 <div>
 
 <p><img src="${imagePath}akcanada_extent.png" alt="alaska-canada extent" />
@@ -3039,8 +3081,11 @@ Historical (1901-2009) monthly average temperature and total precipitation from 
 </table>
 
 </div>
+</div>
 
-<p><a href="#dataset=historical_derived_temperature_2km_CRUTS30">Historical derived temperature products - 2 km CRU TS 3.0</a></p>
+<div class="dataAccordionWrapper">
+<div class="dataAccordion">
+<h3><a href="#dataset=historical_derived_temperature_2km_CRUTS30">Historical derived temperature products - 2 km CRU TS 3.0</a></h3>
 <div>
 
 <p><img src="${imagePath}akcanada_extent.png" alt="alaska-canada extent" />
@@ -3102,9 +3147,11 @@ Estimated Julian days of freeze and thaw (dof, dot) are calculated by assuming a
 </table>
 
 </div>
+</div>
 
-
-<p><a href="#dataset=historical_derived_temperature_2km">Historical derived temperature products - 2 km CRU TS 3.1</a></p>
+<div class="dataAccordionWrapper">
+<div class="dataAccordion">
+<h3><a href="#dataset=historical_derived_temperature_2km">Historical derived temperature products - 2 km CRU TS 3.1</a></h3>
 <div>
 
 <p><img src="${imagePath}akcanada_extent.png" alt="alaska-canada extent" />
@@ -3167,8 +3214,11 @@ Estimated Julian days of freeze and thaw (dof, dot) are calculated by assuming a
 </table>
 
 </div>
+</div>
 
-<p><a href="#dataset=historical_derived_precipitation_2km_CRUTS30">Historical derived precipitation products - 2 km CRU TS 3.0</a></p>
+<div class="dataAccordionWrapper">
+<div class="dataAccordion">
+<h3><a href="#dataset=historical_derived_precipitation_2km_CRUTS30">Historical derived precipitation products - 2 km CRU TS 3.0</a></h3>
 <div>
 
 <p><img src="${imagePath}akcanada_extent.png" alt="alaska-canada extent" />
@@ -3201,7 +3251,7 @@ Historical (1910&ndash;2009) derived precipitation products from CRUTS 3.0 clima
 <a href="/files/data/CRUTS3.0/pr_decadal_summaries_AK_CAN_2km_CRU_TS30_historical.zip">pr_decadal_summaries_AK_CAN_2km_CRU_TS30_historical.zip</a> (312 MB)
 </div>
 
-<p><a href="#dataset=historical_derived_precipitation_2km">Historical derived precipitation products - 2 km CRU TS 3.1.01</a></p>
+<h3><a href="#dataset=historical_derived_precipitation_2km">Historical derived precipitation products - 2 km CRU TS 3.1.01</a></h3>
 <div>
 
 <p><img src="${imagePath}akcanada_extent.png" alt="alaska-canada extent" />
@@ -3238,10 +3288,10 @@ Historical (1910&ndash;2009) derived precipitation products from CRUTS 3.1.01 cl
 </div>
 
 <br/>
+
+<div class="dataAccordionWrapper">
 <div class="dataAccordion">
-
-
-<p><a href="#dataset=historical_monthly_potential_evapotranspiration_2km">Historical monthly potential evapotranspiration -  2km CRUTS3.0</a></p>
+<h3><a href="#dataset=historical_monthly_potential_evapotranspiration_2km">Historical monthly potential evapotranspiration -  2km CRUTS3.0</a></h3>
 <div>
 <p><img src="${imagePath}ak_extent.jpg" alt="alaska extent" />Historical (1901-2006) monthly total potential evapotranspiration utilizing CRU TS 3.0 climate data downscaled to 2 km via the <a href="/methods/downscaling">delta method.</a></p>
 
@@ -3279,9 +3329,11 @@ Historical (1910&ndash;2009) derived precipitation products from CRUTS 3.1.01 cl
 <ul><li><a href="files/data/pet/pet_AK_2km_CRU_TS30_historical.zip">1901&ndash;2006</a> (726MB)</li></ul>
 
 </div>
+</div>
 
-
-<p><a href="#dataset=historical_derived_potential_evapotranspiration_2km">Historical derived potential evapotranspiration -  2km CRUTS3.0</a></p>
+<div class="dataAccordionWrapper">
+<div class="dataAccordion">
+<h3><a href="#dataset=historical_derived_potential_evapotranspiration_2km">Historical derived potential evapotranspiration -  2km CRUTS3.0</a></h3>
 <div>
 
 <p><img src="${imagePath}ak_extent.jpg" alt="alaska extent" />Historical (1910-1999) monthly total potential evapotranspiration utilizing CRU TS 3.0 climate data downscaled to 2 km via the <a href="/methods/downscaling">delta method.</a></p>
@@ -3327,10 +3379,10 @@ Historical (1910&ndash;2009) derived precipitation products from CRUTS 3.1.01 cl
 </div>
 
 <br/>
+
+<div class="dataAccordionWrapper">
 <div class="dataAccordion">
-
-
-<p><a href="#dataset=historical_monthly_snow_day_fraction_771m">Historical decadal averages of monthly snow-day fraction 771m CRU TS 3.1</a></p>
+<h3><a href="#dataset=historical_monthly_snow_day_fraction_771m">Historical decadal averages of monthly snow-day fraction 771m CRU TS 3.1</a></h3>
 <div>
   <p><img src="${imagePath}ak_extent.jpg" alt="alaska extent" />
   These snow-day fraction estimates were produced by applying equations relating decadal average monthly temperature to snow-day fraction to downscaled decadal average monthly temperature. Separate equations were used to model the relationship between decadal monthly average temperature and the fraction of wet days with snow for seven geographic regions in the state: Arctic, western Alaska, Interior, Cook Inlet, SW Islands, SW Interior, and the Gulf of Alaska coast.
@@ -3404,7 +3456,7 @@ Although the equations developed here provide a reasonable fit to the data, mode
 <div class="dataAccordionWrapper">
 <div class="dataAccordion">
 
-<p><a href="#dataset=IEM_ancillary">Ancillary data: elevation, slope, slope complexity, aspect, land cover, fire history (burned area)</a></p>
+<h3><a href="#dataset=IEM_ancillary">Ancillary data: elevation, slope, slope complexity, aspect, land cover, fire history (burned area)</a></h3>
 <div>
 
 <table class="overview iem" style="display: static;">
@@ -3441,7 +3493,7 @@ Although the equations developed here provide a reasonable fit to the data, mode
 
 <div class="dataAccordionWrapper">
   <div class="dataAccordion">
-    <p><a href="#dataset=IEM_historical_temperature">Historical temperature</a></p>
+    <h3><a href="#dataset=IEM_historical_temperature">Historical temperature</a></h3>
     <div>
       <table>
         <tbody>
@@ -3462,7 +3514,7 @@ Although the equations developed here provide a reasonable fit to the data, mode
 
 <div class="dataAccordionWrapper">
   <div class="dataAccordion">
-    <p><a href="#dataset=IEM_historical_precipitation">Historical precipitation</a></p>
+    <h3><a href="#dataset=IEM_historical_precipitation">Historical precipitation</a></h3>
     <div>
             <table>
         <tbody>
@@ -3482,7 +3534,7 @@ Although the equations developed here provide a reasonable fit to the data, mode
 
 <div class="dataAccordionWrapper">
   <div class="dataAccordion">
-    <p><a href="#dataset=IEM_historical_radiation">Historical surface downwelling shortwave radiation</a></p>
+    <h3><a href="#dataset=IEM_historical_radiation">Historical surface downwelling shortwave radiation</a></h3>
     <div>
             <table>
         <tbody>
@@ -3502,7 +3554,7 @@ Although the equations developed here provide a reasonable fit to the data, mode
 
 <div class="dataAccordionWrapper">
   <div class="dataAccordion">
-    <p><a href="#dataset=IEM_historical_vapor">Historical vapor pressure</a></p>
+    <h3><a href="#dataset=IEM_historical_vapor">Historical vapor pressure</a></h3>
     <div>      <table>
         <tbody>
           <tr><th scope="row">Baseline reference climate</th><td>1961&ndash;1990</td></tr>
@@ -3521,7 +3573,7 @@ Although the equations developed here provide a reasonable fit to the data, mode
 
 <div class="dataAccordionWrapper">
   <div class="dataAccordion">
-    <p><a href="#dataset=IEM_projected_temperature">Projected Temperature</a></p>
+    <h3><a href="#dataset=IEM_projected_temperature">Projected temperature</a></h3>
     <div>
       <table>
         <tbody>
@@ -3546,7 +3598,7 @@ Although the equations developed here provide a reasonable fit to the data, mode
 
 <div class="dataAccordionWrapper">
   <div class="dataAccordion">
-    <p><a href="#dataset=IEM_projected_precipitation">Projected precipitation</a></p>
+    <h3><a href="#dataset=IEM_projected_precipitation">Projected precipitation</a></h3>
     <div>
             <table>
         <tbody>
@@ -3571,7 +3623,7 @@ Although the equations developed here provide a reasonable fit to the data, mode
 
 <div class="dataAccordionWrapper">
   <div class="dataAccordion">
-    <p><a href="#dataset=IEM_projected_radiation">Projected surface downwelling shortwave radiation</a></p>
+    <h3><a href="#dataset=IEM_projected_radiation">Projected surface downwelling shortwave radiation</a></h3>
     <div>
             <table>
         <tbody>
@@ -3596,7 +3648,7 @@ Although the equations developed here provide a reasonable fit to the data, mode
 
 <div class="dataAccordionWrapper">
   <div class="dataAccordion">
-    <p><a href="#dataset=projected_vapor">Projected vapor pressure</a></p>
+    <h3><a href="#dataset=projected_vapor">Projected vapor pressure</a></h3>
     <div>
             <table>
         <tbody>

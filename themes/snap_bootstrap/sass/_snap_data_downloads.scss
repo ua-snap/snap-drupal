@@ -1,3 +1,5 @@
+//Styling for Data Downloads page and its accordion dropdowns. Refer to /modules/_snap_data_downloads/data_downloads.php for further code.
+
 .dataAccordionWrapper .dataAccordion {
   
   font-weight: 400;
@@ -10,28 +12,66 @@
   h3 {
     border: none;
     background: #fff none;
-    padding: 1ex 0;
-    font-size: $font-size-h4;
+    padding: .5ex 0;
+    font-size: 1em;
     font-weight: 300;
 
     &.ui-accordion-header-active {
-      background-color: $brand-info;
+      background-color: lighten($snapGreen, 20%);
       span {
         visibility: normal; 
       }
     }
+	  
     span {
       display: inline-block;  
       visibility: hidden;  
-    }
+    	}
+	  
     a {
     display: inline-block;
     }
+	  
     &:hover {
-      background-color: $brand-info;
+      background-color: lighten($snapGreen, 15%);
+		@include link-transition;
       span {
         visibility: normal;
       }
     }
   }
+	
+	td {
+		padding: 0 1em 0 1em;
+		color: $snapDarkGrey;
+	}
+	
+	thead th {
+		text-align: center;
+		border-bottom: 1px solid $snapGrey;
+	}
+
+	th {
+		font-size: .9em;
+		color: $snapDarkGrey;
+	}
+	
+	ul li a {
+		font-size: .9em;
+	}
+	
+	img {
+		float: right;
+	}
+	
+	h4 {
+		font-size: 1em;
+		color: $snapDarkGrey;
+		text-transform: uppercase;
+		font-weight: bold;
+	}
+	
+	p {
+		color: $snapDarkGrey;
+	}	
 }
