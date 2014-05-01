@@ -23,6 +23,8 @@
 @import "snap_tables";
 @import "snap_panels";
 @import "snap_articles";
+@import "snap_redirect";
+@import "snap_data";
 
  #pageWrapper {
   background-color: lighten($snapGreen, 50%);
@@ -53,6 +55,7 @@ a {
 	&:focus {
 		@include link-transition;
 		color: $snapGreen;
+		text-decoration: none;
 	}
 }
 

@@ -223,6 +223,7 @@ This non-module dwells in ```sites/all/modules/snap_community_charts```.  All st
  1. Database: In MySQL, create a new database and user, then load the ```etc/charts.sql.bz2``` SQL dump into that user.  Assign sufficient permissions to the user to allow read access from localhost.
  1. Fonts: Unpack and copy all the TrueType fonts from ```etc/Lato.zip``` into the ```/usr/share/fonts``` directory, then run ```fc-cache``` to rebuild the font cache.  Use ```fc-list``` to verify that various Lato fonts have been installed.
  1. Scratch and web-visible directories: create directory/directories that will be used for scratch space as well as the location that Apache will serve the generated files from.  They can be the same directory.
+ 1. Make sure ImageMagick is installed for the chart export feature to work: ```sudo yum install ImageMagick```
  1. Configuration.  Copy the src/Config.php.example file and update the database configuration and the directory locations from the prior step.
 
 ### Setting up People
@@ -261,6 +262,7 @@ Steps 4-6 should be performed as quickly as possible, as the live Drupal site wi
 
 The main thing to look out for when updating the Drupal core is that the file permissions end up being the same as before. Note that the file permissions change a little bit for ```sites/default/files```. This directory has the group-write bit set so the web server can upload files there. But all of the permissions and file ownership should end up set correctly if you follow the above steps in the proper order.
 
+<<<<<<< HEAD
 ## Setting up the Articles content type to enable publishing of "highlighted" items temporarily on the Home page
 
 **1. Download the Drupal module Scheduler from drupal.org/project/scheduler. 
@@ -293,3 +295,15 @@ The main thing to look out for when updating the Drupal core is that the file pe
 * Choose Image style: Medium (220 x 220); Link to nothing.
 * Change Body trim length to 350.
 * Save.
+=======
+## Add Module: Menu Target
+
+The menu module allows on-the-fly creation of menu links in the content authoring forms. Configuration is simple:
+
+1. Download and extract the Menu target tar.gz file to /modules.
+2. Source for the Main links: Main menu
+3. Source for the Secondary links: Main menu
+4. Menu target type: XHTML Valid
+5. Save.
+6. Now, when editing Menu items, there will be a choice to open link in a new window.
+>>>>>>> master
