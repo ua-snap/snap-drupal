@@ -4,28 +4,28 @@
     text-align: center;
     background-color: lighten($snapGrey, 15%);
     padding: 1.5em 0;
-    background-image: url(../images/SNAP_symbol_white.svg);
+    background-image: url(../images/SNAP_symbol_white_faded.svg);
     background-repeat: no-repeat;
     background-position: 48.2% center;
     img {
-        width: 25em;
+        width: 21em;
     }
-    height: 380px;
+    height: 310px;
 
     h1 {
         font-weight:  300;
         padding: 0;
-        margin: .5em 0 0 0;
+        margin: .75em 0 0 0;
         color: $snapDarkGrey;
-        font-size: 2.2em;
+        font-size: 1.9em;
     }
 
     h2 {
       font-weight: 300;
       padding: 0;
-      margin: 1em 0 0 0;
+      margin: .25em 0 0 0;
       color: $snapDarkGrey;
-		font-size: 1.3em;
+		font-size: 1.15em;
 		line-height: 1.4em;
   }
 }
