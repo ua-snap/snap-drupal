@@ -1,6 +1,8 @@
+//Styling for collaborator logo block in Projects content type
+
 #block-views-collaborators-block { 
   img {
-    max-width: 150px;
+    max-width: 100px;
   }
 }
 
@@ -12,4 +14,9 @@
 .field-name-field-collaborators .field-item.odd {
   float: right;
   margin: 1em .5em 0 .5em;
+}
+
+//Styling for collaborator logos on Collaborators page
+table td {
+	padding: .5em 1em .5em 1em;
 }
