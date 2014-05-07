@@ -220,6 +220,8 @@ h6 { font-size: $font-size-h6; }
 h1, h2, h3, h4 {
 	margin: 1.5em 0 .25em 0;
 	color: $snapGreen;
+	font-weight: bold;
+	letter-spacing: .03em;
 }
 
 h5, h6 {
@@ -227,8 +229,8 @@ h5, h6 {
 	letter-spacing: .05em;
 	text-transform: uppercase;
 	background-color: lighten($snapGreen, 40%);
-	padding: .1em;
-	margin-top: 2em;
+	padding: .2em;
+	margin: 2em 0 .2em 0;
 	font-weight: bold;
 	
 	small, .small {
@@ -247,10 +249,7 @@ blockquote {
 	padding: .5em 1em .5em 1em;
 	border-left: 5px solid $snapGreen;
 	font-weight: 100;
-	
-	p {
-		font-size: 1.1em;
-	}
+	font-size: 1em;
 	
 	a {
 		font-size: .8em;
