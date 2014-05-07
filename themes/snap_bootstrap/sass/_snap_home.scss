@@ -13,7 +13,7 @@
 		@include shadow($x, $y, $blur, $shadow-color);
 		
 		h2 {
-			font-size: 2em;
+			font-size: 1.8em;
 			color: $snapDarkGrey;
 			line-height: 1.2;
 			font-weight: 300;
@@ -21,7 +21,8 @@
 		}
 
 		p {
-			font-size: 1.22em;
+			font-size: 1.05em;
+			line-height: ($line-height-base * .85);
 			margin: .3em 2.5em 0 0;
 			text-align: left;
 			font-weight: 300;
