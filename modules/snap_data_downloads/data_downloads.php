@@ -2561,7 +2561,7 @@ Projected (2010-2100: B1, A1B, and A2 scenarios) derived precipitation products 
 Although the equations developed here provide a reasonable fit to the data, model evaluation demonstrated that some stations are consistently less well described by regional models than others. It is unclear why this occurs, but it is like related to localized climate conditions. Very few weather stations with long records are located above 500m elevation in Alaska, so the equations used here were developed primarily from low-elevation weather stations. It is not clear whether the equations will be completely appropriate in the mountains. Finally, these equations summarize a long-term monthly relationship between temperature and precipitation type that is the result of short-term weather variability. In using these equations to make projections of future snow, as assume that these relationships remain stable over time, and we do not know how accurate that assumption is.
 </p>
  <ul>
-  <li><a href="/files/data/snow_day_fraction/snow_fraction_data_users_guide.pdf">User&rsquo;s guide for this data set</a> (PDF) contains information on methodology and validation</li>
+  <li><a href="/files/data/snow_day_fraction/snow_fraction_data_users_guide.pdf">User&rsquo;s guide for these data</a> (PDF) contains information on methodology and validation</li>
   <li><a href="/attachments/McAfee2013_snowDay.pdf">See this paper</a> (PDF) for detailed information on the construction of this data and its implications</li>
   <li><a href="https://github.com/ua-snap/snowfraction">Download the scripts</a> used to generate these data</li>
 </ul>
@@ -3394,7 +3394,7 @@ Historical (1910&ndash;2009) derived precipitation products from CRUTS 3.1.01 cl
 Although the equations developed here provide a reasonable fit to the data, model evaluation demonstrated that some stations are consistently less well described by regional models than others. It is unclear why this occurs, but it is likely related to localized climate conditions. Very few weather stations with long records are located above 500m elevation in Alaska, so the equations used here were developed primarily from low-elevation weather stations. It is not clear whether the equations will be completely appropriate in the mountains. Finally, these equations summarize a long-term monthly relationship between temperature and precipitation type that is the result of short-term weather variability. In using these equations to make projections of future snow, as assume that these relationships remain stable over time, and we do not know how accurate that assumption is.
 </p>
 <ul>
-  <li><a href="/files/data/snow_day_fraction/snow_fraction_data_users_guide.pdf">User&rsquo;s guide for this data set</a> (PDF) contains information on methodology and validation</li>
+  <li><a href="/files/data/snow_day_fraction/snow_fraction_data_users_guide.pdf">User&rsquo;s guide for these data</a> (PDF) contains information on methodology and validation</li>
   <li><a href="/attachments/McAfee2013_snowDay.pdf">See this paper</a> (PDF) for detailed information on the construction of this data and its implications</li>
   <li><a href="https://github.com/ua-snap/snowfraction">Download the scripts</a> used to generate these data</li>
 </ul>
