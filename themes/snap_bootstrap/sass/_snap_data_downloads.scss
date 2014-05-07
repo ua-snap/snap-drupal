@@ -56,12 +56,14 @@
 		color: $snapDarkGrey;
 	}
 	
-	ul li a {
+	ul li {
 		font-size: .9em;
+		color: $snapDarkGrey;
 	}
 	
 	img {
 		float: right;
+		margin: 0 0 1em 1em;
 	}
 	
 	h4 {
