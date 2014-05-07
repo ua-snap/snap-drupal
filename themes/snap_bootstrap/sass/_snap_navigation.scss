@@ -23,7 +23,7 @@ body {
     &.not-front {
         header#navbar {
 			margin: .2em auto;
-			background-color: lighten($snapDarkGrey, 40%);	
+			background-color: lighten($snapGrey, 10%);	
             z-index: 10;;
             @include border-radius(0);
             border-bottom: 1px solid $snapDarkGrey;
@@ -41,7 +41,7 @@ a.logo img {
 header#navbar {
     padding: 0;
     margin: .2em auto;
-	background-color: lighten($snapDarkGrey, 40%);
+	background-color: lighten($snapGrey, 10%);
 
     nav {
         

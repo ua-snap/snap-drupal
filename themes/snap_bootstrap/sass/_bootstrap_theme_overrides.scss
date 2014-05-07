@@ -198,7 +198,7 @@ ul.secondary {
 	margin: 0 0 0 0;
 	color: $snapDarkGrey;
 	font-weight: 300;
-	font-size: 3em;
+	font-size: 2.5em;
 }
 
 
@@ -254,6 +254,12 @@ blockquote {
 	a {
 		font-size: .8em;
 	}
+}
+
+//Blocks of code.
+pre {
+  padding: (($line-height-computed - 1.5) / 2.5);
+  font-size: ($font-size-base - 3); // 
 }
 	
 
