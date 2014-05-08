@@ -2993,7 +2993,7 @@ Historical (1910-2009) derived precipitation products from CRU TS 3.1.01 climate
 <div class="dataAccordionWrapper">
 <div class="dataAccordion">
 
-<h3><a href="#dataset=historical_monthly_temperature_and_precipitation_2km_CRUTS30">Historical monthly Temperature and Precipitation - 2 km CRU TS 3.0</a></h3>
+<h3><a href="#dataset=historical_monthly_temperature_and_precipitation_2km_CRUTS30">Historical monthly temperature and precipitation - 2 km CRU TS 3.0</a></h3>
 <div>
 
 <p><img src="${imagePath}akcanada_extent.png" alt="alaska-canada extent" />
@@ -3040,7 +3040,7 @@ Historical (1901-2009) monthly average temperature and total precipitation from 
 
 <div class="dataAccordionWrapper">
 <div class="dataAccordion">
-<h3><a href="#dataset=historical_monthly_temperature_and_precipitation_2km">Historical monthly Temperature and Precipitation - 2 km CRU TS 3.1/3.1.01</a></h3>
+<h3><a href="#dataset=historical_monthly_temperature_and_precipitation_2km">Historical monthly temperature and precipitation - 2 km CRU TS 3.1/3.1.01</a></h3>
 <div>
 
 <p><img src="${imagePath}akcanada_extent.png" alt="alaska-canada extent" />

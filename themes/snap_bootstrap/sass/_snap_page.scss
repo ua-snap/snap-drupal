@@ -7,7 +7,8 @@ div.node-page {
 	}
 	
 	ul li {
-		margin: 0 0 .25em 0;
+		margin: -1em 0 1.25em 0;
+		line-height: 1.5em;
 
 		li {
 			margin: .25em 0 0 0;
@@ -15,7 +16,8 @@ div.node-page {
 	}
 	
 	ol li {
-		margin: .75em 0 0 0;
+		margin: -1em 0 1.25em 0;
+		line-height: 1.5em;
 		
 		li {
 			list-style-type: disc;
@@ -46,11 +48,11 @@ div.node-page {
 		padding: .3em;
 		
 		&.pull-left {
-			margin: 0 1.5em .5em 0;
+			margin: 0 1.5em 1em 0;
 		}
 		
 		&.pull-right {
-			margin: 0 0 .5em 1.5em;
+			margin: 0 0 1em 1.5em;
 		}
 	}
 	
