@@ -7,11 +7,13 @@ table.expertise {
 	
 	td {
 		padding: .5em 0 .5em 0;
+		line-height: ($line-height-base * .85);
+
 		
 		a {
 			font-size: 1em;
 			text-transform: uppercase;
-			letter-spacing: .1em;
+			letter-spacing: .05em;
 		}
 	}
 	
@@ -40,19 +42,20 @@ table.texttable {		//for tables that are text only
 	border: 1px solid $snapGrey;
 	
 	th {
-		text-align: left;
+		text-align: center;
 		background-color: $snapGreen;
 		color: white;
-		padding: .2em 1em .2em 1em;
-		font-size: 1.2em;
+		padding: .05em;
+		font-size: 1em;
 		letter-spacing: .05em;
 	}
 	
 	td {
 		vertical-align: text-top;
 		text-align: left;
-		padding: .2em 1em .2em 1em;
+		padding: .1em .5em .1em .5em;
 		border: 1px dotted $snapGrey;
+		font-size: .9em;
 		
 		h1 {
 			font-size: 1.3em;

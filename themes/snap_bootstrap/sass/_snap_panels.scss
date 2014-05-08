@@ -2,9 +2,9 @@
 
 //panel-info: green box
 .panel.panel-info.pull-right {
-	width: 30%;
+	width: auto;
 	clear: right;
-	margin: 0 0 2em 2em;
+	margin: 0 -15px 2em 2em;
 	padding: 1em;
 	border-radius: $border-radius;
 	border: $border;
@@ -21,6 +21,16 @@
 		color: $snapDarkGrey;
 		background-color: lighten($snapGreen,35%);
 	}
+	
+	p {
+		font-size: .9em;
+		line-height: ($line-height-base * .85);
+	}
+	
+	ul li, ol li {
+		font-size: .9em;
+		line-height: ($line-height-base * .85);
+	}
 }
 
 .panel-info > .panel-heading {
@@ -30,44 +40,5 @@
 	background-color: $snapGreen;
 	margin: 0 0 1em 0;
 	border-radius: $border-radius;
-	border: $border;		
-}
-
-.panel-info > p {
-	font-size: .9em;
-	line-height: 1.3em;
-}
-	
-
-//panel-success: gray box	
-.panel.panel-success.pull-right {
-	width: 40%;
-	clear: right;
-	margin: 0 0 2em 2em;
-	padding: 1em;
-	border-radius: $border-radius;
 	border: $border;
-	background: lighten($snapGrey,15%);
-	@include shadow($x, $y, $blur, $shadow-color);
-}
-
-.panel-success > .panel-heading {
-	color: lighten($snapGreen, 50%);
-	line-height: 1.15em;
-	font-size: 1em;
-	background-color: $snapDarkGrey;
-	margin: 0 0 1em 0;
-	border-radius: $border-radius;
-	border: $border;
-}
-
-.panel-success h3 {
-	color: $snapDarkGrey;
-	font-size: 1em;
-	margin: .5em 0 0 0;
-}
-
-.panel-success > p {
-	font-size: .9em;
-	line-height: 1.3em;
 }

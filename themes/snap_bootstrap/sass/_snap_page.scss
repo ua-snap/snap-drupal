@@ -7,8 +7,8 @@ div.node-page {
 	}
 	
 	ul li {
-		margin: -1em 0 1.25em 0;
-		line-height: 1.5em;
+		margin: 0;
+		line-height: ($line-height-base * .85);
 
 		li {
 			margin: .25em 0 0 0;
@@ -16,8 +16,8 @@ div.node-page {
 	}
 	
 	ol li {
-		margin: -1em 0 1.25em 0;
-		line-height: 1.5em;
+		margin: 0;
+		line-height: ($line-height-base * .85);
 		
 		li {
 			list-style-type: disc;
