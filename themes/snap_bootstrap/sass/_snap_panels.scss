@@ -1,6 +1,10 @@
 // Panel (sidebar) styling
 
 //panel-info: green box
+.panel-info {
+	border: none;
+}
+
 .panel.panel-info.pull-right {
 	width: auto;
 	clear: right;

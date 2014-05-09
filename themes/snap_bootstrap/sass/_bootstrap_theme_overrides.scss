@@ -261,6 +261,21 @@ blockquote {
 	}
 }
 
+// MODALS: Title text within header
+.modal-title {
+  margin: 0 2em 0 0;
+  line-height: ($line-height-base * .65);
+	font-size: 1.4em;
+}
+
+// Modal body
+// Where all modal content resides (sibling of .modal-header and .modal-footer)
+.modal-body {
+  position: relative;
+  padding: $modal-inner-padding;
+	line-height: ($line-height-base * .85);
+}
+
 //Blocks of code.
 pre {
   padding: (($line-height-computed - 1.5) / 2.5);
