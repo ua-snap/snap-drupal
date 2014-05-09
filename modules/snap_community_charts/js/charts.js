@@ -50,7 +50,7 @@ $( function() {
 		$('#about_variability').show().dialog({
 			draggable: false,
 			modal: true,
-			title: 'About Inter-Model Variability',
+			title: 'About inter-model variability',
 			resizable: false,
 			show: 'fade',
 			hide: 'fade',
@@ -63,6 +63,31 @@ $( function() {
 			}
 		});
 	});
+	
+	
+$('#derive_help').button({
+	text: false,
+	icons: {
+		primary: 'ui-icon-help'
+	}
+}).click(function(e) {
+	$('#modal_block').show().dialog({
+		draggable: false,
+		modal: true,
+		title: 'Learn more',
+		resizable: false,
+		show: 'fade',
+		hide: 'fade',
+		width: '700px',
+		zindex: 50000,
+		buttons: {
+			'Close': function(e) {
+				$(this).dialog('close');
+			}
+		}
+	});
+});	
+	
 
 	// Initialize the button for the export modal
 	$('#export_options').button({
