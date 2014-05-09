@@ -13,7 +13,8 @@
 		}	
 	}
 
-	.helpbuttons {
+	.helpbuttons,
+	.methods.text.helpbuttons {
 		font-size: .75em;
 		margin-bottom: 1.5em;
 	}
@@ -66,7 +67,7 @@ h1#chartsTitle,
 	font-size: 1.7em;
 }
 
-.region h2{
+.region h3 {
 	color: $snapDarkGrey;
 	font-size: .9em;
 	line-height: ($line-height-base * .75);

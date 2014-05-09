@@ -55,8 +55,8 @@
 
 <div class="col-md-4">
 <div class="panel panel-info pull right">
-<h2 class="region"><a href="http://www.uaf.edu/ces/"><img alt="Cooperative Extension Services" class="plain pull-right" src="/sites/default/files/pictures/ces.jpg" style="height: 100px; width: 100px;" /></a>Outlooks are available for this region, and were created by SNAP in cooperation with&nbsp;<abbr title="Cooperative Extension Service">CES</abbr></h2>
-<img alt="alaska-canada" class="plain" src="/sites/default/files/pictures/akcanada_extent.gif" style="height: 122px; width: 280px;" /></div>
+<h3 class="region"><a href="http://www.uaf.edu/ces/"><img alt="cooperative extension" class="plain pull-right" src="/sites/default/files/pictures/ces.jpg" style="width: 100px; height: 100px;" /></a>Outlooks are available for this region, and were created by SNAP in cooperation with&nbsp;<abbr title="Cooperative Extension Service">CES</abbr></h3>
+<img alt="alaska-canada" class="plain" src="/sites/default/files/pictures/akcanada_extent.gif" style="width: 279px; height: 113px;" /></div>
 </div>
 </div>
 <!-- end row -->
@@ -80,17 +80,10 @@
 
 <p>Warmer, drier spring weather may also be an indicator for increased fire risk. In many locations, winter temperatures are projected to increase dramatically. Warmer winters may favor growth of species that are less cold-hardy (including desirable crops and invasive species), or it may decrease snowpack and increase the frequency of rain-on-snow events that impact wildlife. Higher temperatures across all seasons will likely impact permafrost and land-fast ice.</p>
 
-<p><em><span class="highlight">How did we derive the community climate outlooks?&nbsp;</span></em><button class="btn btn-warning btn-xs" data-target="#chartModalInfo" data-toggle="modal" style="display: inline; margin: 0 0 0 1em;">Learn more</button></p>
+<div class="helpbuttons"><button id="derive_help">Learn more about how we derived the community climate outlooks</button>
 
-<div class="modal fade" id="chartModalInfo" tabindex="-1">
-<div class="modal-dialog">
-<div class="modal-content">
-<div class="modal-header"><button class="close" data-dismiss="modal" type="button">x</button>
+<div class="about_dialog" id="modal_block" style="display: none;"><span class="ui-dialog-title" id="ui-id-7">Community climate outlooks: core statistics and methods</span>
 
-<h4 class="modal-title" id="chartModalInfoLabel">Community climate outlooks: core statistics and methods</h4>
-</div>
-
-<div class="modal-body">
 <p><strong>Data sources: </strong>historical <abbr title="Parameter-elevation Regressions on Independent Slopes Model">PRISM</abbr> climatology data and downscaled outputs averaged from five <abbr title="General Circulation Models">GCMs</abbr>. <a href="/methods/downscaling">Learn more about how we downscale climate data from global to regional scales.</a></p>
 
 <p><strong>We averaged results to smooth out short-term variability. </strong>Results are averaged across decades to lessen the influence of normal year-to-year climate variability on projected values. Averaging also tends to make overall projection trends clearer. Uncertainty is associated with each of these graphed values, and stems from:</p>
@@ -111,10 +104,6 @@
 </ul>
 
 <p><strong>Generally, precipitation is more uncertain than temperature.</strong> And, although our models project increases in precipitation, water availability may decrease in some areas due to longer growing seasons and warmer weather.</p>
-</div>
-
-<div class="modal-footer"><button class="btn btn-warning btn-sm" data-dismiss="modal" type="button">Close</button></div>
-</div>
 </div>
 </div>
 </div>
