@@ -6,26 +6,6 @@ div.node-page {
 		padding: 0 0 1em 0;
 	}
 	
-	
-	ul li {
-		margin: .25em 0 0 0;
-		line-height: ($line-height-base * .85);
-
-		li {
-			margin: .25em 0 0 0;
-		}
-	}
-	
-	ol li {
-		margin: .25em 0 0 0;
-		line-height: ($line-height-base * .85);
-		
-		li {
-			list-style-type: disc;
-			margin: .25em 0 0 0;
-		}
-	}
-	
 	a {
 		&:focus, &:hover {
 		@include link-transition;
