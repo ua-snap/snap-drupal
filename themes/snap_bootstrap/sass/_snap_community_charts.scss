@@ -75,3 +75,34 @@ h1#chartsTitle,
 	padding: .2em;
 }
 
+//jQuery UI modal styling
+.ui-dialog {
+	font-family: $lato;
+	font-size: .9em;
+	line-height: ($line-height-base * .75);
+	
+	ul, ol {
+		font-size: 1em;
+	}
+	
+	a {
+		text-decoration: none;
+
+		&:link {
+			font-weight: bold;
+			color: $snaplink;
+		}
+
+		&:visited {
+			color: $linkvisited;
+		}
+
+		&:hover,
+		&:focus {
+			@include link-transition;
+			color: $snapGreen;
+			text-decoration: none;
+		}
+	}
+}
+

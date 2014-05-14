@@ -74,7 +74,7 @@ $('#derive_help').button({
 	$('#modal_block').show().dialog({
 		draggable: false,
 		modal: true,
-		title: 'Learn more',
+		title: 'Community climate outlooks: core statistics and methods',
 		resizable: false,
 		show: 'fade',
 		hide: 'fade',
