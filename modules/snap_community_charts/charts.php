@@ -54,10 +54,10 @@
 </div>
 
 <div class="col-md-4">
-<div class="panel panel-info pull right">
-<h3 class="region"><a href="http://www.uaf.edu/ces/"><img alt="cooperative extension" class="plain pull-right" src="/sites/default/files/pictures/ces.jpg" style="width: 100px; height: 100px;" /></a>Outlooks are available for this region, and were created by SNAP in cooperation with&nbsp;<abbr title="Cooperative Extension Service">CES</abbr></h3>
+<h3 class="region"><a href="http://www.uaf.edu/ces/"><img alt="cooperative extension" class="plain pull-right" src="/sites/default/files/pictures/ces.jpg" style="width: 100px; height: 100px;" /></a>Created by SNAP in cooperation with&nbsp;<abbr title="Cooperative Extension Service">CES.</abbr></h3>
+
+<h3>We offer climate outlooks for communities in this region:</h3>
 <img alt="alaska-canada" class="plain" src="/sites/default/files/pictures/akcanada_extent.gif" style="width: 279px; height: 113px;" /></div>
-</div>
 </div>
 <!-- end row -->
 
@@ -82,7 +82,7 @@
 
 <div class="helpbuttons"><button id="derive_help">Learn more about how we derived the community climate outlooks</button>
 
-<div class="about_dialog" id="modal_block" style="display: none;"><span class="ui-dialog-title" id="ui-id-7">Community climate outlooks: core statistics and methods</span>
+<div class="about_dialog" id="modal_block" style="display: none;">
 
 <p><strong>Data sources: </strong>historical <abbr title="Parameter-elevation Regressions on Independent Slopes Model">PRISM</abbr> climatology data and downscaled outputs averaged from five <abbr title="General Circulation Models">GCMs</abbr>. <a href="/methods/downscaling">Learn more about how we downscale climate data from global to regional scales.</a></p>
 
