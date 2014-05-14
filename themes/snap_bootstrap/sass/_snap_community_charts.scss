@@ -72,3 +72,34 @@ h1#chartsTitle,
 	font-size: .9em;
 	margin: .35em 0 .35em 0;
 }
+
+//jQuery UI modal styling
+.ui-dialog {
+	font-family: $lato;
+	font-size: .9em;
+	line-height: ($line-height-base * .75);
+	
+	ul, ol {
+		font-size: 1em;
+	}
+	
+	a {
+		text-decoration: none;
+
+		&:link {
+			font-weight: bold;
+			color: $snaplink;
+		}
+
+		&:visited {
+			color: $linkvisited;
+		}
+
+		&:hover,
+		&:focus {
+			@include link-transition;
+			color: $snapGreen;
+			text-decoration: none;
+		}
+	}
+}

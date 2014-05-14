@@ -405,7 +405,7 @@ table tr.error {
 // Unordered and Ordered lists
 ul,
 ol {
-  margin-top: ($line-height-base / 2);
+  margin-top: -1em;
   margin-bottom: ($line-height-base / 2);
 	
   ul,
