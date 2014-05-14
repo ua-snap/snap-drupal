@@ -2,28 +2,28 @@
 
 // todo: move this (and other common reuse) up into a mixins file
 // Mix in ability to toggle disabled form fields with jQuery
-(function($) {
-	$.fn.toggleDisabled = function(){
-		return this.each(function(){
+(function ($) {
+	$.fn.toggleDisabled = function () {
+		return this.each(function () {
 			this.disabled = !this.disabled;
-		});
+		} );
 	};
 })(jQuery);
 
 // Prepare some functionality when page has loaded
-$( function() {
+$(function () {
 
-	$('#variable_selections input[type="radio"]').change( function(e) {
+	$('#variable_selections input[type="radio"]').change(function (e) {
 		snapCharts.data[ $(e.currentTarget).attr('name') ] = $(e.currentTarget).val();
 		snapCharts.changeParams();
-	});
+	} );
 
 	$('#dataset_help').button({
 		text: false,
 		icons: {
 			primary: 'ui-icon-help'
 		}
-	}).click(function(e) {
+	}).click(function (e) {
 		$('#about_scenarios').show().dialog({
 			draggable: false,
 			modal: true,
@@ -34,19 +34,19 @@ $( function() {
 			width: '700px',
 			zindex: 50000,
 			buttons: {
-				'Close': function(e) {
+				'Close': function (e) {
 					$(this).dialog('close');
 				}
 			}
-		});
-	});
+		} );
+	} );
 
 	$('#variability_help').button({
 		text: false,
 		icons: {
 			primary: 'ui-icon-help'
 		}
-	}).click(function(e) {
+	}).click(function (e) {
 		$('#about_variability').show().dialog({
 			draggable: false,
 			modal: true,
@@ -57,12 +57,12 @@ $( function() {
 			width: '700px',
 			zindex: 50000,
 			buttons: {
-				'Close': function(e) {
+				'Close': function (e) {
 					$(this).dialog('close');
 				}
 			}
-		});
-	});
+		} );
+	} );
 	
 	
 $('#derive_help').button({
@@ -70,23 +70,23 @@ $('#derive_help').button({
 	icons: {
 		primary: 'ui-icon-help'
 	}
-}).click(function(e) {
+}).click(function (e) {
 	$('#modal_block').show().dialog({
 		draggable: false,
 		modal: true,
-		title: 'Learn more',
+		title: 'Community climate outlooks: core statistics and method',
 		resizable: false,
 		show: 'fade',
 		hide: 'fade',
 		width: '700px',
 		zindex: 50000,
 		buttons: {
-			'Close': function(e) {
+			'Close': function (e) {
 				$(this).dialog('close');
 			}
 		}
-	});
-});	
+	} );
+} );	
 	
 
 	// Initialize the button for the export modal
@@ -95,7 +95,7 @@ $('#derive_help').button({
 			primary: 'ui-icon-print'
 		}
 	}).click(
-	function(e) {
+	function (e) {
 		$('#exportDialog').show().dialog({
 			draggable: false,
 			modal: true,
@@ -106,14 +106,14 @@ $('#derive_help').button({
 			width: '700px',
 			zindex: 50000,
 			buttons: {
-				'Close': function(e) {
+				'Close': function (e) {
 					$(this).dialog('close');
 				}
 			}
-		});
+		} );
 
 		$('#export_link').select();
-		$('#export_hires_png').button().click( function(e) {
+		$('#export_hires_png').button().click(function (e) {
 			$('#exportDialog').dialog('close');
 			$('#processingExportDialog').show().dialog({
 				draggable: false,
@@ -125,16 +125,16 @@ $('#derive_help').button({
 				width: '700px',
 				zindex: 50000,
 				buttons: {
-					'OK': function(e) {
+					'OK': function (e) {
 						$(this).dialog('close');
 					}
 				}
-			});
+			} );
 			snapCharts.exportChart('png/hires');
-		});
-		$('#export_svg').button().click( function(e) {
+		} );
+		$('#export_svg').button().click(function (e) {
 			snapCharts.exportChart('svg');
-		});
+		} );
 
 	}
 	);
@@ -143,7 +143,7 @@ snapCharts.initialize();
 snapCharts.refreshState();
 snapCharts.fetchData();
 
-});
+} );
 
 // Encapsulate the AJAX functionality
 snapCharts = {
@@ -166,42 +166,42 @@ snapCharts = {
 	},
 
 	// Shorthand to manage rounding consistently
-	round: function(value, precision) {
+	round: function (value, precision) {
 		return parseFloat( value.toFixed(precision) );
 	},
 
 	// Intended to be called on page ready() event
-	initialize : function() {
+	initialize : function () {
 
 		$('#comm_select').focus().autocomplete(
 		{
-			source: function(req, responseFn) {
+			source: function (req, responseFn) {
 				var re = $.ui.autocomplete.escapeRegex(req.term);
 				var matcher = new RegExp( "^" + re, "i" );
-				var a = $.grep( snapCharts.communities, function(item,index){
+				var a = $.grep( snapCharts.communities, function (item,index) {
 					return matcher.test(item.label);
-				});
+				} );
 				responseFn( a );
 			}
 		}
-		).bind('autocompletechange', function(event, ui) {
+		).bind('autocompletechange', function (event, ui) {
 			if( false === _.isUndefined(ui.item) ) {
 				$('#comm_select_id').val(ui.item.value);
 				snapCharts.data.community = ui.item.value;
 			}
-		}).bind('autocompletefocus', function(event, ui) {
+		}).bind('autocompletefocus', function (event, ui) {
 			if( false === _.isUndefined(ui.item) ) {
 				event.preventDefault();
 				$('#comm_select_id').val(ui.item.value);
 				snapCharts.data.community = ui.item.value;
 			}
-		}).bind('autocompleteselect', function(event, ui) {
+		}).bind('autocompleteselect', function (event, ui) {
 			event.preventDefault();
 			$('#comm_select').val(ui.item.label);
 			$('#comm_select_id').val(ui.item.value);
 			snapCharts.data.community = ui.item.value;
 			snapCharts.changeParams();
-		}).keypress(function(e) {
+		}).keypress(function (e) {
 			// if the enter key is pressed, try and search if there's a valid community id.
 			if( 13 === e.which ) {
 				if( false === _.isNull( snapCharts.data.community )) {
@@ -209,30 +209,30 @@ snapCharts = {
 					snapCharts.changeParams();
 				}
 			}
-		});
+		} );
 
-		$(window).bind( 'hashchange', function(e) {
+		$(window).bind( 'hashchange', function (e) {
 			snapCharts.refreshState();
 			snapCharts.fetchData();
-		});
+		} );
 
 		$('#variable_selections .buttonset').buttonset();
 
 	},
 
 	// Prepare the chart for export.  The `type` parameter is expected to be a mime-type.
-	exportChart: function(type) {
+	exportChart: function (type) {
 		snapCharts.refreshState();
 		snapCharts.chart.exportChart({
 			type: type
-		});
+		} );
 
 	},
 
 	// Examine the hashtags to rebuild the correct query parameters.  It's expected
 	// that this will be called when the user changes parameters, or when the user
 	// deep-links to this page, or when the user uses back/forward buttons in the browser.
-	refreshState: function() {
+	refreshState: function () {
 
 		var params = $.bbq.getState(true); // perform type coercion
 
@@ -270,9 +270,9 @@ snapCharts = {
 	},
 
 	// Should be called when values change that need to update the hashtag.
-	changeParams : function() {
+	changeParams : function () {
 		
-		$.scrollTo('#chartsTitle', 400, { offset: -10, axis:'y' });
+		$.scrollTo('#chartsTitle', 400, { offset: -10, axis:'y' } );
 
 		$.bbq.pushState({
 			community : snapCharts.data.community,
@@ -280,11 +280,11 @@ snapCharts = {
 			scenario : snapCharts.data.scenario,
 			variability: snapCharts.data.variability,
 			units: snapCharts.data.units
-		});
+		} );
 		
 	},
 
-	fetchData : function() {
+	fetchData : function () {
 
 		// Only fetch the data if there are meaningful parameters to send.  Otherwise, ignore.
 		if(
@@ -302,7 +302,7 @@ snapCharts = {
 					variability: snapCharts.data.variability
 				},
 
-				function(data) {
+				function (data) {
 					snapCharts.data = data;
 					$('#placeholderImage').remove();
 					$('#location').html(": " + snapCharts.data.communityName + ', ' + snapCharts.data.communityRegion);
@@ -321,7 +321,7 @@ snapCharts = {
 	},
 
 	// Manage steps in rendering the chart itself
-	render: function() {
+	render: function () {
 		snapCharts.refreshState();
 		snapCharts.transformUnits();
 		snapCharts.drawChart();
@@ -329,27 +329,27 @@ snapCharts = {
 
 	// This function manages the unit conversions.  The system gets input in standard units,
 	// and we need to change the values and the GUI depending on what unit is selected.
-	transformUnits: function() {
+	transformUnits: function () {
 
 		// Setup the data depending on if showing metric or standard units
 		// Default is standard units
-		snapCharts.sdUnitConversionMapper = function(sd) { return snapCharts.round(sd, 2); }; // default 4 digits precision
-		snapCharts.unitConversionMapper = function(value) { return snapCharts.round(value, 2); }; // null conversion
+		snapCharts.sdUnitConversionMapper = function (sd) { return snapCharts.round(sd, 2); }; // default 4 digits precision
+		snapCharts.unitConversionMapper = function (value) { return snapCharts.round(value, 2); }; // null conversion
 		
 		if( 'metric' === snapCharts.data.units ) {
 
 			if( 1 === snapCharts.data.dataset ) {
 
-				snapCharts.unitConversionMapper = function(value) { return snapCharts.round((value - 32) * (5 / 9), 1); };
-				snapCharts.sdUnitConversionMapper = function(sd) { return snapCharts.round(sd * (5/9), 1); };
+				snapCharts.unitConversionMapper = function (value) { return snapCharts.round((value - 32) * (5 / 9), 1); };
+				snapCharts.sdUnitConversionMapper = function (sd) { return snapCharts.round(sd * (5/9), 1); };
 				snapCharts.unitName = '°C';
 				snapCharts.yAxisTitle = 'Temperature (' + snapCharts.unitName + ')';
 
 			} else {
 				
 				// in to mm
-				snapCharts.unitConversionMapper = function(value) { return snapCharts.round(value * 25.4, 0); };
-				snapCharts.sdUnitConversionMapper = function(value) { return snapCharts.round(value * 25.4, 0); };
+				snapCharts.unitConversionMapper = function (value) { return snapCharts.round(value * 25.4, 0); };
+				snapCharts.sdUnitConversionMapper = function (value) { return snapCharts.round(value * 25.4, 0); };
 				snapCharts.unitName = 'mm';
 				snapCharts.yAxisTitle = 'Total Precipitation (' + snapCharts.unitName + ')';
 
@@ -375,13 +375,13 @@ snapCharts = {
 		};
 
 		// Transform the units
-		_.each(snapCharts.data.series, function(e, i, l) {
+		_.each(snapCharts.data.series, function (e, i, l) {
 			snapCharts.unitConvertedData.series[i] = _.map(e, snapCharts.unitConversionMapper);
-		});
+		} );
 
-		_.each(snapCharts.data.standardDeviations, function(e, i, l) {
+		_.each(snapCharts.data.standardDeviations, function (e, i, l) {
 			snapCharts.unitConvertedData.standardDeviations[i] = _.map(e, snapCharts.sdUnitConversionMapper);
-		});
+		} );
 
 		snapCharts.unitConvertedData.minimum = snapCharts.unitConversionMapper(snapCharts.data.minimum);
 		snapCharts.unitConvertedData.maximum = snapCharts.unitConversionMapper(snapCharts.data.maximum);
@@ -400,7 +400,7 @@ snapCharts = {
 	// (standard/metric).  Perhaps the button management code
 	// can be removed from this, but it needs to be called whenever
 	// the chart is drawn.
-	drawChart: function() {
+	drawChart: function () {
 
 		if( _.isUndefined(snapCharts.data.series)) {
 			alert('Sorry, an error occurred, and the chart could not be loaded.');
@@ -435,7 +435,7 @@ snapCharts = {
 				style: {
 					fontFamily:'Lato, Lato-Regular'
 				}
-			});
+			} );
 
 			// Add a horizontal line indicating freezing point
 			yAxis.plotBands = [
@@ -462,7 +462,7 @@ snapCharts = {
 				style: {
 					fontFamily: 'Lato, Lato-Regular'
 				}
-			});
+			} );
 
 		}
 
@@ -480,7 +480,7 @@ snapCharts = {
 			},
 
 			tooltip: {
-				formatter: function() {
+				formatter: function () {
 					return '<span style="color: #999; font-family: Lato">' + this.x + ' ' + this.series.name + '</span><br/><span>' + this.y + ' ' + snapCharts.unitName + '</span>';
 				}
 			},
@@ -506,7 +506,7 @@ snapCharts = {
 				verticalAlign: top,
 				y: 40,
 
-				labelFormatter: function() {
+				labelFormatter: function () {
 					return '<span style="font-family: Lato; baseline-shift: .1ex">' + this.name + '</span>';
 				}
 			},
@@ -613,16 +613,16 @@ snapCharts = {
 				data: snapCharts.unitConvertedData.standardDeviations['2091-2100']
 			}
 			]
-		},  function(chart) {
+		},  function (chart) {
 			snapCharts.customChartsRenderer(chart);
-		});
+		} );
 }
 };
 
 // This code is responsible for drawing the variability
 // bars on the chart.  It's a callback referenced in the
 // invocation of the HighCharts object above.
-snapCharts.customChartsRenderer = function(chart) {
+snapCharts.customChartsRenderer = function (chart) {
 
 	if( 1 === snapCharts.data.variability ) {
 

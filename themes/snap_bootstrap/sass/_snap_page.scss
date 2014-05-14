@@ -6,8 +6,9 @@ div.node-page {
 		padding: 0 0 1em 0;
 	}
 	
+	
 	ul li {
-		margin: 0;
+		margin: .25em 0 0 0;
 		line-height: ($line-height-base * .85);
 
 		li {
@@ -16,7 +17,7 @@ div.node-page {
 	}
 	
 	ol li {
-		margin: 0;
+		margin: .25em 0 0 0;
 		line-height: ($line-height-base * .85);
 		
 		li {

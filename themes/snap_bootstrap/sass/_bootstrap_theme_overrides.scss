@@ -222,7 +222,7 @@ h5 { font-size: $font-size-h5; }
 h6 { font-size: $font-size-h6; }
 
 h1, h2, h3, h4 {
-	margin: 1.5em 0 .25em 0;
+	margin: 1.5em 0 -.75em 0;
 	color: $snapGreen;
 	font-weight: bold;
 	letter-spacing: .03em;
@@ -234,7 +234,7 @@ h5, h6 {
 	text-transform: uppercase;
 	background-color: lighten($snapGreen, 40%);
 	padding: .2em;
-	margin: 2em 0 .2em 0;
+	margin: 2em 0 -1em 0;
 	font-weight: bold;
 	
 	small, .small {

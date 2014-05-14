@@ -41,9 +41,9 @@ $color: $snapDarkGrey;
 $font-size-h1: 32px;		//make absolute unit to avoid nesting nightmares
 $font-size-h2: ($font-size-h1 * .85);
 $font-size-h3: ($font-size-h1 * .74);
-$font-size-h4: ($font-size-h1 * .65); 
-$font-size-h5: ($font-size-h1 * .5); 
-$font-size-h6: ($font-size-h1 * .45); 
+$font-size-h4: ($font-size-h1 * .68); 
+$font-size-h5: ($font-size-h1 * .45); 
+$font-size-h6: ($font-size-h1 * .4); 
 
 //Button colors
 $btn-default-color:  #fff;  
