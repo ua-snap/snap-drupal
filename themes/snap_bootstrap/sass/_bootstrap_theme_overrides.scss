@@ -403,15 +403,23 @@ table tr.error {
 }
 
 // Unordered and Ordered lists
-ul,
-ol {
-  margin-top: -1em;
-  margin-bottom: ($line-height-base / 2);
-	
-  ul,
-  ol {
-    margin-bottom: 0;
-  }
+ul li {
+	margin: .25em 0 0 0;
+	line-height: ($line-height-base * .85);
+
+	li {
+		margin: .25em 0 0 0;
+	}
+}
+
+ol li {
+	margin: .25em 0 0 0;
+	line-height: ($line-height-base * .85);
+
+	li {
+		list-style-type: disc;
+		margin: .25em 0 0 0;
+	}
 }
 
 .list-inline {
@@ -419,7 +427,6 @@ ol {
     padding-left: 0;
   }
 }
-
 
 .nav-tabs {
   margin-bottom: 10px;

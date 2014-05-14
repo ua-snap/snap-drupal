@@ -54,10 +54,12 @@
 </div>
 
 <div class="col-md-4">
-<h3 class="region"><a href="http://www.uaf.edu/ces/"><img alt="cooperative extension" class="plain pull-right" src="/sites/default/files/pictures/ces.jpg" style="width: 100px; height: 100px;" /></a>Created by SNAP in cooperation with&nbsp;<abbr title="Cooperative Extension Service">CES.</abbr></h3>
+<div class="outlook-sidebar">
+<p><strong><a href="http://www.uaf.edu/ces/"><img alt="cooperative extension" class="plain pull-right" src="/sites/default/files/pictures/ces.jpg" style="width: 100px; height: 100px;" /></a>Created by SNAP in cooperation with&nbsp;<abbr title="Cooperative Extension Service">CES.</abbr> </strong></p>
 
-<h3>We offer climate outlooks for communities in this region:</h3>
+<p><strong>We offer climate outlooks for communities in this region:</strong></p>
 <img alt="alaska-canada" class="plain" src="/sites/default/files/pictures/akcanada_extent.gif" style="width: 279px; height: 113px;" /></div>
+</div>
 </div>
 <!-- end row -->
 
