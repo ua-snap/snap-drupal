@@ -14,7 +14,7 @@
 	border: $border;
 	background: lighten($snapGreen, 45%);
 	@include shadow($x, $y, $blur, $shadow-color);
-
+	
 	h3 {
 		color: $snapDarkGrey;
 		font-size: 1em;
@@ -45,4 +45,9 @@
 	margin: 0 0 1em 0;
 	border-radius: $border-radius;
 	border: $border;
+}
+
+.panel-info h2 {
+	font-size: 1.2em;
+	color: $snapGreen;
 }
