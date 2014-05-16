@@ -9,20 +9,20 @@
 		margin: 0 0 1.5em 0;
 		background-color: white;
 		padding: 1em;
-		min-height: 14em;
+		min-height: 10em;
 		@include shadow($x, $y, $blur, $shadow-color);
 		
 		h2 {
-			font-size: 1.8em;
+			font-size: 1.4em;
 			color: $snapDarkGrey;
 			line-height: 1.2;
-			font-weight: 300;
-			margin: 0;
+			font-weight: 400;
+			margin: 0 0 .25em 0;
 		}
 
 		p {
-			font-size: 1.2em;
-			line-height: ($line-height-base * .85);
+			font-size: 1em;
+			line-height: ($line-height-base * .8);
 			margin: .3em 2.5em 0 0;
 			text-align: left;
 			font-weight: 300;
