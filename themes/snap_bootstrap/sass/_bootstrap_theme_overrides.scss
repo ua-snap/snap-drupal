@@ -13,7 +13,11 @@ html {
     }
   }
 }
-body {	
+body {
+	
+  	//Override base font color.
+	color: $snapDarkGrey;
+
   // Fix horizontal scrolling on iOS devices.
   // http://drupal.org/node/1870076
   position: relative;
@@ -195,10 +199,10 @@ ul.secondary {
 
 // Page header.
 .page-header {
-	margin: 0 0 0 -.35em;
+	margin: 0 0 0 0;
 	color: $snapDarkGrey;
 	font-weight: 300;
-	font-size: 3em;
+	font-size: 2.5em;
 }
 
 
@@ -218,8 +222,10 @@ h5 { font-size: $font-size-h5; }
 h6 { font-size: $font-size-h6; }
 
 h1, h2, h3, h4 {
-	margin: 1.5em 0 .25em 0;
+	margin: 1.5em 0 -.5em 0;
 	color: $snapGreen;
+	font-weight: bold;
+	letter-spacing: .03em;
 }
 
 h5, h6 {
@@ -227,8 +233,8 @@ h5, h6 {
 	letter-spacing: .05em;
 	text-transform: uppercase;
 	background-color: lighten($snapGreen, 40%);
-	padding: .1em;
-	margin-top: 2em;
+	padding: .2em;
+	margin: 2em 0 -1em 0;
 	font-weight: bold;
 	
 	small, .small {
@@ -241,20 +247,39 @@ p:last-child {
 }
 
 blockquote {
-	background: lighten($snapGrey, 15%);
+	background: lighten($snapGrey, 18%);
 	font-style: italic;
 	margin: 1em;
 	padding: .5em 1em .5em 1em;
 	border-left: 5px solid $snapGreen;
 	font-weight: 100;
-	
-	p {
-		font-size: 1.1em;
-	}
+	font-size: .9em;
+	line-height: ($line-height-base * .85);
 	
 	a {
 		font-size: .8em;
 	}
+}
+
+// MODALS: Title text within header
+.modal-title {
+  margin: 0 2em 0 0;
+  line-height: ($line-height-base * .65);
+	font-size: 1.4em;
+}
+
+// Modal body
+// Where all modal content resides (sibling of .modal-header and .modal-footer)
+.modal-body {
+  position: relative;
+  padding: $modal-inner-padding;
+	line-height: ($line-height-base * .85);
+}
+
+//Blocks of code.
+pre {
+  padding: (($line-height-computed - 1.5) / 2.5);
+  font-size: ($font-size-base - 3); // 
 }
 	
 
@@ -377,13 +402,31 @@ table tr.error {
   }
 }
 
-// Lists
+// Unordered and Ordered lists
+ul li {
+	margin: .25em 0 0 0;
+	line-height: ($line-height-base * .85);
+
+	li {
+		margin: .25em 0 0 0;
+	}
+}
+
+ol li {
+	margin: .25em 0 0 0;
+	line-height: ($line-height-base * .85);
+
+	li {
+		list-style-type: disc;
+		margin: .25em 0 0 0;
+	}
+}
+
 .list-inline {
   > li.first {
     padding-left: 0;
   }
 }
-
 
 .nav-tabs {
   margin-bottom: 10px;

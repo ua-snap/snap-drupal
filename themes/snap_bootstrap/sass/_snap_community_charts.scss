@@ -1,36 +1,123 @@
 
 #charts {
 
-  .buttonset, .helpbuttons {
-    display: inline-block;
-  }
+	.extent img {
+		width: 100%;
+	}
 
-  #variable_selections {
-    font-size: $font-size-small;
-    p {
-      margin: 0;
-      padding: 0;
-    }
+	#exportDialog {
+		legend {
+			margin: 1em 0 0; padding: 1em 0 0;
+			border: none;
+			font-size: $font-size-h4;
+		}	
+	}
 
-    #comm_select {
-      width: 100%;
-    }
+	.helpbuttons,
+	.methods.text.helpbuttons {
+		font-size: .75em;
+		margin-bottom: 1.5em;
+	}
+}
 
-    #comm_select_wrapper {
-      padding-bottom: 1em;
-    }
-  }
+#variable_selections {
 
-  .extent img {
-    width: 100%;
-  }
+	#comm_select_wrapper {
+		margin-bottom: 1em;	
+	}
 
-  #exportDialog {
-    legend {
-      margin: 1em 0 0; padding: 1em 0 0;
-      border: none;
-      font-size: $font-size-h4;
-    }
-  }
+	#comm_select {
+		width: 100%;
+	}
 
+	.ui-widget {
+		font-family: $lato;
+		font-size: .9em;
+		font-style: italic;
+	}
+
+	p, 
+	.inline-controls.pull-left p, 
+	.inline-controls.inline-controls-right p {
+		font-size: 1em;
+		font-weight: bold;
+		margin: 0;
+		padding: 0;
+		text-transform: uppercase;
+	}
+
+	.buttonset, .helpbuttons {
+		display: inline-block;
+		font-size: .85em;
+	}		
+
+	.buttonset#variable_buttons,
+	.buttonset#unit_buttons,
+	.buttonset#scenario_buttons,
+	.buttonset#variability_buttons {
+		margin: 0 2em 1em 0;
+		padding-right: 1em;
+		font-size: .85em;
+		font-weight: 300;
+	}
+}
+
+h1#chartsTitle,
+.methods.text h1 {
+	font-size: 1.7em;
+}
+
+//special right-hand credits block
+.outlook-sidebar {
+	border-left: 3px solid $snapGrey;
+	margin: -1.2em 0 0 0;
+	
+	p {
+		color: lighten($snapDarkGrey, 10%);
+		font-size: ($font-size-base * .85);
+		font-style: italic;
+		line-height: ($line-height-base * .75);
+		margin-left: .5em;		
+	}
+}
+
+	.buttonset, .helpbuttons {
+		display: inline-block;
+		font-size: .85em;
+		margin-top: 1em;
+	}		
+
+	.helpbuttons#derive_help {
+		font-weight: 300;
+	}
+
+//jQuery UI modal styling
+.ui-dialog {
+	font-family: $lato;
+	font-size: .9em;
+	line-height: ($line-height-base * .75);
+	
+	ul, ol {
+		font-size: 1em;
+	}
+	
+	a {
+		text-decoration: none;
+
+		&:link {
+			font-weight: bold;
+			color: $snaplink;
+		}
+
+		&:visited {
+			color: $linkvisited;
+		}
+
+		&:hover,
+		&:focus {
+			@include link-transition;
+			color: $snapGreen;
+			text-decoration: none;
+		}
+	}
 }

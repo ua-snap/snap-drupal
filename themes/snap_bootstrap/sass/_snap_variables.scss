@@ -9,7 +9,8 @@ $font-family-base:        $font-family-sans-serif !default;
 
 $snapGrey: rgb(199,201,199);
 $snapGreen: rgb(150,167,58);
-$snapDarkGrey: rgb(106,112,114);
+$snapDarkGrey: rgb(87,92,94);
+$color: $snapDarkGrey;
 
 $snaplink: rgb(156,0,255);
 $linkvisited: rgb(109,0,178);
@@ -32,17 +33,17 @@ $navbar-default-bg:                #fff;
 $navbar-default-border:            transparent;
 
 //Typography general
-$line-height-base: 1.52857;
-$font-size-base: 14px;		//make absolute unit to avoid nesting nightmares
+$line-height-base: 1.82857;
+$font-size-base: 17px;		//make absolute unit to avoid nesting nightmares
 $color: $snapDarkGrey;
 
 //Headings
 $font-size-h1: 32px;		//make absolute unit to avoid nesting nightmares
 $font-size-h2: ($font-size-h1 * .85);
 $font-size-h3: ($font-size-h1 * .74);
-$font-size-h4: ($font-size-h1 * .65); 
-$font-size-h5: ($font-size-h1 * .4); 
-$font-size-h6: ($font-size-h1 * .35); 
+$font-size-h4: ($font-size-h1 * .68); 
+$font-size-h5: ($font-size-h1 * .45); 
+$font-size-h6: ($font-size-h1 * .4); 
 
 //Button colors
 $btn-default-color:  #fff;  

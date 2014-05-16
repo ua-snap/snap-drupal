@@ -16,45 +16,29 @@ html;
 
 $snap_data_downloads_content = <<<html
 
-<p>SNAP data includes downscaled historically observed, modeled historical, as well as modeled projected data out to 2100 across several top ranked GCM's and scenarios (SRES or RCPs). Data is produced on a project specific basis, but when time and feasibility allows, we try and extend analyses to the greatest spatial and temporal extent possible to allow the greatest applicability to other projects as well. In the broadest sense, our data extends from the mid&ndash;1800s to 2100, across multiple spatial extents including: Alaska, Alaska-Western Canada, Polar, and worldwide.
-</p>
 
-<p>The list of variables is always expanding, so please explore below to see what we currently have available.</p>
 
-<p>All of our downloadable data is provided in GeoTIFF format. We've standardized on geotiff thus far because it is a stable and compressed format that can be easily read by many open source and commercial GIS and data manipulation programs including ArcGIS, QGIS, R (raster package recommended), GDAL, GRASS, and many others.</p>
+<h3 id="Projected">Modeled historical and projected data</h3>
 
-<p>While it&rsquo;s hard to have a completely static file naming scheme, we make every attempt to keep some consistency across our various datasets. This naming scheme outlined below is our general guide, although it does vary depending upon each dataset. Please refer to the full metadata for details on specific datasets.</p>
-
-<p><pre>[variable][metric][units][format][assessmentReport][group][model][scenario][timeFrame].[fileFormat]</pre></p>
-
-<div class="panel panel-info">
-  <div class="panel-heading">License information</div>
-  <div class="panel-body"> 
-  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img alt="Creative Commons License" style="border-width:0; float: left; padding: 1px 1em 0 0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png"></a>
-All information produced by the Scenarios Network for Alaska and Arctic Planning is licensed under a <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License</a>. Attribution text provided on our <a href="/about/faq">FAQ page</a>.  If you are interested in commercialization opportunities and/or collaborative R&amp;D activities please contact us.
-</div>
-</div>
-
-<h3 id="Projected">Modeled Historical and Projected Data</h3>
-</div>
 <div class="dataAccordionWrapper">
 
 <div class="dataAccordion">
-<h3><a href="#dataset=Historical_Estimates_and_Projections_of_Sea_Ice_Concentration">Historical Estimates and Projections of Sea Ice Concentration &ndash; 0.4 degrees CMIP5/AR5</a></h3>
+
+<h3><a href="#dataset=Historical_Estimates_and_Projections_of_Sea_Ice_Concentration">Historical estimates and projections of sea ice concentration &ndash; 0.4&deg; CMIP5/AR5</a></h3>
 <div>
-<p>This set of files includes modeled historical estimates and future projections of monthly sea ice concentration (in percent cover, 0&ndash;100) for each month of every year from January 1860&ndash;December 2100* at 0.4 x 0.4 degrees spatial resolution from 5 top ranking CMIP5 global climate models (GCMs). Each file represents a single month in a given year.</p>
+<p><img src="${imagePath}polar_extent.png" alt="polar extent" />This set of files includes modeled historical estimates and future projections of monthly sea ice concentration (in percent cover, 0&ndash;100) for each month of every year from January 1860&ndash;December 2100* at 0.4 x 0.4&deg; spatial resolution from 5 top ranking CMIP5 global climate models (GCMs). Each file represents a single month in a given year.</p>
 <table class="overview">
 <tbody>
-<tr><th scope="row">Baseline Reference Climate</th><td>NA</td></tr>
-<tr><th scope="row">Spatial Resolution</th><td>0.4 degrees</td></tr>
-<tr><th scope="row">Temporal Resolution</th><td>Monthly</td></tr>
-<tr><th scope="row">Spatial Extent</th><td>Polar</td></tr>
+<tr><th scope="row">Baseline reference climate</th><td>NA</td></tr>
+<tr><th scope="row">Spatial resolution</th><td>0.4&deg;</td></tr>
+<tr><th scope="row">Temporal resolution</th><td>Monthly</td></tr>
+<tr><th scope="row">Spatial extent</th><td>Polar</td></tr>
 </tbody>
 </table>
-<img src="${imagePath}polar_extent.png" alt="" />
 
-<h4>Metadata:</h4><p><a href="#" class="metadataLink" data-geonetwork-metadata-id="101">Historical Estimates and Projections of Sea Ice Concentration AR5</a></p>
-<h4>Products:</h4>
+
+<h4>Metadata</h4><p><a href="#" class="metadataLink" data-geonetwork-metadata-id="101">Historical estimates and projections of sea ice concentration AR5</a></p>
+<h4>Products</h4>
 <ul>
   <li><a href="/files/data/monthly/sic_con_pct_5-Models_historical_01-12_1860-2005.zip">sic_con_pct_5-Models_historical_01-12_1860-2005.zip</a> (1.2 GB)</li>
   <li><a href="/files/data/monthly/sic_con_pct_5-Models_rcp85_01-12_2006-2100.zip">sic_con_pct_5-Models_rcp85_01-12_2006-2100.zip</a> (621 MB)</li>
@@ -62,41 +46,43 @@ All information produced by the Scenarios Network for Alaska and Arctic Planning
 </div>
 </div>
 
+<div class="dataAccordionWrapper">
 <div class="dataAccordion">
-<h3><a href="#dataset=Historical_Daily_Mean_Quantile_Mapped_Temperatures">Historical Daily Mean Quantile Mapped Temperatures &ndash; 2.5 degrees CMIP5/AR5</a></h3>
+<h3><a href="#dataset=Historical_Daily_Mean_Quantile_Mapped_Temperatures">Historical daily mean quantile mapped temperatures &ndash; 2.5&deg; CMIP5/AR5</a></h3>
 <div>
-<p>This data includes quantile&ndash;mapped historical model runs of AR5 daily mean temperature (tas, degrees C) for each day of every year from 1958&ndash;2005 at 2.5 x 2.5 degree spatial resolution across 3 AR5 models utilizing the “historical” GCM model run. They are 365 multi&ndash;band geotiff files, one file per year, each band representing one day of the year, with no leap years.</p>
+<p><img src="${imagePath}worldwide_extent.png" alt="worldwide extent" />These data include quantile&ndash;mapped historical model runs of AR5 daily mean temperature (tas,&deg; C) for each day of every year from 1958&ndash;2005 at 2.5 x 2.5 degree spatial resolution across 3 AR5 models utilizing the “historical” GCM model run. They are 365 multi&ndash;band geoTIFF files, one file per year, each band representing one day of the year, with no leap years.</p>
 <table class="overview">
 <tbody>
-<tr><th scope="row">Baseline Reference Climate</th><td>1958&ndash;2001 ERA&ndash;40</td></tr>
-<tr><th scope="row">Spatial Resolution</th><td>2.5 degrees</td></tr>
-<tr><th scope="row">Temporal Resolution</th><td>Monthly</td></tr>
-<tr><th scope="row">Spatial Extent</th><td>Worldwide</td></tr>
+<tr><th scope="row">Baseline reference climate</th><td>1958&ndash;2001 ERA&ndash;40</td></tr>
+<tr><th scope="row">Spatial resolution</th><td>2.5&deg;</td></tr>
+<tr><th scope="row">Temporal resolution</th><td>Monthly</td></tr>
+<tr><th scope="row">Spatial extent</th><td>Worldwide</td></tr>
 </tbody>
 </table>
-<img src="${imagePath}worldwide_extent.png" alt="" />
 
-<h4>Metadata:</h4><p><a href="#" class="metadataLink" data-geonetwork-metadata-id="114">Historical Daily Mean Quantile Mapped Temperatures &ndash; 2.5 degrees AR5</a></p>
-<h4>Products:</h4><p><a href="/files/data/monthly/tas_mean_C_AR5_3-Models_historical_365_1958-2005.zip">tas_mean_C_AR5_3-Models_historical_365_1958-2005.zip</a> (840 MB)</p>
+
+<h4>Metadata</h4><p><a href="#" class="metadataLink" data-geonetwork-metadata-id="114">Historical daily mean quantile mapped temperatures &ndash; 2.5&deg; AR5</a></p>
+<h4>Products</h4><p><a href="/files/data/monthly/tas_mean_C_AR5_3-Models_historical_365_1958-2005.zip">tas_mean_C_AR5_3-Models_historical_365_1958-2005.zip</a> (840 MB)</p>
 </div>
 </div>
 
+<div class="dataAccordionWrapper">
 <div class="dataAccordion">
-<h3><a href="#dataset=Projected_Daily_Mean_Quantile_Mapped_Temperatures">Projected Daily Mean Quantile Mapped Temperatures &ndash; 2.5 degrees CMIP5/AR5</a></h3>
+<h3><a href="#dataset=Projected_Daily_Mean_Quantile_Mapped_Temperatures">Projected daily mean quantile mapped temperatures &ndash; 2.5&deg; CMIP5/AR5</a></h3>
 <div>
-<p>This data includes quantile&ndash;mapped historical model runs of AR5 daily mean temperature (tas, degrees C) for each day of every year from 2006&ndash;2100 at 2.5 x 2.5 degree spatial resolution across 3 AR5 models and 2 RCPs. They are 365 multi&ndash;band geotiff files, one file per year, each band representing one day of the year, with no leap years.</p>
+<p><img src="${imagePath}worldwide_extent.png" alt="worldwide extent" />These data include quantile&ndash;mapped historical model runs of AR5 daily mean temperature (tas,&deg; C) for each day of every year from 2006&ndash;2100 at 2.5 x 2.5 degree spatial resolution across 3 AR5 models and 2 RCPs. They are 365 multi&ndash;band geoTIFF files, one file per year, each band representing one day of the year, with no leap years.</p>
 <table class="overview">
 <tbody>
-<tr><th scope="row">Baseline Reference Climate</th><td>1958&ndash;2001 ERA&ndash;40</td></tr>
-<tr><th scope="row">Spatial Resolution</th><td>2.5 degrees</td></tr>
-<tr><th scope="row">Temporal Resolution</th><td>Monthly</td></tr>
-<tr><th scope="row">Spatial Extent</th><td>Worldwide</td></tr>
+<tr><th scope="row">Baseline reference climate</th><td>1958&ndash;2001 ERA&ndash;40</td></tr>
+<tr><th scope="row">Spatial resolution</th><td>2.5&deg;</td></tr>
+<tr><th scope="row">Temporal resolution</th><td>Monthly</td></tr>
+<tr><th scope="row">Spatial extent</th><td>Worldwide</td></tr>
 </tbody>
 </table>
-<img src="${imagePath}worldwide_extent.png" alt="" />
 
-<h4>Metadata:</h4><p><a href="#" class="metadataLink" data-geonetwork-metadata-id="100">Projected Daily Mean Quantile Mapped Temperatures &ndash; 2.5 degrees AR5</a></p>
-<h4>Products:</h4>
+
+<h4>Metadata</h4><p><a href="#" class="metadataLink" data-geonetwork-metadata-id="100">Projected daily mean quantile mapped temperatures &ndash; 2.5&deg; AR5</a></p>
+<h4>Products</h4>
 <ul>
   <li><a href="/files/data/monthly/tas_mean_C_AR5_3-Models_rcp60_365_2006-2100.zip">tas_mean_C_AR5_3-Models_rcp60_365_2006-2100.zip</a> (1.7 GB)</li>
   <li><a href="/files/data/monthly/tas_mean_C_AR5_3-Models_rcp85_365_2006-2100.zip">tas_mean_C_AR5_3-Models_rcp85_365_2006-2100.zip</a> (1.7 GB)</li>
@@ -104,22 +90,23 @@ All information produced by the Scenarios Network for Alaska and Arctic Planning
 </div>
 </div>
 
+<div class="dataAccordionWrapper">
 <div class="dataAccordion">
-<h3><a href="#dataset=Historical_Daily_Quantile_Mapped_Near_Surface_Wind_Velocity">Historical Daily Quantile Mapped Near Surface Wind Velocity &ndash; 2.5 degrees CMIP5/AR5</a></h3>
+<h3><a href="#dataset=Historical_Daily_Quantile_Mapped_Near_Surface_Wind_Velocity">Historical daily quantile mapped near surface wind velocity &ndash; 2.5&deg; CMIP5/AR5</a></h3>
 <div>
-<p>This data includes quantile&ndash;mapped historical model runs of AR5 daily near surface wind velocity (uas: West/East component of wind, vas: North/South component, m/s) for each day of every year from 1958&ndash;2100 at 2.5 x 2.5 degree spatial resolution across 3 AR5 models utilizing the “historical” GCM model run. They are 365 multi&ndash;band geotiff files, one file per year, each band representing one day of the year, with no leap years.</p>
+<p><img src="${imagePath}worldwide_extent.png" alt="worldwide extent" />These data include quantile&ndash;mapped historical model runs of AR5 daily near surface wind velocity (uas: West/East component of wind, vas: North/South component, m/s) for each day of every year from 1958&ndash;2100 at 2.5 x 2.5 degree spatial resolution across 3 AR5 models utilizing the “historical” GCM model run. They are 365 multi&ndash;band geoTIFF files, one file per year, each band representing one day of the year, with no leap years.</p>
 <table class="overview">
 <tbody>
-<tr><th scope="row">Baseline Reference Climate</th><td>1958&ndash;2001 ERA&ndash;40</td></tr>
-<tr><th scope="row">Spatial Resolution</th><td>2.5 degrees</td></tr>
-<tr><th scope="row">Temporal Resolution</th><td>Monthly</td></tr>
-<tr><th scope="row">Spatial Extent</th><td>Worldwide</td></tr>
+<tr><th scope="row">Baseline reference climate</th><td>1958&ndash;2001 ERA&ndash;40</td></tr>
+<tr><th scope="row">Spatial resolution</th><td>2.5&deg;</td></tr>
+<tr><th scope="row">Temporal resolution</th><td>Monthly</td></tr>
+<tr><th scope="row">Spatial extent</th><td>Worldwide</td></tr>
 </tbody>
 </table>
-<img src="${imagePath}worldwide_extent.png" alt="" />
 
-<h4>Metadata:</h4><p><a href="#" class="metadataLink" data-geonetwork-metadata-id="115">Historical Daily Quantile Mapped Near Surface Wind Velocity &ndash; 2.5 degrees AR5</a></p>
-<h4>Products:</h4>
+
+<h4>Metadata</h4><p><a href="#" class="metadataLink" data-geonetwork-metadata-id="115">Historical daily quantile mapped near surface wind velocity &ndash; 2.5&deg; AR5</a></p>
+<h4>Products</h4>
 <ul>
   <li><a href="/files/data/monthly/uas_mean_mps_AR5_3-Models_historical_365_1958-2005.zip">uas_mean_mps_AR5_3-Models_historical_365_1958-2005.zip</a> (826 MB)</li>
   <li><a href="/files/data/monthly/vas_mean_mps_AR5_3-Models_historical_365_1958-2005.zip">vas_mean_mps_AR5_3-Models_historical_365_1958-2005.zip</a> (820 MB)</li>
@@ -127,22 +114,23 @@ All information produced by the Scenarios Network for Alaska and Arctic Planning
 </div>
 </div>
 
+<div class="dataAccordionWrapper">
 <div class="dataAccordion">
-<h3><a href="#dataset=Projected_Daily_Quantile_Mapped_Near_Surface_Wind_Velocity">Projected Daily Quantile Mapped Near Surface Wind Velocity &ndash; 2.5 degrees CMIP5/AR5</a></h3>
+<h3><a href="#dataset=Projected_Daily_Quantile_Mapped_Near_Surface_Wind_Velocity">Projected daily quantile mapped near surface wind velocity &ndash; 2.5&deg; CMIP5/AR5</a></h3>
 <div>
-<p>This data includes quantile&ndash;mapped projections of AR5 daily near surface wind velocity (uas: West/East component of wind, vas: North/South component, m/s) for each day of every year from 1958&ndash;2100 at 2.5 x 2.5 degree spatial resolution across 3 AR5 models and 2 RCPs. They are 365 multi&ndash;band geotiff files, one file per year, each band representing one day of the year, with no leap years.</p>
+<p><img src="${imagePath}worldwide_extent.png" alt="worldwide extent" />These data include quantile&ndash;mapped projections of AR5 daily near surface wind velocity (uas: West/East component of wind, vas: North/South component, m/s) for each day of every year from 1958&ndash;2100 at 2.5 x 2.5 degree spatial resolution across 3 AR5 models and 2 RCPs. They are 365 multi&ndash;band geoTIFF files, one file per year, each band representing one day of the year, with no leap years.</p>
 <table class="overview">
 <tbody>
-<tr><th scope="row">Baseline Reference Climate</th><td>1958&ndash;2001 ERA&ndash;40</td></tr>
-<tr><th scope="row">Spatial Resolution</th><td>2.5 degrees</td></tr>
-<tr><th scope="row">Temporal Resolution</th><td>Monthly</td></tr>
-<tr><th scope="row">Spatial Extent</th><td>Worldwide</td></tr>
+<tr><th scope="row">Baseline reference climate</th><td>1958&ndash;2001 ERA&ndash;40</td></tr>
+<tr><th scope="row">Spatial resolution</th><td>2.5&deg;</td></tr>
+<tr><th scope="row">Temporal resolution</th><td>Monthly</td></tr>
+<tr><th scope="row">Spatial extent</th><td>Worldwide</td></tr>
 </tbody>
 </table>
-<img src="${imagePath}worldwide_extent.png" alt="" />
 
-<h4>Metadata:</h4><p><a href="#" class="metadataLink" data-geonetwork-metadata-id="116">Projected Daily Quantile Mapped Near Surface Wind Velocity &ndash; 2.5 degrees AR5</a></p>
-<h4>Products:</h4>
+
+<h4>Metadata</h4><p><a href="#" class="metadataLink" data-geonetwork-metadata-id="116">Projected daily quantile mapped near surface wind velocity &ndash; 2.5&deg; AR5</a></p>
+<h4>Products</h4>
 <ul>
   <li><a href="/files/data/monthly/uas_mean_mps_AR5_3-Models_rcp60_365_2006-2100.zip">uas_mean_mps_AR5_3-Models_rcp60_365_2006-2100.zip</a> (1.6 GB)</li>
   <li><a href="/files/data/monthly/uas_mean_mps_AR5_3-Models_rcp85_365_2006-2100.zip">uas_mean_mps_AR5_3-Models_rcp85_365_2006-2100.zip</a> (1.6 GB)</li>
@@ -156,22 +144,23 @@ All information produced by the Scenarios Network for Alaska and Arctic Planning
 <!-- AR5-uploads -->
 <br/>
 
+<div class="dataAccordionWrapper">
 <div class="dataAccordion">
-<h3><a href="#dataset=projected_monthly_temperature_and_precipitation_2km_ar5">Projected Monthly Temperature and Precipitation - 2km CMIP5/AR5</a></h3>
+<h3><a href="#dataset=projected_monthly_temperature_and_precipitation_2km_ar5">Projected monthly temperature and precipitation - 2km CMIP5/AR5</a></h3>
 <div>
-<p>Projected (2006&ndash;2100: RCP 4.5, 6.0. 8.5 scenarios) monthly average temperature and total precipitation from 5 AR5 GCMs that perform best across Alaska and the Arctic, downscaled to 2km via the delta method. A 5&ndash;Model Average is also included.</p>
+<p><img src="${imagePath}akcanada_extent.png" alt="alaska-canada extent" />Projected (2006&ndash;2100: RCP 4.5, 6.0. 8.5 scenarios) monthly average temperature and total precipitation from 5 AR5 GCMs that perform best across Alaska and the Arctic, downscaled to 2km via the <a href="/methods/downscaling">delta method.</a> A 5&ndash;Model Average is also included.</p>
 <table class="overview">
 <tbody>
-<tr><th scope="row">Baseline Reference Climate</th><td>1961&ndash;1990 PRISM</td></tr>
-<tr><th scope="row">Spatial Resolution</th><td>2km</td></tr>
-<tr><th scope="row">Temporal Resolution</th><td>Monthly</td></tr>
-<tr><th scope="row">Spatial Extent</th><td>Alaska and Western Canada (YT, BC, AB, SK, MB)</td></tr>
+<tr><th scope="row">Baseline reference climate</th><td>1961&ndash;1990 PRISM</td></tr>
+<tr><th scope="row">Spatial resolution</th><td>2km</td></tr>
+<tr><th scope="row">Temporal resolution</th><td>Monthly</td></tr>
+<tr><th scope="row">Spatial extent</th><td>Alaska and Western Canada (YT, BC, AB, SK, MB)</td></tr>
 </tbody>
 </table>
-<img src="${imagePath}akcanada_extent.png" alt="" />
+
 
 <h4>Temperature</h4>
-<p><strong>Metadata: </strong><a href="#" class="metadataLink"  data-geonetwork-metadata-id="120">Projected Monthly Average Temperature 2km AR5</a></p>
+<p><strong>Metadata </strong><a href="#" class="metadataLink"  data-geonetwork-metadata-id="120">Projected Monthly Average Temperature 2km AR5</a></p>
 
 <table class="downloadsTable">
 <thead>
@@ -280,7 +269,7 @@ All information produced by the Scenarios Network for Alaska and Arctic Planning
 </table>
 
 <h4>Precipitation</h4>
-<p><strong>Metadata: </strong><a href="#" class="metadataLink"  data-geonetwork-metadata-id="121">Projected Monthly Total Precipitation 2km AR5</a></p>
+<p><strong>Metadata </strong><a href="#" class="metadataLink"  data-geonetwork-metadata-id="121">Projected Monthly Total Precipitation 2km AR5</a></p>
 
 <table class="downloadsTable">
 <thead>
@@ -289,7 +278,7 @@ All information produced by the Scenarios Network for Alaska and Arctic Planning
 <th scope="col" colspan="3">Scenario</th>
 </tr>
 <tr>
-<th scope="col" style="text-align: left;">Model</th>
+<th scope="col">Model</th>
 <th scope="col">RCP 4.5</th>
 <th scope="col">RCP 6.0</th>
 <th scope="col">RCP 8.5</th>
@@ -396,22 +385,23 @@ All information produced by the Scenarios Network for Alaska and Arctic Planning
 <!-- end first AR5 block -->
 <!-- second block -->
 
+<div class="dataAccordionWrapper">
 <div class="dataAccordion">
-<h3><a href="#dataset=projected_derived_temperature_products_2km_ar5">Projected Derived Temperature Products - 2km CMIP5/AR5</a></h3>
+<h3><a href="#dataset=projected_derived_temperature_products_2km_ar5">Projected derived temperature products - 2km CMIP5/AR5</a></h3>
 <div>
-<p>Projected (2010&ndash;2100: RCP 4.5, 6.0. 8.5 scenarios) derived temperature products from 5 AR5 GCMs that perform best across Alaska and the Arctic, downscaled to 2km via the delta method. A 5&ndash;Model Average is also included.</p>
+<p><img src="${imagePath}akcanada_extent.png" alt="alaska-canada extent" />Projected (2010&ndash;2100: RCP 4.5, 6.0. 8.5 scenarios) derived temperature products from 5 AR5 GCMs that perform best across Alaska and the Arctic, downscaled to 2km via the <a href="/methods/downscaling">delta method.</a> A 5&ndash;Model Average is also included.</p>
 <table class="overview">
 <tbody>
-<tr><th scope="row">Baseline Reference Climate</th><td>1961&ndash;1990 PRISM</td></tr>
-<tr><th scope="row">Spatial Resolution</th><td>2km</td></tr>
-<tr><th scope="row">Temporal Resolution</th><td>Monthly</td></tr>
-<tr><th scope="row">Spatial Extent</th><td>Alaska and Western Canada (YT, BC, AB, SK, MB)</td></tr>
+<tr><th scope="row">Baseline reference climate</th><td>1961&ndash;1990 PRISM</td></tr>
+<tr><th scope="row">Spatial resolution</th><td>2km</td></tr>
+<tr><th scope="row">Temporal resolution</th><td>Monthly</td></tr>
+<tr><th scope="row">Spatial extent</th><td>Alaska and Western Canada (YT, BC, AB, SK, MB)</td></tr>
 </tbody>
 </table>
-<img src="${imagePath}akcanada_extent.png" alt="" />
+
 
 <h4>Temperature</h4>
-<p><strong>Metadata: </strong><a href="#" class="metadataLink"  data-geonetwork-metadata-id="122">Projected Derived Temperature Products - 2km CMIP5/AR5 Decadal Summaries by Month, Year</a></p>
+<p><strong>Metadata </strong><a href="#" class="metadataLink"  data-geonetwork-metadata-id="122">Projected derived temperature products - 2km CMIP5/AR5 Decadal Summaries by Month, Year</a></p>
 
 <table class="downloadsTable">
 <thead>
@@ -523,7 +513,7 @@ All information produced by the Scenarios Network for Alaska and Arctic Planning
 </table>
 
 <h4>Season Day of Freeze, Thaw, Length of Growing Season</h4>
-<p><strong>Metadata: </strong><a href="#" class="metadataLink"  data-geonetwork-metadata-id="127">Projected Derived Temperature Products - 2km CMIP5/AR5 Decadal Summaries by Season Day of Freeze, Thaw, Length of Growing Season</a></p>
+<p><strong>Metadata </strong><a href="#" class="metadataLink"  data-geonetwork-metadata-id="127">Projected derived temperature products - 2km CMIP5/AR5 Decadal Summaries by Season Day of Freeze, Thaw, Length of Growing Season</a></p>
 
 <table class="downloadsTable">
 <thead>
@@ -634,23 +624,23 @@ All information produced by the Scenarios Network for Alaska and Arctic Planning
 <!-- end second block -->
 <!-- start third ar5 block -->
 
-
+<div class="dataAccordionWrapper">
 <div class="dataAccordion">
-<h3><a href="#dataset=projected_derived_precipitation_products_2km_ar5">Projected Derived Precipitation Products - 2km CMIP5/AR5</a></h3>
+<h3><a href="#dataset=projected_derived_precipitation_products_2km_ar5">Projected derived precipitation products - 2km CMIP5/AR5</a></h3>
 <div>
-<p>Projected (2010&ndash;2100: historical run and RCP 4.5, 6.0. 8.5 scenarios) derived precipitation products from 5 AR5 GCMs that perform best across Alaska and the Arctic, downscaled to 2km via the delta method. A 5&ndash;Model Average is also included.</p>
+<p><img src="${imagePath}akcanada_extent.png" alt="alaska-canada extent" />Projected (2010&ndash;2100: historical run and RCP 4.5, 6.0. 8.5 scenarios) derived precipitation products from 5 AR5 GCMs that perform best across Alaska and the Arctic, downscaled to 2km via the <a href="/methods/downscaling">delta method.</a> A 5&ndash;Model Average is also included.</p>
 <table class="overview">
 <tbody>
-<tr><th scope="row">Baseline Reference Climate</th><td>1961&ndash;1990 PRISM</td></tr>
-<tr><th scope="row">Spatial Resolution</th><td>2km</td></tr>
-<tr><th scope="row">Temporal Resolution</th><td>Monthly</td></tr>
-<tr><th scope="row">Spatial Extent</th><td>Alaska and Western Canada (YT, BC, AB, SK, MB)</td></tr>
+<tr><th scope="row">Baseline reference climate</th><td>1961&ndash;1990 PRISM</td></tr>
+<tr><th scope="row">Spatial resolution</th><td>2km</td></tr>
+<tr><th scope="row">Temporal resolution</th><td>Monthly</td></tr>
+<tr><th scope="row">Spatial extent</th><td>Alaska and Western Canada (YT, BC, AB, SK, MB)</td></tr>
 </tbody>
 </table>
-<img src="${imagePath}akcanada_extent.png" alt="" />
+
 
 <h4>Precipitation</h4>
-<p><strong>Metadata: </strong><a href="#" class="metadataLink"  data-geonetwork-metadata-id="126">Projected Derived Precipitation Products - 2km CMIP5/AR5 Decadal Summaries by Month, Year, or Season</a></p>
+<p><strong>Metadata </strong><a href="#" class="metadataLink"  data-geonetwork-metadata-id="126">Projected derived precipitation products - 2km CMIP5/AR5 Decadal Summaries by Month, Year, or Season</a></p>
 
 <table class="downloadsTable">
 <thead>
@@ -768,24 +758,25 @@ All information produced by the Scenarios Network for Alaska and Arctic Planning
 <!-- Start 771km AR5 -->
 <br/>
 
+<div class="dataAccordionWrapper">
 <div class="dataAccordion">
-<h3><a href="#dataset=projected_monthly_temperature_and_precipitation_771m_ar5">Projected Monthly Temperature and Precipitation &ndash; 771m CMIP5/AR5</a></h3>
+<h3><a href="#dataset=projected_monthly_temperature_and_precipitation_771m_ar5">Projected monthly temperature and precipitation &ndash; 771m CMIP5/AR5</a></h3>
 <div>
-<p>Projected (2006&ndash;2100: RCP 4.5, 6.0. 8.5 scenarios) monthly average temperature and total precipitation from 5 AR5 GCMs that perform best across Alaska and the Arctic, downscaled to 771m via the delta method. A 5&ndash;Model Average is also included.</p>
+<p><img src="${imagePath}ak_extent.jpg" alt="alaska extent" />Projected (2006&ndash;2100: RCP 4.5, 6.0. 8.5 scenarios) monthly average temperature and total precipitation from 5 AR5 GCMs that perform best across Alaska and the Arctic, downscaled to 771m via the <a href="/methods/downscaling">delta method.</a> A 5&ndash;Model Average is also included.</p>
 
 <table class="overview">
 <tbody>
-<tr><th scope="row">Baseline Reference Climate</th><td>1971&ndash;2000 PRISM</td></tr>
-<tr><th scope="row">Spatial Resolution</th><td>771m</td></tr>
-<tr><th scope="row">Temporal Resolution</th><td>Monthly</td></tr>
-<tr><th scope="row">Spatial Extent</th><td>Alaska</td></tr>
+<tr><th scope="row">Baseline reference climate</th><td>1971&ndash;2000 PRISM</td></tr>
+<tr><th scope="row">Spatial resolution</th><td>771m</td></tr>
+<tr><th scope="row">Temporal resolution</th><td>Monthly</td></tr>
+<tr><th scope="row">Spatial extent</th><td>Alaska</td></tr>
 </tbody>
 </table>
 
-<img src="${imagePath}ak_extent.jpg" alt="" />
+
 
 <h4>Temperature</h4>
-<p><strong>Metadata: </strong><a href="#" class="metadataLink"  data-geonetwork-metadata-id="118">Projected Monthly Average Temperature 771m AR5</a></p>
+<p><strong>Metadata </strong><a href="#" class="metadataLink"  data-geonetwork-metadata-id="118">Projected Monthly Average Temperature 771m AR5</a></p>
 
 <table class="downloadsTable">
 <thead>
@@ -893,7 +884,7 @@ All information produced by the Scenarios Network for Alaska and Arctic Planning
 </table>
 
 <h4>Precipitation</h4>
-<p><strong>Metadata: </strong><a href="#" class="metadataLink"  data-geonetwork-metadata-id="119">Projected Monthly Total Precipitation 771m AR5</a></p>
+<p><strong>Metadata </strong><a href="#" class="metadataLink"  data-geonetwork-metadata-id="119">Projected Monthly Total Precipitation 771m AR5</a></p>
 
 <table class="downloadsTable">
 <thead>
@@ -1009,24 +1000,25 @@ All information produced by the Scenarios Network for Alaska and Arctic Planning
 <!-- end first 771m AR5 block -->
 <!-- second 771m block -->
 
+<div class="dataAccordionWrapper">
 <div class="dataAccordion">
-<h3><a href="#dataset=projected_derived_temperature_products_771km_ar5">Projected Derived Temperature Products &ndash; 771m CMIP5/AR5</a></h3>
+<h3><a href="#dataset=projected_derived_temperature_products_771km_ar5">Projected derived temperature products &ndash; 771m CMIP5/AR5</a></h3>
 <div>
-<p>Projected (2010&ndash;2100: historical run and RCP 4.5, 6.0. 8.5 scenarios) derived temperature products from 5 AR5 GCMs that perform best across Alaska and the Arctic, downscaled to 771m via the delta method. A 5&ndash;Model Average is also included.</p>
+<p><img src="${imagePath}ak_extent.jpg" alt="alaska extent" />Projected (2010&ndash;2100: historical run and RCP 4.5, 6.0. 8.5 scenarios) derived temperature products from 5 AR5 GCMs that perform best across Alaska and the Arctic, downscaled to 771m via the <a href="/methods/downscaling">delta method.</a> A 5&ndash;Model Average is also included.</p>
 
 <table class="overview">
 <tbody>
-<tr><th scope="row">Baseline Reference Climate</th><td>1971&ndash;2000 PRISM</td></tr>
-<tr><th scope="row">Spatial Resolution</th><td>771m</td></tr>
-<tr><th scope="row">Temporal Resolution</th><td>Monthly</td></tr>
-<tr><th scope="row">Spatial Extent</th><td>Alaska</td></tr>
+<tr><th scope="row">Baseline reference climate</th><td>1971&ndash;2000 PRISM</td></tr>
+<tr><th scope="row">Spatial resolution</th><td>771m</td></tr>
+<tr><th scope="row">Temporal resolution</th><td>Monthly</td></tr>
+<tr><th scope="row">Spatial extent</th><td>Alaska</td></tr>
 </tbody>
 </table>
 
-<img src="${imagePath}ak_extent.jpg" alt="" />
+
 
 <h4>Temperature</h4>
-<p><strong>Metadata: </strong><a href="#" class="metadataLink"  data-geonetwork-metadata-id="125">Projected Derived Temperature Products &ndash; 771m CMIP5/AR5 Decadal Summaries by Month, Year</a></p>
+<p><strong>Metadata </strong><a href="#" class="metadataLink"  data-geonetwork-metadata-id="125">Projected derived temperature products &ndash; 771m CMIP5/AR5 Decadal Summaries by Month, Year</a></p>
 
 <table class="downloadsTable">
 <thead>
@@ -1138,7 +1130,7 @@ All information produced by the Scenarios Network for Alaska and Arctic Planning
 </table>
 
 <h4>Season Day of Freeze, Thaw, Length of Growing Season</h4>
-<p><strong>Metadata: </strong><a href="#" class="metadataLink"  data-geonetwork-metadata-id="123">Projected Derived Temperature Products &ndash; 771m CMIP5/AR5 Decadal Summaries by Season Day of Freeze, Thaw, Length of Growing Season</a></p>
+<p><strong>Metadata </strong><a href="#" class="metadataLink"  data-geonetwork-metadata-id="123">Projected derived temperature products &ndash; 771m CMIP5/AR5 Decadal Summaries by Season Day of Freeze, Thaw, Length of Growing Season</a></p>
 
 <table class="downloadsTable">
 <thead>
@@ -1249,26 +1241,25 @@ All information produced by the Scenarios Network for Alaska and Arctic Planning
 <!-- end second block -->
 <!-- start third ar5 block -->
 
-
+<div class="dataAccordionWrapper">
 <div class="dataAccordion">
-<h3><a href="#dataset=projected_derived_precipitation_products_771m_ar5">Projected Derived Precipitation Products &ndash; 771m CMIP5/AR5</a></h3>
+<h3><a href="#dataset=projected_derived_precipitation_products_771m_ar5">Projected derived precipitation products &ndash; 771m CMIP5/AR5</a></h3>
 <div>
-<p>Projected (2010&ndash;2100: historical run and RCP 4.5, 6.0. 8.5 scenarios) derived precipitation products from 5 AR5 GCMs that perform best across Alaska and the Arctic, downscaled to 771m via the delta method. A 5&ndash;Model Average is also included.</p>
+<p><img src="${imagePath}ak_extent.jpg" alt="alaska extent" />Projected (2010&ndash;2100: historical run and RCP 4.5, 6.0. 8.5 scenarios) derived precipitation products from 5 AR5 GCMs that perform best across Alaska and the Arctic, downscaled to 771m via the <a href="/methods/downscaling">delta method.</a> A 5&ndash;Model Average is also included.</p>
 
 
 <table class="overview">
 <tbody>
-<tr><th scope="row">Baseline Reference Climate</th><td>1971&ndash;2000 PRISM</td></tr>
-<tr><th scope="row">Spatial Resolution</th><td>771m</td></tr>
-<tr><th scope="row">Temporal Resolution</th><td>Monthly</td></tr>
-<tr><th scope="row">Spatial Extent</th><td>Alaska</td></tr>
+<tr><th scope="row">Baseline reference climate</th><td>1971&ndash;2000 PRISM</td></tr>
+<tr><th scope="row">Spatial resolution</th><td>771m</td></tr>
+<tr><th scope="row">Temporal resolution</th><td>Monthly</td></tr>
+<tr><th scope="row">Spatial extent</th><td>Alaska</td></tr>
 </tbody>
 </table>
 
-<img src="${imagePath}ak_extent.jpg" alt="" />
 
 <h4>Precipitation</h4>
-<p><strong>Metadata: </strong><a href="#" class="metadataLink"  data-geonetwork-metadata-id="124">Projected Derived Precipitation Products &ndash; 771m CMIP5/AR5 Decadal Summaries by Month, Year, or Season</a></p>
+<p><strong>Metadata </strong><a href="#" class="metadataLink"  data-geonetwork-metadata-id="124">Projected derived precipitation products &ndash; 771m CMIP5/AR5 Decadal Summaries by Month, Year, or Season</a></p>
 
 <table class="downloadsTable">
 <thead>
@@ -1389,22 +1380,23 @@ All information produced by the Scenarios Network for Alaska and Arctic Planning
 
 <br/>
 
+<div class="dataAccordionWrapper">
 <div class="dataAccordion">
-<h3><a href="#dataset=projected_monthly_temperature_and_precipitation_771m">Projected Monthly Temperature and Precipitation - 771m CMIP3/AR4</a></h3>
+<h3><a href="#dataset=projected_monthly_temperature_and_precipitation_771m">Projected monthly temperature and precipitation - 771m CMIP3/AR4</a></h3>
 <div>
-<p>Projected (2001-2100: B1, A1B, and A2 scenarios) monthly average temperature and total precipitation from 5 AR4 GCMs that perform best across Alaska and the Arctic, downscaled to 771m via the delta method. A 5-Model Average is also included.</p>
+<p><img src="${imagePath}ak_extent.jpg" alt="alaska extent" />Projected (2001-2100: B1, A1B, and A2 scenarios) monthly average temperature and total precipitation from 5 AR4 GCMs that perform best across Alaska and the Arctic, downscaled to 771m via the <a href="/methods/downscaling">delta method.</a> A 5-Model Average is also included.</p>
 <table class="overview">
 <tbody>
-<tr><th scope="row">Baseline Reference Climate</th><td>1971&ndash;2000 PRISM</td></tr>
-<tr><th scope="row">Spatial Resolution</th><td>771m</td></tr>
-<tr><th scope="row">Temporal Resolution</th><td>Monthly</td></tr>
-<tr><th scope="row">Spatial Extent</th><td>Alaska</td></tr>
+<tr><th scope="row">Baseline reference climate</th><td>1971&ndash;2000 PRISM</td></tr>
+<tr><th scope="row">Spatial resolution</th><td>771m</td></tr>
+<tr><th scope="row">Temporal resolution</th><td>Monthly</td></tr>
+<tr><th scope="row">Spatial extent</th><td>Alaska</td></tr>
 </tbody>
 </table>
-<img src="${imagePath}ak_extent.jpg" alt="" />
+
 
 <h4>Temperature</h4>
-<p><strong>Metadata: </strong><a href="#" class="metadataLink"  data-geonetwork-metadata-id="34">Projected Monthly Average Temperature 771m AR4</a></p>
+<p><strong>Metadata </strong><a href="#" class="metadataLink"  data-geonetwork-metadata-id="34">Projected Monthly Average Temperature 771m AR4</a></p>
 
 <table class="downloadsTable">
 <thead>
@@ -1493,7 +1485,7 @@ All information produced by the Scenarios Network for Alaska and Arctic Planning
 
 
 <h4>Precipitation</h4>
-<p><strong>Metadata: </strong><a href="#" class="metadataLink"  data-geonetwork-metadata-id="35">Projected Monthly Total Precipitation 771m AR4</a></p>
+<p><strong>Metadata </strong><a href="#" class="metadataLink"  data-geonetwork-metadata-id="35">Projected Monthly Total Precipitation 771m AR4</a></p>
 
 <table class="downloadsTable">
 <thead>
@@ -1580,23 +1572,25 @@ All information produced by the Scenarios Network for Alaska and Arctic Planning
 </tbody>
 </table>
 
-
+</div>
 </div>
 
-<h3><a href="#dataset=projected_derived_temperature_771m">Projected Derived Temperature Products - 771m CMIP3/AR4</a></h3>
+
+<div class="dataAccordionWrapper">
+<div class="dataAccordion">
+<h3><a href="#dataset=projected_derived_temperature_771m">Projected derived temperature products - 771m CMIP3/AR4</a></h3>
 <div>
 
-<p>
-Projected (2010&ndash;2100: B1, A1B, and A2 scenarios) derived temperature products from 5 AR4 GCMs that perform best across Alaska and the Arctic, downscaled to 771m via the delta method.  A 5-Model Average is also included.</p>
+<p><img src="${imagePath}ak_extent.jpg" alt="alaska extent" />Projected (2010&ndash;2100: B1, A1B, and A2 scenarios) derived temperature products from 5 AR4 GCMs that perform best across Alaska and the Arctic, downscaled to 771m via the <a href="/methods/downscaling">delta method.</a>  A 5-Model Average is also included.</p>
 <table class="overview">
 <tbody>
-<tr><th scope="row">Baseline Reference Climate</th><td>1971&ndash;2000 PRISM</td></tr>
-<tr><th scope="row">Spatial Resolution</th><td>771m</td></tr>
-<tr><th scope="row">Temporal Resolution</th><td>Decadal</td></tr>
-<tr><th scope="row">Spatial Extent</th><td>Alaska</td></tr>
+<tr><th scope="row">Baseline reference climate</th><td>1971&ndash;2000 PRISM</td></tr>
+<tr><th scope="row">Spatial resolution</th><td>771m</td></tr>
+<tr><th scope="row">Temporal resolution</th><td>Decadal</td></tr>
+<tr><th scope="row">Spatial extent</th><td>Alaska</td></tr>
 </tbody>
 </table>
-<img src="${imagePath}ak_extent.jpg" alt="" />
+
 
 
 <h4>Decadal Summaries by Month, Year, or Season</h4>
@@ -1604,8 +1598,8 @@ Projected (2010&ndash;2100: B1, A1B, and A2 scenarios) derived temperature produ
 <h5>Metadata by product</h5>
 <ul>
 <li><a href="#" class="metadataLink"  data-geonetwork-metadata-id="39">Projected Decadal Averages of Monthly Mean Temperatures 771m AR4</a></li>
-<li><a href="#" class="metadataLink"  data-geonetwork-metadata-id="41">Projected Decadal Averages of Annual Mean Temperatures 771m AR4</a></li>
-<li><a href="#" class="metadataLink"  data-geonetwork-metadata-id="42">Projected Decadal Averages of Seasonal Mean Temperatures 771m AR4</a></li>
+<li><a href="#" class="metadataLink"  data-geonetwork-metadata-id="41">Projected decadal averages of annual Mean Temperatures 771m AR4</a></li>
+<li><a href="#" class="metadataLink"  data-geonetwork-metadata-id="42">Projected decadal averages of seasonal Mean Temperatures 771m AR4</a></li>
 </ul>
 <h5>All products by model and scenario</h5>
 
@@ -1672,11 +1666,11 @@ Projected (2010&ndash;2100: B1, A1B, and A2 scenarios) derived temperature produ
 
 <h4>Day of Freeze, Thaw, Length of Growing Season</h4>
 <p>
-Estimated Julian days of freeze and thaw (dof, dot) are calculated by assuming a linear change in temperature between consecutive months. Mean monthly temperatures are used to represent daily temperature on the 15th day of each month. When consecutive monthly midpoints have opposite sign temperatures, the day of transition (freeze or thaw) is the day between them on which temperature crosses zero degrees C. The length of growing season (logs) refers to the number of days between the days of freeze and thaw.  More detailed explanations are discussed in the metadata.
+Estimated Julian days of freeze and thaw (dof, dot) are calculated by assuming a linear change in temperature between consecutive months. Mean monthly temperatures are used to represent daily temperature on the 15th day of each month. When consecutive monthly midpoints have opposite sign temperatures, the day of transition (freeze or thaw) is the day between them on which temperature crosses 0&deg; C. The length of growing season (logs) refers to the number of days between the days of freeze and thaw.  More detailed explanations are discussed in the metadata.
 </p>
 
 <h5>Date of Freeze, Thaw</h5>
-<p><strong>Metadata: </strong><a href="#" class="metadataLink"  data-geonetwork-metadata-id="38">Projected Day of Freeze or Thaw 771 AR4 </a></p>
+<p><strong>Metadata </strong><a href="#" class="metadataLink"  data-geonetwork-metadata-id="38">Projected Day of Freeze or Thaw 771 AR4 </a></p>
 
 <table class="downloadsTable">
 <thead>
@@ -1739,7 +1733,7 @@ Estimated Julian days of freeze and thaw (dof, dot) are calculated by assuming a
 </table>
 
 <h5>Length of Growing Season</h5>
-<p><strong>Metadata:</strong> <a href="#" class="metadataLink"  data-geonetwork-metadata-id="37">Projected Length of Growing Season 771 AR4</a></p>
+<p><strong>Metadata</strong> <a href="#" class="metadataLink"  data-geonetwork-metadata-id="37">Projected Length of Growing Season 771 AR4</a></p>
 
 <table class="downloadsTable">
 <thead>
@@ -1803,31 +1797,33 @@ Estimated Julian days of freeze and thaw (dof, dot) are calculated by assuming a
 </table>
 
 </div>
+</div>
 
-<h3><a href="#dataset=projected_derived_precipitation_771m">Projected Derived Precipitation Products - 771m CMIP3/AR4</a></h3>
+<div class="dataAccordionWrapper">
+<div class="dataAccordion">
+<h3><a href="#dataset=projected_derived_precipitation_771m">Projected derived precipitation products - 771m CMIP3/AR4</a></h3>
 <div>
 
-<p>
-Projected (2010-2100: B1, A1B, and A2 scenarios) derived precipitation products from 5 AR4 GCMs that perform best across Alaska and the Arctic, downscaled to 771m via the delta method.  A 5-Model Average is also included.
+<p><img src="${imagePath}ak_extent.jpg" alt="alaska extent" />Projected (2010-2100: B1, A1B, and A2 scenarios) derived precipitation products from 5 AR4 GCMs that perform best across Alaska and the Arctic, downscaled to 771m via the <a href="/methods/downscaling">delta method.</a>  A 5-Model Average is also included.
 </p>
 
 <table class="overview">
 <tbody>
-<tr><th scope="row">Baseline Reference Climate</th><td>1971&ndash;2000 PRISM</td></tr>
-<tr><th scope="row">Spatial Resolution</th><td>771m</td></tr>
-<tr><th scope="row">Temporal Resolution</th><td>Decadal</td></tr>
-<tr><th scope="row">Spatial Extent</th><td>Alaska</td></tr>
+<tr><th scope="row">Baseline reference climate</th><td>1971&ndash;2000 PRISM</td></tr>
+<tr><th scope="row">Spatial resolution</th><td>771m</td></tr>
+<tr><th scope="row">Temporal resolution</th><td>Decadal</td></tr>
+<tr><th scope="row">Spatial extent</th><td>Alaska</td></tr>
 </tbody>
 </table>
-<img src="${imagePath}ak_extent.jpg" alt="" />
+
 
 <h4>Decadal Summaries by month, year, or season</h4>
 
 <h5>Metadata by product</h5>
 <ul>
 <li><a href="#" class="metadataLink"  data-geonetwork-metadata-id="62">Projected Decadal Averages of Monthly Total Precipitation 771m AR4</a></li>
-<li><a href="#" class="metadataLink"  data-geonetwork-metadata-id="43">Projected Decadal Averages of Annual Total Precipitation 771m AR4</a></li>
-<li><a href="#" class="metadataLink"  data-geonetwork-metadata-id="36">Projected Decadal Averages of Seasonal Total Precipitation 771m AR4</a></li>
+<li><a href="#" class="metadataLink"  data-geonetwork-metadata-id="43">Projected decadal averages of annual Total Precipitation 771m AR4</a></li>
+<li><a href="#" class="metadataLink"  data-geonetwork-metadata-id="36">Projected decadal averages of seasonal Total Precipitation 771m AR4</a></li>
 </ul>
 
 <h5>All products by model and scenario</h5>
@@ -1897,26 +1893,27 @@ Projected (2010-2100: B1, A1B, and A2 scenarios) derived precipitation products 
 </div>
 
 <br/>
+
+
 <div class="dataAccordion">
-<h3><a href="#dataset=projected_monthly_temperature_and_precipitation_2km">Projected Monthly Temperature and Precipitation - 2 km CMIP3/AR4</a></h3>
+<h3><a href="#dataset=projected_monthly_temperature_and_precipitation_2km">Projected monthly temperature and precipitation - 2 km CMIP3/AR4</a></h3>
 <div>
 
-<p>
-Projected (2001&ndash;2100: B1, A1B, and A2 scenarios) monthly temperature and precipitation from 5 AR4 GCMs that perform best across Alaska and the Arctic, downscaled to 2 km via the delta method.  A 5-Model Average is also included.
+<p><img src="${imagePath}akcanada_extent.png" alt="alaska-canada extent" />Projected (2001&ndash;2100: B1, A1B, and A2 scenarios) monthly temperature and precipitation from 5 AR4 GCMs that perform best across Alaska and the Arctic, downscaled to 2 km via the <a href="/methods/downscaling">delta method.</a>  A 5-Model Average is also included.
 </p>
 
 <table class="overview">
 <tbody>
-<tr><th scope="row">Baseline Reference Climate</th><td>1961&ndash;1990 PRISM</td></tr>
-<tr><th scope="row">Spatial Resolution</th><td>2 km</td></tr>
-<tr><th scope="row">Temporal Resolution</th><td>Monthly</td></tr>
-<tr><th scope="row">Spatial Extent</th><td>Alaska and Western Canada (YT, BC, AB, SK, MB)</td></tr>
+<tr><th scope="row">Baseline reference climate</th><td>1961&ndash;1990 PRISM</td></tr>
+<tr><th scope="row">Spatial resolution</th><td>2 km</td></tr>
+<tr><th scope="row">Temporal resolution</th><td>Monthly</td></tr>
+<tr><th scope="row">Spatial extent</th><td>Alaska and Western Canada (YT, BC, AB, SK, MB)</td></tr>
 </tbody>
 </table>
-<img src="${imagePath}akcanada_extent.png" alt="" />
+
 
 <h4>Temperature</h4>
-<p><strong>Metadata: </strong><a href="#" class="metadataLink"  data-geonetwork-metadata-id="29">Projected Monthly Average Temperature 2 km AR4</a></p>
+<p><strong>Metadata </strong><a href="#" class="metadataLink"  data-geonetwork-metadata-id="29">Projected Monthly Average Temperature 2 km AR4</a></p>
 
 <table class="downloadsTable">
 <thead>
@@ -1980,7 +1977,7 @@ Projected (2001&ndash;2100: B1, A1B, and A2 scenarios) monthly temperature and p
 </table>
 
 <h4>Precipitation</h4>
-<p><strong>Metadata: </strong> <a href="#" class="metadataLink"  data-geonetwork-metadata-id="32">Projected Monthly Total Precipitation 2 km AR4</a></p>
+<p><strong>Metadata </strong> <a href="#" class="metadataLink"  data-geonetwork-metadata-id="32">Projected Monthly Total Precipitation 2 km AR4</a></p>
 
 <table class="downloadsTable">
 <thead>
@@ -2043,25 +2040,27 @@ Projected (2001&ndash;2100: B1, A1B, and A2 scenarios) monthly temperature and p
 </tbody>
 </table>
 
-
+</div>
 </div>
 
-<h3><a href="#dataset=projected_derived_temperature_2km">Projected Derived Temperature Products - 2 km CMIP3/AR4</a></h3>
+<div class="dataAccordionWrapper">
+<div class="dataAccordion">
+<h3><a href="#dataset=projected_derived_temperature_2km">Projected derived temperature products - 2 km CMIP3/AR4</a></h3>
 <div>
 
-<p>
-Projected (2010&ndash;2100: B1, A1B, and A2 scenarios) derived temperature products from 5 AR4 GCMs that perform best across Alaska and the Arctic, downscaled to 2km via the delta method.  A 5-Model Average is also included.
+<p><img src="${imagePath}akcanada_extent.png" alt="alaska-canada extent" />
+Projected (2010&ndash;2100: B1, A1B, and A2 scenarios) derived temperature products from 5 AR4 GCMs that perform best across Alaska and the Arctic, downscaled to 2km via the <a href="/methods/downscaling">delta method.</a>  A 5-Model Average is also included.
 </p>
 
 <table class="overview">
 <tbody>
-<tr><th scope="row">Baseline Reference Climate</th><td>1961&ndash;1990 PRISM</td></tr>
-<tr><th scope="row">Spatial Resolution</th><td>2 km</td></tr>
-<tr><th scope="row">Temporal Resolution</th><td>Decadal</td></tr>
-<tr><th scope="row">Spatial Extent</th><td>Alaska and Western Canada (YT, BC, AB, SK, MB)</td></tr>
+<tr><th scope="row">Baseline reference climate</th><td>1961&ndash;1990 PRISM</td></tr>
+<tr><th scope="row">Spatial resolution</th><td>2 km</td></tr>
+<tr><th scope="row">Temporal resolution</th><td>Decadal</td></tr>
+<tr><th scope="row">Spatial extent</th><td>Alaska and Western Canada (YT, BC, AB, SK, MB)</td></tr>
 </tbody>
 </table>
-<img src="${imagePath}akcanada_extent.png" alt="" />
+
 
 <h4>Decadal Summaries by month, year, or season</h4>
 
@@ -2071,10 +2070,10 @@ Projected (2010&ndash;2100: B1, A1B, and A2 scenarios) derived temperature produ
 <a href="#" class="metadataLink"  data-geonetwork-metadata-id="22">Projected Decadal Averages of Monthly Mean Temperatures 2km AR4</a>
 </li>
 <li>
-<a href="#" class="metadataLink"  data-geonetwork-metadata-id="20">Projected Decadal Averages of Annual Mean Temperatures 2km AR4</a>
+<a href="#" class="metadataLink"  data-geonetwork-metadata-id="20">Projected decadal averages of annual Mean Temperatures 2km AR4</a>
 </li>
 <li>
-<a href="#" class="metadataLink"  data-geonetwork-metadata-id="24">Projected Decadal Averages of Seasonal Mean Temperatures 2km AR4</a>
+<a href="#" class="metadataLink"  data-geonetwork-metadata-id="24">Projected decadal averages of seasonal Mean Temperatures 2km AR4</a>
 </li>
 </ul>
 
@@ -2142,12 +2141,12 @@ Projected (2010&ndash;2100: B1, A1B, and A2 scenarios) derived temperature produ
 
 <h4>Day of Freeze, Thaw, Length of Growing Season</h4>
 <p>
-Estimated Julian days of freeze and thaw (dof, dot) are calculated by assuming a linear change in temperature between consecutive months. Mean monthly temperatures are used to represent daily temperature on the 15th day of each month. When consecutive monthly midpoints have opposite sign temperatures, the day of transition (freeze or thaw) is the day between them on which temperature crosses zero degrees C. The length of growing season (logs) refers to the number of days between the days of freeze and thaw.  More detailed explanations are discussed in the metadata.
+Estimated Julian days of freeze and thaw (dof, dot) are calculated by assuming a linear change in temperature between consecutive months. Mean monthly temperatures are used to represent daily temperature on the 15th day of each month. When consecutive monthly midpoints have opposite sign temperatures, the day of transition (freeze or thaw) is the day between them on which temperature crosses 0&deg; C. The length of growing season (logs) refers to the number of days between the days of freeze and thaw.  More detailed explanations are discussed in the metadata.
 </p>
 
 <h5>Day of Freeze, Thaw</h5>
 
-<p><strong>Metadata: </strong><a href="#" class="metadataLink"  data-geonetwork-metadata-id="19">Projected Day of Freeze or Thaw 2km AR4</a></p>
+<p><strong>Metadata </strong><a href="#" class="metadataLink"  data-geonetwork-metadata-id="19">Projected Day of Freeze or Thaw 2km AR4</a></p>
 
 <table class="downloadsTable">
 <thead>
@@ -2210,7 +2209,7 @@ Estimated Julian days of freeze and thaw (dof, dot) are calculated by assuming a
 </table>
 
 <h5>Length of Growing Season</h5>
-<p><strong>Metadata: </strong><a href="#" class="metadataLink"  data-geonetwork-metadata-id="26">Projected Length of Growing Season 2km AR4</a></p>
+<p><strong>Metadata </strong><a href="#" class="metadataLink"  data-geonetwork-metadata-id="26">Projected Length of Growing Season 2km AR4</a></p>
 
 <table class="downloadsTable">
 <thead>
@@ -2273,30 +2272,34 @@ Estimated Julian days of freeze and thaw (dof, dot) are calculated by assuming a
 </table>
 
 </div>
-<h3><a href="#dataset=projected_derived_precipitation_2km">Projected Derived Precipitation Products - 2 km CMIP3/AR4</a></h3>
+</div>
+
+<div class="dataAccordionWrapper">
+<div class="dataAccordion">
+<h3><a href="#dataset=projected_derived_precipitation_2km">Projected derived precipitation products - 2 km CMIP3/AR4</a></h3>
 <div>
 
-<p>
-Projected (2010-2100: B1, A1B, and A2 scenarios) derived precipitation products from 5 AR4 GCMs that perform best across Alaska and the Arctic, downscaled to 2km via the delta method.  A 5-Model Average is also included.
+<p><img src="${imagePath}akcanada_extent.png" alt="alaska-canada extent" />
+Projected (2010-2100: B1, A1B, and A2 scenarios) derived precipitation products from 5 AR4 GCMs that perform best across Alaska and the Arctic, downscaled to 2km via the <a href="/methods/downscaling">delta method.</a>  A 5-Model Average is also included.
 </p>
 
 <table class="overview">
 <tbody>
-<tr><th scope="row">Baseline Reference Climate</th><td>1961&ndash;1990 PRISM</td></tr>
-<tr><th scope="row">Spatial Resolution</th><td>771m</td></tr>
-<tr><th scope="row">Temporal Resolution</th><td>Decadal</td></tr>
-<tr><th scope="row">Spatial Extent</th><td>Alaska and Western Canada (YT, BC, AB, SK, MB)</td></tr>
+<tr><th scope="row">Baseline reference climate</th><td>1961&ndash;1990 PRISM</td></tr>
+<tr><th scope="row">Spatial resolution</th><td>771m</td></tr>
+<tr><th scope="row">Temporal resolution</th><td>Decadal</td></tr>
+<tr><th scope="row">Spatial extent</th><td>Alaska and Western Canada (YT, BC, AB, SK, MB)</td></tr>
 </tbody>
 </table>
-<img src="${imagePath}akcanada_extent.png" alt="" />
+
 
 <h4>Decadal Summaries by month, year, and season</h4>
 
 <h5>Metadata by product</h5>
 <ul>
 <li><a href="#" class="metadataLink"  data-geonetwork-metadata-id="23">Projected Decadal Averages of Monthly Total Precipitation 2km AR4</a></li>
-<li><a href="#" class="metadataLink"  data-geonetwork-metadata-id="21">Projected Decadal Averages of Annual Total Precipitation 2km AR4</a></li>
-<li><a href="#" class="metadataLink"  data-geonetwork-metadata-id="25">Projected Decadal Averages of Seasonal Total Precipitation 2km AR4</a></li>
+<li><a href="#" class="metadataLink"  data-geonetwork-metadata-id="21">Projected decadal averages of annual Total Precipitation 2km AR4</a></li>
+<li><a href="#" class="metadataLink"  data-geonetwork-metadata-id="25">Projected decadal averages of seasonal Total Precipitation 2km AR4</a></li>
 </ul>
 
 <h5>All products by model and scenario</h5>
@@ -2366,12 +2369,13 @@ Projected (2010-2100: B1, A1B, and A2 scenarios) derived precipitation products 
 </div>
 
 <br/>
+
 <div class="dataAccordion">
 
 
-<h3><a href="#dataset=projected_monthly_potential_evapostranspiration_2km">Projected Monthly Potential Evapotranspiration -  2km CMIP3/AR4</a></h3>
+<h3><a href="#dataset=projected_monthly_potential_evapostranspiration_2km">Projected monthly potential evapotranspiration -  2km CMIP3/AR4</a></h3>
 <div>
-  <p>Projected (2001-2099: A1B scenario) monthly total potential evapotranspiration from 5 AR4 GCMs that perform best across Alaska and the Arctic, utilizing 2km downscaled temperature as model inputs.
+  <p><img src="${imagePath}ak_extent.jpg" alt="alaska extent" />Projected (2001-2099: A1B scenario) monthly total potential evapotranspiration from 5 AR4 GCMs that perform best across Alaska and the Arctic, utilizing 2km downscaled temperature as model inputs.
 </p>
 <p>These potential evapotranspiration (PET) estimates were produced using the Hamon equation, which calculates PET as a function of temperature and day length.  Potential evapotranspiration may also be influenced by cloud cover, humidity, and wind speed.  The Hamon equation can not explicitly account for variability in these aspects of weather and climate, so it may over or underestimate changes in PET if humidity, cloud cover, or wind speeds change substantially.  In addition, the Hamon equation was developed to calculate daily potential evapotranspiration, and so these estimates, based on monthly data, may differ from those calculated from daily data. We can also provide PET estimated by the Priestley-Taylor equation and standard equations for estimating the surface radiation budget from temperature. Priestley-Taylor data come with a much longer list of assumptions, including those that apply to the Hamon equation.  Scripts used to produce both the Harmon and Priestley-Taylor versions are <a href="https://github.com/ua-snap/potential-evapotranspiration" rel="external">available online</a>.
 </p>
@@ -2380,29 +2384,29 @@ Projected (2010-2100: B1, A1B, and A2 scenarios) derived precipitation products 
 <table class="overview">
   <tbody>
     <tr>
-      <th scope="row">Baseline Reference Climate</th>
+      <th scope="row">Baseline reference climate</th>
       <td>1961–1990 PRISM</td>
     </tr>
     <tr>
-      <th scope="row">Spatial Resolution</th>
+      <th scope="row">Spatial resolution</th>
       <td>2km</td>
     </tr>
     <tr>
-      <th scope="row">Temporal Resolution</th>
+      <th scope="row">Temporal resolution</th>
       <td>Monthly</td>
     </tr>
     <tr>
-      <th scope="row">Spatial Extent</th>
+      <th scope="row">Spatial extent</th>
       <td>Alaska</td>
     </tr>
   </tbody>
 </table>
-<img src="${imagePath}ak_extent.jpg" alt="" />
+
 
 <h4>Metadata by product</h4>
 
-<p><strong>Metadata:</strong> <a href="#" class="metadataLink"  data-geonetwork-metadata-id="69">Projected Monthly Total Potential Evapotranspiration 2km AR4</a></p>
-<p><strong>Equations used to derive data:</strong> <a href="attachments/Hamon_PET_equations.pdf">Hamon PET equations</a> (PDF, 597KB)</p>
+<p><strong>Metadata</strong> <a href="#" class="metadataLink"  data-geonetwork-metadata-id="69"> Projected monthly total potential evapotranspiration 2km AR4</a></p>
+<p><strong>Equations used to derive data:</strong> <a href="attachments/Hamon_PET_equations.pdf">Hamon PET equations</a> (PDF)</p>
 
 <h4>Data</h4>
 
@@ -2449,10 +2453,13 @@ Projected (2010-2100: B1, A1B, and A2 scenarios) derived precipitation products 
 </table>
 
 </div>
+</div>
 
-<h3><a href="#dataset=projected_derived_potential_evapostranspiration_2km">Projected Derived Potential Evapotranspiration -  2km CMIP3/AR4</a></h3>
+<div class="dataAccordionWrapper">
+<div class="dataAccordion">
+<h3><a href="#dataset=projected_derived_potential_evapostranspiration_2km">Projected derived potential evapotranspiration -  2km CMIP3/AR4</a></h3>
 <div>
-  <p>Projected (2001-2099: A1B scenario) monthly total potential evapotranspiration from 5 AR4 GCMs that perform best across Alaska and the Arctic, utilizing 2km downscaled temperature as model inputs.
+  <p><img src="${imagePath}ak_extent.jpg" alt="alaska extent" />Projected (2001-2099: A1B scenario) monthly total potential evapotranspiration from 5 AR4 GCMs that perform best across Alaska and the Arctic, utilizing 2km downscaled temperature as model inputs.
 </p>
 <p>These potential evapotranspiration (PET) estimates were produced using the Hamon equation, which calculates PET as a function of temperature and day length.  Potential evapotranspiration may also be influenced by cloud cover, humidity, and wind speed.  The Hamon equation can not explicitly account for variability in these aspects of weather and climate, so it may over or underestimate changes in PET if humidity, cloud cover, or wind speeds change substantially.  In addition, the Hamon equation was developed to calculate daily potential evapotranspiration, and so these estimates, based on monthly data, may differ from those calculated from daily data. We can also provide PET estimated by the Priestley-Taylor equation and standard equations for estimating the surface radiation budget from temperature. Priestley-Taylor data come with a much longer list of assumptions, including those that apply to the Hamon equation.  Scripts used to produce both the Harmon and Priestley-Taylor versions are <a href="https://github.com/ua-snap/potential-evapotranspiration" rel="external">available online</a>.
 </p>
@@ -2461,35 +2468,35 @@ Projected (2010-2100: B1, A1B, and A2 scenarios) derived precipitation products 
 <table class="overview">
   <tbody>
     <tr>
-      <th scope="row">Baseline Reference Climate</th>
+      <th scope="row">Baseline reference climate</th>
       <td>1961–1990 PRISM</td>
     </tr>
     <tr>
-      <th scope="row">Spatial Resolution</th>
+      <th scope="row">Spatial resolution</th>
       <td>2km</td>
     </tr>
     <tr>
-      <th scope="row">Temporal Resolution</th>
+      <th scope="row">Temporal resolution</th>
       <td>Decadal</td>
     </tr>
     <tr>
-      <th scope="row">Spatial Extent</th>
+      <th scope="row">Spatial extent</th>
       <td>Alaska</td>
     </tr>
   </tbody>
 </table>
-<img src="${imagePath}ak_extent.jpg" alt="" />
+
 
 <h4>Decadal Summaries by Month, Year, or Season</h4>
 <h5>Metadata by product</h5>
 
 <ul>
-<li><a href="#" class="metadataLink"  data-geonetwork-metadata-id="73">Projected Decadal Averages of Monthly Total Potential Evapotranspiration 2km AR4</a></li>
-<li><a href="#" class="metadataLink"  data-geonetwork-metadata-id="74">Projected Decadal Averages of Annual Total Potential Evapotranspiration 2km AR4</a></li>
-<li><a href="#" class="metadataLink"  data-geonetwork-metadata-id="75">Projected Decadal Averages of Seasonal Total Potential Evapotranspiration 2km AR4</a></li>
+<li><a href="#" class="metadataLink"  data-geonetwork-metadata-id="73">Projected decadal averages of monthly total potential evapotranspiration 2km AR4</a></li>
+<li><a href="#" class="metadataLink"  data-geonetwork-metadata-id="74">Projected decadal averages of annual total potential evapotranspiration 2km AR4</a></li>
+<li><a href="#" class="metadataLink"  data-geonetwork-metadata-id="75">Projected decadal averages of seasonal total potential evapotranspiration 2km AR4</a></li>
 </ul>
 
-<p><strong>Equations used to derive data:</strong> <a href="attachments/Hamon_PET_equations.pdf">Hamon PET equations</a> (PDF, 597KB)</p>
+<p><strong>Equations used to derive data:</strong> <a href="attachments/Hamon_PET_equations.pdf">Hamon PET equations</a> (PDF)</p>
 
 <h4>Data</h4>
 
@@ -2546,41 +2553,45 @@ Projected (2010-2100: B1, A1B, and A2 scenarios) derived precipitation products 
 <div class="dataAccordion">
 
 
-<h3><a href="#dataset=projected_monthly_snow_day_fraction_771m">Projected Decadal Averages Of Monthly Snow-day Fraction 771m CMIP3/AR4</a></h3>
+<h3><a href="#dataset=projected_monthly_snow_day_fraction_771m">Projected decadal averages of monthly snow-day fraction 771m CMIP3/AR4</a></h3>
 <div>
-  <p>
+  <p><img src="${imagePath}ak_extent.jpg" alt="alaska extent" />
   These snow-day fraction estimates were produced by applying equations relating decadal average monthly temperature to snow-day fraction to downscaled decadal average monthly temperature. Separate equations were used to model the relationship between decadal monthly average temperature and the fraction of wet days with snow for seven geographic regions in the state: Arctic, western Alaska, Interior, Cook Inlet, SW Islands, SW Interior, and the Gulf of Alaska coast.
 </p><p>
 Although the equations developed here provide a reasonable fit to the data, model evaluation demonstrated that some stations are consistently less well described by regional models than others. It is unclear why this occurs, but it is like related to localized climate conditions. Very few weather stations with long records are located above 500m elevation in Alaska, so the equations used here were developed primarily from low-elevation weather stations. It is not clear whether the equations will be completely appropriate in the mountains. Finally, these equations summarize a long-term monthly relationship between temperature and precipitation type that is the result of short-term weather variability. In using these equations to make projections of future snow, as assume that these relationships remain stable over time, and we do not know how accurate that assumption is.
 </p>
-  <p>Read the <a href="/files/data/snow_day_fraction/snow_fraction_data_users_guide.pdf">user&rsquo;s guide for this data set</a> (PDF, 1.5MB) for information on methodology and validation.</p>
-  <p>Detailed information on the construction of this data and its implications is available in <a href="/attachments/McAfee2013_snowDay.pdf">this paper.</a> (PDF, 3.27MB)</p>
+
+ <ul>
+  <li><a href="/files/data/snow_day_fraction/snow_fraction_data_users_guide.pdf">See the user&rsquo;s guide for these data</a> (PDF) for information on methodology and validation for these data</li>
+  <li><a href="/attachments/McAfee2013_snowDay.pdf">See this paper</a> (PDF) for detailed information on the construction of this data and its implications</li>
+  <li><a href="https://github.com/ua-snap/snowfraction">Download the scripts</a> used to generate these data</li>
+</ul>
 
 <table class="overview">
   <tbody>
     <tr>
-      <th scope="row">Baseline Reference Climate</th>
+      <th scope="row">Baseline reference climate</th>
       <td>1971&ndash;2000 PRISM</td>
     </tr>
     <tr>
-      <th scope="row">Spatial Resolution</th>
+      <th scope="row">Spatial resolution</th>
       <td>771m</td>
     </tr>
     <tr>
-      <th scope="row">Temporal Resolution</th>
+      <th scope="row">Temporal resolution</th>
       <td>Monthly</td>
     </tr>
     <tr>
-      <th scope="row">Spatial Extent</th>
+      <th scope="row">Spatial extent</th>
       <td>Alaska</td>
     </tr>
   </tbody>
 </table>
-<img src="${imagePath}ak_extent.jpg" alt="" />
+
 
 <h4>Metadata by product</h4>
 
-<p><strong>Metadata:</strong> <a href="#" class="metadataLink"  data-geonetwork-metadata-id="84">Projected Decadal Averages Of Monthly Snow-day Fraction 771m AR4</a></p>
+<p><strong>Metadata</strong> <a href="#" class="metadataLink"  data-geonetwork-metadata-id="84">Projected decadal averages of monthly snow-day fraction 771m AR4</a></p>
 
 
 <h4>Data</h4>
@@ -2628,26 +2639,26 @@ Although the equations developed here provide a reasonable fit to the data, mode
 <!-- HistoricalData -->
 
 <div class="methods text" id="Historical">
-<h3>Historically Observed Data</h3>
+<h3>Historically observed data</h3>
 </div>
 
 <div class="dataAccordionWrapper">
 <div class="dataAccordion">
 
-<h3><a href="#dataset=historical_sea_ice_atlas">Historical Sea Ice Atlas: Observed Estimates of Sea Ice Concentration in Alaska Waters</a></h3>
+<h3><a href="#dataset=historical_sea_ice_atlas">Historical Sea Ice Atlas: observed estimates of sea ice concentration in Alaska waters</a></h3>
 <div>
 
-<p>
-These data were compiled from several historical sea ice data sources into spatially and temporally standardized data sets that include sea ice concentrations (0&ndash;100%) for the seas surrounding the state of Alaska, USA.</p>
+<p><img src="${imagePath}sea-ice-atlas-extent.png" alt="" />
+Data were compiled from several historical sea ice data sources into spatially and temporally standardized data sets that include sea ice concentrations (0&ndash;100%) for the seas surrounding the state of Alaska, USA.</p>
 <table class="overview">
 <tbody>
-<tr><th scope="row">Spatial Resolution</th><td>&frac14;&times;&frac14; degree</td></tr>
-<tr><th scope="row">Temporal Resolution</th><td>weekly and monthly</td></tr>
-<tr><th scope="row">Spatial Extent</th><td>Alaska marine waters</td></tr>
-<tr><th scope="row">Temporal Extent</th><td>Weekly, 1953&ndash;2013; Monthly, 1850&ndash;2013</td></tr>
+<tr><th scope="row">Spatial resolution</th><td>&frac14;&times;&frac14; degree</td></tr>
+<tr><th scope="row">Temporal resolution</th><td>weekly and monthly</td></tr>
+<tr><th scope="row">Spatial extent</th><td>Alaska marine waters</td></tr>
+<tr><th scope="row">Temporal extent</th><td>Weekly, 1953&ndash;2013; Monthly, 1850&ndash;2013</td></tr>
 </tbody>
 </table>
-<img src="${imagePath}sea-ice-atlas-extent.png" alt="" />
+
 
 <h4>Downloads</h4>
 
@@ -2675,22 +2686,22 @@ These data were compiled from several historical sea ice data sources into spati
 <div class="dataAccordionWrapper">
 <div class="dataAccordion">
 
-<h3><a href="#dataset=historical_monthly_temperature_and_precipitation_771m_CRUTS30">Historical Monthly Temperature and Precipitation - 771m CRU TS 3.0</a></h3>
+<h3><a href="#dataset=historical_monthly_temperature_and_precipitation_771m_CRUTS30">Historical monthly temperature and precipitation - 771m CRU TS 3.0</a></h3>
 <div>
 
-<p>
-Historical (1901&ndash;2006) monthly average temperature and total precipitation from CRU TS 3.0 climate data, downscaled to 771m via the delta method.
+<p><img src="${imagePath}ak_extent.jpg" alt="alaska extent" />
+Historical (1901&ndash;2006) monthly average temperature and total precipitation from CRU TS 3.0 climate data, downscaled to 771m via the <a href="/methods/downscaling">delta method.</a>
 </p>
 
 <table class="overview">
 <tbody>
-<tr><th scope="row">Baseline Reference Climate</th><td>1971&ndash;2000 PRISM</td></tr>
-<tr><th scope="row">Spatial Resolution</th><td>771m</td></tr>
-<tr><th scope="row">Temporal Resolution</th><td>Monthly</td></tr>
-<tr><th scope="row">Spatial Extent</th><td>Alaska</td></tr>
+<tr><th scope="row">Baseline reference climate</th><td>1971&ndash;2000 PRISM</td></tr>
+<tr><th scope="row">Spatial resolution</th><td>771m</td></tr>
+<tr><th scope="row">Temporal resolution</th><td>Monthly</td></tr>
+<tr><th scope="row">Spatial extent</th><td>Alaska</td></tr>
 </tbody>
 </table>
-<img src="${imagePath}ak_extent.jpg" alt="" />
+
 
 <h4>Downloads</h4>
 
@@ -2719,24 +2730,26 @@ Historical (1901&ndash;2006) monthly average temperature and total precipitation
 </tbody>
 </table>
 </div>
+</div>
 
-
-<h3><a href="#dataset=historical_monthly_temperature_and_precipitation_771m">Historical Monthly Temperature and Precipitation - 771m CRU TS 3.1/3.1.01</a></h3>
+<div class="dataAccordionWrapper">
+<div class="dataAccordion">
+<h3><a href="#dataset=historical_monthly_temperature_and_precipitation_771m">Historical monthly temperature and precipitation - 771m CRU TS 3.1/3.1.01</a></h3>
 <div>
 
-<p>
-Historical (1901&ndash;2009) monthly average temperature and total precipitation from CRU TS 3.1.01 climate data, downscaled to 771m via the delta method.
+<p><img src="${imagePath}ak_extent.jpg" alt="alaska extent" />
+Historical (1901&ndash;2009) monthly average temperature and total precipitation from CRU TS 3.1.01 climate data, downscaled to 771m via the <a href="/methods/downscaling">delta method.</a>
 </p>
 
 <table class="overview">
 <tbody>
-<tr><th scope="row">Baseline Reference Climate</th><td>1971&ndash;2000 PRISM</td></tr>
-<tr><th scope="row">Spatial Resolution</th><td>771m</td></tr>
-<tr><th scope="row">Temporal Resolution</th><td>Monthly</td></tr>
-<tr><th scope="row">Spatial Extent</th><td>Alaska</td></tr>
+<tr><th scope="row">Baseline reference climate</th><td>1971&ndash;2000 PRISM</td></tr>
+<tr><th scope="row">Spatial resolution</th><td>771m</td></tr>
+<tr><th scope="row">Temporal resolution</th><td>Monthly</td></tr>
+<tr><th scope="row">Spatial extent</th><td>Alaska</td></tr>
 </tbody>
 </table>
-<img src="${imagePath}ak_extent.jpg" alt="" />
+
 
 <h4>Downloads</h4>
 
@@ -2751,14 +2764,14 @@ Historical (1901&ndash;2009) monthly average temperature and total precipitation
 </thead>
 <body>
 <tr>
-<td><a href="#" class="metadataLink"  data-geonetwork-metadata-id="45">Historical Monthly Average Temperature 771m CRUTS3.1</a></td>
+<td><a href="#" class="metadataLink"  data-geonetwork-metadata-id="45">Historical monthly average temperature 771m CRUTS3.1</a></td>
 <td>
 <a href="/files/data/monthly/tas_AK_771m_CRU_TS31_historical_1901_1949.zip">1901&ndash;1949</a> (2.5 GB)
 <a href="/files/data/monthly/tas_AK_771m_CRU_TS31_historical_1950_2009.zip">1950&ndash;2009</a> (3.0 GB)
 </td>
 </tr>
 <tr>
-<td><a href="#" class="metadataLink"  data-geonetwork-metadata-id="44">Historical Monthly Total Precipitation 771m CRUTS3.1.01</a></td>
+<td><a href="#" class="metadataLink"  data-geonetwork-metadata-id="44">Historical monthly total precipitation 771m CRUTS3.1.01</a></td>
 <td>
 <a href="/files/data/monthly/pr_AK_771m_CRU_TS31_historical_1901_1949.zip">1901&ndash;1949</a> (2.1 GB)
 <a href="/files/data/monthly/pr_AK_771m_CRU_TS31_historical_1950_2009.zip">1950&ndash;2009</a> (2.5 GB)
@@ -2767,31 +2780,34 @@ Historical (1901&ndash;2009) monthly average temperature and total precipitation
 </tbody>
 </table>
 </div>
+</div>
 
-<h3><a href="#dataset=historical_derived_temperature_771m_CRUTS30">Historical Derived Temperature Products - 771m CRU TS 3.0</a></h3>
+<div class="dataAccordionWrapper">
+<div class="dataAccordion">
+<h3><a href="#dataset=historical_derived_temperature_771m_CRUTS30">Historical derived temperature products - 771m CRU TS 3.0</a></h3>
 <div>
 
-<p>
-Historical (1910&ndash;1999) derived temperature products from CRU TS 3.0 climate data, downscaled to 771m via the delta method.
+<p><img src="${imagePath}ak_extent.jpg" alt="alaska extent" />
+Historical (1910&ndash;1999) derived temperature products from CRU TS 3.0 climate data, downscaled to 771m via the <a href="/methods/downscaling">delta method.</a>
 </p>
 
 <table class="overview">
 <tbody>
-<tr><th scope="row">Baseline Reference Climate</th><td>1971&ndash;2000 PRISM</td></tr>
-<tr><th scope="row">Spatial Resolution</th><td>771m</td></tr>
-<tr><th scope="row">Temporal Resolution</th><td>Decadal</td></tr>
-<tr><th scope="row">Spatial Extent</th><td>Alaska</td></tr>
+<tr><th scope="row">Baseline reference climate</th><td>1971&ndash;2000 PRISM</td></tr>
+<tr><th scope="row">Spatial resolution</th><td>771m</td></tr>
+<tr><th scope="row">Temporal resolution</th><td>Decadal</td></tr>
+<tr><th scope="row">Spatial extent</th><td>Alaska</td></tr>
 </tbody>
 </table>
-<img src="${imagePath}ak_extent.jpg" alt="" />
+
 
 <h4>Decadal summaries by month, year, and season</h4>
 
 <h5>Metadata by product</h5>
 <ul>
-<li><a href="#" class="metadataLink"  data-geonetwork-metadata-id="47">Historical Decadal Averages of Monthly Mean Temperatures 771m CRUTS3.0</a></li>
-<li><a href="#" class="metadataLink"  data-geonetwork-metadata-id="49">Historical Decadal Averages of Annual Mean Temperatures 771m CRUTS3.0</a></li>
-<li><a href="#" class="metadataLink"  data-geonetwork-metadata-id="51">Historical Decadal Averages of Seasonal Mean Temperatures 771m CRUTS3.0</a></li>
+<li><a href="#" class="metadataLink"  data-geonetwork-metadata-id="47">Historical decadal averages of monthly mean temperatures 771m CRUTS3.0</a></li>
+<li><a href="#" class="metadataLink"  data-geonetwork-metadata-id="49">Historical decadal averages of annual mean temperatures 771m CRUTS3.0</a></li>
+<li><a href="#" class="metadataLink"  data-geonetwork-metadata-id="51">Historical decadal averages of seasonal mean temperatures 771m CRUTS3.0</a></li>
 </ul>
 
 <h5>All products</h5>
@@ -2801,7 +2817,7 @@ Historical (1910&ndash;1999) derived temperature products from CRU TS 3.0 climat
 
 <h4>Day of freeze, thaw, length of growing season</h4>
 <p>
-Estimated Julian days of freeze and thaw (dof, dot) are calculated by assuming a linear change in temperature between consecutive months. Mean monthly temperatures are used to represent daily temperature on the 15th day of each month. When consecutive monthly midpoints have opposite sign temperatures, the day of transition (freeze or thaw) is the day between them on which temperature crosses zero degrees C. The length of growing season (logs) refers to the number of days between the days of freeze and thaw. More detailed explanations are discussed in the metadata.
+Estimated Julian days of freeze and thaw (dof, dot) are calculated by assuming a linear change in temperature between consecutive months. Mean monthly temperatures are used to represent daily temperature on the 15th day of each month. When consecutive monthly midpoints have opposite sign temperatures, the day of transition (freeze or thaw) is the day between them on which temperature crosses 0&deg; C. The length of growing season (logs) refers to the number of days between the days of freeze and thaw. More detailed explanations are discussed in the metadata.
 </p>
 
 <table class="downloadsTable">
@@ -2813,13 +2829,13 @@ Estimated Julian days of freeze and thaw (dof, dot) are calculated by assuming a
 </thead>
 <body>
 <tr>
-<td><a href="#" class="metadataLink"  data-geonetwork-metadata-id="53">Historical Day of Freeze or Thaw 771m CRUTS3.0</a></td>
+<td><a href="#" class="metadataLink"  data-geonetwork-metadata-id="53">Historical day of freeze or thaw 771m CRUTS3.0</a></td>
 <td>
 <a href="/files/data/CRUTS3.0/dof_dot_AK_771m_CRU_TS30_historical.zip">dof_dot_AK_771m_CRU_TS30_historical.zip</a> (52 MB)
 </td>
 </tr>
 <tr>
-<td><a href="#" class="metadataLink"  data-geonetwork-metadata-id="55">Historical Length of Growing Season 771m CRUTS3.0</a></td>
+<td><a href="#" class="metadataLink"  data-geonetwork-metadata-id="55">Historical length of growing season 771m CRUTS3.0</a></td>
 <td>
 <a href="/files/data/CRUTS3.0/logs_AK_771m_CRU_TS30_historical.zip">logs_AK_771m_CRU_TS30_historical.zip</a> (32 MB)
 </td>
@@ -2829,32 +2845,35 @@ Estimated Julian days of freeze and thaw (dof, dot) are calculated by assuming a
 
 
 </div>
+</div>
 
-<h3><a href="#dataset=historical_derived_temperature_771m">Historical Derived Temperature Products - 771m CRU TS 3.1</a></h3>
+<div class="dataAccordionWrapper">
+<div class="dataAccordion">
+<h3><a href="#dataset=historical_derived_temperature_771m">Historical derived temperature products - 771m CRU TS 3.1</a></h3>
 <div>
 
 
-<p>
-Historical (1910&ndash;2009) derived temperature products from CRU TS 3.1 climate data, downscaled to 2 km via the delta method.
+<p><img src="${imagePath}ak_extent.jpg" alt="alaska extent" />
+Historical (1910&ndash;2009) derived temperature products from CRU TS 3.1 climate data, downscaled to 2 km via the <a href="/methods/downscaling">delta method.</a>
 </p>
 
 <table class="overview">
 <tbody>
-<tr><th scope="row">Baseline Reference Climate</th><td>1971&ndash;2000 PRISM</td></tr>
-<tr><th scope="row">Spatial Resolution</th><td>771m</td></tr>
-<tr><th scope="row">Temporal Resolution</th><td>Decadal</td></tr>
-<tr><th scope="row">Spatial Extent</th><td>Alaska</td></tr>
+<tr><th scope="row">Baseline reference climate</th><td>1971&ndash;2000 PRISM</td></tr>
+<tr><th scope="row">Spatial resolution</th><td>771m</td></tr>
+<tr><th scope="row">Temporal resolution</th><td>Decadal</td></tr>
+<tr><th scope="row">Spatial extent</th><td>Alaska</td></tr>
 </tbody>
 </table>
-<img src="${imagePath}ak_extent.jpg" alt="" />
+
 
 <h4>Decadal summaries by month, year, and season</h4>
 
 <h5>Metadata by product</h5>
 <ul>
-<li><a href="#" class="metadataLink"  data-geonetwork-metadata-id="47">Historical Decadal Averages of Monthly Mean Temperatures 771m CRUTS3.1</a></li>
-<li><a href="#" class="metadataLink"  data-geonetwork-metadata-id="49">Historical Decadal Averages of Annual Mean Temperatures 771m CRUTS3.1</a></li>
-<li><a href="#" class="metadataLink"  data-geonetwork-metadata-id="51">Historical Decadal Averages of Seasonal Mean Temperatures 771m CRUTS3.1</a></li>
+<li><a href="#" class="metadataLink"  data-geonetwork-metadata-id="47">Historical decadal averages of monthly mean temperatures 771m CRUTS3.1</a></li>
+<li><a href="#" class="metadataLink"  data-geonetwork-metadata-id="49">Historical decadal averages of annual mean temperatures 771m CRUTS3.1</a></li>
+<li><a href="#" class="metadataLink"  data-geonetwork-metadata-id="51">Historical decadal averages of seasonal mean temperatures 771m CRUTS3.1</a></li>
 </ul>
 
 <h5>All products</h5>
@@ -2864,7 +2883,7 @@ Historical (1910&ndash;2009) derived temperature products from CRU TS 3.1 climat
 
 <h4>Day of freeze, thaw, length of growing season</h4>
 <p>
-Estimated Julian days of freeze and thaw (dof, dot) are calculated by assuming a linear change in temperature between consecutive months. Mean monthly temperatures are used to represent daily temperature on the 15th day of each month. When consecutive monthly midpoints have opposite sign temperatures, the day of transition (freeze or thaw) is the day between them on which temperature crosses zero degrees C. The length of growing season (logs) refers to the number of days between the days of freeze and thaw.  More detailed explanations are discussed in the metadata.
+Estimated Julian days of freeze and thaw (dof, dot) are calculated by assuming a linear change in temperature between consecutive months. Mean monthly temperatures are used to represent daily temperature on the 15th day of each month. When consecutive monthly midpoints have opposite sign temperatures, the day of transition (freeze or thaw) is the day between them on which temperature crosses 0&deg; C. The length of growing season (logs) refers to the number of days between the days of freeze and thaw.  More detailed explanations are discussed in the metadata.
 </p>
 
 
@@ -2877,13 +2896,13 @@ Estimated Julian days of freeze and thaw (dof, dot) are calculated by assuming a
 </thead>
 <body>
 <tr>
-<td><a href="#" class="metadataLink"  data-geonetwork-metadata-id="53">Historical Day of Freeze or Thaw 771m CRUTS3.1</a></td>
+<td><a href="#" class="metadataLink"  data-geonetwork-metadata-id="53">Historical day of freeze or thaw 771m CRUTS3.1</a></td>
 <td>
 <a href="/files/data/derived/dof_dot_AK_771m_CRU_TS31_historical.zip">dof_dot_AK_771m_CRU_TS31_historical.zip</a> (58 MB)
 </td>
 </tr>
 <tr>
-<td><a href="#" class="metadataLink"  data-geonetwork-metadata-id="55">Historical Length of Growing Season 771m CRUTS3.1</a></td>
+<td><a href="#" class="metadataLink"  data-geonetwork-metadata-id="55">Historical length of growing season 771m CRUTS3.1</a></td>
 <td>
 <a>
 <a href="/files/data/derived/logs_AK_771m_CRU_TS31_historical.zip">logs_AK_771m_CRU_TS31_historical.zip</a> (35 MB)
@@ -2895,33 +2914,36 @@ Estimated Julian days of freeze and thaw (dof, dot) are calculated by assuming a
 
 
 </div>
+</div>
 
-<h3><a href="#dataset=historical_derived_precipitation_771m_CRUTS30">Historical Derived Precipitation Products - 771m CRU TS 3.0</a></h3>
+<div class="dataAccordionWrapper">
+<div class="dataAccordion">
+<h3><a href="#dataset=historical_derived_precipitation_771m_CRUTS30">Historical derived precipitation products - 771m CRU TS 3.0</a></h3>
 <div>
 
 
-<p>
-Historical (1910&ndash;1999) derived precipitation products from CRUTS 3.0 climate data, downscaled to 771m via the delta method.
+<p><img src="${imagePath}ak_extent.jpg" alt="alaska extent" />
+Historical (1910&ndash;1999) derived precipitation products from CRUTS 3.0 climate data, downscaled to 771m via the <a href="/methods/downscaling">delta method.</a>
 </p>
 
 <table class="overview">
 <tbody>
-<tr><th scope="row">Baseline Reference Climate</th><td>1971&ndash;2000 PRISM</td></tr>
-<tr><th scope="row">Spatial Resolution</th><td>771m</td></tr>
-<tr><th scope="row">Temporal Resolution</th><td>Decadal</td></tr>
-<tr><th scope="row">Spatial Extent</th><td>Alaska</td></tr>
+<tr><th scope="row">Baseline reference climate</th><td>1971&ndash;2000 PRISM</td></tr>
+<tr><th scope="row">Spatial resolution</th><td>771m</td></tr>
+<tr><th scope="row">Temporal resolution</th><td>Decadal</td></tr>
+<tr><th scope="row">Spatial extent</th><td>Alaska</td></tr>
 </tbody>
 </table>
-<img src="${imagePath}ak_extent.jpg" alt="" />
+
 
 
 <h4>Decadal summaries by month, year, and season</h4>
 
 <h5>Metadata by product</h5>
 <ul>
-<li><a href="#" class="metadataLink"  data-geonetwork-metadata-id="57">Historical Decadal Averages of Monthly Total Precipitation 771m CRUTS3.0</a></li>
-<li><a href="#" class="metadataLink"  data-geonetwork-metadata-id="59">Historical Decadal Averages of Annual Total Precipitation 771m CRUTS3.0</a></li>
-<li><a href="#" class="metadataLink"  data-geonetwork-metadata-id="61">Historical Decadal Averages of Seasonal Total Precipitation 771m CRUTS3.0</a></li>
+<li><a href="#" class="metadataLink"  data-geonetwork-metadata-id="57">Historical decadal averages of monthly total precipitation 771m CRUTS3.0</a></li>
+<li><a href="#" class="metadataLink"  data-geonetwork-metadata-id="59">Historical decadal averages of annual Total Precipitation 771m CRUTS3.0</a></li>
+<li><a href="#" class="metadataLink"  data-geonetwork-metadata-id="61">Historical decadal averages of seasonal Total Precipitation 771m CRUTS3.0</a></li>
 </ul>
 
 <h5>All products</h5>
@@ -2930,22 +2952,22 @@ Historical (1910&ndash;1999) derived precipitation products from CRUTS 3.0 clima
 </pre>
 </div>
 
-<h3><a href="#dataset=historical_derived_precipitation_771m">Historical Derived Precipitation Products - 771m CRU TS 3.1.01</a></h3>
+<h3><a href="#dataset=historical_derived_precipitation_771m">Historical derived precipitation products - 771m CRU TS 3.1.01</a></h3>
 <div>
 
-<p>
-Historical (1910-2009) derived precipitation products from CRU TS 3.1.01 climate data, downscaled to 2 km via the delta method.
+<p><img src="${imagePath}ak_extent.jpg" alt="alaska extent" />
+Historical (1910-2009) derived precipitation products from CRU TS 3.1.01 climate data, downscaled to 2 km via the <a href="/methods/downscaling">delta method.</a>
 </p>
 
 <table class="overview">
 <tbody>
-<tr><th scope="row">Baseline Reference Climate</th><td>1971&ndash;2000 PRISM</td></tr>
-<tr><th scope="row">Spatial Resolution</th><td>771m</td></tr>
-<tr><th scope="row">Temporal Resolution</th><td>Decadal</td></tr>
-<tr><th scope="row">Spatial Extent</th><td>Alaska</td></tr>
+<tr><th scope="row">Baseline reference climate</th><td>1971&ndash;2000 PRISM</td></tr>
+<tr><th scope="row">Spatial resolution</th><td>771m</td></tr>
+<tr><th scope="row">Temporal resolution</th><td>Decadal</td></tr>
+<tr><th scope="row">Spatial extent</th><td>Alaska</td></tr>
 </tbody>
 </table>
-<img src="${imagePath}ak_extent.jpg" alt="" />
+
 
 <h4>Decadal summaries by month, year, and season</h4>
 
@@ -2953,9 +2975,9 @@ Historical (1910-2009) derived precipitation products from CRU TS 3.1.01 climate
 
 <h5>Metadata by product</h5>
 <ul>
-<li><a href="#" class="metadataLink"  data-geonetwork-metadata-id="57">Historical Decadal Averages of Monthly Total Precipitation 771m CRUTS3.1.01</a></li>
-<li><a href="#" class="metadataLink"  data-geonetwork-metadata-id="59">Historical Decadal Averages of Annual Total Precipitation 771m CRUTS3.1.01</a></li>
-<li><a href="#" class="metadataLink"  data-geonetwork-metadata-id="61">Historical Decadal Averages of Seasonal Total Precipitation 771m CRUTS3.1.01</a></li>
+<li><a href="#" class="metadataLink"  data-geonetwork-metadata-id="57">Historical decadal averages of monthly total precipitation 771m CRUTS3.1.01</a></li>
+<li><a href="#" class="metadataLink"  data-geonetwork-metadata-id="59">Historical decadal averages of annual Total Precipitation 771m CRUTS3.1.01</a></li>
+<li><a href="#" class="metadataLink"  data-geonetwork-metadata-id="61">Historical decadal averages of seasonal Total Precipitation 771m CRUTS3.1.01</a></li>
 </ul>
 
 <h5>All products</h5>
@@ -2967,26 +2989,26 @@ Historical (1910-2009) derived precipitation products from CRU TS 3.1.01 climate
 </div>
 </div>
 <br/>
+
+<div class="dataAccordionWrapper">
 <div class="dataAccordion">
 
-
-
-<h3><a href="#dataset=historical_monthly_temperature_and_precipitation_2km_CRUTS30">Historical Monthly Temperature and Precipitation - 2 km CRU TS 3.0</a></h3>
+<h3><a href="#dataset=historical_monthly_temperature_and_precipitation_2km_CRUTS30">Historical monthly temperature and precipitation - 2 km CRU TS 3.0</a></h3>
 <div>
 
-<p>
-Historical (1901-2009) monthly average temperature and total precipitation from CRU TS 3.0 climate data, downscaled to 2 km via the delta method.
+<p><img src="${imagePath}akcanada_extent.png" alt="alaska-canada extent" />
+Historical (1901-2009) monthly average temperature and total precipitation from CRU TS 3.0 climate data, downscaled to 2 km via the <a href="/methods/downscaling">delta method.</a>
 </p>
 
 <table class="overview">
 <tbody>
-<tr><th scope="row">Baseline Reference Climate</th><td>1961&ndash;1990 PRISM</td></tr>
-<tr><th scope="row">Spatial Resolution</th><td>2 km</td></tr>
-<tr><th scope="row">Temporal Resolution</th><td>Monthly</td></tr>
-<tr><th scope="row">Spatial Extent</th><td>Alaska and Western Canada (YT, BC, AB, SK, MB)</td></tr>
+<tr><th scope="row">Baseline reference climate</th><td>1961&ndash;1990 PRISM</td></tr>
+<tr><th scope="row">Spatial resolution</th><td>2 km</td></tr>
+<tr><th scope="row">Temporal resolution</th><td>monthly</td></tr>
+<tr><th scope="row">Spatial extent</th><td>Alaska and Western Canada (YT, BC, AB, SK, MB)</td></tr>
 </tbody>
 </table>
-<img src="${imagePath}akcanada_extent.png" alt="" />
+
 
 <table class="downloadsTable">
 <thead>
@@ -2997,13 +3019,13 @@ Historical (1901-2009) monthly average temperature and total precipitation from 
 </thead>
 <body>
 <tr>
-<td><a href="#" class="metadataLink"  data-geonetwork-metadata-id="28">Historical Monthly Average Temperature 2km CRUTS3.0</a></td>
+<td><a href="#" class="metadataLink"  data-geonetwork-metadata-id="28">Historical monthly average temperature 2km CRUTS3.0</a></td>
 <td>
 <a href="/files/data/CRUTS3.0/tas_AK_CAN_2km_CRU_TS30_historical.zip">tas_AK_CAN_2km_CRU_TS30_historical.zip</a> (2.6 GB)
 </td>
 </tr>
 <tr>
-<td><a href="#" class="metadataLink"  data-geonetwork-metadata-id="31">Historical Monthly Total Precipitation 2km CRUTS3.0</a></td>
+<td><a href="#" class="metadataLink"  data-geonetwork-metadata-id="31">Historical monthly total precipitation 2km CRUTS3.0</a></td>
 <td>
 <a>
 <a href="/files/data/CRUTS3.0/pr_AK_CAN_2km_CRU_TS30_historical.zip">pr_AK_CAN_2km_CRU_TS30_historical.zip</a> (2.2 GB)
@@ -3014,23 +3036,26 @@ Historical (1901-2009) monthly average temperature and total precipitation from 
 </table>
 
 </div>
+</div>
 
-<h3><a href="#dataset=historical_monthly_temperature_and_precipitation_2km">Historical Monthly Temperature and Precipitation - 2 km CRU TS 3.1/3.1.01</a></h3>
+<div class="dataAccordionWrapper">
+<div class="dataAccordion">
+<h3><a href="#dataset=historical_monthly_temperature_and_precipitation_2km">Historical monthly temperature and precipitation - 2 km CRU TS 3.1/3.1.01</a></h3>
 <div>
 
-<p>
-Historical (1901-2009) monthly average temperature and total precipitation from CRU TS 3.1/3.1.01 climate data, downscaled to 2 km via the delta method.
+<p><img src="${imagePath}akcanada_extent.png" alt="alaska-canada extent" />
+Historical (1901-2009) monthly average temperature and total precipitation from CRU TS 3.1/3.1.01 climate data, downscaled to 2 km via the <a href="/methods/downscaling">delta method.</a>
 </p>
 
 <table class="overview">
 <tbody>
-<tr><th scope="row">Baseline Reference Climate</th><td>1961&ndash;1990 PRISM</td></tr>
-<tr><th scope="row">Spatial Resolution</th><td>2 km</td></tr>
-<tr><th scope="row">Temporal Resolution</th><td>Monthly</td></tr>
-<tr><th scope="row">Spatial Extent</th><td>Alaska and Western Canada (YT, BC, AB, SK, MB)</td></tr>
+<tr><th scope="row">Baseline reference climate</th><td>1961&ndash;1990 PRISM</td></tr>
+<tr><th scope="row">Spatial resolution</th><td>2 km</td></tr>
+<tr><th scope="row">Temporal resolution</th><td>monthly</td></tr>
+<tr><th scope="row">Spatial extent</th><td>Alaska and Western Canada (YT, BC, AB, SK, MB)</td></tr>
 </tbody>
 </table>
-<img src="${imagePath}akcanada_extent.png" alt="" />
+
 
 <?php echo getCruts31DataAlert(); ?>
 
@@ -3043,13 +3068,13 @@ Historical (1901-2009) monthly average temperature and total precipitation from 
 </thead>
 <body>
 <tr>
-<td><a href="#" class="metadataLink"  data-geonetwork-metadata-id="28">Historical Monthly Average Temperature 2km CRUTS 3.1</a></td>
+<td><a href="#" class="metadataLink"  data-geonetwork-metadata-id="28">Historical monthly average temperature 2km CRUTS 3.1</a></td>
 <td>
 <a href="/files/data/monthly/tas_AK_CAN_2km_CRU_TS31_historical.zip">tas_AK_CAN_2km_CRU_TS31_historical.zip</a> (2.9 GB)
 </td>
 </tr>
 <tr>
-<td><a href="#" class="metadataLink"  data-geonetwork-metadata-id="31">Historical Monthly Total Precipitation 2km CRUTS 3.1.01</a></td>
+<td><a href="#" class="metadataLink"  data-geonetwork-metadata-id="31">Historical monthly total precipitation 2km CRUTS 3.1.01</a></td>
 <td>
 <a>
 <a href="/files/data/monthly/pr_AK_CAN_2km_CRU_TS31_historical.zip">pr_AK_CAN_2km_CRU_TS31_historical.zip</a> (2.5 GB)
@@ -3060,32 +3085,35 @@ Historical (1901-2009) monthly average temperature and total precipitation from 
 </table>
 
 </div>
+</div>
 
-<h3><a href="#dataset=historical_derived_temperature_2km_CRUTS30">Historical Derived Temperature Products - 2 km CRU TS 3.0</a></h3>
+<div class="dataAccordionWrapper">
+<div class="dataAccordion">
+<h3><a href="#dataset=historical_derived_temperature_2km_CRUTS30">Historical derived temperature products - 2 km CRU TS 3.0</a></h3>
 <div>
 
-<p>
-Historical (1910-2009) derived temperature products from CRU TS 3.0 climate data, downscaled to 2 km via the delta method.
+<p><img src="${imagePath}akcanada_extent.png" alt="alaska-canada extent" />
+Historical (1910-2009) derived temperature products from CRU TS 3.0 climate data, downscaled to 2 km via the <a href="/methods/downscaling">delta method.</a>
 </p>
 
 <table class="overview">
 <tbody>
-<tr><th scope="row">Baseline Reference Climate</th><td>1961&ndash;1990 PRISM</td></tr>
-<tr><th scope="row">Spatial Resolution</th><td>2 km</td></tr>
-<tr><th scope="row">Temporal Resolution</th><td>Decadal</td></tr>
-<tr><th scope="row">Spatial Extent</th><td>Alaska and Western Canada (YT, BC, AB, SK, MB)</td></tr>
+<tr><th scope="row">Baseline reference climate</th><td>1961&ndash;1990 PRISM</td></tr>
+<tr><th scope="row">Spatial resolution</th><td>2 km</td></tr>
+<tr><th scope="row">Temporal resolution</th><td>Decadal</td></tr>
+<tr><th scope="row">Spatial extent</th><td>Alaska and Western Canada (YT, BC, AB, SK, MB)</td></tr>
 </tbody>
 </table>
-<img src="${imagePath}akcanada_extent.png" alt="" />
+
 
 <h4>Decadal summaries by month, year, and season</h4>
 <h5>Metadata by product</h5>
 
 <ul>
 
-<li><a href="#" class="metadataLink"  data-geonetwork-metadata-id="46">Historical Decadal Averages of Monthly Mean Temperatures 2km CRUTS3.0</a></li>
-<li><a href="#" class="metadataLink"  data-geonetwork-metadata-id="48">Historical Decadal Averages of Annual Mean Temperatures 2km CRUTS3.0</a></li>
-<li><a href="#" class="metadataLink"  data-geonetwork-metadata-id="50">Historical Decadal Averages of Seasonal Mean Temperatures 2km CRUTS3.0</a></li>
+<li><a href="#" class="metadataLink"  data-geonetwork-metadata-id="46">Historical decadal averages of monthly mean temperatures 2km CRUTS3.0</a></li>
+<li><a href="#" class="metadataLink"  data-geonetwork-metadata-id="48">Historical decadal averages of annual mean temperatures 2km CRUTS3.0</a></li>
+<li><a href="#" class="metadataLink"  data-geonetwork-metadata-id="50">Historical decadal averages of seasonal mean temperatures 2km CRUTS3.0</a></li>
 
 </ul>
 
@@ -3096,7 +3124,7 @@ Historical (1910-2009) derived temperature products from CRU TS 3.0 climate data
 
 <h4>Day of freeze, thaw, length of growing season</h4>
 <p>
-Estimated Julian days of freeze and thaw (dof, dot) are calculated by assuming a linear change in temperature between consecutive months. Mean monthly temperatures are used to represent daily temperature on the 15th day of each month. When consecutive monthly midpoints have opposite sign temperatures, the day of transition (freeze or thaw) is the day between them on which temperature crosses zero degrees C. The length of growing season (logs) refers to the number of days between the days of freeze and thaw.  More detailed explanations are discussed in the metadata.
+Estimated Julian days of freeze and thaw (dof, dot) are calculated by assuming a linear change in temperature between consecutive months. Mean monthly temperatures are used to represent daily temperature on the 15th day of each month. When consecutive monthly midpoints have opposite sign temperatures, the day of transition (freeze or thaw) is the day between them on which temperature crosses 0&deg; C. The length of growing season (logs) refers to the number of days between the days of freeze and thaw.  More detailed explanations are discussed in the metadata.
 </p>
 
 <table class="downloadsTable">
@@ -3108,13 +3136,13 @@ Estimated Julian days of freeze and thaw (dof, dot) are calculated by assuming a
 </thead>
 <body>
 <tr>
-<td><a href="#" class="metadataLink"  data-geonetwork-metadata-id="52">Historical Day of Freeze or Thaw 2km CRUTS3.0</a></td>
+<td><a href="#" class="metadataLink"  data-geonetwork-metadata-id="52">Historical day of freeze or thaw 2km CRUTS3.0</a></td>
 <td>
 <a href="/files/data/CRUTS3.0/dof_dot_AK_CAN_2km_CRU_TS30_historical.zip">dof_dot_AK_CAN_2km_CRU_TS30_historical.zip</a> (27 MB)
 </td>
 </tr>
 <tr>
-<td><a href="#" class="metadataLink"  data-geonetwork-metadata-id="54">Historical Length of Growing Season 2km CRUTS3.0</a></td>
+<td><a href="#" class="metadataLink"  data-geonetwork-metadata-id="54">Historical length of growing season 2km CRUTS3.0</a></td>
 <td>
 <a href="/files/data/CRUTS3.0/logs_AK_CAN_2km_CRU_TS30_historical.zip">logs_AK_CAN_2km_CRU_TS30_historical.zip</a> (17 MB)
 </td>
@@ -3123,24 +3151,26 @@ Estimated Julian days of freeze and thaw (dof, dot) are calculated by assuming a
 </table>
 
 </div>
+</div>
 
-
-<h3><a href="#dataset=historical_derived_temperature_2km">Historical Derived Temperature Products - 2 km CRU TS 3.1</a></h3>
+<div class="dataAccordionWrapper">
+<div class="dataAccordion">
+<h3><a href="#dataset=historical_derived_temperature_2km">Historical derived temperature products - 2 km CRU TS 3.1</a></h3>
 <div>
 
-<p>
-Historical (1910-2009) derived temperature products from CRU TS 3.1 climate data, downscaled to 2 km via the delta method.
+<p><img src="${imagePath}akcanada_extent.png" alt="alaska-canada extent" />
+Historical (1910-2009) derived temperature products from CRU TS 3.1 climate data, downscaled to 2 km via the <a href="/methods/downscaling">delta method.</a>
 </p>
 
 <table class="overview">
 <tbody>
-<tr><th scope="row">Baseline Reference Climate</th><td>1961&ndash;1990 PRISM</td></tr>
-<tr><th scope="row">Spatial Resolution</th><td>2 km</td></tr>
-<tr><th scope="row">Temporal Resolution</th><td>Decadal</td></tr>
-<tr><th scope="row">Spatial Extent</th><td>Alaska and Western Canada (YT, BC, AB, SK, MB)</td></tr>
+<tr><th scope="row">Baseline reference climate</th><td>1961&ndash;1990 PRISM</td></tr>
+<tr><th scope="row">Spatial resolution</th><td>2 km</td></tr>
+<tr><th scope="row">Temporal resolution</th><td>Decadal</td></tr>
+<tr><th scope="row">Spatial extent</th><td>Alaska and Western Canada (YT, BC, AB, SK, MB)</td></tr>
 </tbody>
 </table>
-<img src="${imagePath}akcanada_extent.png" alt="" />
+
 
 <h4>Decadal summaries by month, year, and season</h4>
 
@@ -3148,9 +3178,9 @@ Historical (1910-2009) derived temperature products from CRU TS 3.1 climate data
 
 <ul>
 
-<li><a href="#" class="metadataLink"  data-geonetwork-metadata-id="46">Historical Decadal Averages of Monthly Mean Temperatures 2km CRUTS3.1</a></li>
-<li><a href="#" class="metadataLink"  data-geonetwork-metadata-id="48">Historical Decadal Averages of Annual Mean Temperatures 2km CRUTS3.1</a></li>
-<li><a href="#" class="metadataLink"  data-geonetwork-metadata-id="50">Historical Decadal Averages of Seasonal Mean Temperatures 2km CRUTS3.1</a></li>
+<li><a href="#" class="metadataLink"  data-geonetwork-metadata-id="46">Historical decadal averages of monthly mean temperatures 2km CRUTS3.1</a></li>
+<li><a href="#" class="metadataLink"  data-geonetwork-metadata-id="48">Historical decadal averages of annual mean temperatures 2km CRUTS3.1</a></li>
+<li><a href="#" class="metadataLink"  data-geonetwork-metadata-id="50">Historical decadal averages of seasonal mean temperatures 2km CRUTS3.1</a></li>
 
 </ul>
 
@@ -3161,7 +3191,7 @@ Historical (1910-2009) derived temperature products from CRU TS 3.1 climate data
 
 <h4>Day of freeze, thaw, length of growing season</h4>
 <p>
-Estimated Julian days of freeze and thaw (dof, dot) are calculated by assuming a linear change in temperature between consecutive months. Mean monthly temperatures are used to represent daily temperature on the 15th day of each month. When consecutive monthly midpoints have opposite sign temperatures, the day of transition (freeze or thaw) is the day between them on which temperature crosses zero degrees C. The length of growing season (logs) refers to the number of days between the days of freeze and thaw.  More detailed explanations are discussed in the metadata.
+Estimated Julian days of freeze and thaw (dof, dot) are calculated by assuming a linear change in temperature between consecutive months. Mean monthly temperatures are used to represent daily temperature on the 15th day of each month. When consecutive monthly midpoints have opposite sign temperatures, the day of transition (freeze or thaw) is the day between them on which temperature crosses 0&deg; C. The length of growing season (logs) refers to the number of days between the days of freeze and thaw.  More detailed explanations are discussed in the metadata.
 </p>
 
 <table class="downloadsTable">
@@ -3173,13 +3203,13 @@ Estimated Julian days of freeze and thaw (dof, dot) are calculated by assuming a
 </thead>
 <body>
 <tr>
-<td><a href="#" class="metadataLink"  data-geonetwork-metadata-id="52">Historical Day of Freeze or Thaw 2km CRUTS3.1</a></td>
+<td><a href="#" class="metadataLink"  data-geonetwork-metadata-id="52">Historical day of freeze or thaw 2km CRUTS3.1</a></td>
 <td>
 <a href="/files/data/derived/dof_dot_AK_CAN_2km_CRU_TS31_historical.zip">dof_dot_AK_CAN_2km_CRU_TS31_historical.zip</a> (30 MB)
 </td>
 </tr>
 <tr>
-<td><a href="#" class="metadataLink"  data-geonetwork-metadata-id="54">Historical Length of Growing Season 2km CRUTS3.1</a></td>
+<td><a href="#" class="metadataLink"  data-geonetwork-metadata-id="54">Historical length of growing season 2km CRUTS3.1</a></td>
 <td>
 <a href="/files/data/derived/logs_AK_CAN_2km_CRU_TS31_historical.zip">logs_AK_CAN_2km_CRU_TS31_historical.zip</a> (19 MB)
 </td>
@@ -3188,32 +3218,35 @@ Estimated Julian days of freeze and thaw (dof, dot) are calculated by assuming a
 </table>
 
 </div>
+</div>
 
-<h3><a href="#dataset=historical_derived_precipitation_2km_CRUTS30">Historical Derived Precipitation Products - 2 km CRU TS 3.0</a></h3>
+<div class="dataAccordionWrapper">
+<div class="dataAccordion">
+<h3><a href="#dataset=historical_derived_precipitation_2km_CRUTS30">Historical derived precipitation products - 2 km CRU TS 3.0</a></h3>
 <div>
 
-<p>
-Historical (1910&ndash;2009) derived precipitation products from CRUTS 3.0 climate data, downscaled to 2 km via the delta method.
+<p><img src="${imagePath}akcanada_extent.png" alt="alaska-canada extent" />
+Historical (1910&ndash;2009) derived precipitation products from CRUTS 3.0 climate data, downscaled to 2 km via the <a href="/methods/downscaling">delta method.</a>
 </p>
 
 <table class="overview">
 <tbody>
-<tr><th scope="row">Baseline Reference Climate</th><td>1961&ndash;1990 PRISM</td></tr>
-<tr><th scope="row">Spatial Resolution</th><td>2 km</td></tr>
-<tr><th scope="row">Temporal Resolution</th><td>Decadal</td></tr>
-<tr><th scope="row">Spatial Extent</th><td>Alaska and Western Canada (YT, BC, AB, SK, MB)</td></tr>
+<tr><th scope="row">Baseline reference climate</th><td>1961&ndash;1990 PRISM</td></tr>
+<tr><th scope="row">Spatial resolution</th><td>2 km</td></tr>
+<tr><th scope="row">Temporal resolution</th><td>Decadal</td></tr>
+<tr><th scope="row">Spatial extent</th><td>Alaska and Western Canada (YT, BC, AB, SK, MB)</td></tr>
 </tbody>
 </table>
-<img src="${imagePath}akcanada_extent.png" alt="" />
+
 
 <h4>Decadal summaries by month, year, and season</h4>
 <h5>Metadata by product</h5>
 
 <ul>
 
-<li><a href="#" class="metadataLink"  data-geonetwork-metadata-id="56">Historical Decadal Averages of Monthly Total Precipitation 2km CRUTS3.0</a></li>
-<li><a href="#" class="metadataLink"  data-geonetwork-metadata-id="58">Historical Decadal Averages of Annual Total Precipitation 2km CRUTS3.0</a></li>
-<li><a href="#" class="metadataLink"  data-geonetwork-metadata-id="60">Historical Decadal Averages of Seasonal Total Precipitation 2km CRUTS3.0</a></li>
+<li><a href="#" class="metadataLink"  data-geonetwork-metadata-id="56">Historical decadal averages of monthly total precipitation 2km CRUTS3.0</a></li>
+<li><a href="#" class="metadataLink"  data-geonetwork-metadata-id="58">Historical decadal averages of annual Total Precipitation 2km CRUTS3.0</a></li>
+<li><a href="#" class="metadataLink"  data-geonetwork-metadata-id="60">Historical decadal averages of seasonal Total Precipitation 2km CRUTS3.0</a></li>
 
 </ul>
 
@@ -3222,22 +3255,21 @@ Historical (1910&ndash;2009) derived precipitation products from CRUTS 3.0 clima
 <a href="/files/data/CRUTS3.0/pr_decadal_summaries_AK_CAN_2km_CRU_TS30_historical.zip">pr_decadal_summaries_AK_CAN_2km_CRU_TS30_historical.zip</a> (312 MB)
 </div>
 
-<h3><a href="#dataset=historical_derived_precipitation_2km">Historical Derived Precipitation Products - 2 km CRU TS 3.1.01</a></h3>
+<h3><a href="#dataset=historical_derived_precipitation_2km">Historical derived precipitation products - 2 km CRU TS 3.1.01</a></h3>
 <div>
 
-<p>
-Historical (1910&ndash;2009) derived precipitation products from CRUTS 3.1.01 climate data, downscaled to 2 km via the delta method.
-</p>
+<p><img src="${imagePath}akcanada_extent.png" alt="alaska-canada extent" />
+Historical (1910&ndash;2009) derived precipitation products from CRUTS 3.1.01 climate data, downscaled to 2 km via the <a href="/methods/downscaling"><a href="/methods/downscaling">delta method.</a></a> </p>
 
 <table class="overview">
 <tbody>
-<tr><th scope="row">Baseline Reference Climate</th><td>1961&ndash;1990 PRISM</td></tr>
-<tr><th scope="row">Spatial Resolution</th><td>2 km</td></tr>
-<tr><th scope="row">Temporal Resolution</th><td>Decadal</td></tr>
-<tr><th scope="row">Spatial Extent</th><td>Alaska and Western Canada (YT, BC, AB, SK, MB)</td></tr>
+<tr><th scope="row">Baseline reference climate</th><td>1961&ndash;1990 PRISM</td></tr>
+<tr><th scope="row">Spatial resolution</th><td>2 km</td></tr>
+<tr><th scope="row">Temporal resolution</th><td>Decadal</td></tr>
+<tr><th scope="row">Spatial extent</th><td>Alaska and Western Canada (YT, BC, AB, SK, MB)</td></tr>
 </tbody>
 </table>
-<img src="${imagePath}akcanada_extent.png" alt="" />
+
 
 <h4>Decadal summaries by month, year, and season</h4>
 
@@ -3247,9 +3279,9 @@ Historical (1910&ndash;2009) derived precipitation products from CRUTS 3.1.01 cl
 
 <ul>
 
-<li><a href="#" class="metadataLink"  data-geonetwork-metadata-id="56">Historical Decadal Averages of Monthly Total Precipitation 2km CRUTS3.1.01</a></li>
-<li><a href="#" class="metadataLink"  data-geonetwork-metadata-id="58">Historical Decadal Averages of Annual Total Precipitation 2km CRUTS3.1.01</a></li>
-<li><a href="#" class="metadataLink"  data-geonetwork-metadata-id="60">Historical Decadal Averages of Seasonal Total Precipitation 2km CRUTS3.1.01</a></li>
+<li><a href="#" class="metadataLink"  data-geonetwork-metadata-id="56">Historical decadal averages of monthly total precipitation 2km CRUTS3.1.01</a></li>
+<li><a href="#" class="metadataLink"  data-geonetwork-metadata-id="58">Historical decadal averages of annual Total Precipitation 2km CRUTS3.1.01</a></li>
+<li><a href="#" class="metadataLink"  data-geonetwork-metadata-id="60">Historical decadal averages of seasonal Total Precipitation 2km CRUTS3.1.01</a></li>
 
 </ul>
 
@@ -3260,12 +3292,12 @@ Historical (1910&ndash;2009) derived precipitation products from CRUTS 3.1.01 cl
 </div>
 
 <br/>
+
+<div class="dataAccordionWrapper">
 <div class="dataAccordion">
-
-
-<h3><a href="#dataset=historical_monthly_potential_evapotranspiration_2km">Historical Monthly Potential Evapotranspiration -  2km CRUTS3.0</a></h3>
+<h3><a href="#dataset=historical_monthly_potential_evapotranspiration_2km">Historical monthly potential evapotranspiration -  2km CRUTS3.0</a></h3>
 <div>
-<p>Historical (1901-2006) monthly total potential evapotranspiration utilizing CRU TS 3.0 climate data downscaled to 2 km via the delta method.</p>
+<p><img src="${imagePath}ak_extent.jpg" alt="alaska extent" />Historical (1901-2006) monthly total potential evapotranspiration utilizing CRU TS 3.0 climate data downscaled to 2 km via the <a href="/methods/downscaling">delta method.</a></p>
 
 <p>These potential evapotranspiration (PET) estimates were produced using the Hamon equation, which calculates PET as a function of temperature and day length.  Potential evapotranspiration may also be influenced by cloud cover, humidity, and wind speed.  The Hamon equation can not explicitly account for variability in these aspects of weather and climate, so it may over or underestimate changes in PET if humidity, cloud cover, or wind speeds change substantially.  In addition, the Hamon equation was developed to calculate daily potential evapotranspiration, and so these estimates, based on monthly data, may differ from those calculated from daily data. We can also provide PET estimated by the Priestley-Taylor equation and standard equations for estimating the surface radiation budget from temperature. Priestley-Taylor data come with a much longer list of assumptions, including those that apply to the Hamon equation.  Scripts used to produce both the Harmon and Priestley-Taylor versions are <a href="https://github.com/ua-snap/potential-evapotranspiration" rel="external">available online</a>.</p>
 
@@ -3273,73 +3305,75 @@ Historical (1910&ndash;2009) derived precipitation products from CRUTS 3.1.01 cl
 <table class="overview">
   <tbody>
     <tr>
-      <th scope="row">Baseline Reference Climate</th>
+      <th scope="row">Baseline reference climate</th>
       <td>1961–1990 PRISM</td>
     </tr>
     <tr>
-      <th scope="row">Spatial Resolution</th>
+      <th scope="row">Spatial resolution</th>
       <td>2km</td>
     </tr>
     <tr>
-      <th scope="row">Temporal Resolution</th>
-      <td>Monthly</td>
+      <th scope="row">Temporal resolution</th>
+      <td>monthly</td>
     </tr>
     <tr>
-      <th scope="row">Spatial Extent</th>
+      <th scope="row">Spatial extent</th>
       <td>Alaska</td>
     </tr>
   </tbody>
 </table>
-<img src="${imagePath}ak_extent.jpg" alt="" />
+
 
 
 <h4>Metadata</h4>
-<p><strong>Metadata:</strong> <a href="#" class="metadataLink"  data-geonetwork-metadata-id="67">Historical Monthly Total Potential Evapotranspiration 2km CRUTS3.0</a></p>
-<p><strong>Equations used to derive data:</strong> <a href="attachments/Hamon_PET_equations.pdf">Hamon PET equations</a> (PDF, 597KB)</p>
+<p><strong>Metadata</strong> <a href="#" class="metadataLink"  data-geonetwork-metadata-id="67">Historical monthly total potential evapotranspiration 2km CRUTS3.0</a></p>
+<p><strong>Equations used to derive data:</strong> <a href="attachments/Hamon_PET_equations.pdf">Hamon PET equations</a> (PDF)</p>
 
 <h4>Data</h4>
 <ul><li><a href="files/data/pet/pet_AK_2km_CRU_TS30_historical.zip">1901&ndash;2006</a> (726MB)</li></ul>
 
 </div>
+</div>
 
-
-<h3><a href="#dataset=historical_derived_potential_evapotranspiration_2km">Historical Derived Potential Evapotranspiration -  2km CRUTS3.0</a></h3>
+<div class="dataAccordionWrapper">
+<div class="dataAccordion">
+<h3><a href="#dataset=historical_derived_potential_evapotranspiration_2km">Historical derived potential evapotranspiration -  2km CRUTS3.0</a></h3>
 <div>
 
-<p>Historical (1910-1999) monthly total potential evapotranspiration utilizing CRU TS 3.0 climate data downscaled to 2 km via the delta method.</p>
+<p><img src="${imagePath}ak_extent.jpg" alt="alaska extent" />Historical (1910-1999) monthly total potential evapotranspiration utilizing CRU TS 3.0 climate data downscaled to 2 km via the <a href="/methods/downscaling">delta method.</a></p>
 
 <p>These potential evapotranspiration (PET) estimates were produced using the Hamon equation, which calculates PET as a function of temperature and day length.  Potential evapotranspiration may also be influenced by cloud cover, humidity, and wind speed.  The Hamon equation can not explicitly account for variability in these aspects of weather and climate, so it may over or underestimate changes in PET if humidity, cloud cover, or wind speeds change substantially.  In addition, the Hamon equation was developed to calculate daily potential evapotranspiration, and so these estimates, based on monthly data, may differ from those calculated from daily data. We can also provide PET estimated by the Priestley-Taylor equation and standard equations for estimating the surface radiation budget from temperature. Priestley-Taylor data come with a much longer list of assumptions, including those that apply to the Hamon equation.  Scripts used to produce both the Harmon and Priestley-Taylor versions are <a href="https://github.com/ua-snap/potential-evapotranspiration" rel="external">available online</a>.</p>
 
 <table class="overview">
   <tbody>
     <tr>
-      <th scope="row">Baseline Reference Climate</th>
+      <th scope="row">Baseline reference climate</th>
       <td>1961–1990 PRISM</td>
     </tr>
     <tr>
-      <th scope="row">Spatial Resolution</th>
+      <th scope="row">Spatial resolution</th>
       <td>2km</td>
     </tr>
     <tr>
-      <th scope="row">Temporal Resolution</th>
+      <th scope="row">Temporal resolution</th>
       <td>Decadal</td>
     </tr>
     <tr>
-      <th scope="row">Spatial Extent</th>
+      <th scope="row">Spatial extent</th>
       <td>Alaska</td>
     </tr>
   </tbody>
 </table>
-<img src="${imagePath}ak_extent.jpg" alt="" />
+
 
 
 <h4>Metadata by product</h4>
 <ul>
-<li><a href="#" class="metadataLink"  data-geonetwork-metadata-id="70">Historical Decadal Averages of Monthly Total Potential Evapotranspiration 2km CRUTS3.0</a></li>
-<li><a href="#" class="metadataLink"  data-geonetwork-metadata-id="71">Historical Decadal Averages of Annual Total Potential Evapotranspiration 2km CRUTS3.0</a></li>
-<li><a href="#" class="metadataLink"  data-geonetwork-metadata-id="72">Historical Decadal Averages of Seasonal Total Potential Evapotranspiration 2km CRUTS3.0</a></li>
+<li><a href="#" class="metadataLink"  data-geonetwork-metadata-id="70">Historical decadal averages of monthly total potential evapotranspiration 2km CRUTS3.0</a></li>
+<li><a href="#" class="metadataLink"  data-geonetwork-metadata-id="71">Historical decadal averages of annual total potential evapotranspiration 2km CRUTS3.0</a></li>
+<li><a href="#" class="metadataLink"  data-geonetwork-metadata-id="72">Historical decadal averages of seasonal total potential evapotranspiration 2km CRUTS3.0</a></li>
 </ul>
-<p><strong>Equations used to derive data:</strong> <a href="attachments/Hamon_PET_equations.pdf">Hamon PET equations</a> (PDF, 597KB)</p>
+<p><strong>Equations used to derive data:</strong> <a href="attachments/Hamon_PET_equations.pdf">Hamon PET equations</a> (PDF)</p>
 
 <h4>All products by model and scenario</h4>
 <ul><li><a href="files/data/pet/pet_decadal_summaries_AK_2km_CRU_TS30_historical.zip">1910&ndash;1999</a> (181MB)</li></ul>
@@ -3349,44 +3383,48 @@ Historical (1910&ndash;2009) derived precipitation products from CRUTS 3.1.01 cl
 </div>
 
 <br/>
+
+<div class="dataAccordionWrapper">
 <div class="dataAccordion">
-
-
-<h3><a href="#dataset=historical_monthly_snow_day_fraction_771m">Historical Decadal Averages Of Monthly Snow-day Fraction 771m CRU TS 3.1</a></h3>
+<h3><a href="#dataset=historical_monthly_snow_day_fraction_771m">Historical decadal averages of monthly snow-day fraction 771m CRU TS 3.1</a></h3>
 <div>
-  <p>
+  <p><img src="${imagePath}ak_extent.jpg" alt="alaska extent" />
   These snow-day fraction estimates were produced by applying equations relating decadal average monthly temperature to snow-day fraction to downscaled decadal average monthly temperature. Separate equations were used to model the relationship between decadal monthly average temperature and the fraction of wet days with snow for seven geographic regions in the state: Arctic, western Alaska, Interior, Cook Inlet, SW Islands, SW Interior, and the Gulf of Alaska coast.
-</p><p>
-Although the equations developed here provide a reasonable fit to the data, model evaluation demonstrated that some stations are consistently less well described by regional models than others. It is unclear why this occurs, but it is like related to localized climate conditions. Very few weather stations with long records are located above 500m elevation in Alaska, so the equations used here were developed primarily from low-elevation weather stations. It is not clear whether the equations will be completely appropriate in the mountains. Finally, these equations summarize a long-term monthly relationship between temperature and precipitation type that is the result of short-term weather variability. In using these equations to make projections of future snow, as assume that these relationships remain stable over time, and we do not know how accurate that assumption is.
 </p>
-<p>Read the <a href="/files/data/snow_day_fraction/snow_fraction_data_users_guide.pdf">user&rsquo;s guide for this data set</a> (PDF, 1.5MB) for information on methodology and validation.</p>
-<p>Detailed information on the construction of this data and its implications is available in <a href="/attachments/McAfee2013_snowDay.pdf">this paper.</a> (PDF, 3.27MB)</p>  
+  <p>
+Although the equations developed here provide a reasonable fit to the data, model evaluation demonstrated that some stations are consistently less well described by regional models than others. It is unclear why this occurs, but it is likely related to localized climate conditions. Very few weather stations with long records are located above 500m elevation in Alaska, so the equations used here were developed primarily from low-elevation weather stations. It is not clear whether the equations will be completely appropriate in the mountains. Finally, these equations summarize a long-term monthly relationship between temperature and precipitation type that is the result of short-term weather variability. In using these equations to make projections of future snow, as assume that these relationships remain stable over time, and we do not know how accurate that assumption is.
+</p>
+<ul>
+    <li><a href="/files/data/snow_day_fraction/snow_fraction_data_users_guide.pdf">See the user&rsquo;s guide for these data</a> (PDF) for information on methodology and validation for these data</li>
+  <li><a href="/attachments/McAfee2013_snowDay.pdf">See this paper</a> (PDF) for detailed information on the construction of this data and its implications</li>
+  <li><a href="https://github.com/ua-snap/snowfraction">Download the scripts</a> used to generate these data</li>
+</ul>
   
 <table class="overview">
   <tbody>
     <tr>
-      <th scope="row">Baseline Reference Climate</th>
+      <th scope="row">Baseline reference climate</th>
       <td>1971&ndash;2000 PRISM</td>
     </tr>
     <tr>
-      <th scope="row">Spatial Resolution</th>
+      <th scope="row">Spatial resolution</th>
       <td>771m</td>
     </tr>
     <tr>
-      <th scope="row">Temporal Resolution</th>
-      <td>Monthly</td>
+      <th scope="row">Temporal resolution</th>
+      <td>monthly</td>
     </tr>
     <tr>
-      <th scope="row">Spatial Extent</th>
+      <th scope="row">Spatial extent</th>
       <td>Alaska</td>
     </tr>
   </tbody>
 </table>
-<img src="${imagePath}ak_extent.jpg" alt="" />
+
 
 <h4>Metadata by product</h4>
 
-<p><strong>Metadata:</strong> <a href="#" class="metadataLink"  data-geonetwork-metadata-id="83">Historical Decadal Averages Of Monthly Snow-day Fraction 771m CRUTS3.1</a></p>
+<p><strong>Metadata</strong> <a href="#" class="metadataLink"  data-geonetwork-metadata-id="83">Historical decadal averages of monthly snow-day fraction 771m CRUTS3.1</a></p>
 
 <h4>Data</h4>
 <p><a href="/files/data/snow_day_fraction/fs_decadal_mean_monthly_mean_pct_cru_TS31_historical_1910_2009.zip">1910-2009</a> (250MB)</p>
@@ -3405,16 +3443,19 @@ Although the equations developed here provide a reasonable fit to the data, mode
 
 
 <div class="methods text" id="Research">
-<h3>Research Data</h3>
+<h3>Research data</div>
 </div>
 
-<p>Data listed in this section are being developed specifically for several broad scale modeling projects. Overviews can be found on their respective project pages including all collaborators and funding sources.</p>
-
-<p>These broad&ndash;scale modeling projects have very specific input data requirements. These include a 1&times;1km pixel resolution, spatial coverage across data poor regions of Alaska, the Yukon Territories, and parts of northern British Columbia, and temporal coverage of monthly data from the early 1900&rsquo;s to 2100. In addition, because these datasets are being developed as input to specific models, they also require adherence to model specific requirements in order to produce plausible outputs. Because existing input data did not already exist at this level of detail, our approach has been to downscale the variables of interest to an intermediate resolution when available and then to apply common raster resampling methods down to 1&times;1km pixel sizes. Care has also been taken to keep the range of the data within accepted bounds and consistent across related variables.</p>
-
-<p>This data is preliminary and is constantly being vetted and updated by our research group. Use of these datasets should be limited to these modeling projects only, but are shared here for stakeholder review and general communication of our data efforts.</p>
-
-<div><img src="${imagePath}IEM_web_thumbnail.png" style="width: 300px;"/></div>
+<p class="intro"><img class="pull-right" src="${imagePath}IEM_web_thumbnail.png" style="width: 400px;" />We are developing data specifically for several broad scale modeling projects. Learn more about the projects related to these data (including collaborators and funding sources) on respective project pages.</p>
+  
+<p>Data are preliminary and are constantly being vetted and updated by our research group. Their use should be limited to these modeling projects, but are shared here for stakeholder review and general communication of our data efforts. Data used in these broad-scale modeling projects must:</p>
+<ul>
+  <li>use 1×1km pixel resolution,</li>
+  <li>cover data-poor regions of Alaska, the Yukon Territories, and parts of northern British Columbia,</li>
+  <li>include monthly data for the early 1900s to 2100, and </li>
+  <li>must adhere to model-specific requirements to produce plausible outputs. Because input data did not already exist at this level of detail, we have downscaled variables of interest to an intermediate resolution when available and then applied common raster resampling methods down to 1×1km pixel sizes. We have also kept the range of the data within accepted bounds and consistent across related variables.<br>
+  </li>
+</ul>
 
 
 
@@ -3422,53 +3463,57 @@ Although the equations developed here provide a reasonable fit to the data, mode
 <div class="dataAccordionWrapper">
 <div class="dataAccordion">
 
-<h3><a href="#dataset=IEM_ancillary">Ancillary Data: Elevation, Slope, Slope Complexity, Aspect, Land Cover, Fire History (Burned Area)</a></h3>
+<h3><a href="#dataset=IEM_ancillary">Ancillary data: elevation, slope, slope complexity, aspect, land cover, fire history (burned area)</a></h3>
 <div>
 
 <table class="overview iem" style="display: static;">
 <thead>
-  <tr><th scope="col">Data Set</th><th scope="col">Original Spatial Resolution</th><th scope="col">Final Spatial Resolution</th><th scope="col">Temporal Resolution</th></tr>
+  <tr>
+    <th scope="col">Dataset</th><th scope="col">Original spatial resolution</th><th scope="col">Final spatial resolution</th><th scope="col">Temporal resolution</th></tr>
 </thead>
 <tbody>
-  <tr><td>Elevation, Slope, Slope Complexity, Aspect</td><td>2km</td><td>1km</td><td>&nbsp;</td></tr>
-  <tr><td>Land Cover</td><td>500m</td><td>1km</td><td>2005, but highly modified classes</td></tr>
-  <tr><td>Fire History (Burned Area)</td><td>vector format</td><td>1km</td><td>1917&mdash;2011</td></tr>
+  <tr>
+    <td>Elevation, slope, slope complexity, aspect</td><td>2km</td><td>1km</td><td>&nbsp;</td></tr>
+  <tr>
+    <td>Land cover</td><td>500m</td><td>1km</td><td>2005, but highly modified classes</td></tr>
+  <tr>
+    <td>Fire history (burned area)</td><td>vector format</td><td>1km</td><td>1917&mdash;2011</td></tr>
 </tbody>
 </table>
 
 <div style="clear: both"></div>
-<h3 style="margin-top: 1em">Metadata</h3>
+<h4>Metadata</h4>
 <ul>
   <li><a href="#" class="metadataLink"  data-geonetwork-metadata-id="86">Elevation</a></li>
   <li><a href="#" class="metadataLink"  data-geonetwork-metadata-id="88">Slope</a></li>
-  <li><a href="#" class="metadataLink"  data-geonetwork-metadata-id="98">Slope Complexity</a></li>
+  <li><a href="#" class="metadataLink"  data-geonetwork-metadata-id="98">Slope complexity</a></li>
   <li><a href="#" class="metadataLink"  data-geonetwork-metadata-id="87">Aspect</a></li>
-  <li><a href="#" class="metadataLink"  data-geonetwork-metadata-id="91">Land Cover</a></li>
-  <li><a href="#" class="metadataLink"  data-geonetwork-metadata-id="90">Fire History (Burned Area)</a></li>
+  <li><a href="#" class="metadataLink"  data-geonetwork-metadata-id="91">Land cover</a></li>
+  <li><a href="#" class="metadataLink"  data-geonetwork-metadata-id="90">Fire history (burned area)</a></li>
 </ul>
-<h3 style="margin-top: 1em">Downloads</h3>
+<h4>Downloads</h4>
 <p><a href="/files/data/iem/ancillary/iem_ancillary_data.zip">Ancillary IEM Data</a>, 35MB</p>
 
-    </div>
   </div>
+</div>
 
 
 <div class="dataAccordionWrapper">
   <div class="dataAccordion">
-    <h3><a href="#dataset=IEM_historical_temperature">Historical Temperature</a></h3>
+    <h3><a href="#dataset=IEM_historical_temperature">Historical temperature</a></h3>
     <div>
       <table>
         <tbody>
-          <tr><th scope="row">Baseline Reference Climate</th><td>1961&ndash;1990</td></tr>
-          <tr><th scope="row">Original Spatial Resolution</th><td>0.5&deg;</td></tr>
-          <tr><th scope="row">Final Spatial Resolution</th><td>1 km</td></tr>
-          <tr><th scope="row">Temporal Resolution</th><td>1901 - 2009</td></tr>
+          <tr><th scope="row">Baseline reference climate</th><td>1961&ndash;1990</td></tr>
+          <tr><th scope="row">Original spatial resolution</th><td>0.5&deg;</td></tr>
+          <tr><th scope="row">Final spatial resolution</th><td>1 km</td></tr>
+          <tr><th scope="row">Temporal resolution</th><td>1901 - 2009</td></tr>
         </tbody>
       </table>
-      <h3 style="margin-top: 1em">Metadata</h3>
-      <p><a href="#" class="metadataLink"  data-geonetwork-metadata-id="93">Historical Temperature</a></p>
-      <h3 style="margin-top: 1em">Downloads</h3>
-      <p><a href="/files/data/iem/cru_ts31/tas_mean_C_iem_cru_TS31_1901_2009.zip">Historical Temperature</a>, 6.6 GB</p>
+      <h4>Metadata</h4>
+      <p><a href="#" class="metadataLink"  data-geonetwork-metadata-id="93">Historical temperature</a></p>
+      <h4>Downloads</h4>
+      <p><a href="/files/data/iem/cru_ts31/tas_mean_C_iem_cru_TS31_1901_2009.zip">Historical temperature</a>, 6.6 GB</p>
     </div>
   </div>
 </div>
@@ -3476,78 +3521,78 @@ Although the equations developed here provide a reasonable fit to the data, mode
 
 <div class="dataAccordionWrapper">
   <div class="dataAccordion">
-    <h3><a href="#dataset=IEM_historical_precipitation">Historical Precipitation</a></h3>
+    <h3><a href="#dataset=IEM_historical_precipitation">Historical precipitation</a></h3>
     <div>
             <table>
         <tbody>
-          <tr><th scope="row">Baseline Reference Climate</th><td>1961&ndash;1990</td></tr>
-          <tr><th scope="row">Original Spatial Resolution</th><td>0.5&deg;</td></tr>
-          <tr><th scope="row">Final Spatial Resolution</th><td>1 km</td></tr>
-          <tr><th scope="row">Temporal Resolution</th><td>1901 - 2009</td></tr>
+          <tr><th scope="row">Baseline reference climate</th><td>1961&ndash;1990</td></tr>
+          <tr><th scope="row">Original spatial resolution</th><td>0.5&deg;</td></tr>
+          <tr><th scope="row">Final spatial resolution</th><td>1 km</td></tr>
+          <tr><th scope="row">Temporal resolution</th><td>1901 - 2009</td></tr>
         </tbody>
       </table>
-            <h3 style="margin-top: 1em">Metadata</h3>
-      <p><a href="#" class="metadataLink"  data-geonetwork-metadata-id="94">Historical Precipitation</a></p>
-      <h3 style="margin-top: 1em">Downloads</h3>
-      <p><a href="/files/data/iem/cru_ts31/pr_total_mm_iem_cru_TS31_1901_2009.zip">Historical Precipitation</a>, 3.0 GB</p>
+            <h4>Metadata</h4>
+      <p><a href="#" class="metadataLink"  data-geonetwork-metadata-id="94">Historical precipitation</a></p>
+      <h4>Downloads</h4>
+      <p><a href="/files/data/iem/cru_ts31/pr_total_mm_iem_cru_TS31_1901_2009.zip">Historical precipitation</a>, 3.0 GB</p>
     </div>
   </div>
 </div>
 
 <div class="dataAccordionWrapper">
   <div class="dataAccordion">
-    <h3><a href="#dataset=IEM_historical_radiation">Historical Surface Downwelling Shortwave Radiation</a></h3>
+    <h3><a href="#dataset=IEM_historical_radiation">Historical surface downwelling shortwave radiation</a></h3>
     <div>
             <table>
         <tbody>
-          <tr><th scope="row">Baseline Reference Climate</th><td>1961&ndash;1990</td></tr>
-          <tr><th scope="row">Original Spatial Resolution</th><td>0.5&deg;</td></tr>
-          <tr><th scope="row">Final Spatial Resolution</th><td>1 km</td></tr>
-          <tr><th scope="row">Temporal Resolution</th><td>1901 - 2009</td></tr>
+          <tr><th scope="row">Baseline reference climate</th><td>1961&ndash;1990</td></tr>
+          <tr><th scope="row">Original spatial resolution</th><td>0.5&deg;</td></tr>
+          <tr><th scope="row">Final spatial resolution</th><td>1 km</td></tr>
+          <tr><th scope="row">Temporal resolution</th><td>1901 - 2009</td></tr>
         </tbody>
       </table>
-            <h3 style="margin-top: 1em">Metadata</h3>
-      <p><a href="#" class="metadataLink"  data-geonetwork-metadata-id="85">Historical Surface Downwelling Shortwave Radiation</a></p>
-      <h3 style="margin-top: 1em">Downloads</h3>
-      <p><a href="/files/data/iem/cru_ts31/rsds_mean_MJ-m2-d1_iem_cru_TS31_1901_2009.zip">Historical Surface Downwelling Shortwave Radiation</a>, 6.3 GB</p>
+            <h4>Metadata</h4>
+      <p><a href="#" class="metadataLink"  data-geonetwork-metadata-id="85">Historical surface downwelling shortwave radiation</a></p>
+      <h4>Downloads</h4>
+      <p><a href="/files/data/iem/cru_ts31/rsds_mean_MJ-m2-d1_iem_cru_TS31_1901_2009.zip">Historical surface downwelling shortwave radiation</a>, 6.3 GB</p>
     </div>
   </div>
 </div>
 
 <div class="dataAccordionWrapper">
   <div class="dataAccordion">
-    <h3><a href="#dataset=IEM_historical_vapor">Historical Vapor Pressure</a></h3>
+    <h3><a href="#dataset=IEM_historical_vapor">Historical vapor pressure</a></h3>
     <div>      <table>
         <tbody>
-          <tr><th scope="row">Baseline Reference Climate</th><td>1961&ndash;1990</td></tr>
-          <tr><th scope="row">Original Spatial Resolution</th><td>0.5&deg;</td></tr>
-          <tr><th scope="row">Final Spatial Resolution</th><td>1 km</td></tr>
-          <tr><th scope="row">Temporal Resolution</th><td>1901 - 2009</td></tr>
+          <tr><th scope="row">Baseline reference climate</th><td>1961&ndash;1990</td></tr>
+          <tr><th scope="row">Original spatial resolution</th><td>0.5&deg;</td></tr>
+          <tr><th scope="row">Final spatial resolution</th><td>1 km</td></tr>
+          <tr><th scope="row">Temporal resolution</th><td>1901 - 2009</td></tr>
         </tbody>
       </table>
-      <h3 style="margin-top: 1em">Metadata</h3>
-      <p><a href="#" class="metadataLink"  data-geonetwork-metadata-id="80">Historical Vapor Pressure</a></p>      
-      <h3 style="margin-top: 1em">Downloads</h3>
-      <p><a href="/files/data/iem/cru_ts31/vap_mean_hPa_iem_cru_TS31_1901_2009.zip">Historical Vapor Pressure</a>, 2.4 GB</p>
+      <h4>Metadata</h4>
+      <p><a href="#" class="metadataLink"  data-geonetwork-metadata-id="80">Historical vapor pressure</a></p>      
+      <h4>Downloads</h4>
+      <p><a href="/files/data/iem/cru_ts31/vap_mean_hPa_iem_cru_TS31_1901_2009.zip">Historical vapor pressure</a>, 2.4 GB</p>
     </div>
   </div>
 </div>
 
 <div class="dataAccordionWrapper">
   <div class="dataAccordion">
-    <h3><a href="#dataset=IEM_projected_temperature">Projected Temperature</a></h3>
+    <h3><a href="#dataset=IEM_projected_temperature">Projected temperature</a></h3>
     <div>
       <table>
         <tbody>
-          <tr><th scope="row">Baseline Reference Climate</th><td>1961&ndash;1990</td></tr>
-          <tr><th scope="row">Original Spatial Resolution</th><td>1.875&ndash;3.75&deg;</td></tr>
-          <tr><th scope="row">Final Spatial Resolution</th><td>1 km</td></tr>
-          <tr><th scope="row">Temporal Resolution</th><td>2001&ndash;2100</td></tr>
+          <tr><th scope="row">Baseline reference climate</th><td>1961&ndash;1990</td></tr>
+          <tr><th scope="row">Original spatial resolution</th><td>1.875&ndash;3.75&deg;</td></tr>
+          <tr><th scope="row">Final spatial resolution</th><td>1 km</td></tr>
+          <tr><th scope="row">Temporal resolution</th><td>2001&ndash;2100</td></tr>
         </tbody>
       </table>
-            <h3 style="margin-top: 1em">Metadata</h3>
-      <p><a href="#" class="metadataLink"  data-geonetwork-metadata-id="89">Projected Temperature</a></p>
-      <h3 style="margin-top: 1em">Downloads</h3><ul>
+            <h4>Metadata</h4>
+      <p><a href="#" class="metadataLink"  data-geonetwork-metadata-id="89">Projected temperature</a></p>
+      <h4>Downloads</h4><ul>
       <li><a href="/files/data/iem/a1b/tas_mean_C_iem_cccma_cgcm3_1_sresa1b_2001_2100.zip">tas_mean_C_iem_cccma_cgcm3_1_sresa1b_2001_2100.zip</a>,  6.2 GB</li>
       <li><a href="/files/data/iem/a1b/tas_mean_C_iem_mpi_echam5_sresa1b_2001_2100.zip">tas_mean_C_iem_mpi_echam5_sresa1b_2001_2100.zip</a>, 6.2 GB</li>
       <li><a href="/files/data/iem/a2/tas_mean_C_iem_cccma_cgcm3_1_sresa2_2001_2100.zip">tas_mean_C_iem_cccma_cgcm3_1_sresa2_2001_2100.zip</a>, 7.0 GB</li>
@@ -3560,19 +3605,19 @@ Although the equations developed here provide a reasonable fit to the data, mode
 
 <div class="dataAccordionWrapper">
   <div class="dataAccordion">
-    <h3><a href="#dataset=IEM_projected_precipitation">Projected Precipitation</a></h3>
+    <h3><a href="#dataset=IEM_projected_precipitation">Projected precipitation</a></h3>
     <div>
             <table>
         <tbody>
-          <tr><th scope="row">Baseline Reference Climate</th><td>1961&ndash;1990</td></tr>
-          <tr><th scope="row">Original Spatial Resolution</th><td>1.875&ndash;3.75&deg;</td></tr>
-          <tr><th scope="row">Final Spatial Resolution</th><td>1 km</td></tr>
-          <tr><th scope="row">Temporal Resolution</th><td>2001&ndash;2100</td></tr>
+          <tr><th scope="row">Baseline reference climate</th><td>1961&ndash;1990</td></tr>
+          <tr><th scope="row">Original spatial resolution</th><td>1.875&ndash;3.75&deg;</td></tr>
+          <tr><th scope="row">Final spatial resolution</th><td>1 km</td></tr>
+          <tr><th scope="row">Temporal resolution</th><td>2001&ndash;2100</td></tr>
         </tbody>
       </table>
-            <h3 style="margin-top: 1em">Metadata</h3>
-      <p><a href="#" class="metadataLink"  data-geonetwork-metadata-id="92">Historical Precipitation</a></p>
-      <h3 style="margin-top: 1em">Downloads</h3><ul>
+            <h4>Metadata</h4>
+      <p><a href="#" class="metadataLink"  data-geonetwork-metadata-id="92">Historical precipitation</a></p>
+      <h4>Downloads</h4><ul>
       <li><a href="/files/data/iem/a1b/pr_total_mm_iem_cccma_cgcm3_1_sresa1b_2001_2100.zip">pr_total_mm_iem_cccma_cgcm3_1_sresa1b_2001_2100.zip</a>, 6.1 GB</li>
       <li><a href="/files/data/iem/a1b/pr_total_mm_iem_mpi_echam5_sresa1b_2001_2100.zip">pr_total_mm_iem_mpi_echam5_sresa1b_2001_2100.zip</a>, 6.0 GB</li>
       <li><a href="/files/data/iem/a2/pr_total_mm_iem_cccma_cgcm3_1_sresa2_2001_2100.zip">pr_total_mm_iem_cccma_cgcm3_1_sresa2_2001_2100.zip</a>, 6.7 GB</li>
@@ -3585,19 +3630,19 @@ Although the equations developed here provide a reasonable fit to the data, mode
 
 <div class="dataAccordionWrapper">
   <div class="dataAccordion">
-    <h3><a href="#dataset=IEM_projected_radiation">Projected Surface Downwelling Shortwave Radiation</a></h3>
+    <h3><a href="#dataset=IEM_projected_radiation">Projected surface downwelling shortwave radiation</a></h3>
     <div>
             <table>
         <tbody>
-          <tr><th scope="row">Baseline Reference Climate</th><td>1961&ndash;1990</td></tr>
-          <tr><th scope="row">Original Spatial Resolution</th><td>1.875&ndash;3.75&deg;</td></tr>
-          <tr><th scope="row">Final Spatial Resolution</th><td>1 km</td></tr>
-          <tr><th scope="row">Temporal Resolution</th><td>2001&ndash;2100</td></tr>
+          <tr><th scope="row">Baseline reference climate</th><td>1961&ndash;1990</td></tr>
+          <tr><th scope="row">Original spatial resolution</th><td>1.875&ndash;3.75&deg;</td></tr>
+          <tr><th scope="row">Final spatial resolution</th><td>1 km</td></tr>
+          <tr><th scope="row">Temporal resolution</th><td>2001&ndash;2100</td></tr>
         </tbody>
       </table>
-            <h3 style="margin-top: 1em">Metadata</h3>
-      <p><a href="#" class="metadataLink"  data-geonetwork-metadata-id="82">Historical Surface Downwelling Shortwave Radiation</a></p>
-      <h3 style="margin-top: 1em">Downloads</h3><ul>
+            <h4>Metadata</h4>
+      <p><a href="#" class="metadataLink"  data-geonetwork-metadata-id="82">Historical surface downwelling shortwave radiation</a></p>
+      <h4>Downloads</h4><ul>
       <li><a href="/files/data/iem/a1b/rsds_mean_MJ-m2-d1_iem_cccma_cgcm3_1_sresa1b_2001_2100.zip">rsds_mean_MJ-m2-d1_iem_cccma_cgcm3_1_sresa1b_2001_2100.zip</a>, 5.8 GB</li>
       <li><a href="/files/data/iem/a1b/rsds_mean_MJ-m2-d1_iem_mpi_echam5_sresa1b_2001_2100.zip">rsds_mean_MJ-m2-d1_iem_mpi_echam5_sresa1b_2001_2100.zip</a>, 5.8 GB</li>
       <li><a href="/files/data/iem/a2/rsds_mean_MJ-m2-d1_iem_cccma_cgcm3_1_sresa2_2001_2100.zip">rsds_mean_MJ-m2-d1_iem_cccma_cgcm3_1_sresa2_2001_2100.zip</a>, 5.8 GB</li>
@@ -3610,19 +3655,19 @@ Although the equations developed here provide a reasonable fit to the data, mode
 
 <div class="dataAccordionWrapper">
   <div class="dataAccordion">
-    <h3><a href="#dataset=projected_vapor">Projected Vapor Pressure</a></h3>
+    <h3><a href="#dataset=projected_vapor">Projected vapor pressure</a></h3>
     <div>
             <table>
         <tbody>
-          <tr><th scope="row">Baseline Reference Climate</th><td>1961&ndash;1990</td></tr>
-          <tr><th scope="row">Original Spatial Resolution</th><td>1.875&ndash;3.75&deg;</td></tr>
-          <tr><th scope="row">Final Spatial Resolution</th><td>1 km</td></tr>
-          <tr><th scope="row">Temporal Resolution</th><td>2001&ndash;2100</td></tr>
+          <tr><th scope="row">Baseline reference climate</th><td>1961&ndash;1990</td></tr>
+          <tr><th scope="row">Original spatial resolution</th><td>1.875&ndash;3.75&deg;</td></tr>
+          <tr><th scope="row">Final spatial resolution</th><td>1 km</td></tr>
+          <tr><th scope="row">Temporal resolution</th><td>2001&ndash;2100</td></tr>
         </tbody>
       </table>
-      <h3 style="margin-top: 1em">Metadata</h3>
-      <p><a href="#" class="metadataLink"  data-geonetwork-metadata-id="81">Historical Vapor Pressure</a></p>
-      <h3 style="margin-top: 1em">Downloads</h3>
+      <h4>Metadata</h4>
+      <p><a href="#" class="metadataLink"  data-geonetwork-metadata-id="81">Historical vapor pressure</a></p>
+      <h4>Downloads</h4>
       <ul>
      <li><a href="/files/data/iem/a1b/vap_mean_hPa_iem_cccma_cgcm3_1_sresa1b_2001_2100.zip">vap_mean_hPa_iem_cccma_cgcm3_1_sresa1b_2001_2100.zip</a>, 2.2 GB</li>
      <li><a href="/files/data/iem/a1b/vap_mean_hPa_iem_mpi_echam5_sresa1b_2001_2100.zip">vap_mean_hPa_iem_mpi_echam5_sresa1b_2001_2100.zip</a>, 2.2 GB</li>

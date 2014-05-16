@@ -70,6 +70,14 @@
   }
 } 
 
+//Text-shadows
+@mixin text-shadow {
+    -webkit-text-shadow: 2px 2px 4px #000;
+    -moz-text-shadow: 2px 3px 4px #000;
+	-o-text-shadow: 2px 2px 4px #000;
+    text-shadow: 2px 2px 4px #000;
+}
+
 // Box-shadows
 @mixin shadow($x, $y, $blur, $shadow-color) {
 	-webkit-box-shadow: $x $y $blur $shadow-color;
