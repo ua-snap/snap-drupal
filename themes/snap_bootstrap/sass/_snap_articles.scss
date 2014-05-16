@@ -63,6 +63,16 @@
 		margin: 0 0 2em 2em;
 		background-color: #fff;
 	}
+	
+	.date-display-single {
+		font-weight: bold;
+		font-style: italic;
+		display: inline;
+		font-size: ($font-size-base * .9);
+		border-bottom: 1px solid $snapDarkGrey;
+		border-top: 1px solid $snapDarkGrey;
+		padding: .2em 0 .2em 0;
+	}	
 }
 
 //for when the article is archived on the "SNAP in the news" page
@@ -75,5 +85,14 @@
 	margin: 1em 0 0 0;
 	padding: 0;
 	@include no-shadow;
+	
+	.date-display-single {
+		font-weight: bold;
+		font-style: italic;
+		display: inline;
+		font-size: ($font-size-base * .9);
+		border: none;
+		margin-top: -1em;
+	}		
 }
 
