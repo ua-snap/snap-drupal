@@ -8,8 +8,8 @@
 		width: auto;
 		margin: 0 0 1.5em 0;
 		background-color: white;
-		padding: 1em 4em 1em 4em;
-		min-height: 13.7em;
+		padding: 1em;
+		min-height: 14em;
 		@include shadow($x, $y, $blur, $shadow-color);
 		
 		h2 {
@@ -21,19 +21,21 @@
 		}
 
 		p {
-			font-size: 1.05em;
+			font-size: 1.2em;
 			line-height: ($line-height-base * .85);
 			margin: .3em 2.5em 0 0;
 			text-align: left;
 			font-weight: 300;
+			margin: 0 0 .15em 0;
+			color: darken($snapDarkGrey, 15%);
 		}
 	}
 	
 	.icon {
 		float: left;
 		padding: 0;
-		margin: .55em 4em 1em 0;
-		width: 15%;
+		margin: .5em 6em 3em 0;
+		width: 12%;
 		height: auto;
 		text-align: center;
   }

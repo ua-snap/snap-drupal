@@ -1,31 +1,8 @@
 //Styling for Articles content type, which are published on a temporary basis on the SNAP home page and on a page called SNAP stories, which lists archived articles as a View.
 
-//Styling for when the article is in full view, linked from home page
-.node.node-article {	
-	
-	img {
-		float: right;
-		border: $border;
-		border-radius: $border-radius;
-		@include shadow($x, $y, $blur, $shadow-color);
-		padding: .3em;
-		margin: 0 0 2em 2em;
-		background-color: #fff;
-	}
-	
-	.date-display-single {
-		font-weight: bold;
-		font-style: italic;
-		margin-bottom: .5em;
-		background-color: $highlight;
-		display: inline;
-		padding: 0 .5em 0 .5em;
-	}
-}
-
 //Styling for main box that holds the article on the home page
 .node.node-article.node-promoted.node-teaser {		
-	border: 2px solid #fff;
+	border: 2px solid $snapGreen;
 	margin: 0 0 2em 0;
 	padding: 1em;
 	background-color: lighten($snapGreen,42%);
@@ -50,6 +27,7 @@
 	img {
 		float: right;
 		border: $border;
+		background-color: #fff;
 		border-radius: $border-radius;
 		@include shadow($x, $y, $blur, $shadow-color);
 		padding: .3em;
@@ -59,6 +37,55 @@
 	ul.list-inline {
 		margin: .5em 0 0 0;
 	}
+}
+
+//Styling for when the article is in full view, linked from home page
+.node.node-article {	
+	
+	img {
+		float: right;
+		border: $border;
+		border-radius: $border-radius;
+		@include shadow($x, $y, $blur, $shadow-color);
+		padding: .3em;
+		margin: 0 0 2em 2em;
+		background-color: #fff;
+	}
+	
+	.date-display-single {
+		font-weight: bold;
+		font-style: italic;
+		margin-bottom: .5em;
+		background-color: $highlight;
+		display: inline;
+		padding: 0 .5em 0 .5em;
+	}
+}
+
+//for when the article is in full view, linked from home page
+.node.node-article {	
+	
+	img {
+		float: right;
+		border: $border;
+		background-color: #fff;
+		border-radius: $border-radius;
+		@include shadow($x, $y, $blur, $shadow-color);
+		padding: .3em;
+		margin: 0 0 2em 2em;
+	}
+}
+
+//for when the article is archived on the "SNAP in the news" page
+.node.node-article.node-promoted.node-unpublished.node-teaser {
+	border-bottom: 1px solid $snapGrey;
+	border-top: none;
+	border-right: none;
+	border-left: none;
+	background-color: #fff;
+	margin: 1em 0 0 0;
+	padding: 0;
+	@include no-shadow;
 	
 	.date-display-single {
 		font-weight: bold;
