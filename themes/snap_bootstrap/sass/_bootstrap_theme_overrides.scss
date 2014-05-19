@@ -261,6 +261,27 @@ blockquote {
 	}
 }
 
+//Links inside buttons
+a.btn-success {
+	text-decoration: none;
+	
+	&:link {
+		font-weight: bold;
+		color: #fff;
+	}
+	
+	&:visited {
+		color: lighten($linkvisited, 60%);
+	}
+	
+	&:hover,
+	&:focus {
+		@include link-transition;
+		color: #fff;
+		text-decoration: none;
+	}
+}
+
 // MODALS: Title text within header
 .modal-title {
   margin: 0 2em 0 0;

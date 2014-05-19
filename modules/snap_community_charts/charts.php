@@ -58,7 +58,11 @@
 <p><strong><a href="http://www.uaf.edu/ces/"><img alt="cooperative extension" class="plain pull-right" src="/sites/default/files/pictures/ces.jpg" style="width: 100px; height: 100px;" /></a>Created by SNAP in cooperation with&nbsp;<abbr title="Cooperative Extension Service">CES.</abbr> </strong></p>
 
 <p><strong>We offer climate outlooks for communities in this region:</strong></p>
-<img alt="alaska-canada" class="plain" src="/sites/default/files/pictures/akcanada_extent.gif" style="width: 279px; height: 113px;" /></div>
+<img alt="alaska-canada" class="plain" src="/sites/default/files/pictures/akcanada_extent.gif" style="width: 279px; height: 113px;" />
+
+<p><a class="btn btn-success" href="http://cerberus.snap.uaf.edu">Return to SNAP home page</a></p>
+
+</div>
 </div>
 </div>
 <!-- end row -->
