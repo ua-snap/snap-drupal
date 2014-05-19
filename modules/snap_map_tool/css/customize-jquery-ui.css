@@ -25,7 +25,7 @@ interactions are more appropriate.
 }
 
 .ui-accordion .ui-accordion-header a {
-	font: 16px "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Verdana, Tahoma, sans-serif;
+	font: 12px "Lato", Verdana, Tahoma, sans-serif;
 }
 .ui-accordion .ui-state-default.ui-state-focus a { 
 	color: #000 !important;
