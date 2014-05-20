@@ -4,7 +4,7 @@ h2.block-title {
 	color: $snapDarkGrey;
 	background-color: lighten($snapGrey, 15%);
 	padding: .2em;
-	margin-bottom: .1em;
+	margin: 0 0 .1em 0;
 	font-weight: 400;
 }
 
@@ -18,12 +18,13 @@ a.username {
 	font-size: .85em;
 	line-height: 1.2em;
 	font-style: italic;
+	margin-top: -.25em;
 }
 
 table.views-view-grid.cols-5 {
 	
 	td {
-		padding: 1em;
+		padding: .5em 1em 2em 1em;
 		vertical-align: text-top;
 		overflow-x: auto;
 		width: 170px;
@@ -43,7 +44,9 @@ table.views-view-grid.cols-5 {
 	}
 }
 
-table.views-table.cols-0.table td {		//alumnni table
+
+//alumnni table
+table.views-table.cols-0.table td {		
 	padding: .1em 0 .1em .5em;
 	font-size: .85em;
 	border-bottom: 1px solid $snapGrey;
