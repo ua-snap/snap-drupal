@@ -15,6 +15,8 @@
             ?><!-- fixed width is important because otherwise variability bars break on chart resize. -->
 <div class="container" style="width: 950px !important;">
     <h1>Community climate outlooks</h1>
+
+    <p>Explore temperature and precipitation projections for thousands of communities across Alaska and Canada. Or, return to the SNAP home page.</p>
 <h2 id="chartsTitle">See the climate outlook for your community.</h2>
 
 <div class="row">
