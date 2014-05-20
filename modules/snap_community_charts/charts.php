@@ -14,7 +14,10 @@
 
             ?><!-- fixed width is important because otherwise variability bars break on chart resize. -->
 <div class="container" style="width: 950px !important;">
-<h1 id="chartsTitle">See the climate outlook for your community.</h1>
+    <h1>Community climate outlooks</h1>
+
+    <p>Explore temperature and precipitation projections for thousands of communities across Alaska and Canada. Or, return to the SNAP home page.</p>
+<h2 id="chartsTitle">See the climate outlook for your community.</h2>
 
 <div class="row">
 <div class="col-md-8">
@@ -74,7 +77,7 @@
 <div id="chart_div">&nbsp;</div>
 
 <div class="methods text">
-<h1>How to interpret climate outlooks for your community</h1>
+<h3>How to interpret climate outlooks for your community</h3>
 
 <p>You can examine SNAP community outlooks for certain key changes and threshold values—for example, higher mean monthly temperatures in the spring and fall may be of particular interest. This could signify any or all of these conditions:</p>
 
