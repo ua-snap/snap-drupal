@@ -9,7 +9,7 @@
 	width: auto;
 	clear: right;
 	margin: 0 -15px 2em 2em;
-	padding: 1em;
+	padding: 0 1em 1em 1em;
 	border-radius: $border-radius;
 	border: $border;
 	background: lighten($snapGreen, 45%);
@@ -42,9 +42,10 @@
 	line-height: 1.15em;
 	font-size: 1.1em;
 	background-color: $snapGreen;
-	margin: 0 0 1em 0;
+	margin: 1em 0 -.5em 0;
 	border-radius: $border-radius;
 	border: $border;
+	padding: .2em;
 }
 
 .panel-info h2 {
