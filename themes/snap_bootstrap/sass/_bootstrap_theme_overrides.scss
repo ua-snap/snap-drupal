@@ -229,7 +229,6 @@ ul.secondary {
 	padding: 0;
 }
 
-
 // Paragraphs and Headers.
 h1 { font-size: $font-size-h1; }
 h2 { font-size: $font-size-h2; }
@@ -451,7 +450,7 @@ ul li {
 }
 
 ol li {
-	margin: .25em 0 0 0;
+	margin: 1em 0 0 0;
 	line-height: ($line-height-base * .85);
 
 	li {

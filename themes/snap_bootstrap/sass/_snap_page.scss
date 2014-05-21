@@ -27,7 +27,6 @@ div.node-page {
 		border-radius: $border-radius;
 		@include shadow($x, $y, $blur, $shadow-color);
 		padding: .3em;
-		background-color: #fff;
 		
 		&.pull-left {
 			margin: 0 1.5em 1em 0;
@@ -48,7 +47,12 @@ div.node-page {
 		
 		&.pull-right {
 			margin: 0 0 .5em 1.5em;
-		}		
+		}
+		
+		&.fullwidth {
+			width: 100%;
+			margin: .5em 0 0 0;
+		}
 	}
 	
 	.row h2 {
@@ -61,4 +65,20 @@ div.node-page {
 .main-container {
 	padding-top: 2em;
 	padding-bottom: 3em;
+}
+
+// Column classes - adds in left and right padding
+.col-md-1.padding,
+.col-md-2.padding,
+.col-md-3.padding,
+.col-md-4.padding,
+.col-md-5.padding,
+.col-md-6.padding,
+.col-md-7.padding,
+.col-md-8.padding,
+.col-md-9.padding,
+.col-md-10.padding,
+.col-md-11.padding,
+.col-md-12.padding, {
+	padding: 0 1em 0 1em;
 }
