@@ -33,7 +33,11 @@ div.node-page {
 		}
 		
 		&.pull-right {
-			margin: 0 0 1em 1.5em;
+			margin: 0 0 1em 2.5em;
+		}
+		&.fullwidth {
+			width: 100%;
+			margin: .5em 0 0 0;
 		}
 	}
 	
@@ -61,6 +65,44 @@ div.node-page {
 	}
 }
 	
+//Figures and figcaptions
+figure {
+	background-color: #fff;
+	font-size: .875em;
+	display: table;
+	
+		&.pull-left {
+			margin: 0 1.5em .5em 0;
+		}
+
+		&.pull-right {
+			margin: 0 0 .5em 1.5em;
+		}
+
+		&.fullwidth {
+		width: 100%;
+		margin: .5em 0 0 0;
+	}
+
+	img {
+		display: block;
+		max-width: 100%;	
+	}
+}
+
+figcaption {
+    display: table-caption;
+    caption-side: bottom;
+    margin: 0 .2em 1.5em .2em;
+	line-height: ($line-height-base * .8);
+	font-style: italic;
+	color: lighten($snapDarkGrey, 15%);
+	
+	&.border-above {
+		margin-top: .3em;
+	}
+}
+
 // Pad out the main container that wraps most content
 .main-container {
 	padding-top: 2em;
