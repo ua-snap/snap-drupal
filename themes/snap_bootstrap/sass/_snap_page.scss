@@ -46,16 +46,16 @@ div.node-page {
 		@include no-shadow;
 		
 		&.pull-left {
-			margin: 0 1.5em .5em 0;
+			margin: 1em 1.5em .5em 0;
 		}
 		
 		&.pull-right {
-			margin: 0 0 .5em 1.5em;
+			margin: 1em 0 .5em 1.5em;
 		}
 		
 		&.fullwidth {
 			width: 100%;
-			margin: .5em 0 0 0;
+			margin: 1em 0 0 0;
 		}
 	}
 	
@@ -72,11 +72,11 @@ figure {
 	display: table;
 	
 		&.pull-left {
-			margin: 0 1.5em .5em 0;
+			margin: 1em 1.5em .5em 0;
 		}
 
 		&.pull-right {
-			margin: 0 0 .5em 1.5em;
+			margin: 1em 0 .5em 1.5em;
 		}
 
 		&.fullwidth {
@@ -93,7 +93,7 @@ figure {
 figcaption {
     display: table-caption;
     caption-side: bottom;
-    margin: 0 .2em 1.5em .2em;
+    margin: .5em .2em 1.5em .2em;
 	line-height: ($line-height-base * .8);
 	font-style: italic;
 	color: lighten($snapDarkGrey, 15%);
