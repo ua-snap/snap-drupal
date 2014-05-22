@@ -7,6 +7,28 @@
  * Theming functions for the Media module.
  */
 
+
+/**
+ * Display a media file list.
+ *
+ * @param array $element
+ *   The form element.
+ *
+ * @return string
+ *   HTML of the file list
+ */
+function theme_media_file_list($element) {
+  // Add the CSS for our display.
+  return '<div class="media-file-list">' . theme('form_element', $element, $element['#children']) . '</div>';
+}
+
+/**
+ * Add messages to the page.
+ */
+function template_preprocess_media_dialog_page(&$variables) {
+  $variables['messages'] = theme('status_messages');
+}
+
 /**
  * Adds a wrapper around a preview of a media file.
  */
@@ -25,18 +47,11 @@ function theme_media_thumbnail($variables) {
 
   // Arguments for the thumbnail link.
   $thumb = $element['#children'];
-  if (file_entity_access('update', $element['#file'])) {
-    $target = 'file/' . $element['#file']->fid . '/edit';
-    $title = t('Click to edit details');
-  }
-  else {
-    $target = 'file/' . $element['#file']->fid;
-    $title = t('Click to view details');
-  }
+  $target = 'file/' . $element['#file']->fid . '/edit';
   $options = array(
     'query' => drupal_get_destination(),
     'html' => TRUE,
-    'attributes' => array('title' => $title),
+    'attributes' => array('title' => t('Click to edit details')),
   );
 
   // Element should be a field renderable array. This should be improved.
@@ -70,7 +85,7 @@ function template_preprocess_media_thumbnail(&$variables) {
  */
 function theme_media_formatter_large_icon($variables) {
   $file = $variables['file'];
-  $icon_dir = variable_get('media_icon_base_directory', 'public://media-icons') . '/' . variable_get('media_icon_set', 'default');
+  $icon_dir = variable_get('media__icon_base_directory', 'public://media-icons') . '/' . variable_get('media__icon_set', 'default');
   $icon = file_icon_path($file, $icon_dir);
   $variables['path'] = $icon;
 
@@ -92,11 +107,4 @@ function theme_media_formatter_large_icon($variables) {
     $output = theme('image', $variables);
   }
   return $output;
-}
-
-/**
- * Add messages to the page.
- */
-function template_preprocess_media_dialog_page(&$variables) {
-  $variables['messages'] = theme('status_messages');
 }
