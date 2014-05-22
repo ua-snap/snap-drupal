@@ -262,7 +262,7 @@ Steps 4-6 should be performed as quickly as possible, as the live Drupal site wi
 
 The main thing to look out for when updating the Drupal core is that the file permissions end up being the same as before. Note that the file permissions change a little bit for ```sites/default/files```. This directory has the group-write bit set so the web server can upload files there. But all of the permissions and file ownership should end up set correctly if you follow the above steps in the proper order.
 
-<<<<<<< HEAD
+
 ## Setting up the Articles content type to enable publishing of "highlighted" items temporarily on the Home page
 
 **1. Download the Drupal module Scheduler from drupal.org/project/scheduler. 
@@ -295,15 +295,34 @@ The main thing to look out for when updating the Drupal core is that the file pe
 * Choose Image style: Medium (220 x 220); Link to nothing.
 * Change Body trim length to 350.
 * Save.
-=======
+
+
 ## Add Module: Menu Target
 
 The menu module allows on-the-fly creation of menu links in the content authoring forms. Configuration is simple:
 
-1. Download and extract the Menu target tar.gz file to /modules.
-2. Source for the Main links: Main menu
-3. Source for the Secondary links: Main menu
-4. Menu target type: XHTML Valid
-5. Save.
-6. Now, when editing Menu items, there will be a choice to open link in a new window.
->>>>>>> master
+**1. Download and extract the Menu target tar.gz file to /modules.
+**2. Source for the Main links: Main menu
+**3. Source for the Secondary links: Main menu
+**4. Menu target type: XHTML Valid
+**5. Save.
+**6. Now, when editing Menu items, there will be a choice to open link in a new window.
+
+
+## Add Module: views_fluid_grid
+
+This module provides the Fluid Grid style plugin for Views. This plugin displays the view as a fluid grid using an HTML list element. The plugin settings form provides options to define the width and height of the elements in the grid. But it also provides advanced layout options implemented in separate CSS classes that allow you to define item margins, alignment and a couple of CSS3 properties (box-shadow and border-radius).
+
+**1. Download and extract the views_fluid_grid tar.gz file to /modules.
+
+**2. Go to the View whose grid you'd like to be fluid. At this point, we have Collaborators and the People pages.
+
+**3. In the FORMAT section of the view, click Grid (assuming your view is already formatted as a non-fluid grid) and choose Fluid grid from the list. Apply.
+
+**4. In the next dialog (Block: style options), choose a width for the size of each item (default is 200), or choose Auto (for collaborators) or 200 (for People). Leave other options alone (assuming you have styled this grid elsewhere). Apply. 
+
+*(For People, re-configure the views for Leadership, Faculty, Staff, and Students. Alumni are in their own table.)
+
+**5. Save. You may need to go back and re-style / edit the items in the grid, because the module comes with its own stylesheets (e.g., for Collaborators, the module puts a gray box behind each logo - the target element is li.views-fluid-grid-item)
+
+
