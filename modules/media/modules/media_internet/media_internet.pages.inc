@@ -13,8 +13,8 @@
 function media_internet_add($form, &$form_state = array(), $types = NULL) {
   $form['embed_code'] = array(
     '#type' => 'textfield',
-    '#title' => t('File URL'),
-    '#description' => t('Enter a URL to a file.'),
+    '#title' => t('Enter a URL to an image'),
+    '#description' => t('Enter a URL to an image on the web.'),
     '#attributes' => array('class' => array('media-add-from-url')),
     // There is no standard specifying a maximum length for a URL. Internet
     // Explorer supports up to 2083 (http://support.microsoft.com/kb/208427)
@@ -29,19 +29,30 @@ function media_internet_add($form, &$form_state = array(), $types = NULL) {
   // Determine if there are any visible providers.
   foreach (media_internet_get_providers() as $key => $provider) {
     if (empty($provider['hidden']) || $provider['hidden'] != TRUE) {
-      $providers[] = check_plain($provider['title']);
+      $providers[] = array(
+        'data' => check_plain($provider['title']),
+        'class' => array(drupal_html_class($provider['title'])),
+      );
     }
   }
-
-  $form['#providers'] = $providers;
 
   // Notify the user of any available providers.
   if ($providers) {
     // If any providers are enabled it is assumed that some kind of embed is supported.
-    $form['embed_code']['#title'] = t('File URL or media resource');
-    $form['embed_code']['#description'] = t('Enter a URL to a file or media resource. Many media providers also support identifying media via the embed code used to embed the media into external websites.');
+    $form['embed_code']['#title'] = t('Enter an image URL or an embed code');
+    $form['embed_code']['#description'] = t('Enter a URL or the embed code from a media provider.');
 
-    $form['embed_code']['#description'] = theme('media_internet_embed_help', array('description' => $form['embed_code']['#description'], 'supported_providers' => implode(' ', $providers)));
+    // Providers are displayed in an unordered list below the embed input.
+    // Providers can easily style their own listing by targeting the unique
+    // class assigned to each list item.
+    $form['providers'] = array(
+      '#theme' => 'item_list',
+      '#title' => t('Supported providers'),
+      '#items' => $providers,
+      '#attributes' => array(
+        'class' => array('media-internet-providers'),
+      ),
+    );
   }
 
   $form['#validators'] = array();

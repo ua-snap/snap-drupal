@@ -39,3 +39,22 @@ function cer_schema() {
 function cer_update_7001() {
   db_rename_table('corresponding_entity_references', 'cer');
 }
+
+/**
+ * Disable presets which refer to fields that don't exist. (Issue #2122531)
+ */
+function cer_update_7002() {
+  $presets = db_query('SELECT entity_types_content_fields FROM {cer} WHERE 1')->fetchCol();
+
+  foreach ($presets as $preset) {
+    $keys = explode('*', $preset);
+    
+    $left = field_info_instance($keys[0], $keys[2], $keys[1]);
+    $right = field_info_instance($keys[3], $keys[5], $keys[4]);
+
+    if (empty($left) || empty($right)) {
+      db_query('UPDATE {cer} SET enabled = 0 WHERE entity_types_content_fields = :preset', array(':preset' => $preset));
+      drupal_set_message(t('CER preset %preset was disabled because it uses non-existent fields.', array('%preset' => $preset)), 'warning');
+    }
+  }
+}

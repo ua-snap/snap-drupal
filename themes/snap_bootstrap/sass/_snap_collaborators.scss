@@ -20,3 +20,12 @@
 table td {
 	padding: .5em 1em .5em 1em;
 }
+
+//Overrides the views_fluid_grid default styling for each list item
+li.views-fluid-grid-item {
+  /* width and height properties are defined at views_fluid_grid.size.css. */
+  padding: .5em 1em .5em 1em;
+  overflow: hidden; /* needed to clip content when explicit width/height is specified. */
+  background-color: #fff;
+  border: none;
+}
