@@ -56,7 +56,7 @@ a {
 	&:focus {
 		@include link-transition;
 		color: $snapGreen;
-		text-decoration: none;
+		text-decoration: underline;
 	}
 }
 
