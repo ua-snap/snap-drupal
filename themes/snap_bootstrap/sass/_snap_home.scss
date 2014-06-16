@@ -1,3 +1,17 @@
+/* Home page only styling. */
+
+.front .page-wrapper {
+background-color: lighten($snapDarkGrey, 55%);
+
+	// Hide the "Welcome to..." message.
+h1.page-header {
+	display: none;
+}
+  margin: 0; padding: 0;
+}
+
+
+
 /* This ID name (below) is a special case where our SCSS code needs to know what Drupal decided the ID should be. This is the ID that Drupal gave the block, so we need to use it here. DO NOT CHANGE.  */
 #block-block-4  {   
 	padding: 0;
@@ -8,7 +22,7 @@
 		margin: 0;
 		padding: 0;
 		
-		h2 {
+		h1 {
 			font-size: 1.05em;
 			color: $snapDarkGrey;
 			line-height: 1.3;
@@ -90,15 +104,20 @@
 		padding: .8em 1em .5em 1em;
 		opacity: 0.8;
 	}
+	
+	#projects {
+		@include projectblock;
+		padding: 1em;
+		
+		h1 {
+			font-size: 1.5em;
+			font-weight: 400;
+			color: $snapDarkGrey;
+			text-align: center;
+			margin-top: 0;
+		}
+	}
 }
 	
 
-.front .page-wrapper {
-background-color: lighten($snapDarkGrey, 45%);
-
-	// Hide the "Welcome to..." message.
-h1.page-header {
-	display: none;
-}
-  margin: 0; padding: 0;
-}	
+	

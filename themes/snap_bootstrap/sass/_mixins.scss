@@ -68,6 +68,18 @@
 	border-radius: 20px;
 }
 
+//Home page block for rotating through projects
+@mixin projectblock {
+	width: auto;
+	margin: 0 2em 2em 0;
+	background-color: lighten($snapDarkGrey, 40%);
+	background-repeat: no-repeat;
+	padding: 1em;
+	min-height: 40em;
+	@include shadow(5px, 5px, 15px, $shadow-color);
+	border-radius: 20px;
+}
+
 // Bullet lists
 @mixin no-bullet {   //Turn off the bullet for an element of a list
   list-style-image: none;
