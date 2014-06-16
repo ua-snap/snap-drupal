@@ -4,49 +4,96 @@
 	margin: 0;
 	text-align: left;
 	
-	.col-md-6.home {
-		padding: 0 1em 0 1em;
-	}
-
-	.expertise {
-		width: auto;
-		margin: 0 0 1.5em 0;
-		background-color: white;
-		padding: 1em;
-		min-height: 10em;
-		@include shadow($x, $y, $blur, $shadow-color);
+	.col-md-4.home {
+		margin: 0;
+		padding: 0;
 		
 		h2 {
-			font-size: 1.4em;
+			font-size: 1.05em;
 			color: $snapDarkGrey;
-			line-height: 1.2;
-			font-weight: 400;
-			margin: 0 0 .25em 0;
+			line-height: 1.3;
+			font-weight: 200;
+			text-align: right;
+			margin-top: .7em;
+			letter-spacing: .1em;
+
+			a {
+				color: #fff;
+
+				&:hover,
+				&:focus {
+					color: $snaplink;
+					@include link-transition;
+				}
+			}
 		}
 
-		p {
-			font-size: 1em;
-			line-height: ($line-height-base * .8);
-			margin: .3em 2.5em 0 0;
-			text-align: left;
-			font-weight: 300;
-			margin: 0 0 .15em 0;
-			color: darken($snapDarkGrey, 15%);
+		.icon {
+			float: left;
+			padding: 0;
+			margin: 0 1.5em 0 0;
+			width: 10%;
+			height: auto;
+		}
+	}
+
+
+	#planning {
+		@include expertise;
+		background: url('/sites/default/files/pictures/planning_block_gr.jpg');
+		
+		&:hover,
+		&:focus {
+			background: url('/sites/default/files/pictures/planning_block2.jpg');
+			@include link-transition;
 		}
 	}
 	
-	.icon {
-		float: left;
-		padding: 0;
-		margin: .5em 6em 3em 0;
-		width: 12%;
-		height: auto;
-		text-align: center;
-  }
+	#data-vis {
+		@include expertise;
+		background: url('/sites/default/files/pictures/data-vis_block_gr.jpg');
+		
+		&:hover,
+		&:focus {
+			background: url('/sites/default/files/pictures/data-vis_block.jpg');
+			@include link-transition;
+		}
+	}
+	
+	#collab {
+		@include expertise;
+		background: url('/sites/default/files/pictures/collab_block_gr.jpg');
+		
+		&:hover,
+		&:focus {
+			background: url('/sites/default/files/pictures/collab_block.jpg');
+			@include link-transition;
+		}
+	}
+	
+	#scicomm {
+		@include expertise;
+		background: url('/sites/default/files/pictures/scicomm_block_gr.jpg');
+		
+		&:hover,
+		&:focus {
+			background: url('/sites/default/files/pictures/scicomm_block.jpg');
+			@include link-transition;
+		}
+	}
+	
+	.icon-text {
+		background: $snapGreen;
+		min-height: 5em;
+		margin: 11em -1em 0 -1em;
+		padding: .8em 1em .5em 1em;
+		opacity: 0.8;
+	}
 }
+	
 
 .front .page-wrapper {
-background-color: lighten($snapGreen, 50%);
+background-color: lighten($snapDarkGrey, 45%);
 
 	// Hide the "Welcome to..." message.
 h1.page-header {

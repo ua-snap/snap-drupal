@@ -1,30 +1,25 @@
  @import "snap_variables";
 
 #masthead {
-    text-align: center;
-    background-color: lighten($snapGrey, 15%);
-    padding: 1em 0;
-    background-image: url(../images/SNAP_symbol_white_faded.svg);
-    background-repeat: no-repeat;
-    background-position: 48.2% center;
+    text-align: left;
+    background-color: #fff;
+	border-top: 2em solid $snapGreen;
+    padding: 1.2em 0 1em 4em;
     img {
-        width: 18em;
+        width: 24em;
     }
-    height: 290px;
+    min-height: 200px;
+	
+	#titleblock {
+		float: right;
+		margin: 1.45em 4em 0 0;
 
-    h1 {
-        font-weight:  300;
-        padding: 0;
-        margin: .75em 0 0 0;
-        color: $snapDarkGrey;
-        font-size: 1.6em;
-    }
-
-    h2 {
-		font-weight: 300;
-		padding: 0;
-		margin: .5em 0 0 0;
-		color: $snapDarkGrey;
-		font-size: 1em;
+		h1 {
+			font-weight: bold;
+			padding: 0;
+			color: lighten($snapDarkGrey, 15%);
+			font-size: 1.25em;
+			letter-spacing: .05em;
+		}
 	}
 }

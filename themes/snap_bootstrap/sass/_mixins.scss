@@ -56,6 +56,18 @@
  	transition: all 0.3s ease-in-out; 
 }
 
+// Home page expertise blocks
+@mixin expertise {
+	width: auto;
+	margin: 0 2em 2em 0;
+	background-color: white;
+	background-repeat: no-repeat;
+	padding: 1em;
+	min-height: 19em;
+	@include shadow(5px, 5px, 15px, $shadow-color);
+	border-radius: 20px;
+}
+
 // Bullet lists
 @mixin no-bullet {   //Turn off the bullet for an element of a list
   list-style-image: none;
