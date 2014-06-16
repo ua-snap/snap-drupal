@@ -74,8 +74,9 @@
  */
 ?>
 <div id="masthead">
-  <img src="<?php print drupal_get_path('theme', 'snap_bootstrap'); ?>/images/snap_color_lato.svg"/>
-  <h1>Exploring our future in a changing Arctic</h1>
+  <img src="<?php print drupal_get_path('theme', 'snap_bootstrap'); ?>/images/snap_acronym_color_lato.svg"/>
+	<div id="titleblock">
+	<h1>SCENARIOS NETWORK FOR ALASKA + ARCTIC PLANNING</h1></div>
   
 </div>
 
