@@ -1,25 +1,27 @@
- @import "snap_variables";
 
-#masthead {
-    text-align: left;
-    background-color: #fff;
-	border-top: 2em solid $snapGreen;
-    padding: 1.2em 0 1em 4em;
-    img {
-        width: 24em;
-    }
-    min-height: 200px;
-	
-	#titleblock {
-		float: right;
-		margin: 1.45em 4em 0 0;
-
-		h1 {
-			font-weight: bold;
-			padding: 0;
-			color: lighten($snapDarkGrey, 15%);
-			font-size: 1.25em;
-			letter-spacing: .05em;
-		}
-	}
+  @import "snap_variables";
+  
+  #masthead {
+	  text-align: left;
+	  background-color: #fff;
+	  border-top: 2em solid $snapGreen;
+	  padding: 1.2em 0 1em 4em;
+	  min-height: 200px;
+      
+	  img {
+		  width: 24em;
+      }
+ 	
+ 	#titleblock {
+ 		float: right;
+ 		margin: 1.45em 4em 0 0;
+  
+ 		h1 {
+ 			font-weight: bold;
+ 			padding: 0;
+ 			color: lighten($snapDarkGrey, 15%);
+ 			font-size: 1.25em;
+ 			letter-spacing: .05em;
+ 		}
+  	}
 }
