@@ -24,6 +24,7 @@
 				&:focus {
 					color: $snaplink;
 					@include link-transition;
+					text-decoration: none;
 				}
 			}
 		}
