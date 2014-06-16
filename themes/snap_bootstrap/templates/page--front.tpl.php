@@ -74,7 +74,7 @@
  */
 ?>
 <div id="masthead">
-  <img src="<?php print drupal_get_path('theme', 'snap_bootstrap'); ?>/sites/default/files/pictures/SNAP_acronym_color_lato.svg"/>
+  <img src="<?php print drupal_get_path('theme', 'snap_bootstrap'); ?>/images/SNAP_acronym_color_lato.svg"/>
 	<div id="titleblock">
 	<h1>SCENARIOS NETWORK FOR ALASKA + ARCTIC PLANNING</h1></div>
   
