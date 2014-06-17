@@ -84,10 +84,8 @@
   <header id="navbar" role="banner" class="navbar-default navbar-static <?php print $navbar_classes; ?>">
     <div class="container">
       <div class="navbar-header">
-        <?php if ($logo): ?>
-        <a class="logo navbar-btn pull-left" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
-          <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
-        </a>
+        <?php if (!empty($site_slogan)): ?>
+          <p class="lead"><?php print $site_slogan; ?></p>
         <?php endif; ?>
 
         <?php if (!empty($site_name)): ?>
@@ -126,10 +124,6 @@
   <div class="main-container container">
 
     <header role="banner" id="page-header">
-      <?php if (!empty($site_slogan)): ?>
-        <p class="lead"><?php print $site_slogan; ?></p>
-      <?php endif; ?>
-
       <?php print render($page['header']); ?>
     </header> <!-- /#page-header -->
 
