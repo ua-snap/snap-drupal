@@ -23,12 +23,24 @@ body {
     &.not-front {
         header#navbar {
 			margin: .2em auto;
-			background-color: lighten($snapGrey, 10%);	
+			background-color: lighten($snapDarkGrey, 10%);	
             z-index: 10;;
             @include border-radius(0);
             border-bottom: 1px solid $snapDarkGrey;
         }
     }
+
+	.navbar-header {
+		min-height: 70px;
+		width: auto;
+	}
+	
+	p.lead {
+		color: lighten($snapDarkGrey, 10%);
+		font-weight: 400;
+		font-size: 1.4em;
+		margin: .75em 0 0 0;
+	}
 }
 
 a.name.navbar-brand { display: none; }
@@ -41,12 +53,12 @@ a.logo img {
 header#navbar {
     padding: 0;
     margin: .2em auto;
-	background-color: lighten($snapGrey, 10%);
+	background-color: lighten($snapGrey, 15%);
 
     nav {
         
         ul {
-            margin-top: 1.5ex;
+            margin-top: .75ex;
             &.menu.nav {
                 @extend .pull-right;
                 li {
