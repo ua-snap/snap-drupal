@@ -265,64 +265,45 @@ The main thing to look out for when updating the Drupal core is that the file pe
 
 ## Setting up the Articles content type to enable publishing of "highlighted" items temporarily on the Home page
 
-**1. Download the Drupal module Scheduler from drupal.org/project/scheduler. 
-* Go to Modules and enable the new module.
-* Leave all of its configuration settings at their defaults - further settings can be made after installation when editing the Article content type.
-* Edit Permissions settings to allow Authenticated users to schedule content publication. Save settings.
+1.	Download the Drupal module Scheduler from drupal.org/project/scheduler.	
+*	Go to Modules and enable the new module.
+*	Leave all of its configuration settings at their defaults - further settings can be made after installation when editing the Article content type.
+*	Edit Permissions settings to allow Authenticated users to schedule content publication.	Save settings.
 
-**2. In Structure > Content types, Edit tab, edit the Article content type:**
-* Edit tab, lower left block:
-* Publishing options: uncheck "Published" (you will be choosing a publish date and time via Scheduler)
-* Display settings: Uncheck 'display author and date information"
+2.	In Structure > Content types, Edit tab, edit the Article content type:
+*	Edit tab, lower left block:
+*	Publishing options: uncheck "Published" (you will be choosing a publish date and time via Scheduler)
+*	Display settings: Uncheck 'display author and date information"
 
-**3. In Structure > Content types, Edit tab, configure Scheduler:**
-* Publishing: check 'enable scheduled publishing for this content type,' 'change content creation time to match the scheduled publish time,' and 'require scheduled publishing.'
-* Unpublishing: Check 'enable scheduled unpublishing,' 'require scheduled unpublishing'
-* Node edit page layout: check 'separate fieldset'
-* Expand fieldset: choose 'always open the fieldset'
+3.	In Structure > Content types, Edit tab, configure Scheduler:
+*	Publishing: check 'enable scheduled publishing for this content type,' 'change content creation time to match the scheduled publish time,' and 'require scheduled publishing.'
+*	Unpublishing: Check 'enable scheduled unpublishing,' 'require scheduled unpublishing'
+*	Node edit page layout: check 'separate fieldset'
+*	Expand fieldset: choose 'always open the fieldset'
 
-**Manage Fields tab:**
-* Add new field, Image (machine name: article_image), Field Type Image, Widget Image. Save, leave Field settings at defaults.
+Manage Fields tab:
+*	Add new field, Image (machine name: article_image), Field Type Image, Widget Image.	Save, leave Field settings at defaults.
 
-**Manage display tab, Default mode:**
-* Reorder fields: Image, Body, Tags.
-* Change Image Label to <Hidden>.
-* Change Body Format to Default.
-* Save.
+Manage display tab, Default mode:
+*	Reorder fields: Image, Body, Tags.
+*	Change Image Label to <Hidden>.
+*	Change Body Format to Default.
+*	Save.
 
-**Manage display tab, Teaser mode:**
-* Change Image format to Image; move to top of Field list. Change label to <Hidden>.
-* Choose Image style: Medium (220 x 220); Link to nothing.
-* Change Body trim length to 350.
-* Save.
-
-
-## Add Module: Menu Target
-
-The menu module allows on-the-fly creation of menu links in the content authoring forms. Configuration is simple:
-
-**1. Download and extract the Menu target tar.gz file to /modules.
-**2. Source for the Main links: Main menu
-**3. Source for the Secondary links: Main menu
-**4. Menu target type: XHTML Valid
-**5. Save.
-**6. Now, when editing Menu items, there will be a choice to open link in a new window.
+Manage display tab, Teaser mode:
+*	Change Image format to Image; move to top of Field list.	Change label to <Hidden>.
+*	Choose Image style: Medium (220 x 220); Link to nothing.
+*	Change Body trim length to 350.
+*	Save.
 
 
-## Add Module: views_fluid_grid
+## Install Views Slideshow, Views Slideshow:Cycle, Libraries modules
 
-This module provides the Fluid Grid style plugin for Views. This plugin displays the view as a fluid grid using an HTML list element. The plugin settings form provides options to define the width and height of the elements in the grid. But it also provides advanced layout options implemented in separate CSS classes that allow you to define item margins, alignment and a couple of CSS3 properties (box-shadow and border-radius).
+Views Slideshow provides a View style that displays rows as a jQuery slideshow. This is an API and requires Views Slideshow Cycle or another module that supports the API. 
 
-**1. Download and extract the views_fluid_grid tar.gz file to /modules.
+Related installs/dependencies:
+*	Views Slideshow: Cycle. Adds a Rotating slideshow mode to Views Slideshow. Requires the jQuery Cycle Plugin, available at [http://malsup.com/jquery/cycle/download.html] - you will be prompted to install this plugin if you try to enable Views Slideshow: Cycle; instructions are given in the Drupal prompt/warning window.
 
-**2. Go to the View whose grid you'd like to be fluid. At this point, we have Collaborators and the People pages.
-
-**3. In the FORMAT section of the view, click Grid (assuming your view is already formatted as a non-fluid grid) and choose Fluid grid from the list. Apply.
-
-**4. In the next dialog (Block: style options), choose a width for the size of each item (default is 200), or choose Auto (for collaborators) or 200 (for People). Leave other options alone (assuming you have styled this grid elsewhere). Apply. 
-
-*(For People, re-configure the views for Leadership, Faculty, Staff, and Students. Alumni are in their own table.)
-
-**5. Save. You may need to go back and re-style / edit the items in the grid, because the module comes with its own stylesheets (e.g., for Collaborators, the module puts a gray box behind each logo - the target element is li.views-fluid-grid-item)
+*	Libraries: Required for Views Slideshow: Cycle and houses the jQuery Cycle plugin.
 
 
