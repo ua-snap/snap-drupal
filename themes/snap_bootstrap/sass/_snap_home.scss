@@ -18,7 +18,7 @@ h1.page-header {
 	margin: 0;
 	text-align: left;
 	
-	.col-md-4.home {
+	.col-md-6.home {
 		margin: 0;
 		padding: 0;
 		
@@ -60,6 +60,7 @@ h1.page-header {
 		&:hover,
 		&:focus {
 			background: url('/sites/default/files/pictures/planning_block2.jpg');
+			background-repeat: no-repeat;
 			@include link-transition;
 		}
 	}
@@ -67,6 +68,7 @@ h1.page-header {
 	#data-vis {
 		@include expertise;
 		background: url('/sites/default/files/pictures/data-vis_block_gr.jpg');
+			background-repeat: no-repeat;
 		
 		&:hover,
 		&:focus {
@@ -78,7 +80,8 @@ h1.page-header {
 	#collab {
 		@include expertise;
 		background: url('/sites/default/files/pictures/collab_block_gr.jpg');
-		
+			background-repeat: no-repeat;
+
 		&:hover,
 		&:focus {
 			background: url('/sites/default/files/pictures/collab_block.jpg');
@@ -89,7 +92,8 @@ h1.page-header {
 	#scicomm {
 		@include expertise;
 		background: url('/sites/default/files/pictures/scicomm_block_gr.jpg');
-		
+		background-repeat: no-repeat;
+
 		&:hover,
 		&:focus {
 			background: url('/sites/default/files/pictures/scicomm_block.jpg');
@@ -104,20 +108,48 @@ h1.page-header {
 		padding: .8em 1em .5em 1em;
 		opacity: 0.8;
 	}
-	
-	#projects {
-		@include projectblock;
-		padding: 1em;
-		
-		h1 {
-			font-size: 1.5em;
-			font-weight: 400;
-			color: $snapDarkGrey;
-			text-align: center;
-			margin-top: 0;
-		}
+}
+
+.col-md-3.projects {
+	margin: 0;
+	padding: 0;			
+}
+
+.region.region-sidebar-second {
+	@include projectblock;
+	padding: 1em;
+	margin-top: 52px;
+
+	h2.block-title {
+		font-size: 1.25em;
+		font-weight: 400;
+		text-transform: uppercase;
+		background: none;
+		text-align: center;
+		margin-bottom: .5em;
+	}
+
+	.views-field.views-field-title {
+		font-size: 1em;
+		margin: .5em 0 0 0 ;
+		line-height: 1.2em;
+	}
+
+	.views-field-field-project-image img {
+		border-radius: $border-radius;
+		border: 1px solid $snapGrey;
+		@include shadow($x, $y, $blur, $shadow-color);
+		text-align: center;
+	}
+
+	p {
+		font-size: .9em;
+		margin: .5em 0 0 0;
+		line-height: 1.4em;
 	}
 }
+
+
 	
 
 	

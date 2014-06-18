@@ -54,6 +54,7 @@
  	-moz-transition: all 0.3s ease-in-out;
  	-o-transition: all 0.3s ease-in-out;
  	transition: all 0.3s ease-in-out; 
+	text-decoration: none;
 }
 
 // Home page expertise blocks
@@ -72,11 +73,12 @@
 @mixin projectblock {
 	width: auto;
 	margin: 0 2em 2em 0;
-	background-color: lighten($snapDarkGrey, 40%);
+	background-color: #fff;
 	background-repeat: no-repeat;
 	padding: 1em;
 	min-height: 40em;
 	@include shadow(5px, 5px, 15px, $shadow-color);
+	border: 2px solid $snapGreen;
 	border-radius: 20px;
 }
 
