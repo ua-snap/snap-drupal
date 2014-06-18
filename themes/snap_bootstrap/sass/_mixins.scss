@@ -40,12 +40,12 @@
 }
 
 // Making border radius nice again!
-@mixin border-radius($radius) {
-  -webkit-border-radius: $radius;
-     -moz-border-radius: $radius;
-      -ms-border-radius: $radius;
-       -o-border-radius: $radius;
-          border-radius: $radius;
+@mixin border-radius($border-radius) {
+  -webkit-border-radius: $border-radius;
+     -moz-border-radius: $border-radius;
+      -ms-border-radius: $border-radius;
+       -o-border-radius: $border-radius;
+          border-radius: $border-radius;
 }
 
  // Links
@@ -96,12 +96,28 @@
   }
 } 
 
+//Text-shadows
+@mixin text-shadow {
+    -webkit-text-shadow: 2px 2px 4px #000;
+    -moz-text-shadow: 2px 3px 4px #000;
+	-o-text-shadow: 2px 2px 4px #000;
+    text-shadow: 2px 2px 4px #000;
+}
+
 // Box-shadows
 @mixin shadow($x, $y, $blur, $shadow-color) {
 	-webkit-box-shadow: $x $y $blur $shadow-color;
 	-moz-box-shadow: $x $y $blur $shadow-color;
 	-o-box-shadow: $x $y $blur $shadow-color;
 	box-shadow: $x $y $blur $shadow-color;
+}
+
+// No Box-shadows!
+@mixin no-shadow() {
+ -webkit-box-shadow: none;
+ -moz-box-shadow: none;
+ -o-box-shadow: none;
+ box-shadow: none;
 }
 
 // Tables

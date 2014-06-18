@@ -1,38 +1,27 @@
- @import "snap_variables";
 
-#masthead {
-    text-align: center;
-    background-color: lighten($snapGrey, 15%);
-    padding: 1.5em 0;
-    background-image: url(../images/SNAP_symbol_white.svg);
-    background-repeat: no-repeat;
-    background-position: 48.2% center;
-    img {
-        width: 25em;
-    }
-    height: 380px;
-
-    h1 {
-        font-weight:  300;
-        padding: 0;
-        margin: .25em 0 0 0;
-        color: $snapDarkGrey;
-        font-size: 2.2em;
-    }
-
-    h2 {
-      font-weight: 400;
-      padding: 0;
-      margin: .2em 0 0 0;
-      color: $snapGreen;
-		font-size: 1.6em;
-  }
-
-  p {
-      color: $snapDarkGrey;
-      line-height: 1.4em;
-      margin: .25em 0 0 0;
-      font-size: 1.05em;
-	  letter-spacing: .02em;
-  }
+  @import "snap_variables";
+  
+  #masthead {
+	  text-align: left;
+	  background-color: #fff;
+	  border-top: 2em solid $snapGreen;
+	  padding: 1.2em 0 1em 4em;
+	  min-height: 200px;
+      
+	  img {
+		  width: 24em;
+      }
+ 	
+ 	#titleblock {
+ 		float: right;
+ 		margin: 1.45em 4em 0 0;
+  
+ 		h1 {
+ 			font-weight: bold;
+ 			padding: 0;
+ 			color: lighten($snapDarkGrey, 15%);
+ 			font-size: 1.25em;
+ 			letter-spacing: .05em;
+ 		}
+  	}
 }

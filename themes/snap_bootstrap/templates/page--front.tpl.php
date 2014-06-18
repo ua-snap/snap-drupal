@@ -74,21 +74,18 @@
  */
 ?>
 <div id="masthead">
-  <img src="<?php print drupal_get_path('theme', 'snap_bootstrap'); ?>/images/snap_color_lato.svg"/>
-  <h1>Exploring our future in a changing Arctic</h1>
-  <h2>We develop plausible scenarios of future conditions</h2>
-  <p>through a diverse network of people and organizations.</p>
-  <p>Our research and collaborations enable robust planning for the future of Alaska and the Arctic.</p>
+  <img src="<?php print drupal_get_path('theme', 'snap_bootstrap'); ?>/images/SNAP_acronym_color_lato.svg"/>
+	<div id="titleblock">
+	<h1>SCENARIOS NETWORK FOR ALASKA + ARCTIC PLANNING</h1></div>
+  
 </div>
 
 <div id="navbar-sticky">
   <header id="navbar" role="banner" class="navbar-default navbar-static <?php print $navbar_classes; ?>">
     <div class="container">
       <div class="navbar-header">
-        <?php if ($logo): ?>
-        <a class="logo navbar-btn pull-left" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
-          <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
-        </a>
+        <?php if (!empty($site_slogan)): ?>
+          <p class="lead"><?php print $site_slogan; ?></p>
         <?php endif; ?>
 
         <?php if (!empty($site_name)): ?>
@@ -127,10 +124,6 @@
   <div class="main-container container">
 
     <header role="banner" id="page-header">
-      <?php if (!empty($site_slogan)): ?>
-        <p class="lead"><?php print $site_slogan; ?></p>
-      <?php endif; ?>
-
       <?php print render($page['header']); ?>
     </header> <!-- /#page-header -->
 

@@ -14,6 +14,10 @@ html {
   }
 }
 body {
+	
+  	//Override base font color.
+	color: $snapDarkGrey;
+
   // Fix horizontal scrolling on iOS devices.
   // http://drupal.org/node/1870076
   position: relative;
@@ -93,6 +97,17 @@ body {
   }
 }
 
+//Dropdown styling
+.dropdown-menu > li > a {
+  display: block;
+  padding: 3px 20px;
+  clear: both;
+  font-weight: normal;
+  line-height: 1.42857;
+  color: $color;
+  white-space: nowrap;
+}
+
 // Adjust z-index of core components.
 #overlay-container,
 .overlay-modal-background,
@@ -113,10 +128,8 @@ body {
   z-index: 1610;
 }
 .footer {
-  margin-top: 45px;
-  padding-top: 35px;
-  padding-bottom: 36px;
-  border-top: 1px solid #E5E5E5;
+  margin: 0;
+  padding: 0;
 }
 
 // Element invisible fix
@@ -140,15 +153,58 @@ body {
 // Navigation.
 ul.secondary {
   float: left;
-  @media screen and (min-width: $screen-sm-min) { // Tablet
+  
+	@media screen and (min-width: $screen-sm-min) { // Tablet
     float: right;
+  }
+}
+
+// Dividers (basically an hr) within the dropdown
+.divider {
+	@include nav-divider($snapGrey);
+  }
+
+// Links within the dropdown menu
+> li > a {
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: normal;
+    line-height: $line-height-base;
+    color: $dropdown-link-color;
+    white-space: nowrap; // prevent links from randomly breaking onto new lines
+  }
+
+// Hover/Focus state
+.dropdown-menu > li > a {
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    color: $snapDarkGrey;
+    background-color: lighten($snapGreen, 30%);
+  }
+}
+
+// Active state
+.dropdown-menu > .active > a {
+  &,
+  &:hover,
+  &:focus {
+    color: #fff;
+    text-decoration: none;
+    outline: 0;
+    background-color: lighten($snapGreen, 10%);
   }
 }
 
 // Page header.
 .page-header {
-  margin-top: 0;
+	margin: 0 0 0 0;
+	color: $snapDarkGrey;
+	font-weight: 300;
+	font-size: 2.5em;
 }
+
 
 // Blocks
 .block {
@@ -157,36 +213,23 @@ ul.secondary {
   }
 }
 
+// Column classes - remove left and right padding
+.col-md-1,
+.col-md-2,
+.col-md-3,
+.col-md-4,
+.col-md-5,
+.col-md-6,
+.col-md-7,
+.col-md-8,
+.col-md-9,
+.col-md-10,
+.col-md-11,
+.col-md-12, {
+	padding: 0;
+}
+
 // Paragraphs and Headers.
-
-h1, h2, h3, h4 {
-	margin-top: 1.5em;
-	margin-bottom: .25em;
-	color: $snapGreen;
-	margin-top: 1.5em;
-	
-	&.page-header {
-	color: $snapDarkGrey;
-	font-weight: 300;
-	margin: 1em 0 0 0;
-	font-size: 3em;
-	}
-}
-
-h5, h6 {
-	color: black;
-	letter-spacing: .05em;
-	text-transform: uppercase;
-	background-color: lighten($snapGreen, 40%);
-	padding: .1em;
-	margin-top: 2em;
-	font-weight: bold;
-	
-	small, .small {
-		font-size: 75%;
-	}
-}
-
 h1 { font-size: $font-size-h1; }
 h2 { font-size: $font-size-h2; }
 h3 { font-size: $font-size-h3; }
@@ -194,27 +237,87 @@ h4 { font-size: $font-size-h4; }
 h5 { font-size: $font-size-h5; }
 h6 { font-size: $font-size-h6; }
 
+h1, h2, h3, h4 {
+	margin: 1.5em 0 -.5em 0;
+	color: $snapGreen;
+	font-weight: bold;
+	letter-spacing: .03em;
+}
+
+h5, h6 {
+	color: black;
+	letter-spacing: .05em;
+	text-transform: uppercase;
+	background-color: lighten($snapGreen, 40%);
+	padding: .2em;
+	margin: 2em 0 -1em 0;
+	font-weight: bold;
+	
+	small, .small {
+		font-size: 75%;
+	}
+}
+
 p:last-child {
   margin-bottom: 0;
 }
 
 blockquote {
-	background: lighten($snapGrey, 15%);
-	padding: 0.5em 10px;
-	margin: 1.5em 2em 1.5em 2em;
-	border-left: 7px solid $snapGreen;
+	background: lighten($snapGrey, 18%);
 	font-style: italic;
-	font-size: 1.2em;
-	
-	p {
-		font-weight: 100;
-	}
+	margin: 1em;
+	padding: .5em 1em .5em 1em;
+	border-left: 5px solid $snapGreen;
+	font-weight: 100;
+	font-size: .9em;
+	line-height: ($line-height-base * .85);
 	
 	a {
 		font-size: .8em;
 	}
 }
+
+//Links inside buttons
+a.btn-success {
+	text-decoration: none;
 	
+	&:link {
+		font-weight: bold;
+		color: #fff;
+	}
+	
+	&:visited {
+		color: lighten($linkvisited, 60%);
+	}
+	
+	&:hover,
+	&:focus {
+		@include link-transition;
+		color: #fff;
+		text-decoration: none;
+	}
+}
+
+// MODALS: Title text within header
+.modal-title {
+  margin: 0 2em 0 0;
+  line-height: ($line-height-base * .65);
+	font-size: 1.4em;
+}
+
+// Modal body
+// Where all modal content resides (sibling of .modal-header and .modal-footer)
+.modal-body {
+  position: relative;
+  padding: $modal-inner-padding;
+	line-height: ($line-height-base * .85);
+}
+
+//Blocks of code.
+pre {
+  padding: (($line-height-computed - 1.5) / 2.5);
+  font-size: ($font-size-base - 3); // 
+}
 	
 
 // Help region.
@@ -336,13 +439,31 @@ table tr.error {
   }
 }
 
-// Lists
+// Unordered and Ordered lists
+ul li {
+	margin: .25em 0 0 0;
+	line-height: ($line-height-base * .85);
+
+	li {
+		margin: .25em 0 0 0;
+	}
+}
+
+ol li {
+	margin: 1em 0 0 0;
+	line-height: ($line-height-base * .85);
+
+	li {
+		list-style-type: disc;
+		margin: .25em 0 0 0;
+	}
+}
+
 .list-inline {
   > li.first {
     padding-left: 0;
   }
 }
-
 
 .nav-tabs {
   margin-bottom: 10px;

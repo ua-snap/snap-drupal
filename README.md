@@ -214,6 +214,18 @@ Now we configure the "Teaser" view of the Project so it can be used on the page 
 
 Finally, we create the view for the projects page.  Go to Structure &#x2192; Views &#x2192; Add new view.  View name "Projects", show content of type Project sorted by title, uncheck "Create a Page", check Create a Block, display format Teaser with links / without comments, 100 items per page, don't enable the pager.  On the next configuration page, under the "Fields" section, verify that it shows both "Website" and "Collaborator Logo" fields; click the "Website" field and configure it to be "Hidden," save, then click the "Collaborator Logo" field and change the Formatter to "Image Link Formatter".  Add it to the existing Projects page by going to the admin menu Structure &#x2192; Blocks and drag the View: Projects block into the Content area; click to edit it and put &lt;none&gt; for the title, then change it to only display on page 'projects'.  Save.
 
+### Setting up Community Charts
+
+Community Charts is a standalone webapp that is set up to run from the ```modules``` directory, though it's *not* a Drupal module&mdash;it's there so it's in our source control; implementing as a Drupal module would conflict with a number of existing libraries and would require some reworking of the source.
+
+This non-module dwells in ```sites/all/modules/snap_community_charts```.  All steps below need to be done on the relevant Drupal server/Vagrant instance.
+
+ 1. Database: In MySQL, create a new database and user, then load the ```etc/charts.sql.bz2``` SQL dump into that user.  Assign sufficient permissions to the user to allow read access from localhost.
+ 1. Fonts: Unpack and copy all the TrueType fonts from ```etc/Lato.zip``` into the ```/usr/share/fonts``` directory, then run ```fc-cache``` to rebuild the font cache.  Use ```fc-list``` to verify that various Lato fonts have been installed.
+ 1. Scratch and web-visible directories: create directory/directories that will be used for scratch space as well as the location that Apache will serve the generated files from.  They can be the same directory.
+ 1. Make sure ImageMagick is installed for the chart export feature to work: ```sudo yum install ImageMagick```
+ 1. Configuration.  Copy the src/Config.php.example file and update the database configuration and the directory locations from the prior step.
+
 ### Setting up People
 
 Set up the taxonomy for staff categories.  Main menu Structure > Taxonomy > Add Vocabulary.  Name it "Staff Categories".  Add 5 terms: Leaders, Faculty, Students, Staff, Alumni.
@@ -231,4 +243,77 @@ Now we create block views for each staff category.  For each staff category: Str
 	5.	 Save the view.	
 	6.	 Rinse and repeat: create a view for each of the other 4 staff category types (Faculty, Students, Staff, Alumni).
 	7.	 Once all 5 new views have been created: Structure > Blocks > move View: Staff Category [category] (all 5 of them) to Content block, Save Blocks then click Configure for that block, Block title: [category], Show Block On Specific Pages -- only the listed page: [target page for people], Content types / Show block for specific content types, choose people.
+
+## Updating the Drupal core
+
+Like modules, we will occasionally need to update the Drupal core when there is a security update available. Fortunately, we have been very careful to isolate all of our development work in the ```sites``` directory, which makes updating the Drupal core pretty easy.
+
+To update the Drupal core (these instructions are from memory; please be careful):
+
+1. Download and extract the Drupal core tar.gz file to /tmp.
+2. ```rm -fr /tmp/drupal-7.27/sites```
+3. ```sudo chown -R drupal:drupal /tmp/drupal-7.27```
+4. ```sudo mv /var/www/snap ~/snap_old```
+5. ```sudo mv /tmp/drupal-7.27 /var/www/snap```
+6. ```sudo mv ~/snap_old/sites /var/www/snap/```
+7. Run the Drupal update script: http://cerberus.snap.uaf.edu/update.php
+
+Steps 4-6 should be performed as quickly as possible, as the live Drupal site will be broken until they are finished.
+
+The main thing to look out for when updating the Drupal core is that the file permissions end up being the same as before. Note that the file permissions change a little bit for ```sites/default/files```. This directory has the group-write bit set so the web server can upload files there. But all of the permissions and file ownership should end up set correctly if you follow the above steps in the proper order.
+
+
+## Setting up the Articles content type to enable publishing of "highlighted" items temporarily on the Home page
+
+1.	Download the Drupal module Scheduler from drupal.org/project/scheduler.	
+*	Go to Modules and enable the new module.
+*	Leave all of its configuration settings at their defaults - further settings can be made after installation when editing the Article content type.
+*	Edit Permissions settings to allow Authenticated users to schedule content publication.	Save settings.
+
+2.	In Structure > Content types, Edit tab, edit the Article content type:
+*	Edit tab, lower left block:
+*	Publishing options: uncheck "Published" (you will be choosing a publish date and time via Scheduler)
+*	Display settings: Uncheck 'display author and date information"
+
+3.	In Structure > Content types, Edit tab, configure Scheduler:
+*	Publishing: check 'enable scheduled publishing for this content type,' 'change content creation time to match the scheduled publish time,' and 'require scheduled publishing.'
+*	Unpublishing: Check 'enable scheduled unpublishing,' 'require scheduled unpublishing'
+*	Node edit page layout: check 'separate fieldset'
+*	Expand fieldset: choose 'always open the fieldset'
+
+Manage Fields tab:
+*	Add new field, Image (machine name: article_image), Field Type Image, Widget Image.	Save, leave Field settings at defaults.
+
+Manage display tab, Default mode:
+*	Reorder fields: Image, Body, Tags.
+*	Change Image Label to <Hidden>.
+*	Change Body Format to Default.
+*	Save.
+
+Manage display tab, Teaser mode:
+*	Change Image format to Image; move to top of Field list.	Change label to <Hidden>.
+*	Choose Image style: Medium (220 x 220); Link to nothing.
+*	Change Body trim length to 350.
+*	Save.
+
+
+## Install Views Slideshow, Views Slideshow:Cycle, Libraries modules
+
+Views Slideshow provides a View style that displays rows as a jQuery slideshow. This is an API and requires Views Slideshow Cycle or another module that supports the API. 
+
+Related installs/dependencies:
+*	Views Slideshow: Cycle. Adds a Rotating slideshow mode to Views Slideshow. Requires the jQuery Cycle Plugin, available at [http://malsup.com/jquery/cycle/download.html] - you will be prompted to install this plugin if you try to enable Views Slideshow: Cycle; instructions are given in the Drupal prompt/warning window.
+
+*	Libraries: Required for Views Slideshow: Cycle and houses the jQuery Cycle plugin.
+
+View: Featured Projects settings
+Display as Block
+Title: Featured Projects
+Fields: 
+*	Content: Project Image (links to Content)
+*	Content: Title
+*	Content: Body (summary or trimmed)
+Sort criteria: Global: Random (asc)
+Pager: Display a specified number of items (1 item)
+
 

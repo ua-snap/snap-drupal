@@ -1,0 +1,54 @@
+// Panel (sidebar) styling
+
+//panel-info: green box
+.panel-info {
+	border: none;
+}
+
+.panel.panel-info.pull-right {
+	width: auto;
+	clear: right;
+	margin: 0 0 2em 2em;
+	padding: 0 1em 1em 1em;
+	border-radius: $border-radius;
+	border: $border;
+	background: lighten($snapGreen, 45%);
+	@include shadow($x, $y, $blur, $shadow-color);
+	
+	h3 {
+		color: $snapDarkGrey;
+		font-size: 1em;
+	}
+
+	h4 {
+		font-size: .9em;
+		color: $snapDarkGrey;
+		background-color: lighten($snapGreen,35%);
+	}
+	
+	p {
+		font-size: .9em;
+		line-height: ($line-height-base * .85);
+	}
+	
+	ul li, ol li {
+		font-size: .9em;
+		line-height: ($line-height-base * .85);
+	}
+}
+
+.panel-info > .panel-heading {
+	color: lighten($snapGreen, 50%);
+	line-height: 1.15em;
+	font-size: 1.1em;
+	background-color: $snapGreen;
+	margin: 1em 0 -.5em 0;
+	border-radius: $border-radius;
+	border: $border;
+	padding: .2em;
+}
+
+.panel-info h2 {
+	font-size: 1.2em;
+	color: $snapGreen;
+}

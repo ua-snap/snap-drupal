@@ -45,7 +45,8 @@ function bootstrap_preprocess_page(&$variables) {
     $variables['navbar_classes_array'][] = 'navbar-' . theme_get_setting('bootstrap_navbar_position');
   }
   else {
-    $variables['navbar_classes_array'][] = 'container';
+    // Removed the below to get full-bleed navbar for non-home-pages.
+    // $variables['navbar_classes_array'][] = 'container';
   }
   if (theme_get_setting('bootstrap_navbar_inverse')) {
     $variables['navbar_classes_array'][] = 'navbar-inverse';

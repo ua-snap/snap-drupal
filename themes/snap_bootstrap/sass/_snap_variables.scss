@@ -9,12 +9,15 @@ $font-family-base:        $font-family-sans-serif !default;
 
 $snapGrey: rgb(199,201,199);
 $snapGreen: rgb(150,167,58);
-$snapDarkGrey: rgb(106,112,114);
+$snapDarkGrey: rgb(87,92,94);
+$color: $snapDarkGrey;
 
-$snaplink: rgb(156,0,255);
-$linkvisited: rgb(109,0,178);
+$snaplink: rgb(17,27,253);
+$linkvisited: rgb(79,16,163);
+
+$highlight: lighten($linkvisited, 20%);  //lighter purple highlight for accented text
  
-$border-radius: 3px;
+$border-radius: 10px;
 $border: 1px solid $snapGreen;
 
 // Shadow properties
@@ -29,18 +32,42 @@ $navbar-default-color:             $snapDarkGrey;
 $navbar-default-bg:                #fff;
 $navbar-default-border:            transparent;
 
-//Typography
-$line-height-base: 1.52857;
-$font-size-base: 14px;		//make absolute unit to avoid nesting nightmares
+//Typography general
+$line-height-base: 1.82857;
+$font-size-base: 17px;		//make absolute unit to avoid nesting nightmares
 $color: $snapDarkGrey;
 
 //Headings
-$font-size-h1: 36px;		//make absolute unit to avoid nesting nightmares
+$font-size-h1: 32px;		//make absolute unit to avoid nesting nightmares
 $font-size-h2: ($font-size-h1 * .85);
-$font-size-h3: ($font-size-h1 * .7);
-$font-size-h4: ($font-size-h1 * .65); 
-$font-size-h5: ($font-size-h1 * .4); 
-$font-size-h6: ($font-size-h1 * .35); 
+$font-size-h3: ($font-size-h1 * .74);
+$font-size-h4: ($font-size-h1 * .68); 
+$font-size-h5: ($font-size-h1 * .45); 
+$font-size-h6: ($font-size-h1 * .4); 
 
+//Button colors
+$btn-default-color:  #fff;  
+$btn-default-bg: $snapDarkGrey;
+$btn-default-border: $snapGrey;
+
+// Success appears as green
+$btn-success-color: #fff;  
+$btn-success-bg: $snapGreen;
+$btn-success-border: $snapDarkGrey;
+
+// Info appears as light purple
+$btn-info-color:  #000;  
+$btn-info-bg: $highlight;
+$btn-info-border: $snapDarkGrey;
+
+// Warning appears as purple
+$btn-warning-color:  #fff;  
+$btn-warning-bg: $snaplink;
+$btn-warning-border: $snapDarkGrey;
+
+// Danger and error appear as red
+$btn-danger-color:  #fff;  
+$btn-danger-bg: red;
+$btn-danger-border: $snapDarkGrey;
 
 

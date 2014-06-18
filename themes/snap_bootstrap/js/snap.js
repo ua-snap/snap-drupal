@@ -7,17 +7,19 @@
               top: $('#masthead').height()
             }
       });
-  });
-}(jQuery));
 
-// Other pages sticky menu
-(function($) {
-  // Fire when DOM is ready, or elements are missing.
-  $( function() {
-    $('#navbar-sticky').affix({
-            offset: {
-              top: $('#navbar').height('80')
-            }
-      });
+    $('body.not-front #navbar').affix({
+        offset: {
+          top: 0
+        }
+    });
+
+    $(window).resize(function () {
+        $('body.not-front #navbar').width($('body').width());
+    });
+    $(window).scroll(function () {
+        $('body.not-front #navbar').width($('body').width());
+    });
+
   });
 }(jQuery));

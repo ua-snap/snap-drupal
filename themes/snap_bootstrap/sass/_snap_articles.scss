@@ -1,0 +1,97 @@
+//Styling for Articles content type, which are published on a temporary basis on the SNAP home page and on a page called SNAP stories, which lists archived articles as a View.
+
+//Styling for main box that holds the article on the home page
+.node.node-article.node-promoted.node-teaser {		
+	border: 5px solid $snapGreen;
+	margin: 0 0 2em 0;
+	padding: 0 0 1em 0;
+	background-color: lighten($snapDarkGrey,60%);
+	@include shadow(.2rem, .2rem, 1rem, $shadow-color);
+	@include border-radius($border-radius);
+	
+	h2 {
+		margin: 0 0 .5em 0;
+		font-size: 1.35em;
+		background-color: #fff;
+		padding: .2em 1em .35em .65em;
+		
+		a {
+			font-weight: 400;
+		}
+	}
+	
+	p {
+		font-size: 1em;
+		line-height: ($line-height-base * .85);
+		font-weight: 300;
+		margin: 0 1em 0 1em;
+	}
+	
+	img {
+		float: right;
+		border: $border;
+		background-color: #fff;
+		border-radius: $border-radius;
+		@include shadow($x, $y, $blur, $shadow-color);
+		padding: .3em;
+		margin: 0 1em .5em 2em;
+	}
+	
+	ul.list-inline {
+		margin: 0 0 0 1em;
+		font-size: ($font-size-base * .9);
+	}
+	
+	.date-display-single {
+		font-weight: bold;
+		font-style: italic;
+		margin: 0 0 0 1.1em;
+		display: inline;
+		font-size: ($font-size-base * .9);
+	}	
+}
+
+//Styling for when the article is in full view, linked from home page
+.node.node-article {	
+	
+	img {
+		float: right;
+		border: $border;
+		border-radius: $border-radius;
+		@include shadow($x, $y, $blur, $shadow-color);
+		padding: .3em;
+		margin: 0 0 2em 2em;
+		background-color: #fff;
+	}
+	
+	.date-display-single {
+		font-weight: bold;
+		font-style: italic;
+		display: inline;
+		font-size: ($font-size-base * .9);
+		border-bottom: 1px solid $snapDarkGrey;
+		border-top: 1px solid $snapDarkGrey;
+		padding: .2em 0 .2em 0;
+	}	
+}
+
+//for when the article is archived on the "SNAP in the news" page
+.node.node-article.node-promoted.node-unpublished.node-teaser {
+	border-bottom: 1px solid $snapGrey;
+	border-top: none;
+	border-right: none;
+	border-left: none;
+	background-color: #fff;
+	margin: 1em 0 0 0;
+	padding: 0;
+	@include no-shadow;
+	
+	.date-display-single {
+		font-weight: bold;
+		font-style: italic;
+		display: inline;
+		font-size: ($font-size-base * .9);
+		border: none;
+	}		
+}
+

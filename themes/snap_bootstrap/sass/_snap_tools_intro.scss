@@ -1,0 +1,32 @@
+/* Intro page for data visualization and analysis expertise page  */
+ .tools {
+	 width: auto;
+	 border: 1px solid $snapGrey;
+	 background-color: lighten($snapGreen,53%);
+	 margin: 0 0 1.5em -15px;
+	 padding: .5em;
+	 min-height: 7.55em;
+	 @include shadow($x, $y, $blur, $shadow-color);
+	 vertical-align: middle;
+ 	
+	 h2 {
+		font-size: 1.5em;
+		color: $snapDarkGrey;
+		line-height: 1.1em;
+		font-weight: 400;
+		margin: 0;
+	 }
+	 
+	 p {
+		font-size: 1em;
+		line-height: 1.5em;
+		margin: .3em 0 0 0;
+		text-align: left;
+		font-weight: 300;
+	}
+		
+	img {
+		background-color: #fff;
+		
+	}
+ }
