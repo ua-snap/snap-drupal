@@ -306,4 +306,14 @@ Related installs/dependencies:
 
 *	Libraries: Required for Views Slideshow: Cycle and houses the jQuery Cycle plugin.
 
+View: Featured Projects settings
+Display as Block
+Title: Featured Projects
+Fields: 
+*	Content: Project Image (links to Content)
+*	Content: Title
+*	Content: Body (summary or trimmed)
+Sort criteria: Global: Random (asc)
+Pager: Display a specified number of items (1 item)
+
 
