@@ -1,159 +1,162 @@
-/* Home page only styling. */
+ /* Home page only styling. */
+  
+  .front .page-wrapper {
+  background-color: lighten($snapDarkGrey, 55%);
+  
+  	// Hide the "Welcome to..." message.
+  h1.page-header {
+  	display: none;
+  }
+    margin: 0; padding: 0;
+  }
+  
+  
+  
+  /* This ID name (below) is a special case where our SCSS code needs to know what Drupal decided the ID should be. This is the ID that Drupal gave the block, so we need to use it here. DO NOT CHANGE.  */
+  #block-block-4  {   
+  	padding: 0;
+  	margin: 0;
+  	text-align: left;
+  	
+ 	.col-md-4.home {
+ 	.col-md-6.home {
+  		margin: 0;
+  		padding: 0;
+  		
+  		h1 {
+  			font-size: 1.05em;
+  			color: $snapDarkGrey;
+  			line-height: 1.3;
+  			font-weight: 200;
+  			text-align: right;
+  			margin-top: .7em;
+  			letter-spacing: .1em;
+  
+  			a {
+  				color: #fff;
+  
+  				&:hover,
+  				&:focus {
+  					color: $snaplink;
+  					@include link-transition;
+  					text-decoration: none;
+  				}
+  			}
+  		}
+  
+  		.icon {
+  			float: left;
+  			padding: 0;
+  			margin: 0 1.5em 0 0;
+  			width: 10%;
+  			height: auto;
+  		}
+  	}
+  
+  
+  	#planning {
+  		@include expertise;
+  		background: url('/sites/default/files/pictures/planning_block_gr.jpg');
+  		
+  		&:hover,
+  		&:focus {
+  			background: url('/sites/default/files/pictures/planning_block2.jpg');
+ 			background-repeat: no-repeat;
+  			@include link-transition;
+  		}
+  	}
+  	
+  	#data-vis {
+  		@include expertise;
+  		background: url('/sites/default/files/pictures/data-vis_block2_gr.jpg');
+ 			background-repeat: no-repeat;
+  		
+  		&:hover,
+  		&:focus {
+  			background: url('/sites/default/files/pictures/data-vis_block2.jpg');
+  			@include link-transition;
+  		}
+  	}
+  	
+  	#collab {
+  		@include expertise;
+  		background: url('/sites/default/files/pictures/collab_block_gr.jpg');
+ 		
+ 			background-repeat: no-repeat;
 
-.front .page-wrapper {
-background-color: lighten($snapDarkGrey, 55%);
-
-	// Hide the "Welcome to..." message.
-h1.page-header {
-	display: none;
-}
-  margin: 0; padding: 0;
-}
-
-
-
-/* This ID name (below) is a special case where our SCSS code needs to know what Drupal decided the ID should be. This is the ID that Drupal gave the block, so we need to use it here. DO NOT CHANGE.  */
-#block-block-4  {   
-	padding: 0;
-	margin: 0;
-	text-align: left;
-	
-	.col-md-6.home {
+  		&:hover,
+  		&:focus {
+  			background: url('/sites/default/files/pictures/collab_block.jpg');
+  			@include link-transition;
+  		}
+  	}
+  	
+  	#scicomm {
+  		@include expertise;
+  		background: url('/sites/default/files/pictures/scicomm_block_gr.jpg');
+ 		
+ 		background-repeat: no-repeat;
+ 	  		
+		&:hover,
+  		&:focus {
+  			background: url('/sites/default/files/pictures/scicomm_block.jpg');
+  			@include link-transition;
+  		}
+  	}
+  	
+  	.icon-text {
+  		background: $snapGreen;
+  		min-height: 5em;
+  		margin: 11em -1em 0 -1em;
+  		padding: .8em 1em .5em 1em;
+  		opacity: 0.8;
+  	}
+ 	
+ 	#projects {
+ 		@include projectblock;
+ 		padding: 1em;
+ 		
+ 		h1 {
+ 			font-size: 1.5em;
+ 			font-weight: 400;
+ 			color: $snapDarkGrey;
+ 			text-align: center;
+ 			margin-top: 0;
+ 		}
+	}
+		
+ 	 .col-md-3.projects {
 		margin: 0;
-		padding: 0;
+		padding: 0;			
+	 }
 		
-		h1 {
-			font-size: 1.05em;
-			color: $snapDarkGrey;
-			line-height: 1.3;
-			font-weight: 200;
-			text-align: right;
-			margin-top: .7em;
-			letter-spacing: .1em;
-
-			a {
-				color: #fff;
-
-				&:hover,
-				&:focus {
-					color: $snaplink;
-					@include link-transition;
-					text-decoration: none;
-				}
-			}
+ 	 .region.region-sidebar-second {
+		 @include projectblock;
+		 padding: 1em;
+		 margin-top: 52px;
+			
+		 h2.block-title {
+			font-size: 1.25em;
+			font-weight: 400;
+			text-transform: uppercase;
+			background: none;
+			text-align: center;
+			margin-bottom: .5em;
 		}
-
-		.icon {
-			float: left;
-			padding: 0;
-			margin: 0 1.5em 0 0;
-			width: 10%;
-			height: auto;
+			.views-field.views-field-title {
+			font-size: 1em;
+			margin: .5em 0 0 0 ;
+			line-height: 1.2em;
 		}
-	}
-
-
-	#planning {
-		@include expertise;
-		background: url('/sites/default/files/pictures/planning_block_gr.jpg');
-		background-repeat: no-repeat;
-		
-		&:hover,
-		&:focus {
-			background: url('/sites/default/files/pictures/planning_block2.jpg');
-			background-repeat: no-repeat;
-			@include link-transition;
+			.views-field-field-project-image img {
+			border-radius: $border-radius;
+			border: 1px solid $snapGrey;
+			@include shadow($x, $y, $blur, $shadow-color);
+			text-align: center;
 		}
-	}
-	
-	#data-vis {
-		@include expertise;
-		background: url('/sites/default/files/pictures/data-vis_block_gr.jpg');
-			background-repeat: no-repeat;
-		
-		&:hover,
-		&:focus {
-			background: url('/sites/default/files/pictures/data-vis_block.jpg');
-			@include link-transition;
-			background-repeat: no-repeat;
+			p {
+			font-size: .9em;
+			margin: .5em 0 0 0;
+			line-height: 1.4em;
 		}
-	}
-	
-	#collab {
-		@include expertise;
-		background: url('/sites/default/files/pictures/collab_block_gr.jpg');
-			background-repeat: no-repeat;
-
-		&:hover,
-		&:focus {
-			background: url('/sites/default/files/pictures/collab_block.jpg');
-			@include link-transition;
-			background-repeat: no-repeat;
-		}
-	}
-	
-	#scicomm {
-		@include expertise;
-		background: url('/sites/default/files/pictures/scicomm_block_gr.jpg');
-		background-repeat: no-repeat;
-
-		&:hover,
-		&:focus {
-			background: url('/sites/default/files/pictures/scicomm_block.jpg');
-			@include link-transition;
-			background-repeat: no-repeat;
-		}
-	}
-	
-	.icon-text {
-		background: $snapGreen;
-		min-height: 5em;
-		margin: 11em -1em 0 -1em;
-		padding: .8em 1em .5em 1em;
-		opacity: 0.8;
-	}
-}
-
-.col-md-3.projects {
-	margin: 0;
-	padding: 0;			
-}
-
-.region.region-sidebar-second {
-	@include projectblock;
-	padding: 1em;
-	margin-top: 52px;
-
-	h2.block-title {
-		font-size: 1.25em;
-		font-weight: 400;
-		text-transform: uppercase;
-		background: none;
-		text-align: center;
-		margin-bottom: .5em;
-	}
-
-	.views-field.views-field-title {
-		font-size: 1em;
-		margin: .5em 0 0 0 ;
-		line-height: 1.2em;
-	}
-
-	.views-field-field-project-image img {
-		border-radius: $border-radius;
-		border: 1px solid $snapGrey;
-		@include shadow($x, $y, $blur, $shadow-color);
-		text-align: center;
-	}
-
-	p {
-		font-size: .9em;
-		margin: .5em 0 0 0;
-		line-height: 1.4em;
-	}
-}
-
-
-	
-
-	
+	 }
