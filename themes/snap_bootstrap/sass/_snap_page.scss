@@ -27,6 +27,7 @@ div.node-page {
 		border-radius: $border-radius;
 		@include shadow($x, $y, $blur, $shadow-color);
 		padding: .3em;
+		background: #fff;
 		
 		&.pull-left {
 			margin: 0 1.5em 1em 0;

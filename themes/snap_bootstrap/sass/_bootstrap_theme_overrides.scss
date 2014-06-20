@@ -200,8 +200,8 @@ ul.secondary {
 // Page header.
 .page-header {
 	margin: 0 0 0 0;
-	color: $snapDarkGrey;
-	font-weight: 300;
+	color: $snapGreen;
+	font-weight: 400;
 	font-size: 2.5em;
 }
 
@@ -239,16 +239,16 @@ h6 { font-size: $font-size-h6; }
 
 h1, h2, h3, h4 {
 	margin: 1.5em 0 -.5em 0;
-	color: $snapGreen;
-	font-weight: bold;
+	color: $snapDarkGrey;
+	font-weight: 400;
 	letter-spacing: .03em;
 }
 
 h5, h6 {
-	color: black;
+	color: $snapDarkGrey;
 	letter-spacing: .05em;
 	text-transform: uppercase;
-	background-color: lighten($snapGreen, 40%);
+	background-color: lighten($snapGrey, 15%);
 	padding: .2em;
 	margin: 2em 0 -1em 0;
 	font-weight: bold;

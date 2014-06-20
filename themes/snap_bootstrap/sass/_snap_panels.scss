@@ -5,19 +5,32 @@
 	border: none;
 }
 
-.panel.panel-info.pull-right {
+.panel.panel-info {
 	width: auto;
 	clear: right;
 	margin: 0 0 2em 2em;
 	padding: 0 1em 1em 1em;
 	border-radius: $border-radius;
 	border: $border;
-	background: lighten($snapGreen, 45%);
+	background: lighten($snapGrey, 15%);
 	@include shadow($x, $y, $blur, $shadow-color);
+	
+	h2.panel-heading {
+		color: $snapDarkGrey;
+		font-weight: bold;
+		line-height: 1.15em;
+		font-size: 1.4em;
+		margin: 1em 0 0 0;
+		background: none;
+		border-bottom: 2px solid $snapGreen;
+		padding: 0 0 .1em 0;
+	}
 	
 	h3 {
 		color: $snapDarkGrey;
 		font-size: 1em;
+		font-weight: bold;
+		margin: 1em 0 .5em 0;
 	}
 
 	h4 {
@@ -27,8 +40,10 @@
 	}
 	
 	p {
-		font-size: .9em;
-		line-height: ($line-height-base * .85);
+		font-size: .85em;
+		line-height: ($line-height-base * .75);
+		margin: 0 0 .5em 0;
+		font-weight: 400;
 	}
 	
 	ul li, ol li {
@@ -37,18 +52,3 @@
 	}
 }
 
-.panel-info > .panel-heading {
-	color: lighten($snapGreen, 50%);
-	line-height: 1.15em;
-	font-size: 1.1em;
-	background-color: $snapGreen;
-	margin: 1em 0 -.5em 0;
-	border-radius: $border-radius;
-	border: $border;
-	padding: .2em;
-}
-
-.panel-info h2 {
-	font-size: 1.2em;
-	color: $snapGreen;
-}

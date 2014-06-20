@@ -66,15 +66,9 @@ a {
 p {
 	margin: 1.25em 0 0 0;
 	font-size: $font-size-base;
-	line-height: line-height-base;
+	line-height: $line-height-base;
+	font-weight: 300;
 	
-	&.code {
-		font-family: $lekton;
-		color: black;
-		background-color: lighten($snapGrey, 12%);
-		display: inline;
-		font-size: .9em;
-	}
 	abbr {
 		background: lighten($snapGreen, 50%);
 	}
@@ -87,14 +81,27 @@ p {
 	
 	&.intro {
 		font-weight: 300;
-		font-size: 1.25em;
+		font-size: 1.2em;
 		margin-top: 1.5em;
-		color: darken($snapDarkGrey, 15%);
+		color: lighten($snapDarkGrey, 15%);
+		line-height: 1.4em;
 		
 		a {
 			font-weight: 400;
 		}
+		
+		strong {
+			font-weight: 400;
+		}
 	}
+}
+
+code {
+	font-family: $lekton;
+	color: black;
+	background-color: lighten($snapGrey, 12%);
+	display: inline;
+	font-size: .9em;
 }
 
 .highlight {
