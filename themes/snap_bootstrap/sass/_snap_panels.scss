@@ -28,9 +28,9 @@
 	
 	h3 {
 		color: $snapDarkGrey;
-		font-size: 1em;
+		font-size: 1.05em;
 		font-weight: bold;
-		margin: 1em 0 .5em 0;
+		margin: 1.2em 0 .5em 0;
 	}
 
 	h4 {
@@ -43,12 +43,17 @@
 		font-size: .85em;
 		line-height: ($line-height-base * .75);
 		margin: 0 0 .5em 0;
-		font-weight: 400;
+		font-weight: 300;
+	}
+	
+	ul, ol {
+		padding-left: 1em;
 	}
 	
 	ul li, ol li {
-		font-size: .9em;
-		line-height: ($line-height-base * .85);
+		font-size: .85em;
+		line-height: ($line-height-base * .75);
+		margin-bottom: .4em;
 	}
 }
 
