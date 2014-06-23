@@ -33,7 +33,7 @@ $navbar-default-bg:                #fff;
 $navbar-default-border:            transparent;
 
 //Typography general
-$line-height-base: 1.82857;
+$line-height-base: 1.72857;
 $font-size-base: 17px;		//make absolute unit to avoid nesting nightmares
 $color: $snapDarkGrey;
 
@@ -55,8 +55,8 @@ $btn-success-color: #fff;
 $btn-success-bg: $snapGreen;
 $btn-success-border: $snapDarkGrey;
 
-// Info appears as light purple
-$btn-info-color:  #000;  
+// Info appears as blue
+$btn-info-color:  $snaplink;  
 $btn-info-bg: $highlight;
 $btn-info-border: $snapDarkGrey;
 

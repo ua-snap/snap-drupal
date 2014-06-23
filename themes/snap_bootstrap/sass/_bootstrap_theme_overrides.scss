@@ -17,6 +17,7 @@ body {
 	
   	//Override base font color.
 	color: $snapDarkGrey;
+	line-height: $line-height-base;
 
   // Fix horizontal scrolling on iOS devices.
   // http://drupal.org/node/1870076
@@ -443,6 +444,7 @@ table tr.error {
 ul li {
 	margin: .25em 0 0 0;
 	line-height: ($line-height-base * .85);
+	font-weight: 300;
 
 	li {
 		margin: .25em 0 0 0;
@@ -452,6 +454,7 @@ ul li {
 ol li {
 	margin: 1em 0 0 0;
 	line-height: ($line-height-base * .85);
+	font-weight: 300;
 
 	li {
 		list-style-type: disc;
