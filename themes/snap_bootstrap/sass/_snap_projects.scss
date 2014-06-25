@@ -53,29 +53,49 @@
 		@extend .row;
 		
 		.field-name-body {
-			@extend .col-md-7;
+			@extend .col-md-8;
+			padding: 0 2em 0 0;
 		}
 		
 		#node_projects_full_group_right_sidebar {
 			padding: 0 1em .5em 1em;
-			@extend .col-md-5;
+			@extend .col-md-4;
+			border-radius: $border-radius;
+			font-size: .85em;
+		}
+		
+		.field-name-field-project-image .field-item.even img {
+			margin: 0 0 1em 0;
+			@include shadow($x, $y, $blur, $shadow-color);
+			max-width: 100%;
+			@include border-radius ($border-radius);
 		}
 		
 		 a img {
 			 display: inline;
-			 
+		}
+		
+		.field-label {
+			text-transform: uppercase;
+			padding: 0 .5em 0 0;
+			margin: 0;
+		}
+		
+		.field-items a {
+			padding: 0;
 		}
 		
 		table {
-			margin: .5em 0 0 1em;
+			color: lighten($snapDarkGrey, 40%);
+			margin: 0 0 1em 0;
 			padding: 0;
+			max-width: 100%;
 		
 			th {
 				display: none;
 			}
 			
 			td, td.file {
-				font-size: .9em;
 				padding: 0 .5em 0 .5em;
 				margin: 0;
 				vertical-align: middle;
