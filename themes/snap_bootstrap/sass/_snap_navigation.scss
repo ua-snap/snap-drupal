@@ -6,17 +6,33 @@ body {
         .navbar-form input, .form-inline input {
             width:auto;
         }
+		
+		/* Unit "vw" is for viewport-sized typography. See http://css-tricks.com/viewport-sized-typography/  */
+		.navbar-header {
+			max-width: 40vw;
+			height: auto;
+			vertical-align: middle;
+		}
+		
+		p.lead {
+			color: lighten($snapDarkGrey, 10%);
+			font-weight: 200;
+			font-size: 2.1vw;
+			line-height: 1.2em;
+			margin: .25em 0 0 0;
+		}
     	
         #navbar-sticky {
             background-color: white;
             border-top: 1px solid $snapDarkGrey;
             border-bottom: 1px solid $snapDarkGrey;
-            &.affix {
+           
+			&.affix {
                 position: fixed;
                 top: 0;
                 width: 100%;
                 z-index:10;
-            }    
+            }
         }
     }
 
@@ -33,13 +49,6 @@ body {
 	.navbar-header {
 		min-height: 70px;
 		width: auto;
-	}
-	
-	p.lead {
-		color: lighten($snapDarkGrey, 10%);
-		font-weight: 400;
-		font-size: 1.4em;
-		margin: .75em 0 0 0;
 	}
 }
 
