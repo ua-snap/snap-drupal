@@ -67,7 +67,7 @@ p {
 	margin: 1.25em 0 0 0;
 	font-size: $font-size-base;
 	line-height: $line-height-base;
-	font-weight: 300;
+	font-weight: 400;
 	
 	abbr {
 		background: lighten($snapGreen, 50%);
@@ -80,11 +80,11 @@ p {
 	}
 	
 	&.intro {
-		font-weight: 300;
-		font-size: 1.2em;
+		font-weight: 400;
+		font-size: 1.25em;
 		margin-top: 1.5em;
 		color: lighten($snapDarkGrey, 15%);
-		line-height: 1.4em;
+		line-height: 1.55em;
 		
 		a {
 			font-weight: 400;
