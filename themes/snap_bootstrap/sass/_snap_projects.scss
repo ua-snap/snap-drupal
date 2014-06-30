@@ -93,7 +93,6 @@
 		margin: 0 0 1em 1em;
 	}
 	
-	h2 { display: none; } // hide title display
 	
 	@extend .container;
 	
@@ -152,6 +151,10 @@
 					margin: 0;
 				}
 			}
+		}
+		
+		.node.node-organizations.node-teaser h2 {
+			display: none;
 		}
 	}
 }
