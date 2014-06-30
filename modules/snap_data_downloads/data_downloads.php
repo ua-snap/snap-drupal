@@ -3498,6 +3498,25 @@ Although the equations developed here provide a reasonable fit to the data, mode
 </div>
 
 
+<!-- Thermokarst data -->
+ <div class="dataAccordionWrapper">
+  <div class="dataAccordion">
+  
+  <h3><a href="#dataset=thermokarst_predisp_model">Thermokarst Model</a></h3>
+  <div>
+  
+  <div style="clear: both"></div>
+  <h3 style="margin-top: 1em">Metadata</h3>
+  <ul>
+    <li><a href="#" class="metadataLink"  data-geonetwork-metadata-id="137">Thermokarst Model</a></li>
+  </ul>
+  <h3 style="margin-top: 1em">Downloads</h3>
+  <p><a href="/files/data/iem/ancillary/thermokarst_predisp_model.zip">Thermokarst Model</a>, 2MB</p>
+  
+      </div>
+    </div>
+
+
 <div class="dataAccordionWrapper">
   <div class="dataAccordion">
     <h3><a href="#dataset=IEM_historical_temperature">Historical temperature</a></h3>

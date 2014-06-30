@@ -73,12 +73,12 @@
  * @ingroup themeable
  */
 ?>
+
 <div id="masthead">
-  <img src="<?php print drupal_get_path('theme', 'snap_bootstrap'); ?>/images/SNAP_acronym_color_lato.svg"/>
-	<div id="titleblock">
-	<h1>SCENARIOS NETWORK FOR ALASKA + ARCTIC PLANNING</h1></div>
-  
-</div>
+  <img src="<?php print drupal_get_path('theme', 'snap_bootstrap'); ?>/images/SNAP_acronym_masthead2.svg"/>
+	</div>
+
+
 
 <div id="navbar-sticky">
   <header id="navbar" role="banner" class="navbar-default navbar-static <?php print $navbar_classes; ?>">

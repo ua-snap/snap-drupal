@@ -6,15 +6,14 @@
   }
 }
 
-.field-name-field-collaborators .field-item.even {
+.field-name-field-collaborators .field-item.even,
+.field-name-field-collaborators .field-item.odd {
   float: left;
-  margin: 1em .5em 0 .5em;
+	clear: right;  
+  margin: 0 1em 0 0;
 }
 
-.field-name-field-collaborators .field-item.odd {
-  float: right;
-  margin: 1em .5em 0 .5em;
-}
+
 
 //Styling for collaborator logos on Collaborators page
 table td {

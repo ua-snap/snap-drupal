@@ -1,79 +1,85 @@
 //Styling for Data Downloads page and its accordion dropdowns. Refer to /modules/_snap_data_downloads/data_downloads.php for further code.
 
+h3 {
+	margin: 1em 0 1em 0;
+}
+
 .dataAccordionWrapper .dataAccordion {
-  
-  font-weight: 400;
-  font-family: $lato;
+	font-weight: 400;
+	font-family: $lato;
+	color: $snapDarkGrey;
 
-  .ui-accordion-content {
-    padding: 1ex;
-  }
+	  .ui-accordion-content-active {
+		  padding: 1.5ex;
+		  
+		  p {
+			  font-size: .85em;
+			  line-height: 1.4em;
+			  margin: 0 0 1em 0;
+		  }
+		  
+		  table {
+			  font-size: .85em;
+			  
+			  thead th {
+				  text-align: center;
+				  border-bottom: 1px solid $snapGrey;
+			  }
+		  
+			  td {
+				  padding: 0 1em 0 1em;
+			  }
+		  }
+		  
+		  h4 {
+			  font-size: .9em;
+			  text-transform: uppercase;
+			  font-weight: bold;
+			  margin: 1em 0 .25em 0;
+			}
+		  
+		  ul li {
+			  margin: 0;
+			  font-size: .85em;
+		  }
+		  
+		  img {
+			  float: right;
+			  margin: 0 0 1em 1em;
+		  }
+	  }
 
-  h3 {
-    border: none;
-    background: #fff none;
-    padding: .5ex 0;
-    font-size: .9em;
-    font-weight: 300;
+	  h3 {
+		border: none;
+		background: #fff none;
+		padding: .5ex 0;
+		font-size: .85em;
 
-    &.ui-accordion-header-active {
-      background-color: lighten($snapGreen, 20%);
-      span {
-        visibility: normal; 
-      }
-    }
+		&.ui-accordion-header-active {
+		  background-color: lighten($snapGreen, 20%);
+		  span {
+			visibility: normal; 
+		  }
+		}
 	  
-    span {
-      display: inline-block;  
-      visibility: hidden;  
-    	}
+		span {
+		  display: inline-block;  
+		  visibility: hidden;  
+			}
 	  
-    a {
-    display: inline-block;
-    }
+		a {
+		display: inline-block;
+		}
 	  
-    &:hover {
-      background-color: lighten($snapGreen, 15%);
-		@include link-transition;
-      span {
-        visibility: normal;
-      }
-    }
-  }
-	
-	td {
-		padding: 0 1em 0 1em;
-		color: $snapDarkGrey;
-	}
-	
-	thead th {
-		text-align: center;
-		border-bottom: 1px solid $snapGrey;
-	}
+		&:hover {
+		  background-color: lighten($snapGreen, 15%);
+			@include link-transition;
 
-	th {
-		font-size: .9em;
-		color: $snapDarkGrey;
-	}
+		  span {
+			visibility: normal;
+		  }
+		}
+	  }
 	
-	ul li {
-		font-size: .9em;
-		color: $snapDarkGrey;
-	}
 	
-	img {
-		float: right;
-		margin: 0 0 1em 1em;
-	}
-	
-	h4 {
-		font-size: 1em;
-		color: $snapDarkGrey;
-		text-transform: uppercase;
-		font-weight: bold;
-	}
-	
-	p {
-		color: $snapDarkGrey;
-	}	
 }

@@ -34,16 +34,17 @@
 	}
 
 	h4 {
-		font-size: .9em;
+		font-size: 1em;
+		font-weight: bold;
 		color: $snapDarkGrey;
-		background-color: lighten($snapGreen,35%);
+		margin: 1em 0 .25em 0;
 	}
 	
 	p {
 		font-size: .85em;
 		line-height: ($line-height-base * .75);
 		margin: 0 0 .5em 0;
-		font-weight: 300;
+		font-weight: 400;
 	}
 	
 	ul, ol {
