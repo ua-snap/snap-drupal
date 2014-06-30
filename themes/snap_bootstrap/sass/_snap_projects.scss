@@ -27,8 +27,6 @@
 	}
 }
 
-
-
 /* Styles for Featured project at the top of the main projects page */
 
 /*Style for the "help" block in which the featured project block lives */
@@ -65,8 +63,11 @@
 		margin: 0 1em 0 0;
 		@include shadow($x, $y, $blur, $shadow-color);
 		@include border-radius ($border-radius);
+<<<<<<< HEAD
+=======
 		padding: .3em;
 		background: #fff;
+>>>>>>> master
 	}
 	
 	h2.block-title {
