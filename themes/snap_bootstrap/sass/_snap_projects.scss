@@ -63,11 +63,8 @@
 		margin: 0 1em 0 0;
 		@include shadow($x, $y, $blur, $shadow-color);
 		@include border-radius ($border-radius);
-<<<<<<< HEAD
-=======
 		padding: .3em;
 		background: #fff;
->>>>>>> master
 	}
 	
 	h2.block-title {
