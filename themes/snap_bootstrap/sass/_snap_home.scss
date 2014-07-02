@@ -136,6 +136,7 @@
 	 .region.region-sidebar-second {
 		 @include projectblock;
 		 padding: 1em;
+		 height: auto;
 
 		#block-views-featured-projects-block {
 			margin-bottom: 1em;
