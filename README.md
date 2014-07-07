@@ -155,19 +155,41 @@ Remove the image button from CKEditor's Filtered HTML profile since the Filtered
 
 CKEditor -> Profiles -> Filtered HTML -> edit -> Editor Appearance -> Toolbar
 
-And move the image button from the "Used buttons" section down to the "All buttons" section.
+And move the image button from the "Used buttons" section down to the "Available buttons" section.
 
-#### Allow HTML class attributes in Full HTML profile
+#### Update CKEditor (July 2014)
+Backstory: Sometimes weird and problematic tags like this appear in the underlying HTML when editing text with the rich text editor (CKEditor):
+	<span class="line-height: 1.6;">TEXT</span>
+Apparently this is actually a problem with Webkit (and Google's fork of it, Blink) and CKEditor has hitherto left the problem unaddressed, expecting the browsers to clean up their own mess. A new version of CKEditor, 4.4.1, was released May 2014 that appeared to finally fix most of this problem with the rest to be fixed in their next release, 4.4.2. We installed 4.4.1 in May; 4.4.2 (full version) was installed July 2014.
 
-From the Configuration page, go to:
+- Disable current CKEditor module.
+- Move new CKEditor module folder into /modules/ckeditor.
+- Re-enable CKEditor.
 
-CKEditor -> Profiles -> Full HTML -> edit -> Advanced Options -> Custon JavaScript configuration
+#### Edit CKEditor Profile (full)
+Basic setup
+- Text formats: full HTML
 
-Enter this into the textarea:
+Security: defaults
 
-```javascript
-config.allowedContent = true;
-```
+Editor appearance
+- drag/drop toolbar buttons to suit needs
+- Toolbar state on startup: expanded
+- Default editor state: expanded
+- Show RTE toggle: show
+- Select user interface color manually; choose color
+- Plugins: enable all
+- Other settings: default
+
+Advanced content filter: enabled
+
+Cleanup and output
+- Custom formatting options: Yes, select all
+
+CSS
+- Editor: Define CSS; file path %t
+- Predefined styles: Define path to ckeditor.styles.js
+- Predefined styles path: %t
 
 ### Setting up IMCE file browser module
 
@@ -183,6 +205,19 @@ IMCE -> Role-profile assignments:
 
 administrator: User-1
 authenticated user: User-1
+
+
+Advanced options
+- Force pasting as plain text: disabled
+- HTML entities: yes
+- Spellhecker: yes
+- Load ckeditor.config.js from theme path: no
+- Custon JavaScript configuration: Enter this into the textarea:
+
+```javascript
+config.allowedContent = true;
+```
+
 
 ### Configuring Collaborators view
 
