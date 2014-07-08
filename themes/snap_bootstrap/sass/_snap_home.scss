@@ -93,12 +93,12 @@
 
 		#scicomm {
 			@include expertise;
-			background: url('/sites/default/files/pictures/scicomm_block_gr.jpg');
+			background: url('/sites/default/files/pictures/scicomm_block2_gr.jpg');
 			background-repeat: no-repeat;
 
 			&:hover,
 			&:focus {
-				background: url('/sites/default/files/pictures/scicomm_block.jpg');
+				background: url('/sites/default/files/pictures/scicomm_block2.jpg');
 				@include link-transition;
 				background-repeat: no-repeat;
 			}
