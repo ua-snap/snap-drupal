@@ -173,11 +173,10 @@ Basic setup
 Security: defaults
 
 Editor appearance
-- drag/drop toolbar buttons to suit needs
+- drag/drop toolbar buttons to suit needs and/or change user interface color (first switch JQuery Update module to use version 1.5 or your changes to the toolbar won't save')
 - Toolbar state on startup: expanded
 - Default editor state: expanded
 - Show RTE toggle: show
-- Select user interface color manually; choose color
 - Plugins: enable all
 - Other settings: default
 
@@ -187,9 +186,8 @@ Cleanup and output
 - Custom formatting options: Yes, select all
 
 CSS
-- Editor: Define CSS; file path %t
-- Predefined styles: Define path to ckeditor.styles.js
-- Predefined styles path: %t
+- Editor: Use theme CSS
+- Predefined styles: CKEditor default
 
 ### Setting up IMCE file browser module
 
@@ -210,12 +208,12 @@ authenticated user: User-1
 Advanced options
 - Force pasting as plain text: disabled
 - HTML entities: yes
-- Spellhecker: yes
+- Spellchecker: yes
 - Load ckeditor.config.js from theme path: no
 - Custon JavaScript configuration: Enter this into the textarea:
-
 ```javascript
 config.allowedContent = true;
+config.height = '500px';  
 ```
 
 
