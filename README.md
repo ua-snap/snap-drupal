@@ -110,6 +110,16 @@ http://cerberus.snap.uaf.edu/admin/config/search/clean-urls
 
 Check the "Enable clean URLs" box and click the "Save configuration" button. From now on, Drupal will use clean URLs by default.
 
+### Adding .htaccess file to Git repository
+
+Drupal comes with an .htaccess file in the Drupal root directory. Our repository starts in the /sites/all directory. So, to set up the .htaccess file for version control (used for redirects, for example), we copied Drupal's .htaccess file into the /sites/all/misc directory and replaced the original path with a symbolic link:
+
+```bash
+cd /var/www/snap
+sudo -u drupal rm .htaccess
+sudo -u drupal ln -s sites/all/misc/.htaccess
+```
+
 ## Site structure and configuration notes
 
 ### Navigation
