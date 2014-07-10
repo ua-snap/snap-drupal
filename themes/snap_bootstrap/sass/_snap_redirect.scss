@@ -1,58 +1,56 @@
-// Redirect page for 404 and other "page not found" errors. This page is /node/101. CSS courtesy http://css-tricks.com/perfect-full-page-background-image/
+// Redirect page for 404 and other "page not found" errors. This page is /node/101. CSS courtesy http://css-tricks.com/how-to-resizeable-background-image/
 
-img.bg {
-	/* Set rules to fill background */
-	min-height: 100%;
-	min-width: 1024px;
-	border: none;
-	@include no-shadow;
+.page-node-101 {
+	background-color: $snapGreen;
 	
-	/* Set up proportionate scaling */
-	width: 100%;
-	height: auto;
-	
-	/* Set up positioning */
-	position: fixed;
-	top: 0;
-	left: 0;
-	z-index: -1;
-}
-
-@media screen and (max-width: 1024px) { /* Specific to this particular image */
-	img.bg {
-		left: 50%;
-		margin-left: -512px;   /* 50% */
-		border: none;
-		@include no-shadow;
-  }
-}
-
-#redirect-text {
-	margin: 0 2em 0 0;
-	padding-bottom: 2em;
-	
-	.redirect {
-		font-size: 2.3em;
-		font-weight: bold;
-		color: #000;
-		margin: 1em 0 2em 0;
+	.footer-wrapper {
+		display: none;
 	}
 	
+	.page-header {
+		color: #000;
+		margin: .5em 0 0 0;
+	}
+	
+	#bg.redirect {   //image with special class and id
+		width: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		border: none;
+		border-radius: 0;
+		padding: 0;
+		@include no-shadow;
+		z-index: -1;
+	}
+}
+
+
+.redirect-text {
+	margin: 20em 7em 0 .75em;
+	
 	p {
-		font-size: 1.15em;
+		font-size: 1em;
 		line-height: 1.5em;
 		font-weight: bold;
-		margin: 0 0 .75em 30em;
-		color: #fff;
-		@include text-shadow;
-		letter-spacing: .1em;
-		
+		color: #000;
+		letter-spacing: .05em;
+
 		a {
 			text-shadow: none;
-			background: white;
 			display: inline-block;
 			padding: 0 .2em 0 .2em;
 		}
 	}
+	
+	.footnote {
+			font-size: .9em;
+			line-height: 1.2em;
+		}
 }
+
+
+
+
+
 
