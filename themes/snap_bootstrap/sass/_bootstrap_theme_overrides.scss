@@ -468,9 +468,10 @@ ul li.expanded,
 ul li.leaf {
   list-style: none;
   list-style-image: none;
+	margin: 0;
 }
 .tabs--secondary {
-  margin: 0 0 10px;
+  margin: 0 0 0 10px;
 }
 
 // Submitted

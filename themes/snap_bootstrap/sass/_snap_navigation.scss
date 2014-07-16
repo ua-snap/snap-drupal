@@ -7,19 +7,39 @@ body {
             width:auto;
         }
 		
-		/* Unit "vw" is for viewport-sized typography. See http://css-tricks.com/viewport-sized-typography/  */
 		.navbar-header {
-			max-width: 40vw;
-			height: auto;
-			vertical-align: middle;
+			display: none;
 		}
 		
-		p.lead {
-			color: lighten($snapDarkGrey, 10%);
-			font-weight: 300;
-			font-size: 2.2vw;
-			line-height: 1.2em;
-			margin: .35em 0 0 0;
+		header#navbar {
+            z-index: 10;
+			max-height: 50px;
+            @include border-radius(0);
+            border-bottom: 1px solid $snapDarkGrey;
+			padding: 0;
+			margin: 0 auto;
+			background-color: lighten($snapGrey, 15%);
+			
+			nav {
+
+				ul {
+					&.menu.nav {
+					width: 300px;
+						margin: 0 auto;
+						li {
+							font-size: .9em;
+							text-transform: uppercase;
+						}
+
+						// Hide the "My account/Logout" links.
+						&.secondary { display: none; }
+
+						ul.dropdown-menu li {
+							text-transform: none;
+						}
+					}
+				}
+			}
 		}
     	
         #navbar-sticky {
@@ -38,52 +58,48 @@ body {
 
     &.not-front {
         header#navbar {
-			margin: .2em auto;
-			background-color: lighten($snapGrey, 10%);	
-            z-index: 10;;
+            z-index: 10;
             @include border-radius(0);
             border-bottom: 1px solid $snapDarkGrey;
-        }
+			padding: 0;
+			margin: 0 auto;
+			background-color: lighten($snapGrey, 15%);
+
+			nav {
+
+				ul {
+					margin-top: 1.5ex;
+					&.menu.nav {
+						@extend .pull-right;
+						li {
+							font-size: .9em;
+							text-transform: uppercase;
+						}
+
+						// Hide the "My account/Logout" links.
+						&.secondary { display: none; }
+
+						ul.dropdown-menu li {
+							text-transform: none;
+						}
+					}
+				}
+			}
+		}
     }
+}
 
 	.navbar-header {
 		min-height: 70px;
 		width: auto;
 	}
-}
+
 
 a.name.navbar-brand { display: none; }
 
 a.logo img {
     height: 4em;
     border: none;
-}
-
-header#navbar {
-    padding: 0;
-    margin: .2em auto;
-	background-color: lighten($snapGrey, 15%);
-
-    nav {
-        
-        ul {
-            margin-top: .75ex;
-            &.menu.nav {
-                @extend .pull-right;
-                li {
-                    font-size: .9em;
-                    text-transform: uppercase;
-                }
-
-                // Hide the "My account/Logout" links.
-                &.secondary { display: none; }
-
-                ul.dropdown-menu li {
-                    text-transform: none;
-                }
-            }
-        }
-    }
 }
 
 // HIde the breadcrumbs.
