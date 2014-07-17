@@ -360,3 +360,25 @@ Sort criteria: Global: Random (asc)
 Pager: Display a specified number of items (1 item)
 
 
+##Install Menu Block module
+
+Provides configurable blocks of menu trees starting with any level of any menu. Access through Structure > Blocks > Add Menu Block. Help for configuration can be found at /admin/help/menu_block
+
+Example given for the Projects/UAS-RITA project:
+*	Create new menu, "More about UAS"
+*	Edit Content Type: Basic Page > Menu Settings (bottom of page): check the box to include your new menu as an Available Menu.
+*	Create a basic page with a parent item of the new sub-menu, "More about UAS"
+
+*	Structure > Menus > Settings. Choose  a Source for the secondary links: (choose the new secondary menu, "More about UAS")
+
+###Create menu block in Structure > Blocks:
+*	Block title: More about UAS
+*	Admin title: UAS-RITA subnavigation
+*	Menu: More about UAS
+*	Starting level: 1st level (primary)
+*	Check box, "expand all children of this tree"
+*	Region settings: choose region for menu block for display
+
+
+
+
