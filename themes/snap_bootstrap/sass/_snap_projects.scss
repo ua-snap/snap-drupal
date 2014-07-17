@@ -75,6 +75,30 @@
 
 
 /* Styles for individual project */
+aside.col-sm-2 {
+	margin: 5.75em 0 0 0;
+	padding: 0;
+	
+	.region.region-sidebar-first.well {
+		padding: 0;
+		margin: 0;
+		border: none;
+				
+		h2.block-title {
+			color: $snapDarkGrey;
+			font-size: .95em;
+			font-weight: bold;
+			text-transform: uppercase;
+			margin: .5em 0 0 .5em;
+			padding: 0;
+		}
+		
+		ul.menu.nav li a {
+			font-size: 1em;
+		}
+	}
+}
+
 .node-projects:not(.node-teaser) {
 	
 	ul, ol {
@@ -93,27 +117,38 @@
 	.field-items img {
 		margin: 0 0 1em 1em;
 	}
-	
+
 	
 	@extend .container;
 	
+
+	
 	.content {
+		
 		@extend .row;
 		
+
 		.field-name-body {
-			@extend .col-md-8;
+			@extend .col-sm-7;
 			padding: 0 2em 0 0;
+			
+			.intro {
+				margin: .5em 0 .5em 0;
+				font-size: 1.15em;
+				line-height: 1.3em;
+				color: $snapGreen;
+			}
 		}
 		
 		#node_projects_full_group_right_sidebar {
 			padding: 0 1em .5em 1em;
-			@extend .col-md-4;
+			@extend .col-sm-3;
 			border-radius: $border-radius;
 			font-size: .85em;
 		}
 		
 		.field-name-field-project-image .field-item.even img {
-			margin: 0 0 1em 0;
+			margin: 1em 0 1em 0;
 			@include shadow($x, $y, $blur, $shadow-color);
 			max-width: 100%;
 			@include border-radius ($border-radius);
