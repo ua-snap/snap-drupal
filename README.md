@@ -367,9 +367,8 @@ Provides configurable blocks of menu trees starting with any level of any menu. 
 Example given for the Projects/UAS-RITA project:
 *	Create new menu, "More about UAS"
 *	Edit Content Type: Basic Page > Menu Settings (bottom of page): check the box to include your new menu as an Available Menu.
-*	Create a basic page with a parent item of the new sub-menu, "More about UAS"
-
-*	Structure > Menus > Settings. Choose  a Source for the secondary links: (choose the new secondary menu, "More about UAS")
+*	Create a basic page. Under Menu Settings, check "Provide a menu link" with the parent item, More about UAS
+*	Structure > Menus > Settings. Choose  a Source for the secondary links: Main menu
 
 ###Create menu block in Structure > Blocks:
 *	Block title: More about UAS
