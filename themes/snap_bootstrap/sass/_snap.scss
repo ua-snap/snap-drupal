@@ -45,7 +45,6 @@ a {
 	text-decoration: none;
 	
 	&:link {
-		font-weight: bold;
 		color: $snaplink;
 	}
 	
@@ -72,7 +71,7 @@ p {
 	
 	abbr {
 		background: lighten($snapGreen, 50%);
-	}
+	}	
 
 	q {		//for short, inline quotes
 		color: $snapGreen;
