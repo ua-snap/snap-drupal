@@ -386,7 +386,7 @@ The Lightbox2 module is a simple, unobtrusive script used to overlay images on t
 *	Leave all Lightbox settings at defaults.
 
 ### Edit Basic Page content type to work with Lightbox
-*	Basic page, Manage Field tab: Add new field, Image (machine name: field_basic_page_image), help text: "Add an image to display on the page. Images added this way can be clicked on and enlarged via the Lightbox2 module, which works for both individual and multiple images." Enable Alt and Title fields, Number of values: unlimited. Save.
+*	Basic page, Manage Field tab: Add new field, Image (machine name: field_basic_page_image), help text: "Add an image to display on the page. Images added this way can be clicked on and enlarged via the Lightbox2 module, which works for  individual and multiple images." Enable Alt and Title fields, Number of values: unlimited. Save.
 *	Basic page, Default Tab > Manage Display: Image Label: Hidden; Format: Lightbox2: lightbox: thumbnail large
 *	Basic page, Default Tab > Manage Display: Image Label: Hidden; Format: Lightbox2: lightbox: thumbnail medium
 

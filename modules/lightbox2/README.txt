@@ -74,6 +74,10 @@ For example:
 Optional: To show a caption either use the title attribute or put in the second
 set of [] of the rel attribute.
 
+EXAMPLE
+<p><a href="/sites/default/files/pictures/snap_process_lato.svg” rel="lightbox"><img src="/sites/default/files/pictures/snap_process_lato.svg"></a><br>
+<em>Caption here</em></p>
+
 With Grouping
 ==============
 If you have a set of related images that you would like to group, follow step

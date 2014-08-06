@@ -45,8 +45,8 @@ a {
 	text-decoration: none;
 	
 	&:link {
-		font-weight: bold;
 		color: $snaplink;
+		font-weight: 500;
 	}
 	
 	&:visited {
@@ -72,7 +72,7 @@ p {
 	
 	abbr {
 		background: lighten($snapGreen, 50%);
-	}
+	}	
 
 	q {		//for short, inline quotes
 		color: $snapGreen;
