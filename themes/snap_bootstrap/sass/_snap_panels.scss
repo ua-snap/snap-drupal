@@ -12,7 +12,7 @@
 	padding: 0 1em 1em 1em;
 	border-radius: $border-radius;
 	border: $border;
-	background: lighten($snapGrey, 15%);
+	background: url('/sites/default/files/pictures/satinweave_@2X.png');
 	@include shadow($x, $y, $blur, $shadow-color);
 	
 	h2.panel-heading {
