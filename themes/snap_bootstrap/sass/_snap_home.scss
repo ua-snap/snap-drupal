@@ -22,7 +22,7 @@
 
 		.col-md-6.home {
 			margin: 0;
-			padding: 0;
+			padding: 0 20px 0 20px;
 
 			h1 {
 				font-size: 1.05em;
@@ -56,53 +56,57 @@
 
 		#planning {
 			@include expertise;
-			background: url('/sites/default/files/pictures/planning_block_gr.jpg');
-			background-repeat: no-repeat;
+			min-height: 19em;
+			background: url('/sites/default/files/pictures/planning_block4_gr.jpg') no-repeat;
+			background-size: cover; 
 
 			&:hover,
 			&:focus {
-				background: url('/sites/default/files/pictures/planning_block2.jpg');
-				background-repeat: no-repeat;
+				background: url('/sites/default/files/pictures/planning_block4.jpg') no-repeat;
 				@include link-transition;
+				background-size: cover; 
 			}
 		}
 
 		#data-vis {
 			@include expertise;
-			background: url('/sites/default/files/pictures/data-vis_block2_gr.jpg');
-			background-repeat: no-repeat;
+			min-height: 19em;
+			background: url('/sites/default/files/pictures/data-vis_block4_gr.jpg') no-repeat;
+			background-size: cover; 
 
 			&:hover,
 			&:focus {
-				background: url('/sites/default/files/pictures/data-vis_block2.jpg');
+				background: url('/sites/default/files/pictures/data-vis_block4.jpg') no-repeat;
 				@include link-transition;
-				background-repeat: no-repeat;
+				background-size: cover; 
 			}
 		}
 
 		#collab {
 			@include expertise;
-			background: url('/sites/default/files/pictures/collab_block_gr.jpg');
-			background-repeat: no-repeat;
+			min-height: 19em;
+			background: url('/sites/default/files/pictures/collab_block4_gr.jpg') no-repeat;
+			background-size: cover; 
 
 			&:hover,
 			&:focus {
-				background: url('/sites/default/files/pictures/collab_block.jpg');
+				background: url('/sites/default/files/pictures/collab_block4.jpg') no-repeat;
 				@include link-transition;
-				background-repeat: no-repeat;
+				background-size: cover; 
 			}
 		}
 
 		#scicomm {
 			@include expertise;
-			background: url('/sites/default/files/pictures/scicomm_block2_gr.jpg');
-			background-repeat: no-repeat;
+			min-height: 19em;
+			background: url('/sites/default/files/pictures/scicomm_block4_gr.jpg') no-repeat;
+			background-size: cover; 
 
 			&:hover,
 			&:focus {
-				background: url('/sites/default/files/pictures/scicomm_block2.jpg');
+				background: url('/sites/default/files/pictures/scicomm_block4.jpg') no-repeat;
 				@include link-transition;
-				background-repeat: no-repeat;
+				background-size: cover; 
 			}
 		}
 
@@ -166,7 +170,7 @@
 			border-radius: $border-radius;
 			border: 1px solid $snapGrey;
 			@include shadow($x, $y, $blur, $shadow-color);
-			text-align: center;
+			float: right;
 			max-width: 100%;
 		}
 

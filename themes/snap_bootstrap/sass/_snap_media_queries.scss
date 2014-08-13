@@ -1,11 +1,16 @@
 //General media queries.
 /* Extra small devices (phones, less than 768px) */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
 	#masthead {
 		background: url('/sites/default/files/pictures/SNAP_acronym_masthead_mobile.svg') center no-repeat;
 		@include background-size;
 	}
+	
+	.col-md-3.projects .region.region-sidebar-second {
+		margin: 0 30px 0 30px;
+	}
 }
+
 /* Small devices (tablets, 768px and up) */
 @media screen and (min-width: 768px) {
 	#masthead {
