@@ -96,6 +96,14 @@
   }
 } 
 
+//Responsive background images
+@mixin background-size {
+	-webkit-background-size:contain;
+	-moz-background-size:contain;
+	-o-background-size:contain;
+	background-size:contain;
+}
+
 //Text-shadows
 @mixin text-shadow {
     -webkit-text-shadow: 2px 2px 4px #000;

@@ -1,0 +1,44 @@
+//General media queries.
+/* Extra small devices (phones, less than 768px) */
+@media screen and (max-width: 768px) {
+	#masthead {
+		background: url('/sites/default/files/pictures/SNAP_acronym_masthead_mobile.svg') center no-repeat;
+		@include background-size;
+	}
+}
+/* Small devices (tablets, 768px and up) */
+@media screen and (min-width: 768px) {
+	#masthead {
+		background: url('/sites/default/files/pictures/SNAP_acronym_masthead2.svg') center no-repeat;
+		@include background-size;
+	}
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media screen and (min-width: 992px) {
+	#masthead {
+		background: url('/sites/default/files/pictures/SNAP_acronym_masthead2.svg') center no-repeat;
+		@include background-size;
+	}
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media screen and (min-width: 1200px) {
+	#masthead {
+		background: url('/sites/default/files/pictures/SNAP_acronym_masthead2.svg') center no-repeat;
+		@include background-size;
+	}
+}
+
+@media
+	only screen and (-webkit-min-device-pixel-ratio: 2),
+	only screen and (min--moz-device-pixel-ratio: 2),
+	only screen and (-moz-min-device-pixel-ratio: 2),
+	only screen and (-o-min-device-pixel-ratio: 2/1),
+	only screen and (min-device-pixel-ratio: 2),
+	only screen and (min-resolution: 192dpi),
+	only screen and (min-resolution: 2dppx) { 
+		/* styles for Retina-type displays */
+}
+
+
