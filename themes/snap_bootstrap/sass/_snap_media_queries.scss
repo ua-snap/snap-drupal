@@ -17,6 +17,17 @@
 		background: url('/sites/default/files/pictures/SNAP_acronym_masthead2.svg') center no-repeat;
 		@include background-size;
 	}
+	
+	#block-block-4 {
+		.col-md-6.home {
+			float: left;
+		}
+	}
+	
+	.col-md-3.projects .region.region-sidebar-second {
+		clear: both;
+		margin: 0;
+	}	
 }
 
 /* Medium devices (desktops, 992px and up) */
