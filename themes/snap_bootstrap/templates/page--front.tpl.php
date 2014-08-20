@@ -74,9 +74,8 @@
  */
 ?>
 
-<div id="masthead">
-  <img src="<?php print drupal_get_path('theme', 'snap_bootstrap'); ?>/images/SNAP_acronym_masthead2.svg"/>
-	</div>
+ <div id="masthead">
+	</div> 
 
 
 

@@ -45,6 +45,17 @@ $font-size-h4: ($font-size-h1 * .68);
 $font-size-h5: ($font-size-h1 * .45); 
 $font-size-h6: ($font-size-h1 * .4); 
 
+//Media query dimensions
+$screen-sm-min: 768px;		//Small devices (tablets, 768px and up)
+$screen-md-min: 992px;		//Medium devices (desktops, 992px and up)
+$screen-lg-min: 1200px;		//Large devices (large desktops, 1200px and up)
+$container-sm:	750px;
+$container-md: 970px;
+$container-lg: 1170px;
+
+
+
+
 //Button colors
 $btn-default-color:  #fff;  
 $btn-default-bg: $snapDarkGrey;
