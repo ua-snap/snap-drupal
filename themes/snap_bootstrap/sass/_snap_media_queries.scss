@@ -3,7 +3,7 @@
 /* Extra small devices (custom, iPhone Retina, 320px and up) */
 @media screen and (min-width: 320px){
 	#masthead {
-		background: url('/themes/snap_bootstrap/images/SNAP_acronym_masthead_mobile.svg') center no-repeat;
+		background: url('/sites/default/files/pictures/SNAP_acronym_masthead_mobile.svg') center no-repeat;
 		@include background-size;
 	}
 	
@@ -30,7 +30,7 @@
 /* Small devices (tablets, 768px and up) */
 @media screen and (min-width: 768px) {
 	#masthead {
-		background: url('/themes/snap_bootstrap/images/SNAP_acronym_masthead2.svg') center no-repeat;
+		background: url('/sites/default/files/pictures/SNAP_acronym_masthead2.svg') center no-repeat;
 		@include background-size;
 	}
 
@@ -52,7 +52,7 @@
 /* Medium devices (desktops, 992px and up) */
 @media screen and (min-width: 992px) {
 	#masthead {
-		background: url('/themes/snap_bootstrap/images/SNAP_acronym_masthead2.svg') center no-repeat;
+		background: url('/sites/default/files/pictures/SNAP_acronym_masthead2.svg') center no-repeat;
 		@include background-size;
 	}
 }
@@ -60,7 +60,7 @@
 /* Large devices (large desktops, 1200px and up) */
 @media screen and (min-width: 1200px) {
 	#masthead {
-		background: url('/themes/snap_bootstrap/images/SNAP_acronym_masthead2.svg') center no-repeat;
+		background: url('/sites/default/files/pictures/SNAP_acronym_masthead2.svg') center no-repeat;
 		@include background-size;
 	}
 }
