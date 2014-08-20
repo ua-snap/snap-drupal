@@ -18,11 +18,16 @@
 	#block-block-4 { 
 		padding: 0;
 		margin: 0;
+		
+		.col-sm-9.home {
+			margin: 0;
+			padding: 0;
+			width: 100%;
+		}
 
 		.col-md-12.home {
 			margin: 0;
 			padding: 0;
-			border: 1px solid red;
 			
 			#expertise {
 				@include background-size;
@@ -81,7 +86,7 @@
 			background: $snapGreen;
 			padding: .75em;
 			opacity: 0.9;
-			margin: 12.5em 0 0 0;
+			margin: 12em 0 0 0;
 			height: 1%;
 			overflow: hidden;
 
@@ -135,61 +140,63 @@
 //styling for featured projects and tools sidebar on home page	
 	 .col-md-3.projects {
 		margin: 0;
-		padding: 0;			
- 		}
+		padding: 0;	
+ 		
 		
-	 .region.region-sidebar-second {
-		 @include projectblock;
-		 padding: 1em;
-		 height: auto;
+		 .region.region-sidebar-second {
+			 @include projectblock;
+			 padding: 1em;
+			 height: auto;
+			 margin: 0;
 
-		#block-views-featured-projects-block {
-			margin-bottom: 1em;
+			#block-views-featured-projects-block {
+				margin-bottom: 1em;
+				}
+
+			 h2.block-title {
+				 font-size: 1.05em;
+				 font-weight: 500;
+				 text-transform: uppercase;
+				 background: none;
+				 text-align: center;
+				 margin: 0 0 .25em 0;
+				 background: lighten($snapGrey, 10%);
+				 padding: 3px;
+				 border-radius: 3px;
+			 }
+
+			 .views-field.views-field-title {
+				font-size: .95em;
+				margin: .25em 0 .25em 0;
+				line-height: 1.2em;
 			}
 
-		 h2.block-title {
-			 font-size: 1.05em;
-			 font-weight: 500;
-			 text-transform: uppercase;
-			 background: none;
-			 text-align: center;
-			 margin: 0 0 .25em 0;
-			 background: lighten($snapGrey, 10%);
-			 padding: 3px;
-			 border-radius: 3px;
-		 }
-		 
-		 .views-field.views-field-title {
-			font-size: .95em;
-			margin: .25em 0 .25em 0;
-			line-height: 1.2em;
-		}
+			.views-field-field-project-image img {
+				border-radius: $border-radius;
+				border: 1px solid $snapGrey;
+				@include shadow($x, $y, $blur, $shadow-color);
+				float: right;
+				display: block;
+				max-width: 100%;
+				margin: .25em 0 .5em .5em; 
+			}
 
-		.views-field-field-project-image img {
-			border-radius: $border-radius;
-			border: 1px solid $snapGrey;
-			@include shadow($x, $y, $blur, $shadow-color);
-			float: right;
-			display: block;
-			max-width: 100%;
-			margin: .25em 0 .5em .5em; 
-		}
+			 .views-field.views-field-field-tool-image img {
+				 border-radius: $border-radius;
+				 border: 1px solid $snapGrey;
+				 @include shadow($x, $y, $blur, $shadow-color); 
+				 float: right;
+				 margin: .1em 0 .1em .25em;
+			 }
 
-		 .views-field.views-field-field-tool-image img {
-			 border-radius: $border-radius;
-			 border: 1px solid $snapGrey;
-			 @include shadow($x, $y, $blur, $shadow-color); 
-			 float: right;
-			 margin: .1em 0 .1em .25em;
+			 p {
+				font-size: .85em;
+				margin: 0;
+				line-height: 1.4em;
+			 }
+
+			 .view-footer a {
+				 font-size: .9em;
+			 }
 		 }
-		 
-		 p {
-			font-size: .85em;
-			margin: 0;
-			line-height: 1.4em;
-		 }
-		 
-		 .view-footer a {
-			 font-size: .9em;
-		 }
-	 }
+}

@@ -1,44 +1,29 @@
 //General media queries.
-/* Extra small devices (custom, iPhone Retina) */
+
+/* Extra small devices (custom, iPhone Retina, 320px and up) */
 @media screen and (min-width: 320px){
 	#masthead {
 		background: url('/sites/default/files/pictures/SNAP_acronym_masthead_mobile.svg') center no-repeat;
 		@include background-size;
 	}
 	
-	#expertise {
-		float: none;
-		width: 100%;
+	.col-md-3.projects .region.region-sidebar-second {
+		clear: both;
+		margin: 0 1em;
+		
+		h2.block-title {
+			text-align: left;
+		}		
 	}
 	
 	.icon-text {
 		img {
 			display: none;
+		}
+		
+		h1 {
 		}
 	 }
-	
-	.col-md-3.projects .region.region-sidebar-second {
-		margin: 0 30px 0 30px;
-	}
-}
-
-
-/* Extra small devices and phones */
-@media screen and (min-width: 480px){
-	#masthead {
-		background: url('/sites/default/files/pictures/SNAP_acronym_masthead_mobile.svg') center no-repeat;
-		@include background-size;
-	}
-	
-	.icon-text {
-		img {
-			display: none;
-		}
-	}
-	
-	.col-md-3.projects .region.region-sidebar-second {
-		margin: 0 30px 0 30px;
-	}
 }
 
 
@@ -48,19 +33,18 @@
 		background: url('/sites/default/files/pictures/SNAP_acronym_masthead2.svg') center no-repeat;
 		@include background-size;
 	}
-	
-	#expertise {
-		float: none;
-		width: 100%;
+
+	.col-md-3.projects .region.region-sidebar-second {
+		clear: both;
+		margin: 0;
+		
+		h2.block-title {
+			text-align: center;
+		}
 	}
 	
 	.icon-text img {
 		display: block;
-	}
-	
-	.col-md-3.projects .region.region-sidebar-second {
-		clear: both;
-		margin: 0;
 	}	
 }
 
@@ -72,7 +56,6 @@
 		@include background-size;
 	}
 }
-
 
 /* Large devices (large desktops, 1200px and up) */
 @media screen and (min-width: 1200px) {
