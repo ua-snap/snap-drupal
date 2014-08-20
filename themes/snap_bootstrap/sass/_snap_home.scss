@@ -1,7 +1,7 @@
 /* Home page only styling. */
 
 .front .page-wrapper {	//patterns from subtlepatterns.com
-	background: url('/sites/default/files/pictures/redox_01_@2X.png');
+	background: url('/themes/snap_bootstrap/images/redox_01_@2X.png');
 	background-size: auto, cover;
 
 
@@ -41,42 +41,42 @@
 				float: left;
 				
 				&.planning {
-					background: url('/sites/default/files/pictures/planning_block4_gr.jpg');
+					background: url('/themes/snap_bootstrap/images/planning_block4_gr.jpg');
 					margin-right: 1.5em;
 
 					&:hover,
 					&:focus {
-						background: url('/sites/default/files/pictures/planning_block4.jpg');
+						background: url('/themes/snap_bootstrap/images/planning_block4.jpg');
 						@include link-transition;
 					}
 				}
 
 				&.collab {
-					background: url('/sites/default/files/pictures/collab_block4_gr.jpg');
+					background: url('/themes/snap_bootstrap/images/collab_block4_gr.jpg');
 
 					&:hover,
 					&:focus {
-						background: url('/sites/default/files/pictures/collab_block4.jpg');
+						background: url('/themes/snap_bootstrap/images/collab_block4.jpg');
 						@include link-transition;
 					}
 				}
 
 				&.data-vis {
-					background: url('/sites/default/files/pictures/data-vis_block4_gr.jpg');								margin-right: 1.5em;
+					background: url('/themes/snap_bootstrap/images/data-vis_block4_gr.jpg');								margin-right: 1.5em;
 
 					&:hover,
 					&:focus {
-						background: url('/sites/default/files/pictures/data-vis_block4.jpg');
+						background: url('/themes/snap_bootstrap/images/data-vis_block4.jpg');
 						@include link-transition;
 					}
 				}
 
 				&.scicomm {
-					background: url('/sites/default/files/pictures/scicomm_block4_gr.jpg');
+					background: url('/themes/snap_bootstrap/images/scicomm_block4_gr.jpg');
 
 					&:hover,
 					&:focus {
-						background: url('/sites/default/files/pictures/scicomm_block4.jpg');
+						background: url('/themes/snap_bootstrap/images/scicomm_block4.jpg');
 						@include link-transition;
 					}
 				}
