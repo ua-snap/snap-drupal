@@ -47,16 +47,16 @@ div.node-page {
 		@include no-shadow;
 		
 		&.pull-left {
-			margin: 1em 1.5em .5em 0;
+			margin: 0 1.5em .5em 0;
 		}
 		
 		&.pull-right {
-			margin: 1em 0 .5em 1.5em;
+			margin: 0 0 .5em 1.5em;
 		}
 		
 		&.fullwidth {
 			width: 100%;
-			margin: 1em 0 0 0;
+			margin: 0;
 		}
 	}
 	

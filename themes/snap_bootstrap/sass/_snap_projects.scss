@@ -90,11 +90,15 @@ aside.col-sm-2 {
 			font-weight: bold;
 			text-transform: uppercase;
 			margin: .5em 0 0 .5em;
-			padding: 0;
+			padding: 2px 0 10px 0;
 		}
 		
 		ul.menu.nav li a {
-			font-size: .95em;
+			font-size: .85em;
+		}
+		
+		.nav > li > a {
+			padding: 5px 5px 5px 8px;
 		}
 	}
 }
@@ -162,7 +166,7 @@ aside.col-sm-2 {
 		.field-label {
 			text-transform: uppercase;
 			padding: 0 .5em 0 0;
-			margin: 0;
+			margin: 0 0 .5em 0;
 		}
 		
 		.field-items a {
