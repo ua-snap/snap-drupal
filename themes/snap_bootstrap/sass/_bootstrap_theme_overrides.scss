@@ -278,6 +278,21 @@ blockquote {
 	}
 }
 
+//Tables {
+.table > thead > tr > th,
+.table > thead > tr > td,
+.table > tbody > tr > th,
+.table > tbody > tr > td,
+.table > tfoot > tr > th,
+.table > tfoot > tr > td {
+  padding: .5em;
+  line-height: 1.1em;
+  vertical-align: top;
+  border-top: 1px solid #dddddd;
+	font-size: .95em;
+}
+
+
 //Links inside buttons
 a.btn-success {
 	text-decoration: none;

@@ -83,6 +83,7 @@ aside.col-sm-2 {
 		padding: 0;
 		margin: 0;
 		border: none;
+		border-radius: 5px;
 				
 		h2.block-title {
 			color: #fff;
@@ -90,8 +91,9 @@ aside.col-sm-2 {
 			font-weight: bold;
 			text-transform: uppercase;
 			letter-spacing: .08em;
-			padding: 10px 0 10px 5px;
+			padding: 10px 0 10px 10px;
 			background: $snapGreen;
+			border-radius: 5px;
 		}
 		
 		ul.menu.nav li a {
@@ -130,7 +132,7 @@ aside.col-sm-2 {
 
 	
 	.content {
-		
+				
 		@extend .row;
 		
 
@@ -205,6 +207,17 @@ aside.col-sm-2 {
 		}
 	}
 }
+
+table {	
+	.file a {
+		margin: 0;
+	}
+}
+
+
+
+
+
 
 
 
