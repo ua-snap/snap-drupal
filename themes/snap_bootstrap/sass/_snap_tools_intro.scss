@@ -3,11 +3,12 @@
 	 width: auto;
 	 border: 1px solid $snapGrey;
 	 background-color: lighten($snapGreen,53%);
-	 margin: 0 0 1.5em -15px;
+	 margin: 0 0 1.5em 0;
 	 padding: .5em;
 	 min-height: 7.55em;
 	 @include shadow($x, $y, $blur, $shadow-color);
 	 vertical-align: middle;
+	 border-radius: 5px;
  	
 	 h2 {
 		font-size: 1.5em;

@@ -32,7 +32,7 @@
 /*Style for the "help" block in which the featured project block lives */
 .region.region-help.alert.alert-info {
 	border: 1px solid $snapDarkGrey;
-	background: url('/sites/default/files/pictures/squared_metal_2X.png');
+	background: url('/sites/default/files/pictures/satinweave_@2X.png');
 	background-size: auto;
 	@include shadow(3px, 3px, 10px, $shadow-color);
 	@include border-radius ($border-radius);
@@ -55,13 +55,13 @@
 	}
 	
 	p {
-		margin: 0;
+		margin: .2em 0 0 0;
 		font-weight: 400;
 	}
 	
 	.views-field.views-field-field-project-image img {
 		float: left;
-		margin: 0 1em 0 0;
+		margin: 0 1em .2em 0;
 		@include shadow($x, $y, $blur, $shadow-color);
 		@include border-radius ($border-radius);
 		padding: .3em;
