@@ -243,6 +243,10 @@ h1, h2, h3, h4 {
 	color: $snapDarkGrey;
 	font-weight: 400;
 	letter-spacing: .03em;
+	
+	&.top {	//for the first header inside a column
+		margin-top: 0;
+	}
 }
 
 h5, h6 {
