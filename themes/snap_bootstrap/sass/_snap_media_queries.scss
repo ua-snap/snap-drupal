@@ -20,7 +20,23 @@
 		img {
 			display: none;
 		}
-	 }
+	 }	
+	
+	body.front {
+		header#navbar {
+			nav {
+				ul.menu.nav.navbar-nav {
+					float: left;
+					text-align: left;
+					
+					> li {
+						float: left;
+						clear: left;
+					}
+				}
+			}
+		}
+	}
 
 	.navbar-collapse.collapse.in {
 		background: #fff;
