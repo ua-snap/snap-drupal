@@ -17,12 +17,14 @@ body {
             @include border-radius(0);
             border-bottom: 1px solid $snapDarkGrey;
 			padding: 0;
-			margin: 0 auto;
-			background: url('/sites/default/files/pictures/satinweave_@2X.png');			
+			background: url('/sites/default/files/pictures/satinweave_@2X.png');
+			@include shadow(0, 0, 10px, $shadow-color);
+			
 			nav {
 
+
 				ul {
-					&.menu.nav {
+					&.menu.nav {	
 						li {
 							font-size: .9em;
 							text-transform: uppercase;
@@ -33,6 +35,16 @@ body {
 
 						ul.dropdown-menu li {
 							text-transform: none;
+						}	
+						
+						&.navbar-nav {
+							float: none;
+							text-align: center;
+							
+							> li {
+								float: none;
+								display: inline-block;
+							}
 						}
 					}
 				}
@@ -40,10 +52,10 @@ body {
 		}
     	
         #navbar-sticky {
-            background-color: white;
             border-top: 1px solid $snapDarkGrey;
             border-bottom: 1px solid $snapDarkGrey;
-           
+			max-height: 50px;
+			           
 			&.affix {
                 position: fixed;
                 top: 0;
