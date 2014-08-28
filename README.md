@@ -391,5 +391,12 @@ The Lightbox2 module is a simple, unobtrusive script used to overlay images on t
 *	Basic page, Default Tab > Manage Display: Image Label: Hidden; Format: Lightbox2: lightbox: thumbnail medium
 
 
+##Install and configure External links module
+External Links is a small module used to differentiate between internal and external links. Using jQuery, it will find all external links on a page and add an external icon  indicating it will take you offsite or a mail icon  for mailto: links.
+*	Uncheck place an icon next to external links
+*	Check open external links in a new window
+*	Leave other checkboxes at defaults
+
+
 
 
