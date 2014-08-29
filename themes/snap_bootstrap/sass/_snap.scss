@@ -96,6 +96,12 @@ p {
 			font-weight: 400;
 		}
 	}
+	
+	.read-more {
+		font-size: ($font-size-base * .9);
+		padding-left: 1em;
+		font-style: italic;
+	}
 }
 
 code {
