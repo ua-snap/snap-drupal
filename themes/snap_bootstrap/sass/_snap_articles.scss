@@ -2,17 +2,16 @@
 
 //Styling for main box that holds the article on the home page
 .node.node-article.node-promoted.node-teaser {		
-	border: 5px solid $snapGreen;
-	margin: 0 0 2em 0;
-	padding: 0 0 1em 0;
-	background-color: lighten($snapDarkGrey,60%);
-	@include shadow(.2rem, .2rem, 1rem, $shadow-color);
-	@include border-radius($border-radius);
+	border: 2px solid $snapGreen;
+	margin: 0 1em 2em 0;
+	padding: .5em 0;
+	background: #fff;
+	@include shadow(5px, 5px, 15px, $shadow-color);
+	border-radius: $border-radius;
 	
 	h2 {
-		margin: 0 0 .5em 0;
+		margin: 0;
 		font-size: 1.35em;
-		background-color: #fff;
 		padding: .2em 1em .35em .65em;
 		
 		a {
@@ -37,7 +36,7 @@
 		margin: 0 1em .5em 2em;
 	}
 	
-	ul.list-inline {
+	ul.links.list-inline li a {
 		margin: 0 0 0 1em;
 		font-size: ($font-size-base * .9);
 	}
@@ -47,7 +46,8 @@
 		font-style: italic;
 		margin: 0 0 0 1.1em;
 		display: inline;
-		font-size: ($font-size-base * .9);
+		font-size: ($font-size-base * .85);
+		border: none;
 	}	
 }
 
