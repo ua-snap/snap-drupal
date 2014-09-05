@@ -398,5 +398,13 @@ External Links is a small module used to differentiate between internal and exte
 *	Leave other checkboxes at defaults
 
 
+##Install and configure Read More module
+This module allows you to move the "Read more" link from the node's links area to the end of the teaser text.
+*	Install and enable the module as usual, but configure it in Configuration > Content Authoring > Read More link
+*	Default setting for Link Behavior is: inline. Leave this.
+*	Can add custom link text if you wish.
+*	Link can be styled (.read more) in theme stylesheet, _snap.css
+
+
 
 

@@ -1,10 +1,10 @@
 //Styling for Articles content type, which are published on a temporary basis on the SNAP home page and on a page called SNAP stories, which lists archived articles as a View.
 
-//Styling for main box that holds the article on the home page
+//Styling for box that holds the article on the home page
 .node.node-article.node-promoted.node-teaser {		
 	border: 2px solid $snapGreen;
-	margin: 0 1em 2em 0;
 	padding: .5em 0;
+	margin: 0 0 1.5em 0;
 	background: #fff;
 	@include shadow(5px, 5px, 15px, $shadow-color);
 	border-radius: $border-radius;
@@ -22,8 +22,7 @@
 	p {
 		font-size: 1em;
 		line-height: ($line-height-base * .85);
-		font-weight: 300;
-		margin: 0 1em 0 1em;
+		margin: 0 0 0 1em;
 	}
 	
 	img {
@@ -33,19 +32,13 @@
 		border-radius: $border-radius;
 		@include shadow($x, $y, $blur, $shadow-color);
 		padding: .3em;
-		margin: 0 1em .5em 2em;
-	}
-	
-	ul.links.list-inline li a {
-		margin: 0 0 0 1em;
-		font-size: ($font-size-base * .9);
+		margin: 0 1em .5em .5em;
 	}
 	
 	.date-display-single {
 		font-weight: bold;
 		font-style: italic;
 		margin: 0 0 0 1.1em;
-		display: inline;
 		font-size: ($font-size-base * .85);
 		border: none;
 	}	
@@ -67,10 +60,7 @@
 	.date-display-single {
 		font-weight: bold;
 		font-style: italic;
-		display: inline;
 		font-size: ($font-size-base * .9);
-		border-bottom: 1px solid $snapDarkGrey;
-		border-top: 1px solid $snapDarkGrey;
 		padding: .2em 0 .2em 0;
 	}	
 }
