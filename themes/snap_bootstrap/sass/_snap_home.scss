@@ -10,84 +10,79 @@
 		display: none;
 	}
 	
-	
-
-
 
 /* This ID name (below) is a special case where our SCSS code needs to know what Drupal decided the ID should be. This is the ID that Drupal gave the block, so we need to use it here. DO NOT CHANGE.*/
 	#block-block-4 { 
 		padding: 0;
 		margin: 0;
-		
+	
 		.col-sm-9.home {
-			margin: 0;
-			padding: 0;
-			width: 100%;
-		}
-
-		.col-md-12.home {
-			margin: 0;
 			padding: 0;
 			
+			
 			#expertise {
-				@include background-size;
-				background-repeat: no-repeat;
 				@include shadow(5px, 5px, 15px, $shadow-color);
 				border-radius: 20px;
-				margin: 0 0 25px 0;
-				padding: 0;
-				width: 47%;
-				min-height: 19em;
-				float: left;
+				margin: 0 0 1.5em 0;
+				height: 300px;
+				background-repeat: no-repeat;
 				
 				&.planning {
-					background: url('/sites/default/files/pictures/planning_block4_gr.jpg');
-					margin-right: 1.5em;
-
+					background-image: url('/sites/default/files/pictures/planning_block4_gr.jpg');
+					@include background-size;
 					&:hover,
 					&:focus {
-						background: url('/sites/default/files/pictures/planning_block4.jpg');
+						background-image: url('/sites/default/files/pictures/planning_block4.jpg');
 						@include link-transition;
+						@include background-size;
 					}
 				}
 
 				&.collab {
-					background: url('/sites/default/files/pictures/collab_block4_gr.jpg');
+					background-image: url('/sites/default/files/pictures/collab_block4_gr.jpg');
+					@include background-size;
 
 					&:hover,
 					&:focus {
-						background: url('/sites/default/files/pictures/collab_block4.jpg');
+						background-image: url('/sites/default/files/pictures/collab_block4.jpg');
 						@include link-transition;
+						@include background-size;
 					}
 				}
 
 				&.data-vis {
-					background: url('/sites/default/files/pictures/data-vis_block4_gr.jpg');								margin-right: 1.5em;
-
+					background-image: url('/sites/default/files/pictures/data-vis_block4_gr.jpg');
+					@include background-size;
+					
 					&:hover,
 					&:focus {
-						background: url('/sites/default/files/pictures/data-vis_block4.jpg');
+						background-image: url('/sites/default/files/pictures/data-vis_block4.jpg');
 						@include link-transition;
+						@include background-size;
 					}
 				}
 
 				&.scicomm {
-					background: url('/sites/default/files/pictures/scicomm_block4_gr.jpg');
-
+					background-image: url('/sites/default/files/pictures/scicomm_block4_gr.jpg');
+					@include background-size;
+					
 					&:hover,
 					&:focus {
-						background: url('/sites/default/files/pictures/scicomm_block4.jpg');
+						background-image: url('/sites/default/files/pictures/scicomm_block4.jpg');
 						@include link-transition;
+						@include background-size;
 					}
 				}
 			}
+		
+			
 			
 		.icon-text {
 			background: $snapGreen;
 			padding: .75em;
 			opacity: 0.9;
-			margin: 12em 0 0 0;
-			height: 1%;
+			margin: 11.25em 0 0 0;
+			height: auto;
 			overflow: hidden;
 
 			img {
@@ -98,7 +93,7 @@
 			}
 
 			h1 {
-				font-size: 1.8vw;
+				font-size: 1.7vw;
 				line-height: 1.3;
 				font-weight: 200;
 				text-align: right;
@@ -139,8 +134,7 @@
 
 //styling for featured projects and tools sidebar on home page	
 	 .col-md-3.projects {
-		margin: 0;
-		padding: 0;	
+		padding: 0 0 0 .5em;	
  		
 		
 		 .region.region-sidebar-second {
