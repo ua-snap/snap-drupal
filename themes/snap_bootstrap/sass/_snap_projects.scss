@@ -109,8 +109,9 @@ aside.col-sm-2 {
 .node-projects:not(.node-teaser) {
 	
 	ul, ol {
-	color: $color;
-	font-size: $font-size-base;
+		color: $color;
+		font-size: $font-size-base;
+		margin-top: .5em;
 
 	li {
 		margin: 0 5em .5em 0;
