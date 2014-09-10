@@ -160,10 +160,18 @@ aside.col-sm-2 {
 			border-radius: $border-radius;
 			font-size: .85em;
 			
-			.field-items a {
+			.field-items {
+				color: lighten($snapDarkGrey, 15%);
+			
+				a {
 				padding: 0;
 				line-height: 1.2em;
+				}
 			}
+			
+			.field-label {
+					margin: 0;
+				}
 			
 			.field.field-name-field-learn-more.field-type-link-field {
 				line-height: 1.2em;
