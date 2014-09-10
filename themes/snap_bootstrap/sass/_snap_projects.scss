@@ -158,6 +158,16 @@ aside.col-sm-2 {
 			@extend .col-sm-3;
 			border-radius: $border-radius;
 			font-size: .85em;
+			
+			.field-items a {
+				padding: 0;
+				line-height: 1.2em;
+			}
+			
+			.field.field-name-field-learn-more.field-type-link-field {
+				line-height: 1.2em;
+				margin-bottom: 1em;
+			}
 		}
 		
 		.field-name-field-project-image .field-item.even img {
@@ -165,6 +175,10 @@ aside.col-sm-2 {
 			@include shadow($x, $y, $blur, $shadow-color);
 			max-width: 100%;
 			@include border-radius ($border-radius);
+		}
+		
+		.read-more a {
+			display: none;
 		}
 		
 		 a img {
@@ -177,9 +191,7 @@ aside.col-sm-2 {
 			margin: 0 0 .5em 0;
 		}
 		
-		.field-items a {
-			padding: 0;
-		}
+
 		
 		table {
 			color: lighten($snapDarkGrey, 40%);
@@ -192,7 +204,7 @@ aside.col-sm-2 {
 			}
 			
 			td, td.file {
-				padding: 0 .5em 0 .5em;
+				padding: .25em;
 				margin: 0;
 				vertical-align: middle;
 				
@@ -205,12 +217,6 @@ aside.col-sm-2 {
 		.node.node-organizations.node-teaser h2 {
 			display: none;
 		}
-	}
-}
-
-table {	
-	.file a {
-		margin: 0;
 	}
 }
 
