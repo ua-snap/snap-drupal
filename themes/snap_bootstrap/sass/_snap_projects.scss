@@ -238,17 +238,15 @@ aside.col-sm-2 {
 			 @include projectblock;
 			 padding: 1em;
 			 height: auto;
-			 margin: 0;
-			 background: lighten($snapGreen, 35%);
+			 margin: 5em 0 0 0;
+			 background: url('/sites/default/files/pictures/satinweave_@2X.png');
+
 
 			 h2.block-title {
 				 font-size: 1.25em;
 				 font-weight: 500;
-				 background: none;
 				 text-align: center;
 				 margin: 0 0 .25em 0;
-				 padding: 3px;
-				 border-radius: 3px;
 			 }
 
 			 .views-field.views-field-title {
