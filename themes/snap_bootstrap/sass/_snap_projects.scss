@@ -1,4 +1,4 @@
-/* Styles for project list page "current2" = current; "current"= completed" due to error in creating views and blocks. */
+/* Styles for main project list page "current2" = current; "current"= completed" due to error in creating views and blocks. */
 #block-views-project-category-current2-block,
 #block-views-project-category-current-block {
 	
@@ -27,7 +27,7 @@
 	}
 }
 
-/* Styles for Featured project at the top of the main projects page */
+/* Styles for Featured project at the top of the main project list page */
 
 /*Style for the "help" block in which the featured project block lives */
 .region.region-help.alert.alert-info {
@@ -74,7 +74,7 @@
 }
 
 
-/* Styles for individual project */
+/* Styles for individual project pages */
 aside.col-sm-2 {
 	margin: 5.75em 0 0 0;
 	padding: 0;
@@ -228,6 +228,58 @@ aside.col-sm-2 {
 		}
 	}
 }
+
+//styling for featured projects on expertise pages	
+	 .col-md-3.expertise-projects {
+		padding: 0 0 0 .5em;
+ 		
+		
+		 .region.region-sidebar-second {
+			 @include projectblock;
+			 padding: 1em;
+			 height: auto;
+			 margin: 0;
+			 background: lighten($snapGreen, 35%);
+
+			 h2.block-title {
+				 font-size: 1.25em;
+				 font-weight: 500;
+				 background: none;
+				 text-align: center;
+				 margin: 0 0 .25em 0;
+				 padding: 3px;
+				 border-radius: 3px;
+			 }
+
+			 .views-field.views-field-title {
+				font-size: .95em;
+				margin: .25em 0 .25em 0;
+				line-height: 1.2em;
+			}
+
+			.views-field-field-project-image img {
+				border-radius: $border-radius;
+				border: 1px solid $snapGrey;
+				@include shadow($x, $y, $blur, $shadow-color);
+				float: right;
+				display: block;
+				max-width: 100%;
+				margin: .25em 0 .5em .5em; 
+			}
+
+			 p {
+				font-size: .85em;
+				margin: 0;
+				line-height: 1.4em;
+			 }
+
+			 .view-footer a {
+				 font-size: .9em;
+			 }
+		 }
+}
+
+
 
 
 
