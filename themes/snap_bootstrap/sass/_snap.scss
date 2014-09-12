@@ -53,6 +53,7 @@ a {
 	&:visited {
 		color: $linkvisited;
 	}
+
 	
 	&:hover,
 	&:focus {
@@ -72,7 +73,7 @@ p {
 	font-weight: 400;
 	
 	abbr {
-		background: lighten($snapGreen, 50%);
+		text-decoration: none;
 	}	
 
 	q {		//for short, inline quotes
@@ -113,10 +114,10 @@ code {
 }
 
 .highlight {
-	font-style: italic;
-	color: black;
-	background-color: $highlight;
+	font-size: 1.8em;
+	color: $snapGreen;
+	font-weight: 300;
 	display: inline-block;
-	line-height: ($line-height-base * .85);
-	padding: 0 .3em;
+	line-height: ($line-height-base * .75);
+	text-decoration: underline dotted;
 }
