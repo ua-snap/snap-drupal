@@ -296,10 +296,23 @@ function cer_ctools_plugin_api($owner, $api) {
 function _cer_update($entity_type, $entity) {
   $entity->original = isset($entity->original) ? $entity->original : NULL;
 
+  $extract_ids = entity_extract_IDs($entity_type, $entity);
+  $id = array_shift($extract_ids);
+
   field_attach_presave($entity_type, $entity);
   field_attach_update($entity_type, $entity);
 
-  $extract_ids = entity_extract_IDs($entity_type, $entity);
-  $id = array_shift($extract_ids);
+  // Issue #2212499.
+  if ($entity_type == 'node') {
+    $entity->changed = time();
+
+    db_update('node')
+      ->fields(array(
+        'changed' => $entity->changed,
+      ))
+      ->condition('nid', $id)
+      ->execute();
+  }
+
   entity_get_controller($entity_type)->resetCache(array($id));
 }
