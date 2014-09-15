@@ -75,7 +75,7 @@
 
 
 /* Styles for individual project pages */
-aside.col-sm-2 {
+aside.col-sm-2 {		//left sidebar for UAS project sub menu
 	margin: 5.75em 0 0 0;
 	padding: 0;
 	
@@ -159,8 +159,6 @@ aside.col-sm-2 {
 			@extend .col-sm-3;
 			border-radius: $border-radius;
 			font-size: .85em;
-			border: 1px solid $snapGrey;
-			background: url('/sites/default/files/pictures/satinweave_@2X.png');
 
 			
 			.field-items {
