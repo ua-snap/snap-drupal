@@ -154,11 +154,14 @@ aside.col-sm-2 {
 			}
 		}
 		
-		#node_projects_full_group_right_sidebar {
+		#node-projects-full-group-right-sidebar.group-right-sidebar.field-group-div {
 			padding: 0 1em .5em 1em;
 			@extend .col-sm-3;
 			border-radius: $border-radius;
 			font-size: .85em;
+			border: 1px solid $snapGrey;
+			background: url('/sites/default/files/pictures/satinweave_@2X.png');
+
 			
 			.field-items {
 				color: lighten($snapDarkGrey, 15%);
