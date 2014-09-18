@@ -26,7 +26,6 @@
 				margin: 0 0 1.5em 0;
 				height: 300px;
 				background-repeat: no-repeat;
-				display: block;
 				
 				&.planning {
 					background-image: url('/sites/default/files/pictures/planning_block4_gr.jpg');
@@ -97,21 +96,10 @@
 			h1 {
 				font-size: 1.7vw;
 				line-height: 1.3;
-				font-weight: 200;
 				text-align: right;
 				letter-spacing: .1em;
 				margin: 0;
-
-				a {
-					color: #fff;
-
-					&:hover,
-					&:focus {
-						color: $snaplink;
-						@include link-transition;
-						text-decoration: none;
-					}
-				}
+				color: #fff;
 			}
 		}
 	}
