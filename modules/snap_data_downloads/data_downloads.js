@@ -5,7 +5,8 @@
       jQuery('.dataAccordion').each( function(index, element) { 
           jQuery(this).accordion({
             navigation: true,
-            autoHeight: false,
+            autoHeight: true,
+            heightStyle: 'content',
             collapsible: true,
             active: false
             });

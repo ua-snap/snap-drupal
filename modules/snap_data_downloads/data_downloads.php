@@ -4417,6 +4417,7 @@ $snap_data_downloads_content = <<<html
 			"#dataset=projected_derived_precipitation_2km">Projected Derived
 			Precipitation Products - 2 km CMIP3/AR4</a></h3>
 
+			<div>
 			<p>Projected (2010-2100: B1, A1B, and A2 scenarios) derived
 			precipitation products from 5 AR4 GCMs that perform best across
 			Alaska and the Arctic, downscaled to 2km via the delta method. A
@@ -5118,9 +5119,6 @@ $snap_data_downloads_content = <<<html
 							<th scope="col">Data</th>
 						</tr>
 					</thead>
-				</table>
-
-				<table>
 					<tr>
 						<td>
 							<a class="metadataLink"
@@ -5189,9 +5187,7 @@ $snap_data_downloads_content = <<<html
 								<th scope="col">Data</th>
 							</tr>
 						</thead>
-					</table>
 
-					<table>
 						<tr>
 							<td>
 								<a class="metadataLink"
@@ -5296,9 +5292,6 @@ $snap_data_downloads_content = <<<html
 								<th scope="col">Data</th>
 							</tr>
 						</thead>
-					</table>
-
-					<table>
 						<tr>
 							<td>
 								<a class="metadataLink"
@@ -5427,9 +5420,6 @@ $snap_data_downloads_content = <<<html
 								<th scope="col">Data</th>
 							</tr>
 						</thead>
-					</table>
-
-					<table>
 						<tr>
 							<td>
 								<a class="metadataLink"
@@ -5556,9 +5546,6 @@ $snap_data_downloads_content = <<<html
 								<th scope="col">Data</th>
 							</tr>
 						</thead>
-					</table>
-
-					<table>
 						<tr>
 							<td>
 								<a class="metadataLink"
@@ -5804,9 +5791,6 @@ $snap_data_downloads_content = <<<html
 								<th scope="col">Data</th>
 							</tr>
 						</thead>
-					</table>
-
-					<table>
 						<tr>
 							<td>
 								<a class="metadataLink"
@@ -5908,9 +5892,6 @@ $snap_data_downloads_content = <<<html
 								<th scope="col">Data</th>
 							</tr>
 						</thead>
-					</table>
-
-					<table>
 						<tr>
 							<td>
 								<a class="metadataLink"
@@ -6038,9 +6019,6 @@ $snap_data_downloads_content = <<<html
 								<th scope="col">Data</th>
 							</tr>
 						</thead>
-					</table>
-
-					<table>
 						<tr>
 							<td>
 								<a class="metadataLink"
@@ -6168,9 +6146,6 @@ $snap_data_downloads_content = <<<html
 								<th scope="col">Data</th>
 							</tr>
 						</thead>
-					</table>
-
-					<table>
 						<tr>
 							<td>
 								<a class="metadataLink"
