@@ -30,6 +30,8 @@ $snap_data_downloads_content = <<<html
 			&ndash; 0.4 degrees CMIP5/AR5</a></h3>
 
 			<div>
+				<img alt="" src="$imagePath/polar_extent.png">
+				
 				<p>This set of files includes modeled historical estimates and
 				future projections of monthly sea ice concentration (in percent
 				cover, 0&ndash;100) for each month of every year from January
@@ -64,7 +66,7 @@ $snap_data_downloads_content = <<<html
 							<td>Polar</td>
 						</tr>
 					</tbody>
-				</table><img alt="" src="$imagePath/polar_extent.png">
+				</table>
 
 				<h4>Metadata:</h4>
 
