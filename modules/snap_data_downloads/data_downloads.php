@@ -101,6 +101,8 @@ $snap_data_downloads_content = <<<html
 			CMIP5/AR5</a></h3>
 
 			<div>
+				<img alt="" src="$imagePath/worldwide_extent.png">
+			
 				<p>This data includes quantile&ndash;mapped historical model
 				runs of AR5 daily mean temperature (tas, degrees C) for each
 				day of every year from 1958&ndash;2005 at 2.5 x 2.5 degree
@@ -135,7 +137,7 @@ $snap_data_downloads_content = <<<html
 							<td>Worldwide</td>
 						</tr>
 					</tbody>
-				</table><img alt="" src="$imagePath/worldwide_extent.png">
+				</table>
 
 				<h4>Metadata:</h4>
 
@@ -159,6 +161,8 @@ $snap_data_downloads_content = <<<html
 			CMIP5/AR5</a></h3>
 
 			<div>
+				<img alt="" src="$imagePath/worldwide_extent.png">
+				
 				<p>This data includes quantile&ndash;mapped historical model
 				runs of AR5 daily mean temperature (tas, degrees C) for each
 				day of every year from 2006&ndash;2100 at 2.5 x 2.5 degree
@@ -192,7 +196,7 @@ $snap_data_downloads_content = <<<html
 							<td>Worldwide</td>
 						</tr>
 					</tbody>
-				</table><img alt="" src="$imagePath/worldwide_extent.png">
+				</table>
 
 				<h4>Metadata:</h4>
 
@@ -227,6 +231,8 @@ $snap_data_downloads_content = <<<html
 			2.5 degrees CMIP5/AR5</a></h3>
 
 			<div>
+				<img alt="" src="$imagePath/worldwide_extent.png">
+			
 				<p>This data includes quantile&ndash;mapped historical model
 				runs of AR5 daily near surface wind velocity (uas: West/East
 				component of wind, vas: North/South component, m/s) for each
@@ -262,7 +268,7 @@ $snap_data_downloads_content = <<<html
 							<td>Worldwide</td>
 						</tr>
 					</tbody>
-				</table><img alt="" src="$imagePath/worldwide_extent.png">
+				</table>
 
 				<h4>Metadata:</h4>
 
@@ -297,6 +303,8 @@ $snap_data_downloads_content = <<<html
 			2.5 degrees CMIP5/AR5</a></h3>
 
 			<div>
+				<img alt="" src="$imagePath/worldwide_extent.png">
+			
 				<p>This data includes quantile&ndash;mapped projections of AR5
 				daily near surface wind velocity (uas: West/East component of
 				wind, vas: North/South component, m/s) for each day of every
@@ -331,7 +339,7 @@ $snap_data_downloads_content = <<<html
 							<td>Worldwide</td>
 						</tr>
 					</tbody>
-				</table><img alt="" src="$imagePath/worldwide_extent.png">
+				</table>
 
 				<h4>Metadata:</h4>
 
@@ -380,6 +388,8 @@ $snap_data_downloads_content = <<<html
 			Monthly Temperature and Precipitation - 2km CMIP5/AR5</a></h3>
 
 			<div>
+				<img alt="" src="$imagePath/akcanada_extent.png">
+			
 				<p>Projected (2006&ndash;2100: RCP 4.5, 6.0. 8.5 scenarios)
 				monthly average temperature and total precipitation from 5 AR5
 				GCMs that perform best across Alaska and the Arctic, downscaled
@@ -413,7 +423,7 @@ $snap_data_downloads_content = <<<html
 							MB)</td>
 						</tr>
 					</tbody>
-				</table><img alt="" src="$imagePath/akcanada_extent.png">
+				</table>
 
 				<h4>Temperature</h4>
 
@@ -746,6 +756,8 @@ $snap_data_downloads_content = <<<html
 			Derived Temperature Products - 2km CMIP5/AR5</a></h3>
 
 			<div>
+				<img alt="" src="$imagePath/akcanada_extent.png">
+			
 				<p>Projected (2010&ndash;2100: RCP 4.5, 6.0. 8.5 scenarios)
 				derived temperature products from 5 AR5 GCMs that perform best
 				across Alaska and the Arctic, downscaled to 2km via the delta
@@ -778,7 +790,7 @@ $snap_data_downloads_content = <<<html
 							MB)</td>
 						</tr>
 					</tbody>
-				</table><img alt="" src="$imagePath/akcanada_extent.png">
+				</table>
 
 				<h4>Temperature</h4>
 
@@ -1113,6 +1125,8 @@ $snap_data_downloads_content = <<<html
 			Derived Precipitation Products - 2km CMIP5/AR5</a></h3>
 
 			<div>
+				<img alt="" src="$imagePath/akcanada_extent.png">
+				
 				<p>Projected (2010&ndash;2100: historical run and RCP 4.5, 6.0.
 				8.5 scenarios) derived precipitation products from 5 AR5 GCMs
 				that perform best across Alaska and the Arctic, downscaled to
@@ -1146,7 +1160,7 @@ $snap_data_downloads_content = <<<html
 							MB)</td>
 						</tr>
 					</tbody>
-				</table><img alt="" src="$imagePath/akcanada_extent.png">
+				</table>
 
 				<h4>Precipitation</h4>
 
@@ -1320,6 +1334,8 @@ $snap_data_downloads_content = <<<html
 			CMIP5/AR5</a></h3>
 
 			<div>
+				<img alt="" src="$imagePath/ak_extent.jpg">
+				
 				<p>Projected (2006&ndash;2100: RCP 4.5, 6.0. 8.5 scenarios)
 				monthly average temperature and total precipitation from 5 AR5
 				GCMs that perform best across Alaska and the Arctic, downscaled
@@ -1352,7 +1368,7 @@ $snap_data_downloads_content = <<<html
 							<td>Alaska</td>
 						</tr>
 					</tbody>
-				</table><img alt="" src="$imagePath/ak_extent.jpg">
+				</table>
 
 				<h4>Temperature</h4>
 
@@ -1685,6 +1701,8 @@ $snap_data_downloads_content = <<<html
 			Derived Temperature Products &ndash; 771m CMIP5/AR5</a></h3>
 
 			<div>
+				<img alt="" src="$imagePath/ak_extent.jpg">
+				
 				<p>Projected (2010&ndash;2100: historical run and RCP 4.5, 6.0.
 				8.5 scenarios) derived temperature products from 5 AR5 GCMs
 				that perform best across Alaska and the Arctic, downscaled to
@@ -1717,7 +1735,7 @@ $snap_data_downloads_content = <<<html
 							<td>Alaska</td>
 						</tr>
 					</tbody>
-				</table><img alt="" src="$imagePath/ak_extent.jpg">
+				</table>
 
 				<h4>Temperature</h4>
 
@@ -2052,6 +2070,8 @@ $snap_data_downloads_content = <<<html
 			Derived Precipitation Products &ndash; 771m CMIP5/AR5</a></h3>
 
 			<div>
+				<img alt="" src="$imagePath/ak_extent.jpg">
+				
 				<p>Projected (2010&ndash;2100: historical run and RCP 4.5, 6.0.
 				8.5 scenarios) derived precipitation products from 5 AR5 GCMs
 				that perform best across Alaska and the Arctic, downscaled to
@@ -2084,7 +2104,7 @@ $snap_data_downloads_content = <<<html
 							<td>Alaska</td>
 						</tr>
 					</tbody>
-				</table><img alt="" src="$imagePath/ak_extent.jpg">
+				</table>
 
 				<h4>Precipitation</h4>
 
@@ -2257,6 +2277,8 @@ $snap_data_downloads_content = <<<html
 			Monthly Temperature and Precipitation - 771m CMIP3/AR4</a></h3>
 
 			<div>
+				<img alt="" src="$imagePath/ak_extent.jpg">
+				
 				<p>Projected (2001-2100: B1, A1B, and A2 scenarios) monthly
 				average temperature and total precipitation from 5 AR4 GCMs
 				that perform best across Alaska and the Arctic, downscaled to
@@ -2289,7 +2311,7 @@ $snap_data_downloads_content = <<<html
 							<td>Alaska</td>
 						</tr>
 					</tbody>
-				</table><img alt="" src="$imagePath/ak_extent.jpg">
+				</table>
 
 				<h4>Temperature</h4>
 
@@ -2726,6 +2748,8 @@ $snap_data_downloads_content = <<<html
 			Derived Temperature Products - 771m CMIP3/AR4</a></h3>
 
 			<div>
+				<img alt="" src="$imagePath/ak_extent.jpg">
+				
 				<p>Projected (2010&ndash;2100: B1, A1B, and A2 scenarios)
 				derived temperature products from 5 AR4 GCMs that perform best
 				across Alaska and the Arctic, downscaled to 771m via the delta
@@ -2757,7 +2781,7 @@ $snap_data_downloads_content = <<<html
 							<td>Alaska</td>
 						</tr>
 					</tbody>
-				</table><img alt="" src="$imagePath/ak_extent.jpg">
+				</table>
 
 				<h4>Decadal Summaries by Month, Year, or Season</h4>
 
@@ -3281,6 +3305,8 @@ $snap_data_downloads_content = <<<html
 			Precipitation Products - 771m CMIP3/AR4</a></h3>
 
 			<div>
+				<img alt="" src="$imagePath/ak_extent.jpg">
+				
 				<p>Projected (2010-2100: B1, A1B, and A2 scenarios) derived
 				precipitation products from 5 AR4 GCMs that perform best across
 				Alaska and the Arctic, downscaled to 771m via the delta method.
@@ -3312,7 +3338,7 @@ $snap_data_downloads_content = <<<html
 							<td>Alaska</td>
 						</tr>
 					</tbody>
-				</table><img alt="" src="$imagePath/ak_extent.jpg">
+				</table>
 
 				<h4>Decadal Summaries by month, year, or season</h4>
 
@@ -3503,6 +3529,8 @@ $snap_data_downloads_content = <<<html
 			Monthly Temperature and Precipitation - 2 km CMIP3/AR4</a></h3>
 
 			<div>
+				<img alt="" src="$imagePath/akcanada_extent.png">
+				
 				<p>Projected (2001&ndash;2100: B1, A1B, and A2 scenarios)
 				monthly temperature and precipitation from 5 AR4 GCMs that
 				perform best across Alaska and the Arctic, downscaled to 2 km
@@ -3535,7 +3563,7 @@ $snap_data_downloads_content = <<<html
 							MB)</td>
 						</tr>
 					</tbody>
-				</table><img alt="" src="$imagePath/akcanada_extent.png">
+				</table>
 
 				<h4>Temperature</h4>
 
@@ -3864,6 +3892,8 @@ $snap_data_downloads_content = <<<html
 			Derived Temperature Products - 2 km CMIP3/AR4</a></h3>
 
 			<div>
+				<img alt="" src="$imagePath/akcanada_extent.png">
+				
 				<p>Projected (2010&ndash;2100: B1, A1B, and A2 scenarios)
 				derived temperature products from 5 AR4 GCMs that perform best
 				across Alaska and the Arctic, downscaled to 2km via the delta
@@ -3896,7 +3926,7 @@ $snap_data_downloads_content = <<<html
 							MB)</td>
 						</tr>
 					</tbody>
-				</table><img alt="" src="$imagePath/akcanada_extent.png">
+				</table>
 
 				<h4>Decadal Summaries by month, year, or season</h4>
 
@@ -4420,6 +4450,8 @@ $snap_data_downloads_content = <<<html
 			Precipitation Products - 2 km CMIP3/AR4</a></h3>
 
 			<div>
+			<img alt="" src="$imagePath/akcanada_extent.png">
+				
 			<p>Projected (2010-2100: B1, A1B, and A2 scenarios) derived
 			precipitation products from 5 AR4 GCMs that perform best across
 			Alaska and the Arctic, downscaled to 2km via the delta method. A
@@ -4451,7 +4483,7 @@ $snap_data_downloads_content = <<<html
 						<td>Alaska and Western Canada (YT, BC, AB, SK, MB)</td>
 					</tr>
 				</tbody>
-			</table><img alt="" src="$imagePath/akcanada_extent.png">
+			</table>
 
 			<h4>Decadal Summaries by month, year, and season</h4>
 
@@ -4641,6 +4673,8 @@ $snap_data_downloads_content = <<<html
 		Monthly Potential Evapotranspiration - 2km CMIP3/AR4</a></h3>
 
 		<div>
+			<img alt="" src="$imagePath/ak_extent.jpg">
+			
 			<p>Projected (2001-2099: A1B scenario) monthly total potential
 			evapotranspiration from 5 AR4 GCMs that perform best across Alaska
 			and the Arctic, utilizing 2km downscaled temperature as model
@@ -4691,7 +4725,7 @@ $snap_data_downloads_content = <<<html
 						<td>Alaska</td>
 					</tr>
 				</tbody>
-			</table><img alt="" src="$imagePath/ak_extent.jpg">
+			</table>
 
 			<h4>Metadata by product</h4>
 
@@ -4779,6 +4813,8 @@ $snap_data_downloads_content = <<<html
 		Derived Potential Evapotranspiration - 2km CMIP3/AR4</a></h3>
 
 		<div>
+			<img alt="" src="$imagePath/ak_extent.jpg">
+			
 			<p>Projected (2001-2099: A1B scenario) monthly total potential
 			evapotranspiration from 5 AR4 GCMs that perform best across Alaska
 			and the Arctic, utilizing 2km downscaled temperature as model
@@ -4829,7 +4865,7 @@ $snap_data_downloads_content = <<<html
 						<td>Alaska</td>
 					</tr>
 				</tbody>
-			</table><img alt="" src="$imagePath/ak_extent.jpg">
+			</table>
 
 			<h4>Decadal Summaries by Month, Year, or Season</h4>
 
@@ -4937,6 +4973,8 @@ $snap_data_downloads_content = <<<html
 		Averages Of Monthly Snow-day Fraction 771m CMIP3/AR4</a></h3>
 
 		<div>
+			<img alt="" src="$imagePath/ak_extent.jpg">
+			
 			<p>These snow-day fraction estimates were produced by applying
 			equations relating decadal average monthly temperature to snow-day
 			fraction to downscaled decadal average monthly temperature.
@@ -4992,7 +5030,7 @@ $snap_data_downloads_content = <<<html
 						<td>Alaska</td>
 					</tr>
 				</tbody>
-			</table><img alt="" src="$imagePath/ak_extent.jpg">
+			</table>
 
 			<h4>Metadata by product</h4>
 
@@ -5077,6 +5115,8 @@ $snap_data_downloads_content = <<<html
 			Waters</a></h3>
 
 			<div>
+				<img alt="" src="$imagePath/sea-ice-atlas-extent.png">
+				
 				<p>These data were compiled from several historical sea ice
 				data sources into spatially and temporally standardized data
 				sets that include sea ice concentrations (0&ndash;100%) for the
@@ -5109,7 +5149,7 @@ $snap_data_downloads_content = <<<html
 							1850&ndash;2013</td>
 						</tr>
 					</tbody>
-				</table><img alt="" src="$imagePath/sea-ice-atlas-extent.png">
+				</table>
 
 				<h4>Downloads</h4>
 
@@ -5147,6 +5187,8 @@ $snap_data_downloads_content = <<<html
 				3.0</a></h3>
 
 				<div>
+					<img alt="" src="$imagePath/ak_extent.jpg">
+					
 					<p>Historical (1901&ndash;2006) monthly average temperature
 					and total precipitation from CRU TS 3.0 climate data,
 					downscaled to 771m via the delta method.</p>
@@ -5177,7 +5219,7 @@ $snap_data_downloads_content = <<<html
 								<td>Alaska</td>
 							</tr>
 						</tbody>
-					</table><img alt="" src="$imagePath/ak_extent.jpg">
+					</table>
 
 					<h4>Downloads</h4>
 
@@ -5232,6 +5274,8 @@ $snap_data_downloads_content = <<<html
 				3.1/3.1.01</a></h3>
 
 				<div>
+					<img alt="" src="$imagePath/ak_extent.jpg">
+					
 					<p>Historical (1901&ndash;2009) monthly average temperature
 					and total precipitation from CRU TS 3.1.01 climate data,
 					downscaled to 771m via the delta method.</p>
@@ -5262,7 +5306,7 @@ $snap_data_downloads_content = <<<html
 								<td>Alaska</td>
 							</tr>
 						</tbody>
-					</table><img alt="" src="$imagePath/ak_extent.jpg">
+					</table>
 
 					<h4>Downloads</h4>
 
@@ -5335,6 +5379,8 @@ $snap_data_downloads_content = <<<html
 				Derived Temperature Products - 771m CRU TS 3.0</a></h3>
 
 				<div>
+					<img alt="" src="$imagePath/ak_extent.jpg">
+					
 					<p>Historical (1910&ndash;1999) derived temperature
 					products from CRU TS 3.0 climate data, downscaled to 771m
 					via the delta method.</p>
@@ -5365,7 +5411,7 @@ $snap_data_downloads_content = <<<html
 								<td>Alaska</td>
 							</tr>
 						</tbody>
-					</table><img alt="" src="$imagePath/ak_extent.jpg">
+					</table>
 
 					<h4>Decadal summaries by month, year, and season</h4>
 
@@ -5461,6 +5507,8 @@ $snap_data_downloads_content = <<<html
 				Derived Temperature Products - 771m CRU TS 3.1</a></h3>
 
 				<div>
+					<img alt="" src="$imagePath/ak_extent.jpg">
+					
 					<p>Historical (1910&ndash;2009) derived temperature
 					products from CRU TS 3.1 climate data, downscaled to 2 km
 					via the delta method.</p>
@@ -5491,7 +5539,7 @@ $snap_data_downloads_content = <<<html
 								<td>Alaska</td>
 							</tr>
 						</tbody>
-					</table><img alt="" src="$imagePath/ak_extent.jpg">
+					</table>
 
 					<h4>Decadal summaries by month, year, and season</h4>
 
@@ -5587,6 +5635,8 @@ $snap_data_downloads_content = <<<html
 				Derived Precipitation Products - 771m CRU TS 3.0</a></h3>
 
 				<div>
+					<img alt="" src="$imagePath/ak_extent.jpg">
+					
 					<p>Historical (1910&ndash;1999) derived precipitation
 					products from CRUTS 3.0 climate data, downscaled to 771m
 					via the delta method.</p>
@@ -5617,7 +5667,7 @@ $snap_data_downloads_content = <<<html
 								<td>Alaska</td>
 							</tr>
 						</tbody>
-					</table><img alt="" src="$imagePath/ak_extent.jpg">
+					</table>
 
 					<h4>Decadal summaries by month, year, and season</h4>
 
@@ -5658,6 +5708,8 @@ $snap_data_downloads_content = <<<html
 				Derived Precipitation Products - 771m CRU TS 3.1.01</a></h3>
 
 				<div>
+					<img alt="" src="$imagePath/ak_extent.jpg">
+					
 					<p>Historical (1910-2009) derived precipitation products
 					from CRU TS 3.1.01 climate data, downscaled to 2 km via the
 					delta method.</p>
@@ -5688,7 +5740,7 @@ $snap_data_downloads_content = <<<html
 								<td>Alaska</td>
 							</tr>
 						</tbody>
-					</table><img alt="" src="$imagePath/ak_extent.jpg">
+					</table>
 
 					<h4>Decadal summaries by month, year, and season</h4>
 
@@ -5752,6 +5804,8 @@ $snap_data_downloads_content = <<<html
 				3.0</a></h3>
 
 				<div>
+					<img alt="" src="$imagePath/akcanada_extent.png">
+					
 					<p>Historical (1901-2009) monthly average temperature and
 					total precipitation from CRU TS 3.0 climate data,
 					downscaled to 2 km via the delta method.</p>
@@ -5783,7 +5837,7 @@ $snap_data_downloads_content = <<<html
 								MB)</td>
 							</tr>
 						</tbody>
-					</table><img alt="" src="$imagePath/akcanada_extent.png">
+					</table>
 
 					<table class="downloadsTable">
 						<thead>
@@ -5833,6 +5887,8 @@ $snap_data_downloads_content = <<<html
 				3.1/3.1.01</a></h3>
 
 				<div>
+					<img alt="" src="$imagePath/akcanada_extent.png">
+					
 					<p>Historical (1901-2009) monthly average temperature and
 					total precipitation from CRU TS 3.1/3.1.01 climate data,
 					downscaled to 2 km via the delta method.</p>
@@ -5864,7 +5920,7 @@ $snap_data_downloads_content = <<<html
 								MB)</td>
 							</tr>
 						</tbody>
-					</table><img alt="" src="$imagePath/akcanada_extent.png">
+					</table>
 
 					<div class="ui-widget cruts-31-data-alert" style=
 					"margin: 1em 0;">
@@ -6060,6 +6116,8 @@ $snap_data_downloads_content = <<<html
 				Derived Temperature Products - 2 km CRU TS 3.1</a></h3>
 
 				<div>
+					<img alt="" src="$imagePath/akcanada_extent.png">
+					
 					<p>Historical (1910-2009) derived temperature products from
 					CRU TS 3.1 climate data, downscaled to 2 km via the delta
 					method.</p>
@@ -6091,7 +6149,7 @@ $snap_data_downloads_content = <<<html
 								MB)</td>
 							</tr>
 						</tbody>
-					</table><img alt="" src="$imagePath/akcanada_extent.png">
+					</table>
 
 					<h4>Decadal summaries by month, year, and season</h4>
 
@@ -6187,6 +6245,8 @@ $snap_data_downloads_content = <<<html
 				Derived Precipitation Products - 2 km CRU TS 3.0</a></h3>
 
 				<div>
+					<img alt="" src="$imagePath/akcanada_extent.png">
+					
 					<p>Historical (1910&ndash;2009) derived precipitation
 					products from CRUTS 3.0 climate data, downscaled to 2 km
 					via the delta method.</p>
@@ -6218,7 +6278,7 @@ $snap_data_downloads_content = <<<html
 								MB)</td>
 							</tr>
 						</tbody>
-					</table><img alt="" src="$imagePath/akcanada_extent.png">
+					</table>
 
 					<h4>Decadal summaries by month, year, and season</h4>
 
@@ -6259,6 +6319,8 @@ $snap_data_downloads_content = <<<html
 				Derived Precipitation Products - 2 km CRU TS 3.1.01</a></h3>
 
 				<div>
+					<img alt="" src="$imagePath/akcanada_extent.png">
+					
 					<p>Historical (1910&ndash;2009) derived precipitation
 					products from CRUTS 3.1.01 climate data, downscaled to 2 km
 					via the delta method.</p>
@@ -6290,7 +6352,7 @@ $snap_data_downloads_content = <<<html
 								MB)</td>
 							</tr>
 						</tbody>
-					</table><img alt="" src="$imagePath/akcanada_extent.png">
+					</table>
 
 					<h4>Decadal summaries by month, year, and season</h4>
 
@@ -6353,6 +6415,8 @@ $snap_data_downloads_content = <<<html
 				Monthly Potential Evapotranspiration - 2km CRUTS3.0</a></h3>
 
 				<div>
+					<img alt="" src="$imagePath/ak_extent.jpg">
+					
 					<p>Historical (1901-2006) monthly total potential
 					evapotranspiration utilizing CRU TS 3.0 climate data
 					downscaled to 2 km via the delta method.</p>
@@ -6404,7 +6468,7 @@ $snap_data_downloads_content = <<<html
 								<td>Alaska</td>
 							</tr>
 						</tbody>
-					</table><img alt="" src="$imagePath/ak_extent.jpg">
+					</table>
 
 					<h4>Metadata</h4>
 
@@ -6433,6 +6497,8 @@ $snap_data_downloads_content = <<<html
 				Derived Potential Evapotranspiration - 2km CRUTS3.0</a></h3>
 
 				<div>
+					<img alt="" src="$imagePath/ak_extent.jpg">
+					
 					<p>Historical (1910-1999) monthly total potential
 					evapotranspiration utilizing CRU TS 3.0 climate data
 					downscaled to 2 km via the delta method.</p>
@@ -6484,7 +6550,7 @@ $snap_data_downloads_content = <<<html
 								<td>Alaska</td>
 							</tr>
 						</tbody>
-					</table><img alt="" src="$imagePath/ak_extent.jpg">
+					</table>
 
 					<h4>Metadata by product</h4>
 
@@ -6534,6 +6600,8 @@ $snap_data_downloads_content = <<<html
 				3.1</a></h3>
 
 				<div>
+					<img alt="" src="$imagePath/ak_extent.jpg">
+					
 					<p>These snow-day fraction estimates were produced by
 					applying equations relating decadal average monthly
 					temperature to snow-day fraction to downscaled decadal
@@ -6592,7 +6660,7 @@ $snap_data_downloads_content = <<<html
 								<td>Alaska</td>
 							</tr>
 						</tbody>
-					</table><img alt="" src="$imagePath/ak_extent.jpg">
+					</table>
 
 					<h4>Metadata by product</h4>
 
