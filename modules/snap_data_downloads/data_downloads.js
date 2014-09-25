@@ -1,27 +1,28 @@
-(function($){
+(function($) {
 
-  $(function() {
+  jQuery(document).ready(function() {
 
-      $('.dataAccordion').each( function(index) { 
-          $(this).accordion({
+      jQuery('.dataAccordion').each( function(index, element) { 
+          jQuery(this).accordion({
             navigation: true,
-            autoHeight: false,
+            autoHeight: true,
+            heightStyle: 'content',
             collapsible: true,
             active: false
             });
       });
 
       if( window.location.hash ) {
-        $.scrollTo($('a[href="'+window.location.hash+'"]'), 1000, { offset: -50 });
+        jQuery.scrollTo($('a[href="'+window.location.hash+'"]'), 1000, { offset: -50 });
         window.location.hash = ''; // clear this to prevent user from seeing dissonance between url + opened folds
       }
 
   });
 
-  $('.metadataLink')
+  jQuery('.metadataLink')
         .click( function(e) {
 
-          $('#metadataModal')
+          jQuery('#metadataModal')
             .html('<iframe height="600px" width="100%" src="<?php echo Config::$geonetworkMetadataUrlBase; ?>'+$(e.target).data('geonetwork-metadata-id')+'"></iframe>')
             .dialog({
               draggable: false,
