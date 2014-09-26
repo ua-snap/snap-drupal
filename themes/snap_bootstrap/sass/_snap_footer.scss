@@ -1,41 +1,55 @@
 /* Footer */
 .footer-wrapper {
 	border-top: 3px solid $snapDarkGrey;
-	border-bottom: 2em solid $snapGreen;
+	border-bottom: 6px solid $snapDarkGrey;
 	margin: 0;
-	padding: 1em 4em .8em 5em;
 	background: url('/sites/default/files/pictures/satinweave_@2X.png');
 	}
 
+
+.footer-left {
+	text-align:left;
+	padding: 0 10em .5em 2em;
+	min-height: 145px;
+}
+
+.footer-right {
+	text-align: right;
+	padding: 0 2em .5em 5em;
+	min-height: 145px;
+}
+
 .footer.container {
-	text-align: center;
 	width: auto;
 
 	p {
-		font-size: ($font-size-base * .75);
-		margin: 0 0 .25em 0;
+		font-size: ($font-size-base * .65);
+		margin: .5em 0 .25em 0;
 		line-height: 1.3em;
 	}
-
-	h3 {
-		margin: 0 0 1ex 0; 
-		padding: 0;
-		color: $snapDarkGrey;
-		font-weight: 400;
+	
+	.larger {
+		font-size: .8em;
+		
+		&.topmargin {
+			margin-top: 1.15em;
+		}
+		
+		a{
+			font-size: 1.2em;
+		}
 	}
+	
+
 
 	ul {
 		list-style-type: none;
 		padding: 0;
 
 		li {
-			padding: .5em .5em 0 .5em;
+			padding: .5em .25em 0 .25em;
 			margin: 0;
 			display: inline-block;
-			
-			a {
-				font-size: .95em;
-			}
 		}
 	}
 }
