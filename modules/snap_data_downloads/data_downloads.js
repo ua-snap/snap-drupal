@@ -1,6 +1,6 @@
-(function($){
+(function($) {
   $(function() {
-    $('.dataAccordion').each( function(index) { 
+    $('.dataAccordion').each(function(index) { 
         $(this).accordion({
           navigation: true,
           autoHeight: false,
