@@ -5605,6 +5605,8 @@ $snap_data_downloads_content = <<<html
 	</div>
 </div>
 
+<script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
 html;
 
 ?>
