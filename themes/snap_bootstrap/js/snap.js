@@ -2,9 +2,15 @@
 (function($) {
   // Fire when DOM is ready, or elements are missing.
   $( function() {
+
+    var homeNavbarHeight = $('#nav-sticky').outerHeight();
+    var nonhomeNavbarHeight = $('body.not-front #navbar').height();
+    var offsetHeight = homeNavbarHeight > nonhomeNavbarHeight ? homeNavbarHeight : nonhomeNavbarHeight;
+    $('#nav-wrapper').css('min-height', offsetHeight);
+
     $('#navbar-sticky').affix({
             offset: {
-              top: $('#masthead').height()
+              top: $('#masthead').outerHeight()
             }
       });
 
