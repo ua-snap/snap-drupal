@@ -1,28 +1,33 @@
 //Styling for Articles content type, which are published on a temporary basis on the SNAP home page and on a page called SNAP stories, which lists archived articles as a View.
 
 //Styling for box that holds the article on the home page
-.node.node-article.node-promoted.node-teaser {		
-	border: 2px solid $snapGreen;
+.node.node-article.node-promoted.node-teaser {	
+	margin: 0;
+	
+	.content {
+		margin: 0;
+		padding: 0;
+		max-height: 400px;
+	}
 	
 	h2 {
-		margin: 0;
-		font-size: 1.35em;
-		padding: .2em 1em .35em .65em;
-		
-		a {
-			font-weight: 400;
-		}
+		display: none;
 	}
 	
 	img {
 		border: none;
 		margin: 0;
+		width: 100%;
 	}
 	
 	p {
 		font-size: 1em;
 		line-height: ($line-height-base * .85);
 		margin: 0 0 0 1em;
+		
+		.read-more {
+			display: none;
+		}
 	}
 	
 	.date-display-single {
