@@ -3,11 +3,6 @@
 //Styling for box that holds the article on the home page
 .node.node-article.node-promoted.node-teaser {		
 	border: 2px solid $snapGreen;
-	padding: .5em 0;
-	margin: 0 0 1.5em 0;
-	background: #fff;
-	@include shadow(5px, 5px, 15px, $shadow-color);
-	border-radius: $border-radius;
 	
 	h2 {
 		margin: 0;
@@ -19,28 +14,19 @@
 		}
 	}
 	
+	img {
+		border: none;
+		margin: 0;
+	}
+	
 	p {
 		font-size: 1em;
 		line-height: ($line-height-base * .85);
 		margin: 0 0 0 1em;
 	}
 	
-	img {
-		float: right;
-		border: $border;
-		background-color: #fff;
-		border-radius: $border-radius;
-		@include shadow($x, $y, $blur, $shadow-color);
-		padding: .3em;
-		margin: 0 1em .5em .5em;
-	}
-	
 	.date-display-single {
-		font-weight: bold;
-		font-style: italic;
-		margin: 0 0 0 1.1em;
-		font-size: ($font-size-base * .85);
-		border: none;
+		display: none;
 	}	
 }
 
@@ -48,13 +34,9 @@
 .node.node-article {	
 	
 	img {
+		width: 45%;
 		float: right;
-		border: $border;
-		border-radius: $border-radius;
-		@include shadow($x, $y, $blur, $shadow-color);
-		padding: .3em;
 		margin: 0 0 2em 2em;
-		background-color: #fff;
 	}
 	
 	.date-display-single {
