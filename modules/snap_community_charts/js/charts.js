@@ -173,12 +173,12 @@ snapCharts = {
 				responseFn(a);
 			}
 		}).bind('autocompletechange', function(event, ui) {
-			if (false === _.isUndefined(ui.item)) {
+			if (false === _.isUndefined(ui.item) && false === _.isNull(ui.item)) {
 				$('#comm_select_id').val(ui.item.value);
 				snapCharts.data.community = ui.item.value;
 			}
 		}).bind('autocompletefocus', function(event, ui) {
-			if (false === _.isUndefined(ui.item)) {
+			if (false === _.isUndefined(ui.item) && false === _.isNull(ui.item)) {
 				event.preventDefault();
 				$('#comm_select_id').val(ui.item.value);
 				snapCharts.data.community = ui.item.value;
