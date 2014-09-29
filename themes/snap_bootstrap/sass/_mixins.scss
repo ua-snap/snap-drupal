@@ -48,6 +48,42 @@
           border-radius: $border-radius;
 }
 
+//Radial background gradient
+@mixin background-gradient {
+  /* Safari 4-5, Chrome 1-9 */
+  /* Can't specify a percentage size? Laaaaaame. */
+  background: -webkit-gradient(radial, center center, 0, center center, 460, from($snapGrey), to($snapDarkGrey));
+  background: -webkit-radial-gradient(circle, $snapGrey, $snapDarkGrey);  /* Safari 5.1+, Chrome 10+ */
+  background: -moz-radial-gradient(circle, $snapGrey, $snapDarkGrey);  /* Firefox 3.6+ */
+  background: -ms-radial-gradient(circle, $snapGrey, $snapDarkGrey);  /* IE 10 */
+/* Opera couldn't do radial gradients, then at some point they started supporting the -webkit- syntax, how it kinda does but it's kinda broken (doesn't do sizing) */
+}
+
+//Horizontal line gradient with transparency
+@mixin hr-fader {
+	background-image: -webkit-linear-gradient(left, rgba(255,255,255,0), rgba(255,255,255,1), rgba(255,255,255,0));
+				background-image: -moz-linear-gradient(left, rgba(255,255,255,0), rgba(255,255,255,1), rgba(255,255,255,0));
+				background-image: -ms-linear-gradient(left, rgba(255,255,255,0), rgba(255,255,255,1), rgba(255,255,255,0));
+				background-image: -o-linear-gradient(left, rgba(255,255,255,0), rgba(255,255,255,1), rgba(255,255,255,0));
+}
+
+//Background gradient with transparenty! www.colorzilla.com/gradient-editor
+@mixin background-gradient-transparency {
+/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+	background: rgb(87,92,94); /* Old browsers */
+/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzU3NWM1ZSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjMwJSIgc3RvcC1jb2xvcj0iI2FkYWRhZCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iI2M3YzljNyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjcwJSIgc3RvcC1jb2xvcj0iI2FkYWRhZCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM1NzVjNWUiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+background: -moz-linear-gradient(left,  rgba(87,92,94,1) 0%, rgba(173,173,173,1) 30%, rgba(199,201,199,1) 50%, rgba(173,173,173,1) 70%, rgba(87,92,94,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(87,92,94,1)), color-stop(30%,rgba(173,173,173,1)), color-stop(50%,rgba(199,201,199,1)), color-stop(70%,rgba(173,173,173,1)), color-stop(100%,rgba(87,92,94,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(left,  rgba(87,92,94,1) 0%,rgba(173,173,173,1) 30%,rgba(199,201,199,1) 50%,rgba(173,173,173,1) 70%,rgba(87,92,94,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(left,  rgba(87,92,94,1) 0%,rgba(173,173,173,1) 30%,rgba(199,201,199,1) 50%,rgba(173,173,173,1) 70%,rgba(87,92,94,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(left,  rgba(87,92,94,1) 0%,rgba(173,173,173,1) 30%,rgba(199,201,199,1) 50%,rgba(173,173,173,1) 70%,rgba(87,92,94,1) 100%); /* IE10+ */
+background: linear-gradient(to right,  rgba(87,92,94,1) 0%,rgba(173,173,173,1) 30%,rgba(199,201,199,1) 50%,rgba(173,173,173,1) 70%,rgba(87,92,94,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#575c5e', endColorstr='#575c5e',GradientType=1 ); /* IE6-8 */
+	
+}
+
+
 // Links
 @mixin link-transition {
 -webkit-transition: all 0.3s ease-in-out;

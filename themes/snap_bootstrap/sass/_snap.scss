@@ -18,8 +18,6 @@
 @import "snap_people";
 @import "snap_projects";
 @import "snap_community_charts";
-@import "snap_tools";
-@import "snap_tools_intro";
 @import "snap_tables";
 @import "snap_panels";
 @import "snap_articles";
@@ -29,13 +27,8 @@
 @import "snap_videos";
 @import "snap_media_queries";
 
- #pageWrapper {
-  background-color: lighten($snapGreen, 50%);
-}
 
-.main-container.container {
-	padding-bottom: 1em;
-}
+
 
 html {
   font-family: $lato;
