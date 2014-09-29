@@ -3,6 +3,8 @@
   // Fire when DOM is ready, or elements are missing.
   $( function() {
 
+    // Set the min-height of nav-wrapper to prevent jumpy behavior.
+    // See GH#146.
     var homeNavbarHeight = $('#nav-sticky').outerHeight();
     var nonhomeNavbarHeight = $('body.not-front #navbar').height();
     var offsetHeight = homeNavbarHeight > nonhomeNavbarHeight ? homeNavbarHeight : nonhomeNavbarHeight;
