@@ -26,6 +26,7 @@ $(function() {
 			title: 'About scenarios',
 			resizable: false,
 			show: 'fade',
+			position: { my: 'top', at: 'top+25', of: window},
 			hide: 'fade',
 			width: '700px',
 			zindex: 50000,
@@ -48,6 +49,7 @@ $(function() {
 			title: 'About inter-model variability',
 			resizable: false,
 			show: 'fade',
+			position: { my: 'top', at: 'top+25', of: window},
 			hide: 'fade',
 			width: '700px',
 			zindex: 50000,
@@ -70,6 +72,7 @@ $(function() {
 			title: 'Community climate outlooks: core statistics and methods',
 			resizable: false,
 			show: 'fade',
+			position: { my: 'top', at: 'top+25', of: window},
 			hide: 'fade',
 			width: '700px',
 			zindex: 50000,
@@ -93,6 +96,7 @@ $(function() {
 			modal: true,
 			title: 'Export chart for ' + snapCharts.data.communityName + ', ' + snapCharts.data.communityRegion,
 			resizable: false,
+			position: { my: 'top', at: 'top+25', of: window},
 			show: 'fade',
 			hide: 'fade',
 			width: '700px',
@@ -111,6 +115,7 @@ $(function() {
 				modal: true,
 				title: 'Processing image export&hellip;',
 				resizable: false,
+				position: { my: 'top', at: 'top+25', of: window},
 				show: 'fade',
 				hide: 'fade',
 				width: '700px',
@@ -173,12 +178,12 @@ snapCharts = {
 				responseFn(a);
 			}
 		}).bind('autocompletechange', function(event, ui) {
-			if (false === _.isUndefined(ui.item)) {
+			if (false === _.isUndefined(ui.item) && false === _.isNull(ui.item)) {
 				$('#comm_select_id').val(ui.item.value);
 				snapCharts.data.community = ui.item.value;
 			}
 		}).bind('autocompletefocus', function(event, ui) {
-			if (false === _.isUndefined(ui.item)) {
+			if (false === _.isUndefined(ui.item) && false === _.isNull(ui.item)) {
 				event.preventDefault();
 				$('#comm_select_id').val(ui.item.value);
 				snapCharts.data.community = ui.item.value;
