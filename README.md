@@ -41,6 +41,19 @@ cd /path/to/snap_bootstrap/
 bower install
 ```
 
+Three more steps need to happen here (first, install Compass per the note below, then pick it up here).
+
+ 1. Grab current Drupal DB copy.  You probably can wrangle that with no more hints, but I'll prowl email and send one to you shortly.
+
+ 2. Grab current copy of "drupal-managed files."  These are files that live in /sites/default/files.  Get a sysadmin-type to grab you a fresh copy, then unzip that into the same spot locally.
+
+ 3. Compile the SASS:
+
+```bash
+cd /path/to/sites/all/themes/snap_bootstrap
+compass watch
+```
+
 ### Install Compass
 
 Compass is used for the SASS development.  On OSX, first [install Homebrew](http://brew.sh/) then ```brew install ruby```, then [install Compass](http://compass-style.org/install/).
