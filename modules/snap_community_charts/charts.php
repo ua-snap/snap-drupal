@@ -1,24 +1,28 @@
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]--><!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]--><!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]--><!--[if gt IE 8]><!--><!--<![endif]-->
+<html>
+<head>
 <meta charset="utf-8" />
 <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
 <title></title>
 <meta content="" name="description" />
 <meta content="width=device-width, initial-scale=1" name="viewport" />
 <link href="/sites/all/themes/snap_bootstrap/css/styles.css" rel="stylesheet" />
-<link href="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/themes/smoothness/jquery-ui.css" rel="stylesheet" /><script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script><script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script><script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script><script src="//cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/1.4.11/jquery.scrollTo.min.js"></script><script src="//cdnjs.cloudflare.com/ajax/libs/highcharts/2.1.5/highcharts.min.js"></script><script src="js/exporting.src.js"></script><!--[if lt IE 8]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-            <![endif]--><?php
+<link href="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/themes/smoothness/jquery-ui.css" rel="stylesheet" /><script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script><script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script><script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script><script src="//cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/1.4.11/jquery.scrollTo.min.js"></script><script src="//cdnjs.cloudflare.com/ajax/libs/highcharts/2.1.5/highcharts.min.js"></script><script src="js/exporting.src.js"></script>
 
+<?php
             require_once 'src/ChartsFetcher.php';
-            error_reporting(E_ALL);
-
-            ?><!-- fixed width is important because otherwise variability bars break on chart resize. -->
+?>
+</head>
+<body id="charts">
 <div class="container" style="width: 950px !important;">
+<div class="row">
+    <div>
+        <img class="logo" src="/sites/all/themes/snap_bootstrap/images/SNAP_acronym_color_lato.png" alt="" />
+    </div>
     <h1>Community Charts</h1>
 
     <p>Explore temperature and precipitation projections for thousands of communities across Alaska and Canada. Or, return to the SNAP home page.</p>
-<h2 id="chartsTitle">See the climate outlook for your community.</h2>
-
+    <h2 id="chartsTitle">See the climate outlook for your community.</h2>
+</div>
 <div class="row">
 <div class="col-md-8">
 <div id="variable_selections">
@@ -63,7 +67,7 @@
 <p><strong>We offer climate outlooks for communities in this region:</strong></p>
 <img alt="alaska-canada" class="plain" src="/sites/default/files/pictures/akcanada_extent.gif" style="width: 279px; height: 113px;" />
 
-<p><a class="btn btn-success" href="http://cerberus.snap.uaf.edu">Return to SNAP home page</a></p>
+<p><a class="btn btn-success" href="/">Return to SNAP home page</a></p>
 
 </div>
 </div>
@@ -175,3 +179,5 @@
         r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
         ga('create','-UA-3978613-1');ga('send','pageview');
     </script>
+</body>
+</html>
