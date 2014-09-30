@@ -1,7 +1,21 @@
 body#charts {
 
+	img.logo {
+		margin: 1ex 0;
+	}
+
+	h1 {
+		margin: 1em 0 .5ex;
+	}
+
 	.extent img {
 		width: 100%;
+	}
+
+	#export_options {
+		font-size: 2em;
+		position: relative;
+		bottom: 2px;
 	}
 
 	#exportDialog {
