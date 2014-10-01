@@ -204,6 +204,14 @@
 	}
 }
 
+/* Extra-large devices (large desktops, 1600px and up) */
+@media screen and (min-width: 1600px) {
+	#masthead {
+		background: url('/sites/default/files/pictures/SNAP_acronym_masthead_xlg.svg') center no-repeat;
+		@include background-size;
+	}
+}
+
 @media
 	only screen and (-webkit-min-device-pixel-ratio: 2),
 	only screen and (min--moz-device-pixel-ratio: 2),
