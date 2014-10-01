@@ -60,12 +60,7 @@ $(function() {
 			}
 		});
 	});
-	$('#derive_help').button({
-		text: false,
-		icons: {
-			primary: 'ui-icon-help'
-		}
-	}).click(function(e) {
+	$('#derive_help').button({}).click(function(e) {
 		$('#modal_block').show().dialog({
 			draggable: false,
 			modal: true,
