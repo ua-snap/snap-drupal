@@ -1,5 +1,7 @@
 body#charts {
 
+	margin-bottom: 4em;
+
 	img.logo {
 		margin: 1ex 0;
 	}
@@ -102,8 +104,9 @@ body#charts {
 		font-size: .9em;
 	}
 
-	.helpbuttons#derive_help {
+	#derive_help {
 		font-weight: 300;
+		margin-top: 1em;
 	}
 
 	.ui-dialog {

@@ -91,7 +91,7 @@
     <li>a shift in precipitation from snow to rain, which impacts water storage capacity and surface water availability</li>
 </ul>
 
-<p>Warmer, drier spring weather may also be an indicator for increased fire risk. In many locations, winter temperatures are projected to increase dramatically. Warmer winters may favor growth of species that are less cold-hardy (including desirable crops and invasive species), or it may decrease snowpack and increase the frequency of rain-on-snow events that impact wildlife. Higher temperatures across all seasons will likely impact permafrost and land-fast ice. <button id="derive_help">Learn more about how we derived the community climate outlooks</button>
+<p>Warmer, drier spring weather may also be an indicator for increased fire risk. In many locations, winter temperatures are projected to increase dramatically. Warmer winters may favor growth of species that are less cold-hardy (including desirable crops and invasive species), or it may decrease snowpack and increase the frequency of rain-on-snow events that impact wildlife. Higher temperatures across all seasons will likely impact permafrost and land-fast ice. <a id="derive_help">Learn more about how we derived the community climate outlooks</a>
 </p>
 
 
