@@ -15,9 +15,9 @@
 <body id="charts">
 <div class="container" style="width: 950px !important;">
 <div class="row">
-    <div>
+    <a href="/">
         <img class="logo" src="/sites/all/themes/snap_bootstrap/images/SNAP_acronym_color_lato.png" alt="" />
-    </div>
+    </a>
     <h1>Community Charts</h1>
 
     <p>Explore temperature and precipitation projections for thousands of communities across Alaska and Canada. Or, return to the SNAP home page.</p>
