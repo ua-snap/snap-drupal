@@ -7,29 +7,6 @@
 		@include background-size-contain;
 	}
 	
-	.col-sm-9.home {
-		
-		#expertise {
-			margin: 0;
-			width: 100%;
-			float: none;
-		}
-	}
-	
-	.col-md-3.projects {
-		padding: 0 1em;
-
-		.region.region-sidebar-second {
-			clear: both;
-		
-			h2.block-title {
-				text-align: left;
-			}
-		}
-	}
-	
-	
-	
 	body.front {
 		header#navbar {
 			nav {
@@ -70,29 +47,6 @@
 			}
 		}	
 	}
-
-
-	.node.node-article.node-promoted.node-teaser {
-		clear: right;
-		margin-right: 0;
-
-		p {
-			font-size: .8em;
-		}
-
-		h2 {
-			font-size: 1.1em;
-		}
-
-		.read-more {
-			font-size: ($font-size-base * .8);
-		}
-
-		.date-display-single {
-			font-size: ($font-size-base * .8);
-			margin: 0 0 0 1em;
-		}	
-	}
 }
 
 
@@ -102,59 +56,9 @@
 		background: url('/sites/default/files/pictures/SNAP_acronym_masthead2.svg') center no-repeat;
 		@include background-size-contain;
 	}
-	
-	.col-sm-9.home {
-		width: 137.5%;
-		
-		#expertise {
-			width: 48%;
-			float: left;
-			
-			&.collab,
-			&.scicomm {
-				float: right;
-			}
-		}
-	}
-
-	.col-md-3.projects {
-		padding: 0 0 0 1em;
-	
-		.region.region-sidebar-second {
-			clear: both;
-			width: 100%;
-		}
-
-		h2.block-title {
-			text-align: center;
-		}
-	}
-	
-	
-	
-	.col-sm-9 {
-			.node.node-article.node-promoted.node-teaser {	
-			width: 137.5%;
-
-			p {
-				font-size: .9em;
-			}
-
-			h2 {
-				font-size: 1.1em;
-			}
-
-			.read-more {
-				font-size: ($font-size-base * .8);
-			}
-
-			.date-display-single {
-				font-size: ($font-size-base * .8);
-				margin: 0 0 0 1em;
-			}	
-		}
-	}
 }
+	
+	
 
 
 /* Medium devices (desktops, 992px and up) */
@@ -163,28 +67,9 @@
 		background: url('/sites/default/files/pictures/SNAP_acronym_masthead2.svg') center no-repeat;
 		@include background-size-contain;
 	}
-
-	.col-sm-9 {
-		.node.node-article.node-promoted.node-teaser {	
-		width: auto;
-		}
-	}
-	
-	.col-sm-9.home {
-		width: auto;
-		
-		#expertise {
-			width: 48%;
-			float: left;
-		}
-	}
-	
-	.col-md-3.projects .region.region-sidebar-second {
-		clear: none;
-		margin: 0;
-		width: auto;
-	}
 }
+
+
 
 /* Large devices (large desktops, 1200px and up) */
 @media screen and (min-width: 1200px) {
