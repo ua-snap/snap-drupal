@@ -11,6 +11,7 @@
 <?php
             require_once 'src/ChartsFetcher.php';
 ?>
+<link rel="shortcut icon" href="/sites/all/themes/snap_bootstrap/snap.ico" />
 </head>
 <body id="charts">
 <div class="container" style="width: 950px !important;">
