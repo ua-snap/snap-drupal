@@ -1,7 +1,7 @@
 //Styling for Articles content type, which are published on a temporary basis on the SNAP home page and on a page called SNAP stories, which lists archived articles as a View.
 
 //Styling for box that holds the article on the home page
-.node.node-article.node-teaser {	
+.front .view-id-masthead .node.node-article.node-teaser {	
 	margin: 13em auto 0 auto;
 	border: 2px solid #fff;
 	text-align: center;
@@ -50,11 +50,21 @@
 	}	
 }
 
+.node.node-article.node-teaser {
+	h2 {
+		font-size: 1.2em;
+		margin: 0 0 .5em 0;
+	}
+
+	h4 {
+		margin: .5em 0 .25em 0;
+	}
+}
+
 //Styling for when the article is in full view, linked from home page
 .node.node-article {	
 	
 	img {
-		width: 45%;
 		float: right;
 		margin: 0 0 2em 2em;
 	}
