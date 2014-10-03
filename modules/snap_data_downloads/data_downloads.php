@@ -3588,7 +3588,7 @@ $snap_data_downloads_content = <<<html
 
 			<p><strong>Metadata:</strong> <a class="metadataLink" data-geonetwork-metadata-id="69" href="#">Projected Monthly Total Potential Evapotranspiration 2km AR4</a></p>
 
-			<p><strong>Equations used to derive data:</strong> <a href="attachments/Hamon_PET_equations.pdf">Hamon PET equations</a> (PDF, 597KB)</p>
+			<p><strong>Equations used to derive data:</strong> <a href="/sites/default/files/Hamon_PET_equations.pdf">Hamon PET equations</a> (PDF, 597KB)</p>
 
 			<h4>Data</h4>
 
@@ -3708,7 +3708,7 @@ $snap_data_downloads_content = <<<html
 				</li>
 			</ul>
 
-			<p><strong>Equations used to derive data:</strong> <a href="attachments/Hamon_PET_equations.pdf">Hamon PET equations</a> (PDF, 597KB)</p>
+			<p><strong>Equations used to derive data:</strong> <a href="/sites/default/files/Hamon_PET_equations.pdf">Hamon PET equations</a> (PDF, 597KB)</p>
 
 			<h4>Data</h4>
 
@@ -4902,7 +4902,7 @@ $snap_data_downloads_content = <<<html
 
 					<p><strong>Metadata:</strong> <a class="metadataLink" data-geonetwork-metadata-id="67" href="#">Historical Monthly Total Potential Evapotranspiration 2km CRUTS3.0</a></p>
 
-					<p><strong>Equations used to derive data:</strong> <a href="attachments/Hamon_PET_equations.pdf">Hamon PET equations</a> (PDF, 597KB)</p>
+					<p><strong>Equations used to derive data:</strong> <a href="/sites/default/files/Hamon_PET_equations.pdf">Hamon PET equations</a> (PDF, 597KB)</p>
 
 					<h4>Data</h4>
 
@@ -4968,7 +4968,7 @@ $snap_data_downloads_content = <<<html
 						</li>
 					</ul>
 
-					<p><strong>Equations used to derive data:</strong> <a href="attachments/Hamon_PET_equations.pdf">Hamon PET equations</a> (PDF, 597KB)</p>
+					<p><strong>Equations used to derive data:</strong> <a href="/sites/default/files/Hamon_PET_equations.pdf">Hamon PET equations</a> (PDF, 597KB)</p>
 
 					<h4>All products by model and scenario</h4>
 
