@@ -53,7 +53,7 @@
 .node.node-article.node-teaser {
 	h2 {
 		font-size: 1.2em;
-		margin: 0 0 .5em 0;
+		margin: .75em 0 .5em 0;
 	}
 
 	h4 {
@@ -65,6 +65,8 @@
 .node.node-article {	
 	
 	img {
+		width: 45%;
+		height: auto;
 		float: right;
 		margin: 0 0 2em 2em;
 	}
