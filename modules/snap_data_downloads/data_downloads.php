@@ -3782,7 +3782,7 @@ $snap_data_downloads_content = <<<html
 
 			<p>Although the equations developed here provide a reasonable fit to the data, model evaluation demonstrated that some stations are consistently less well described by regional models than others. It is unclear why this occurs, but it is like related to localized climate conditions. Very few weather stations with long records are located above 500m elevation in Alaska, so the equations used here were developed primarily from low-elevation weather stations. It is not clear whether the equations will be completely appropriate in the mountains. Finally, these equations summarize a long-term monthly relationship between temperature and precipitation type that is the result of short-term weather variability. In using these equations to make projections of future snow, as assume that these relationships remain stable over time, and we do not know how accurate that assumption is.</p>
 
-			<p>Detailed information on the construction of this data and its implications is available in <a href="/attachments/McAfee2013_snowDay.pdf">this paper.</a> (PDF, 3.27MB)</p>
+			<p>Detailed information on the construction of this data and its implications is available in <a href="/sites/default/files/McAfee2013_snowDay.pdf">this paper.</a> (PDF, 3.27MB)</p>
 
 			<table class="overview">
 				<tbody>
