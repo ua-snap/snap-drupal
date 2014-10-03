@@ -3612,7 +3612,7 @@ $snap_data_downloads_content = <<<html
 						<th scope="row">cccma_cgcm31</th>
 
 						<td>
-							<a href="files/data/pet/pet_AK_2km_cccma_cgcm3_1_sresa1b.zip">2001&ndash;2099</a> (757 MB)
+							<a href="/files/data/pet/pet_AK_2km_cccma_cgcm3_1_sresa1b.zip">2001&ndash;2099</a> (757 MB)
 						</td>
 					</tr>
 
@@ -3620,7 +3620,7 @@ $snap_data_downloads_content = <<<html
 						<th scope="row">gfdl_cm2_1</th>
 
 						<td>
-							<a href="files/data/pet/pet_AK_2km_gfdl_cm2_1_sresa1b.zip">2001&ndash;2099</a> (759MB)
+							<a href="/files/data/pet/pet_AK_2km_gfdl_cm2_1_sresa1b.zip">2001&ndash;2099</a> (759MB)
 						</td>
 					</tr>
 
@@ -3628,7 +3628,7 @@ $snap_data_downloads_content = <<<html
 						<th scope="row">miroc3_2_medres</th>
 
 						<td>
-							<a href="files/data/pet/pet_AK_2km_miroc3_2_medres_sresa1b.zip">2001&ndash;2099</a> (770MB)
+							<a href="/files/data/pet/pet_AK_2km_miroc3_2_medres_sresa1b.zip">2001&ndash;2099</a> (770MB)
 						</td>
 					</tr>
 
@@ -3636,7 +3636,7 @@ $snap_data_downloads_content = <<<html
 						<th scope="row">mpi_echam5</th>
 
 						<td>
-							<a href="files/data/pet/pet_AK_2km_mpi_echam5_sresa1b.zip">2001&ndash;2099</a> (769MB)
+							<a href="/files/data/pet/pet_AK_2km_mpi_echam5_sresa1b.zip">2001&ndash;2099</a> (769MB)
 						</td>
 					</tr>
 
@@ -3644,7 +3644,7 @@ $snap_data_downloads_content = <<<html
 						<th scope="row">ukmo_hadcm3</th>
 
 						<td>
-							<a href="files/data/pet/pet_AK_2km_ukmo_hadcm3_sresa1b.zip">2001&ndash;2099</a> (762MB)
+							<a href="/files/data/pet/pet_AK_2km_ukmo_hadcm3_sresa1b.zip">2001&ndash;2099</a> (762MB)
 						</td>
 					</tr>
 				</tbody>
@@ -3732,7 +3732,7 @@ $snap_data_downloads_content = <<<html
 						<th scope="row">cccma_cgcm31</th>
 
 						<td>
-							<a href="files/data/pet/pet_decadal_summaries_AK_2km_cccma_cgcm3_1_sresa1b.zip">2001&ndash;2099</a> (188MB)
+							<a href="/files/data/pet/pet_decadal_summaries_AK_2km_cccma_cgcm3_1_sresa1b.zip">2001&ndash;2099</a> (188MB)
 						</td>
 					</tr>
 
@@ -3740,7 +3740,7 @@ $snap_data_downloads_content = <<<html
 						<th scope="row">gfdl_cm2_1</th>
 
 						<td>
-							<a href="files/data/pet/pet_decadal_summaries_AK_2km_gfdl_cm2_1_sresa1b.zip">2001&ndash;2099</a> (187MB)
+							<a href="/files/data/pet/pet_decadal_summaries_AK_2km_gfdl_cm2_1_sresa1b.zip">2001&ndash;2099</a> (187MB)
 						</td>
 					</tr>
 
@@ -3748,7 +3748,7 @@ $snap_data_downloads_content = <<<html
 						<th scope="row">miroc3_2_medres</th>
 
 						<td>
-							<a href="files/data/pet/pet_decadal_summaries_AK_2km_miroc3_2_medres_sresa1b.zip">2001&ndash;2099</a> (188MB)
+							<a href="/files/data/pet/pet_decadal_summaries_AK_2km_miroc3_2_medres_sresa1b.zip">2001&ndash;2099</a> (188MB)
 						</td>
 					</tr>
 
@@ -3756,7 +3756,7 @@ $snap_data_downloads_content = <<<html
 						<th scope="row">mpi_echam5</th>
 
 						<td>
-							<a href="files/data/pet/pet_decadal_summaries_AK_2km_mpi_echam5_sresa1b.zip">2001&ndash;2099</a> (189MB)
+							<a href="/files/data/pet/pet_decadal_summaries_AK_2km_mpi_echam5_sresa1b.zip">2001&ndash;2099</a> (189MB)
 						</td>
 					</tr>
 
@@ -3764,7 +3764,7 @@ $snap_data_downloads_content = <<<html
 						<th scope="row">ukmo_hadcm3</th>
 
 						<td>
-							<a href="files/data/pet/pet_decadal_summaries_AK_2km_ukmo_hadcm3_sresa1b.zip">2001&ndash;2099</a> (189MB)
+							<a href="/files/data/pet/pet_decadal_summaries_AK_2km_ukmo_hadcm3_sresa1b.zip">2001&ndash;2099</a> (189MB)
 						</td>
 					</tr>
 				</tbody>
@@ -3832,7 +3832,7 @@ $snap_data_downloads_content = <<<html
 						<th scope="row">cccma_cgcm31</th>
 
 						<td>
-							<a href="files/data/snow_day_fraction/fs_decadal_mean_monthly_mean_pct_cccma_cgcm3_1_2010_2099.zip">2010&ndash;2099</a> (479 MB)
+							<a href="/files/data/snow_day_fraction/fs_decadal_mean_monthly_mean_pct_cccma_cgcm3_1_2010_2099.zip">2010&ndash;2099</a> (479 MB)
 						</td>
 					</tr>
 
@@ -3840,7 +3840,7 @@ $snap_data_downloads_content = <<<html
 						<th scope="row">gfdl_cm2_1</th>
 
 						<td>
-							<a href="files/data/snow_day_fraction/fs_decadal_mean_monthly_mean_pct_gfdl_cm2_1_2010_2099.zip">2010&ndash;2099</a> (491MB)
+							<a href="/files/data/snow_day_fraction/fs_decadal_mean_monthly_mean_pct_gfdl_cm2_1_2010_2099.zip">2010&ndash;2099</a> (491MB)
 						</td>
 					</tr>
 
@@ -3848,7 +3848,7 @@ $snap_data_downloads_content = <<<html
 						<th scope="row">miroc3_2_medres</th>
 
 						<td>
-							<a href="files/data/snow_day_fraction/fs_decadal_mean_monthly_mean_pct_miroc3_2_medres_2010_2099.zip">2010&ndash;2099</a> (461MB)
+							<a href="/files/data/snow_day_fraction/fs_decadal_mean_monthly_mean_pct_miroc3_2_medres_2010_2099.zip">2010&ndash;2099</a> (461MB)
 						</td>
 					</tr>
 
@@ -3856,7 +3856,7 @@ $snap_data_downloads_content = <<<html
 						<th scope="row">mpi_echam5</th>
 
 						<td>
-							<a href="files/data/snow_day_fraction/fs_decadal_mean_monthly_mean_pct_mpi_echam5_2010_2099.zip">2010&ndash;2099</a> (476MB)
+							<a href="/files/data/snow_day_fraction/fs_decadal_mean_monthly_mean_pct_mpi_echam5_2010_2099.zip">2010&ndash;2099</a> (476MB)
 						</td>
 					</tr>
 
@@ -3864,7 +3864,7 @@ $snap_data_downloads_content = <<<html
 						<th scope="row">ukmo_hadcm3</th>
 
 						<td>
-							<a href="files/data/snow_day_fraction/fs_decadal_mean_monthly_mean_pct_ukmo_hadcm3_2010_2099.zip">2010&ndash;2099</a> (470MB)
+							<a href="/files/data/snow_day_fraction/fs_decadal_mean_monthly_mean_pct_ukmo_hadcm3_2010_2099.zip">2010&ndash;2099</a> (470MB)
 						</td>
 					</tr>
 				</tbody>
@@ -4908,7 +4908,7 @@ $snap_data_downloads_content = <<<html
 
 					<ul>
 						<li>
-							<a href="files/data/pet/pet_AK_2km_CRU_TS30_historical.zip">1901&ndash;2006</a> (726MB)
+							<a href="/files/data/pet/pet_AK_2km_CRU_TS30_historical.zip">1901&ndash;2006</a> (726MB)
 						</li>
 					</ul>
 				</div>
@@ -4974,7 +4974,7 @@ $snap_data_downloads_content = <<<html
 
 					<ul>
 						<li>
-							<a href="files/data/pet/pet_decadal_summaries_AK_2km_CRU_TS30_historical.zip">1910&ndash;1999</a> (181MB)
+							<a href="/files/data/pet/pet_decadal_summaries_AK_2km_CRU_TS30_historical.zip">1910&ndash;1999</a> (181MB)
 						</li>
 					</ul>
 				</div>
