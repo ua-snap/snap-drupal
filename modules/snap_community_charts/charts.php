@@ -58,6 +58,7 @@
 
 <div class="helpbuttons"><button id="variability_help">More about inter–model variability</button></div>
 </div>
+
 </div>
 
 <div class="col-md-4">
@@ -76,9 +77,9 @@
 
 <div class="row">
 <div class="md-col-12">
-<div class="pull-right" id="chartTools" style="display: none;"><button id="export_options">Export</button></div>
 
 <div id="chart_div">&nbsp;</div>
+<div id="chartTools" style="display: none;"><button id="export_options">Download this chart</button></div>
 
 <div class="methods text">
 <h3>How to interpret climate outlooks for your community</h3>
