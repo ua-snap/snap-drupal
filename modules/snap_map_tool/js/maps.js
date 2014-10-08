@@ -735,7 +735,7 @@ function addMap() {
     getTileUrl: function(a, z) {
       var tiles = 1 << z, X = (a.x % tiles);
       if(X < 0) { X += tiles; }
-      return "http://mt0.google.com/vt/v=apt.116&hl=en-US&x=" +
+      return "https://mt0.google.com/vt/v=apt.116&hl=en-US&x=" +
       X + "&y=" + a.y + "&z=" + z + "&s=G&lyrs=h";
     },
     tileSize: new google.maps.Size(256, 256),
