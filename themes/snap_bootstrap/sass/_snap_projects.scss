@@ -239,8 +239,10 @@ aside.col-sm-2 {		//left sidebar for UAS project sub menu
 			 @include projectblock;
 			 padding: 1em;
 			 height: auto;
-			 margin: 5em 0 0 0;
+			 margin: 5.2em 0 0 0;
 			 background: url('/sites/default/files/pictures/satinweave_@2X.png');
+			 border-radius: $border-radius;
+			border: $border;
 
 
 			 h2.block-title {
