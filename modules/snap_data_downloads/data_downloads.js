@@ -18,7 +18,7 @@
     $('.metadataLink')
     .click(function(e) {
       $('#metadataModal')
-      .html('<iframe height="600px" width="100%" src="http://athena.snap.uaf.edu:8080/geonetwork/srv/en/metadata.show.embedded?id='+$(e.target).data('geonetwork-metadata-id')+'"></iframe>')
+      .html('<iframe height="600px" width="100%" src="https://athena.snap.uaf.edu:443/geonetwork/srv/en/metadata.show.embedded?id='+$(e.target).data('geonetwork-metadata-id')+'"></iframe>')
       .dialog({
          draggable: false,
          resizable: false,
