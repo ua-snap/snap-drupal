@@ -999,7 +999,7 @@ table.overview.iem th[scope="col"] {
   height: 10px;
   border-top: 1px solid #707A7C;
   opacity: 0.5;
-  background: transparent url("/images/map-field-triangle.png") center top no-repeat;
+  background: transparent url("/sites/all/modules/snap_map_tool/images/map-field-triangle.png") center top no-repeat;
 }
 
 .menuSpacerToggle {
