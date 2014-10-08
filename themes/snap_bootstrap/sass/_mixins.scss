@@ -110,17 +110,7 @@ text-decoration: none;
 	background-size: contain;
 	}
   
-//Home page block for rotating through projects and tools
-@mixin projectblock {
-	width: auto;
-	margin: 0 2em 2em 0;
-	background-color: #fff;
-	padding: 1em;
-  height: auto;
-	@include shadow(5px, 5px, 15px, $shadow-color);
-	border: 2px solid $snapGreen;
-	border-radius: 20px;
-}
+
 
 // Bullet lists
 @mixin no-bullet {   //Turn off the bullet for an element of a list

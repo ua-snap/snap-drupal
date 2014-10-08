@@ -236,20 +236,20 @@ aside.col-sm-2 {		//left sidebar for UAS project sub menu
  		
 		
 		 .region.region-sidebar-second {
-			 @include projectblock;
-			 padding: 1em;
+			 padding: 0 1em 1em 1em;
 			 height: auto;
 			 margin: 5.2em 0 0 0;
 			 background: url('/sites/default/files/pictures/satinweave_@2X.png');
 			 border-radius: $border-radius;
 			border: $border;
+			 	@include shadow($x, $y, $blur, $shadow-color);
+
 
 
 			 h2.block-title {
-				 font-size: 1.25em;
-				 font-weight: 500;
-				 text-align: center;
-				 margin: 0 0 .25em 0;
+				 font-size: 1.2em;
+				 font-weight: 400;
+				 margin: .75em 0 .25em 0;
 			 }
 
 			 .views-field.views-field-title {
