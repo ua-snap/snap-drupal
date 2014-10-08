@@ -117,6 +117,13 @@ Clean URLs will not work unless the "AllowOverride All" directive has been set i
 
 http://cerberus.snap.uaf.edu/about
 
+Also, you must create a symbolic link to the .htaccess file found in this Git repo like below:
+
+```bash
+cd /path/to/drupal/
+ln -s /path/to/drupal/sites/all/misc/.htaccess .htaccess
+```
+
 After you have confirmed that you can access a page in this way, visit the following page WITHOUT "?q=" in the URL (or this won't work):
 
 http://cerberus.snap.uaf.edu/admin/config/search/clean-urls
