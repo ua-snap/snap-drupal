@@ -8,8 +8,8 @@
 .panel.panel-info {
 	width: auto;
 	clear: right;
-	margin: 0 0 2em 2em;
-	padding: 1em;
+	margin: 1.9em 0 2em 2em;
+	padding: 0 1em 1em 1em;
 	border-radius: $border-radius;
 	border: $border;
 	background: url('/sites/default/files/pictures/satinweave_@2X.png');
@@ -17,24 +17,24 @@
 	
 	h2.panel-heading {
 		color: $snapDarkGrey;
-		font-weight: bold;
+		font-weight: 400;
 		line-height: 1.2em;
-		font-size: 1.3em;
-		margin: 0 0 .25em 0;
+		font-size: 1.2em;
+		margin: .75em 0 .25em 0;
 		background: none;
-		border-bottom: 2px solid $snapGreen;
-		padding: 0 0 .1em 0;
+		padding: 0;
+		border-bottom: none;
 	}
 	
 	h3 {
 		color: $snapDarkGrey;
-		font-size: 1.1em;
-		font-weight: bold;
+		font-size: 1em;
+		font-weight: 400;
 		margin: 1.2em 0 .25em 0;
 	}
 
 	h4 {
-		font-size: 1em;
+		font-size: .9em;
 		font-weight: bold;
 		color: $snapDarkGrey;
 		margin: 1em 0 .25em 0;

@@ -69,6 +69,11 @@
 		height: auto;
 		float: right;
 		margin: 0 0 2em 2em;
+		border: $border;
+		border-radius: $border-radius;
+		@include shadow($x, $y, $blur, $shadow-color);
+		padding: .3em;
+		background: #fff;
 	}
 	
 	.date-display-single {
@@ -77,10 +82,11 @@
 		font-size: ($font-size-base * .9);
 		padding: .2em 0 .2em 0;
 	}	
+
 }
 
-//for when the article is archived on the "SNAP in the news" page
-.node.node-article.node-promoted.node-unpublished.node-teaser {
+//for when the article is archived on the "News" page
+.node.node-article.node-teaser {
 	border-bottom: 1px solid $snapGrey;
 	border-top: none;
 	border-right: none;
@@ -96,6 +102,11 @@
 		display: inline;
 		font-size: ($font-size-base * .9);
 		border: none;
-	}		
+	}	
+	
+		p {
+			color: red;
+		}
+	
 }
 
