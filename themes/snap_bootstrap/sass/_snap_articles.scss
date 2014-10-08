@@ -15,35 +15,38 @@
 	
 	.content {
 		
+		p {
+			display: none;
+		}
+		
 		.read-more a {
 			text-transform: uppercase;
-			font-size: .9em;
+			margin: 0;
+			font-size: .85em;
 			color: #fff;
+			font-style: italic;
+			letter-spacing: .05em;
 			
 			&:hover,
 			&:focus {
 				border: 1px solid #fff;
+				padding: .25em .4em;
+				@include link-transition;
 				border-radius: 5px;
-				padding: 4px 8px;
 			}
 		}
 	}
+	
 	
 	h2 {
 		font-size: 1.2em;
 		margin: 0 0 .75em 0;
 		
 		a {
-			color: #fff;
-			
+			color: #fff;	
 		}
 	}
-	
-	p {
-		font-size: 1em;
-		line-height: ($line-height-base * .85);
-		margin: 0 0 0 1em;
-	}
+
 	
 	.date-display-single {
 		display: none;
@@ -86,27 +89,51 @@
 }
 
 //for when the article is archived on the "News" page
-.node.node-article.node-teaser {
-	border-bottom: 1px solid $snapGrey;
-	border-top: none;
-	border-right: none;
-	border-left: none;
-	background-color: #fff;
-	margin: 1em 0 0 0;
-	padding: 0;
-	@include no-shadow;
+.view.view-archived-articles {
 	
-	.date-display-single {
-		font-weight: bold;
-		font-style: italic;
-		display: inline;
-		font-size: ($font-size-base * .9);
-		border: none;
-	}	
-	
-		p {
-			color: red;
+	.node.node-article.node-teaser {
+		border-bottom: 1px solid $snapGrey;
+		border-top: none;
+		border-right: none;
+		border-left: none;
+		background-color: #fff;
+		margin: 1em 0 0 0;
+		padding: 0;
+		@include no-shadow;
+
+		.date-display-single {
+			font-weight: 300;
+			font-style: italic;
+			display: inline;
+			font-size: ($font-size-base * .9);
+			border: none;
 		}
-	
+
+		h2 a {
+			margin: 0;
+			color: $snapDarkGrey;
+
+			&:hover,
+			&:focus {
+				color: $snapGreen;
+				@include link-transition;
+			}
+		}
+
+		p {
+			font-size: .95em;
+			margin: -2em 0 0 7em;
+		}
+
+		.read-more {
+			display: inline-block;
+			margin: 0;
+			font-size: .85em;
+			border: $border;
+			border-radius: $border-radius;
+			@include shadow($x, $y, $blur, $shadow-color);
+			padding: 0 .5em;
+		}
+	}
 }
 
