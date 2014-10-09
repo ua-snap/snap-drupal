@@ -565,7 +565,7 @@ function writeHash() {
       .show()
       .on('click', function(e) {
         $('#metadataModal')
-          .html('<iframe height="600px" width="100%" src="http://athena.snap.uaf.edu:8080/geonetwork/srv/en/metadata.show.embedded?id='+metadataId+'"></iframe>')
+          .html('<iframe height="600px" width="100%" src="https://athena.snap.uaf.edu:8080/geonetwork/srv/en/metadata.show.embedded?id='+metadataId+'"></iframe>')
           .dialog({
             draggable: false,
             resizable: false,
@@ -799,7 +799,7 @@ var resize = function() {
 };
 
 snap.mapUrls = {
-  'baseUrl' : 'http://tiles.snap.uaf.edu/tilecache/tilecache.py/2.11.0/',
+  'baseUrl' : 'https://tiles.snap.uaf.edu/tilecache/tilecache.py/2.11.0/',
   'urlSuffix' : '',
 
   'precipitation' : {
