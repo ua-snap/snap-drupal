@@ -90,6 +90,7 @@
 
 //for when the article is archived on the "News" page
 .view.view-archived-articles {
+	padding: 0 1em;
 	
 	.node.node-article.node-teaser {
 		border-bottom: 1px solid $snapGrey;

@@ -1,46 +1,49 @@
 /* People -- styles for main page with the grid of everyone, and individual peeps' pages */
 
-h2.block-title {
-	color: $snapDarkGrey;
-	background-color: lighten($snapGrey, 15%);
-	padding: .2em;
-	margin: 0 0 .1em 0;
-	font-weight: 400;
-}
-
-a.username {
-	font-size: 1em;
-	margin: 0;
-	line-height: 1em;
-}
-
-.views-field.views-field-field-title {
-	font-size: .85em;
-	line-height: 1.2em;
-	font-style: italic;
-	margin-top: -.25em;
-}
-
-table.views-view-grid.cols-5 {
+#block-views-staff-category-leadership-block,
+#block-views-staff-category-faculty-block,
+#block-views-staff-category-affiliated-block,
+#block-views-staff-category-staff-block,
+#block-views-staff-category-alumni-block, {
+	margin: 0 1em;
 	
-	td {
-		padding: .5em 1em 2em 1em;
-		vertical-align: text-top;
-		overflow-x: auto;
-		width: 170px;
-		
-		p {
-			line-height: 1.3em;
-			letter-spacing: .02em;
-			font-size: .94em;
-		}
-		
-		img {
-			border: $border;
-			border-radius: $border-radius;
-			@include shadow($x, $y, $blur, $shadow-color);
-			margin-bottom: .5em;
-		}
+	h2.block-title {
+		color: $snapDarkGrey;
+		background-color: lighten($snapGrey, 15%);
+		padding: .2em;
+		margin: 0 0 .1em 0;
+		font-weight: 400;
+		border-radius: 5px;
+	}
+	
+	.views-fluid-grid img {
+		@include shadow($x, $y, $blur, $shadow-color);
+		@include border-radius ($border-radius);
+		margin-bottom: .5em;
+		max-width: 100%;
+		padding: .3em;
+		border: $border;
+	}
+	
+	a.username {
+		font-size: 1em;
+		margin: 0;
+		line-height: 1em;
+	}
+
+	.views-field.views-field-field-title {
+		font-size: .85em;
+		line-height: 1.2em;
+		font-style: italic;
+	}
+	
+//Overrides the views_fluid_grid default styling for each list item
+	li.views-fluid-grid-item {
+
+	  /* width and height properties are defined at views_fluid_grid.size.css. */
+	  padding: 0 .25em 1.5em 0;
+	  overflow: hidden; /* needed to clip content when explicit width/height is specified. */
+	  background-color: #fff;
 	}
 }
 
