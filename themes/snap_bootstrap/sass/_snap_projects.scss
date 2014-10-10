@@ -1,6 +1,16 @@
 /* Styles for main project list page "current2" = current; "current"= completed" due to error in creating views and blocks. */
 #block-views-project-category-current2-block,
 #block-views-project-category-current-block {
+	margin: 0 1em;
+	
+	h2.block-title {
+		color: $snapDarkGrey;
+		background-color: lighten($snapGrey, 15%);
+		padding: .2em;
+		margin: 0 0 .1em 0;
+		font-weight: 400;
+		border-radius: 5px;
+	}
 	
 	.views-field-field-project-image img {
 		@include shadow($x, $y, $blur, $shadow-color);
@@ -36,7 +46,7 @@
 	background-size: auto;
 	@include shadow(5px, 5px, 15px, $shadow-color);
 	@include border-radius ($border-radius);
-	margin: 0;
+	margin: 0 1em;
 	
 	.icon {
 		display: none;
@@ -70,6 +80,7 @@
 	
 	h2.block-title {
 		background: none;
+		margin: 0;
 	}
 }
 
@@ -232,13 +243,13 @@ aside.col-sm-2 {		//left sidebar for UAS project sub menu
 
 //styling for featured projects on expertise pages	
 	 .col-md-3.expertise-projects {
-		padding: 0 0 0 .5em;
+		
  		
 		
 		 .region.region-sidebar-second {
 			 padding: 0 1em 1em 1em;
 			 height: auto;
-			 margin: 5.2em 0 0 0;
+			 margin: 5.2em 1em 0 0;
 			 background: url('/sites/default/files/pictures/satinweave_@2X.png');
 			 border-radius: $border-radius;
 			border: $border;
@@ -249,7 +260,7 @@ aside.col-sm-2 {		//left sidebar for UAS project sub menu
 			 h2.block-title {
 				 font-size: 1.2em;
 				 font-weight: 400;
-				 margin: .5em 0 .25em 0;
+				 margin: .5em 0 .25em -.25em;
 				 line-height: 1.2em;
 			 }
 

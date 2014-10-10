@@ -4,7 +4,7 @@ body {
 // This div's height is set dynamically in js/snap.js to the height of the block that sticks at the top of the page.
 // This prevents a jumpy behavior when the affix-top class is applied.
 #nav-wrapper {
-  min-height: 50px;
+  min-height: 50px !important;
 }
 
 

@@ -62,22 +62,22 @@
 			padding: 2em 3em .5em 3em;
 			
 			img {
-				-webkit-transition-duration: 0.5s; /*Webkit: Animation duration*/
-				-moz-transition-duration: 0.5s; /*Mozilla duration version*/
-				-o-transition-duration: 0.5s; /*Opera duration version*/
+				-webkit-transition-duration: 0.5s;
+				-moz-transition-duration: 0.5s; 
+				-o-transition-duration: 0.5s; 
 				transition-duration: 0.5s;
 				opacity: 0.65; /*initial opacity of images*/
 				border-radius: 5px;
 				padding: 3px;
 
 				&:hover, &:focus {
-					-webkit-transform:scale(1.1); /*Webkit: Scale up image to 1.2x original size*/
-					-moz-transform:scale(1.1); /*Mozilla scale version*/
-					-o-transform:scale(1.1); /*Opera scale version*/
+					-webkit-transform:scale(1.1); 
+					-moz-transform:scale(1.1); 
+					-o-transform:scale(1.1); 
 					transform:scale(1.1);
-					box-shadow:0px 0px 35px #000; /*CSS3 shadow: 40px blurred shadow all around image*/
-					-webkit-box-shadow:0px 0px 35px #000; /*Safari shadow version*/
-					-moz-box-shadow:0px 0px 35px #000; /*Mozilla shadow version*/
+					box-shadow:0px 0px 35px #000; 
+					-webkit-box-shadow:0px 0px 35px #000; 
+					-moz-box-shadow:0px 0px 35px #000; 
 					box-shadow:0px 0px 35px #000;
 					opacity: 1;
 						
