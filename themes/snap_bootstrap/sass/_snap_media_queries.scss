@@ -47,6 +47,12 @@
 			}
 		}	
 	}
+	
+	.footer-left,
+	.footer-right {
+		text-align: center;
+		padding: 0;
+	}
 }
 
 
@@ -55,6 +61,12 @@
 	#masthead {
 		background: url('/sites/default/files/pictures/SNAP_acronym_masthead2.svg') center no-repeat;
 		@include background-size-contain;
+	}
+	
+	.footer-left,
+	.footer-right {
+		text-align: center;
+		padding: 0;
 	}
 }
 	
@@ -67,6 +79,16 @@
 		background: url('/sites/default/files/pictures/SNAP_acronym_masthead2.svg') center no-repeat;
 		@include background-size-contain;
 	}
+	
+	.footer-left {
+		text-align: left;
+		padding: 0 0 .5em 1em;
+		}
+	.footer-right {
+		text-align: right;
+		padding: 0 1em .5em 0;
+	}
+	
 }
 
 
