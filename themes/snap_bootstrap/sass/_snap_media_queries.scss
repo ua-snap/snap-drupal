@@ -97,7 +97,10 @@
 		padding: 0 1em .5em 0;
 	}
 	
-	.col-md-3 {
+	.col-md-3.data,
+	.col-md-3.collab,
+	.col-md-3.planning-expertise,
+	.col-md-3.tools {
 		padding-left: 2em;
 		padding-right: 2em;
 	}
