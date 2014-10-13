@@ -29,12 +29,13 @@
 		width: 100%;
 		background: url('/sites/default/files/pictures/crossed_stripes.png');
 		background-size: auto, cover;
-		padding: 0;
+		padding: 0 0 .5em 0;
 		
 		.col-md-12.tagline {
 			@include background-gradient-transparency;
 			text-align: center;
 			height: auto;
+			margin: 0 0 1.5em 0;
 			
 			h1.tagline {
 				margin: .75em 0;
@@ -53,13 +54,16 @@
 				@include hr-fader;
 			}
 		}
+		
+		p {
+			text-align: center;
+			padding: 2em 3em .5em 3em;
+		}
 	
 		.col-md-3.data,
 		.col-md-3.collab,
 		.col-md-3.planning-expertise,
 		.col-md-3.tools {
-			text-align: center;
-			padding: 2em 3em .5em 3em;
 			
 			img {
 				-webkit-transition-duration: 0.5s;
@@ -88,14 +92,14 @@
 				color: white;
 				text-transform: uppercase;
 				font-size: 1.3em;
-				margin: .75em 0 0 0;
+				margin: .75em 2em 0 2em;
 				line-height: 1.3em;
 				display: block;
 
 			}
 			
 			span.whitetext {
-				margin: 0 0 1em 0;
+				margin: 0 2em 1em 2em;
 				color: white;
 				font-size: .8em;
 				line-height: 1.3em;
