@@ -5,11 +5,8 @@
 	
 	h2.block-title {
 		color: $snapDarkGrey;
-		background-color: lighten($snapGrey, 15%);
-		padding: .2em;
-		margin: 0 0 .1em 0;
+		margin: .5em 0 .1em 0;
 		font-weight: 400;
-		border-radius: 5px;
 	}
 	
 	.views-field-field-project-image img {
