@@ -9,11 +9,8 @@
 	
 	h2.block-title {
 		color: $snapDarkGrey;
-		background-color: lighten($snapGrey, 15%);
-		padding: .2em;
-		margin: 0 0 .1em 0;
+		margin: .5em 0 .1em 0;
 		font-weight: 400;
-		border-radius: 5px;
 	}
 	
 	.views-fluid-grid img {
@@ -35,6 +32,7 @@
 		font-size: .85em;
 		line-height: 1.2em;
 		font-style: italic;
+		margin-right: 2em;
 	}
 	
 //Overrides the views_fluid_grid default styling for each list item
@@ -49,16 +47,18 @@
 
 
 //alumnni table
-table.views-table.cols-0.table td {		
-	padding: .1em 0 .1em .5em;
-	font-size: .85em;
-	border-bottom: 1px solid $snapGrey;
-	vertical-align: middle;
+.views-table.cols-0.table td  {		
+	padding: .2em 0;
+	border-top: 0;
 	
-	a {
-		font-size: 1em;
-	}
+	a.username {	//disables alumni names as links
+		font-size: .85em;
+		pointer-events: none;
+		cursor: default;
+		color: $snapDarkGrey;
+	}	
 }
+
 
 .profile img {	/*main square user picture */
 	border: $border;
