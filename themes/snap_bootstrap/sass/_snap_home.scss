@@ -95,7 +95,7 @@
 				margin: .75em 0 0 0;
 				line-height: 1.3em;
 				display: block;
-
+				letter-spacing: .05em;
 			}
 			
 			span.whitetext {
@@ -109,6 +109,7 @@
 
 			span.linklike {
 				color: lighten($snapGreen, 20%);
+				letter-spacing: .05em;
 
 				&:hover,
 				&:focus {
