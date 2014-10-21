@@ -484,7 +484,7 @@ This module allows you to move the "Read more" link from the node's links area t
    sudo mv snap snap_old && sudo mv drupal-#.## snap && sudo mv snap_old/sites snap/
    ```
 
-If something goes wrong, remember you backed up the website files to your home directory in Step 1.
+   If something goes wrong, remember you backed up the website files to your home directory in Step 1.
 
 10. Set up symbolic links inside our new website directory:
 
