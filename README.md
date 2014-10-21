@@ -326,37 +326,33 @@ Steps 4-6 should be performed as quickly as possible, as the live Drupal site wi
 The main thing to look out for when updating the Drupal core is that the file permissions end up being the same as before. Note that the file permissions change a little bit for ```sites/default/files```. This directory has the group-write bit set so the web server can upload files there. But all of the permissions and file ownership should end up set correctly if you follow the above steps in the proper order.
 
 
-## Setting up the Articles content type to enable publishing of "highlighted" items temporarily on the Home page
+## Setting up the Articles content type to enable publishing of Articles on the Home page
 
-1.	Download the Drupal module Scheduler from drupal.org/project/scheduler.	
-*	Go to Modules and enable the new module.
-*	Leave all of its configuration settings at their defaults - further settings can be made after installation when editing the Article content type.
-*	Edit Permissions settings to allow Authenticated users to schedule content publication.	Save settings.
-
-2.	In Structure > Content types, Edit tab, edit the Article content type:
+1.	In Structure > Content types, Edit tab, edit the Article content type:
 *	Edit tab, lower left block:
-*	Publishing options: uncheck "Published" (you will be choosing a publish date and time via Scheduler)
+*	Publishing options: uncheck "Published" 
 *	Display settings: Uncheck 'display author and date information"
 
-3.	In Structure > Content types, Edit tab, configure Scheduler:
-*	Publishing: check 'enable scheduled publishing for this content type,' 'change content creation time to match the scheduled publish time,' and 'require scheduled publishing.'
-*	Unpublishing: Check 'enable scheduled unpublishing,' 'require scheduled unpublishing'
-*	Node edit page layout: check 'separate fieldset'
-*	Expand fieldset: choose 'always open the fieldset'
-
 Manage Fields tab:
-*	Add new field, Image (machine name: article_image), Field Type Image, Widget Image.	Save, leave Field settings at defaults.
+*	Add new field, Masthead Image (machine name: field_article_image), Field Type Image, Widget Image.	Save, leave Field settings at defaults.
 
 Manage display tab, Default mode:
-*	Reorder fields: Image, Body, Tags.
-*	Change Image Label to <Hidden>.
+*	Reorder fields: Article Date, Masthead image, Body.
+*	Change Masthead Image Label to <Hidden>.
 *	Change Body Format to Default.
 *	Save.
 
 Manage display tab, Teaser mode:
-*	Change Image format to Image; move to top of Field list.	Change label to <Hidden>.
-*	Choose Image style: Medium (220 x 220); Link to nothing.
-*	Change Body trim length to 350.
+*	Reorder: Article date, Masthead Image, Body.
+*	Change Masthead Image format to Background image; move to top of Field list.	Change label to <Hidden>, link to original image URL.
+*	To configure Masthead, click gear icon and:
+**	Image style: None
+**	Selector: .highlighted.jumbotron
+**	Color: #FFFFFF
+**	Horizontal alignment: left; vertical: top
+**	Background attachment: scroll; Background repeat: no repeat; Background size: cover, add support for IE8
+**	Media query: all; add !important
+*	Change Body Format to Summary or Trimmed; trim length 350.
 *	Save.
 
 
