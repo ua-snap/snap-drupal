@@ -6,7 +6,7 @@
  */
 
 /**
- * Implements WYSIWYG's hook_INCLUDE_plugin().
+ * Implementation of WYSIWYG's hook_INCLUDE_plugin().
  */
 function media_media_plugin() {
   // Include the required browser JS.
@@ -15,16 +15,13 @@ function media_media_plugin() {
   // @see http://drupal.org/node/1039076
   media_include_browser_js();
 
-  // Add the filter handling.
-  drupal_add_js(drupal_get_path('module', 'media') . '/js/media.filter.js');
-
-  // Plugin definition.
+  // Plugin definition
   $plugins['media'] = array(
-    'title' => variable_get('media__wysiwyg_title', t('Media browser')),
+    'title' => media_variable_get('wysiwyg_title'),
     'vendor url' => 'http://drupal.org/project/media',
     'icon path' => drupal_get_path('module', 'media') . '/images',
     'icon file' => 'wysiwyg-media.gif',
-    'icon title' => variable_get('media__wysiwyg_icon_title', t('Add media')),
+    'icon title' => media_variable_get('wysiwyg_icon_title'),
     // @todo: move this to the plugin directory for the wysiwyg plugin.
     'js path' => drupal_get_path('module', 'media') . '/js',
     'js file' => 'wysiwyg-media.js',
@@ -32,9 +29,7 @@ function media_media_plugin() {
     'css path' => NULL,
     'settings' => array(
       'global' => array(
-        'enabledPlugins' => variable_get('media__wysiwyg_browser_plugins', array()),
-        'file_directory' => variable_get('media__wysiwyg_upload_directory', ''),
-        'types' => variable_get('media__wysiwyg_allowed_types', array('audio', 'image', 'video', 'document')),
+        'types' => media_variable_get('wysiwyg_allowed_types'),
         'id' => 'media_wysiwyg',
       ),
     ),
@@ -62,13 +57,12 @@ function media_include_browser_js() {
       // Since the arguments to pass are variable, use call_user_func_array().
       // This will not handle all potential drupal_add_*() functions directly
       // but covers the js and library needed here, which are unlikely to be
-      // expanded since this function is only a workaround for a wysiwyg
-      // limitation.
+      // expanded since this function is only a workaround for a wysiwyg limitation.
       call_user_func_array($function, $definition);
     }
   }
   // Add wysiwyg-specific settings.
-  $settings = array('wysiwyg_allowed_attributes' => variable_get('media__wysiwyg_allowed_attributes', array('height', 'width', 'hspace', 'vspace', 'border', 'align', 'style', 'class', 'id', 'usemap', 'data-picture-group', 'data-picture-align')));
+  $settings = array('blacklist' => array('src', 'fid', 'view_mode', 'format'));
   drupal_add_js(array('media' => $settings), 'setting');
 }
 

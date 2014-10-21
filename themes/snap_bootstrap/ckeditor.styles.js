@@ -6,6 +6,8 @@ For licensing, see LICENSE.html or http://ckeditor.com/license
 /*
  * This file is used/requested by the 'Styles' button.
  * The 'Styles' button is not enabled by default in DrupalFull and DrupalFiltered toolbars.
+ 
+ * THIS FILE LIVES AT /sites/all/themes/snap_bootstrap. When updating CKEditor, replace or delete the file it comes with, with this one .
  */
 if(typeof(CKEDITOR) !== 'undefined') {
     CKEDITOR.addStylesSet( 'drupal',
@@ -36,12 +38,12 @@ if(typeof(CKEDITOR) !== 'undefined') {
             { name : 'Strikethrough'	, element : 'strike' },
             { name : 'Subscript'		, element : 'sub' },
             { name : 'Superscript'		, element : 'sup' },
-            */
+            
 
             { name : 'Computer Code'	, element : 'code' },
             { name : 'Cited Work'		, element : 'cite' },
             { name : 'Inline Quotation'	, element : 'q' },
-
+*/
             /* Object Styles */
 
             {
