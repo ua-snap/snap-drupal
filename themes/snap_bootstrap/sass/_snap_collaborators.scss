@@ -6,6 +6,18 @@
   }
 }
 
+#block-views-projects-block-1 {
+  h2 {
+      margin: 1em 0 0 0;
+  }
+
+  .node-teaser {
+    h2 {
+      margin: 1em 0 .5em 0;
+    }
+  }
+}
+
 .field-name-field-collaborators .field-item.even,
 .field-name-field-collaborators .field-item.odd {
   float: left;
