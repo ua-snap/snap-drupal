@@ -28,3 +28,13 @@ li.views-fluid-grid-item {
   background-color: #fff;
   border: none;
 }
+
+
+//Styling for collaborator logos on their own pages
+.field.field-name-field-image.field-type-image.field-label-hidden img {
+	float: left;
+	margin: 0 1em 0 0;
+	border-right: 2px solid $snapGrey;
+	padding: .5em;
+}
+
