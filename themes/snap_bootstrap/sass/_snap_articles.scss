@@ -86,18 +86,22 @@
 		padding: .2em 0 .2em 0;
 	}	
 
-
-		.caption.right p {
-			font-size: .85em;
-			margin: -2em 0	1em	8em;
-			line-height: ($line-height-base * .8);
-			font-style: italic;
-			color: lighten($snapDarkGrey, 15%);
-			text-align: left;
-			float: right;
-			max-width: 45%;
-		}
+	.caption.right p {
+		font-size: .85em;
+		margin: -2em 0	1em	8em;
+		line-height: ($line-height-base * .8);
+		font-style: italic;
+		color: lighten($snapDarkGrey, 15%);
+		text-align: left;
+		float: right;
+		max-width: 45%;
+	}
 }
+
+
+
+	
+
 
 
 //for when the article is archived on the "News" page
