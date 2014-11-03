@@ -102,6 +102,7 @@ aside.col-sm-2 {		//left sidebar for UAS project sub menu
 			padding: 10px 0 10px 10px;
 			background: $snapGreen;
 			border-radius: 5px;
+			margin: 0 0 .25em 0;
 		}
 		
 		ul.menu.nav li a {
@@ -188,11 +189,20 @@ aside.col-sm-2 {		//left sidebar for UAS project sub menu
 			}
 		}
 		
-		.field-name-field-project-image .field-item.even img {
+		.field-name-field-project-image .field-item.even img,
+		.field-name-field-project-image .field-item.odd img {
 			margin: 1em 0 1em 0;
 			@include shadow($x, $y, $blur, $shadow-color);
 			max-width: 100%;
 			@include border-radius ($border-radius);
+		}
+		
+		.caption.none p {
+			font-size: 1em;
+			margin: -.5em 0	1em	0;
+			line-height: ($line-height-base * .8);
+			font-style: italic;
+			color: lighten($snapDarkGrey, 15%);
 		}
 		
 		.read-more a {
