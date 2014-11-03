@@ -515,4 +515,4 @@ Content types that have Image fields include Article, Organizations, and Project
 **	.field-name-field-project-image .field-item.odd img
 *	Check require text, copy style, copy class, remove align, copy foat, auto width, keep link
 *	Uncheck remove style, remove class, copy alignment
-*	Style the markup for Image Caption paragraph
+*	Style the markup for Image Caption paragraph (.caption.left p, .caption.right p, .caption.none p)
