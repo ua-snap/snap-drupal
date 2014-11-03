@@ -291,7 +291,7 @@ This non-module dwells in ```sites/all/modules/snap_community_charts```.  All st
 
 ### Setting up People
 
-Set up the taxonomy for staff categories.  Main menu Structure > Taxonomy > Add Vocabulary.  Name it "Staff Categories".  Add 5 terms: Leaders, Faculty, Students, Staff, Alumni.
+Set up the taxonomy for staff categories.  Main menu Structure > Taxonomy > Add Vocabulary.  Name it "Staff Categories".  Add 6 terms: Leaders, Faculty, Affiliated, Students, Staff, Alumni.
 
 Go to Configuration > (People section) Account settings, then click on the "Manage Fields" tab at the upper-right.  Note, those tabs may be hidden by the Shortcuts toolbar; if so, disable the Shortcuts module.  Add a new field "Title", type Text, make it required & leave other settings default.  Add new field "Biography", type Long Text, make it required, change text processing to "Filtered Text" and leave other settings default.  Add a new field "Display Email", type Text, make it required and leave other settings default.  Add new field "Staff Category", type Term Reference, widget default (check box/etc); on next screen, configure field to Vocabulary Staff Categories; make field required and default to Staff for convenience; leave other settings default.  
 
@@ -376,7 +376,7 @@ Sort criteria: Global: Random (asc)
 Pager: Display a specified number of items (1 item)
 
 
-##Install Menu Block module
+## Install Menu Block module
 
 Provides configurable blocks of menu trees starting with any level of any menu. Access through Structure > Blocks > Add Menu Block. Help for configuration can be found at /admin/help/menu_block
 
@@ -387,7 +387,7 @@ Example given for the Projects/UAS-RITA project:
 *	Create a basic page. Under Menu Settings, check "Provide a menu link" with the parent item, More about UAS
 
 
-###Create menu block in Structure > Blocks:
+### Create menu block in Structure > Blocks:
 *	Block title: More about UAS
 *	Admin title: UAS-RITA subnavigation
 *	Menu: More about UAS
@@ -407,14 +407,14 @@ The Lightbox2 module is a simple, unobtrusive script used to overlay images on t
 *	Basic page, Default Tab > Manage Display: Image Label: Hidden; Format: Lightbox2: lightbox: thumbnail medium
 
 
-##Install and configure External links module
+## Install and configure External links module
 External Links is a small module used to differentiate between internal and external links. Using jQuery, it will find all external links on a page and add an external icon  indicating it will take you offsite or a mail icon  for mailto: links.
 *	Uncheck place an icon next to external links
 *	Check open external links in a new window
 *	Leave other checkboxes at defaults
 
 
-##Install and configure Read More module
+## Install and configure Read More module
 This module allows you to move the "Read more" link from the node's links area to the end of the teaser text.
 *	Install and enable the module as usual, but configure it in Configuration > Content Authoring > Read More link
 *	Default setting for Link Behavior is: inline. Leave this.
@@ -502,3 +502,17 @@ This module allows you to move the "Read more" link from the node's links area t
 13. If all went as planned, Drupal will report that it's using the new Drupal core on this page:
 
    https://www.snap.uaf.edu/#overlay=admin/reports/updates
+   
+   
+## Configure jCaption module for image captions
+Provides a caption for images from the alt or title attribute using jQuery. This module  uses whatever text a content creator puts in the "Title" field for the image. So you just have to make sure "Enable Title field" is checked for the image field you use. Then you go into the jCaption configuration settings to add the selectors you want to be captionized. jQuery handles the rest.
+
+Content types that have Image fields include Article, Organizations, and Projects. HOWEVER we don't want captions to appear for Organization logos, so disable Alt and Title fields for the logos in the Organizations content type (Collaborator logo element).
+*	Set to use TITLE attribute
+*	Choose selectors on which it will run: 
+**	.content .content img
+**	.field-name-field-project-image .field-item.even img
+**	.field-name-field-project-image .field-item.odd img
+*	Check require text, copy style, copy class, remove align, copy foat, auto width, keep link
+*	Uncheck remove style, remove class, copy alignment
+*	Style the markup for Image Caption paragraph
