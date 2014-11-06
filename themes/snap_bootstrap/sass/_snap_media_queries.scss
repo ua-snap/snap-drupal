@@ -21,31 +21,10 @@
 				}
 			}
 		}
-	}
-
-	.navbar-collapse.collapse.in {
-		background: #fff;
-		opacity: 0.85;
-		border-radius: 5px;
-		width: 50%;
 		
-		li a {
-			padding: 2px 10px;
+		.main-container {
+			padding: 2em 0 3em 0;
 		}
-		
-		li a:hover {
-			background: $snapGreen;
-			color: white;
-		}
-		
-		.dropdown-menu li a {
-			margin-left: 10px;
-			
-			&:hover {
-				background: lighten($snapGreen, 30%);			
-				margin-left: 20px;
-			}
-		}	
 	}
 	
 	.front .view-id-masthead .node.node-article.node-teaser {	
@@ -55,13 +34,46 @@
 	.footer-left,
 	.footer-right {
 		text-align: center;
-		padding: 0;
+		padding: 0 1em;
+	}
+	
+	.navbar-collapse.collapse.in {
+		background: #fff;
+		opacity: 0.85;
+		border-radius: 5px;
+		width: auto;
+		float: right;
+		margin-right: 0;
+
+		li a {
+			padding: 2px 10px;
+		}
+
+		li a:hover {
+			background: $snapGreen;
+			color: white;
+		}
+
+		.dropdown-menu li a {
+			margin-left: 10px;
+
+			&:hover {
+				background: lighten($snapGreen, 30%);			
+				margin-left: 20px;
+			}
+		}	
+	}
+	
+	body.not-front {
+		.main-container {
+			padding: 2em 1em 3em 1em;
+		}
 	}
 }
 
 
 /* Small devices (tablets, 768px and up) */
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 991px) {
 	#masthead {
 		background: url('/sites/default/files/pictures/SNAP_acronym_masthead2.svg') center no-repeat;
 		@include background-size-contain;
@@ -74,7 +86,39 @@
 	.footer-left,
 	.footer-right {
 		text-align: center;
-		padding: 0;
+	}
+	
+	.main-container {
+		padding: 2em 0 3em 0;
+	}
+	
+	body.not-front {
+		header#navbar {
+			
+			nav ul {
+				width: 100%;
+				margin: 0 auto;
+				padding: 0 0 0 3em;
+				
+				.dropdown-menu {
+					padding: 0;
+					width: auto;
+				}
+			}
+			.navbar-header {
+				width: 100%;
+				
+				.logo.navbar-btn.pull-left {
+					padding: 0;
+					width: 100%;
+					
+					img {
+						display: block;
+						margin: auto;
+					}
+				}
+			}
+		}
 	}
 }
 	
