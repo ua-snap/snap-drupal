@@ -1,7 +1,7 @@
 /* Styles for main project list page "current2" = current; "current"= completed" due to error in creating views and blocks. */
 #block-views-project-category-current2-block,
 #block-views-project-category-current-block {
-	margin: 0 1em;
+	margin: 0;
 	
 	h2.block-title {
 		color: $snapDarkGrey;
@@ -38,12 +38,10 @@
 
 /*Style for the "help" block in which the featured project block lives */
 .region.region-help.alert.alert-info {
-	border: 1px solid $snapDarkGrey;
-	background: url('/sites/default/files/pictures/satinweave_@2X.png');
-	background-size: auto;
-	@include shadow(5px, 5px, 15px, $shadow-color);
-	@include border-radius ($border-radius);
-	margin: 0 1em;
+	border: none;
+	background: #fff;
+	margin: 0 10em 0 0;
+	padding: 0;
 	
 	.icon {
 		display: none;
@@ -77,7 +75,7 @@
 	
 	h2.block-title {
 		background: none;
-		margin: 0;
+		margin: 0 0 .25em 0;
 	}
 }
 
