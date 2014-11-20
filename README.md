@@ -342,19 +342,19 @@ Now we create block views for each staff category.  For each staff category: Str
    wget -O /tmp/drupalcore.tar.gz 'http://ftp.drupal.org/files/projects/drupal-7.##.tar.gz'
    ```   
 
-1. Change to the /var/www directory to extract the tar file. Files extracted directly into the /var/www directory will inherit the "httpd_sys_content_t" SELinux context. Apache will not be able to serve files without this context.
+1. Make sure you are still in the /var/www directory before extracting the tar file. Files extracted directly into the /var/www directory will inherit the "httpd_sys_content_t" SELinux context. Apache will not be able to serve files without this context.
 
    ```bash
    sudo tar zxvf /tmp/drupalcore.tar.gz
    ```
 
-   To make the rest of this documentation easier and less accident prone, change the extracted folder's name to remove the version number:
+   To make the rest of this documentation easier and less accident prone, change the extracted directory's name to remove the version number:
 
    ```bash
    sudo mv /var/www/drupal-7.## /var/www/drupalcore
    ```
 
-1. Change file ownership to "drupal" user and group:
+1. Change file ownership to the "drupal" user and group:
 
    ```bash
    sudo chown -R drupal:drupal /var/www/drupalcore
@@ -378,7 +378,7 @@ Now we create block views for each staff category.  For each staff category: Str
    sudo -u drupal rm /var/www/drupalcore/.htaccess
    ```
 
-1. **This step will break the website if something goes wrong, so be very careful and make sure you are free of distractions.** This step combines three small steps into one so they can run one after the other instantly, essentially eliminating any website downtime. First, we rename the old SNAP website directory to "snap_old". Second, we rename the new Drupal core directory to "snap". Third, we move the "sites" subdirectory out of "snap_old" and into "snap":
+1. **This step will break the website if something goes wrong, so be very careful and make sure you are free of distractions. Think about this command carefully before performing it and have a backup plan ready.** This step combines three small steps into one so they can run one after the other instantly, essentially eliminating any website downtime. First, we rename the old SNAP website directory to "snap_old". Second, we rename the new Drupal core directory to "snap". Third, we move the "sites" subdirectory out of "snap_old" and into "snap":
 
    ```bash
    sudo mv snap snap_old && sudo mv drupalcore snap && sudo mv snap_old/sites snap/
