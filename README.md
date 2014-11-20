@@ -310,7 +310,11 @@ Now we create block views for each staff category.  For each staff category: Str
 
 ## Drupal core upgrade
 
-**Important: These notes were typed from memory. Somebody experienced with core upgrades should verify these instructions work the next time we need to perform an upgrade.**
+1. Change directories to the Apache document root:
+
+   ```bash
+   cd /var/www
+   ```
 
 1. Backup website files to your home directory:
 
@@ -318,58 +322,71 @@ Now we create block views for each staff category.  For each staff category: Str
    sudo cp -rp snap ~/snap_backup
    ```
 
-2. Backup website database to your home directory:
+1. Backup website database to your home directory:
 
    ```bash
    mysqldump -u drupal -p snapdb -r ~/snap_backup.sql
    ```
 
-3. Remove "snap_old" directory from previous upgrade, if it exists:
+   The database password can be found in ```/var/www/snap/sites/default/settings.php```.
+
+1. Remove "snap_old" directory from previous upgrade, if it exists:
 
    ```bash
    sudo rm -fr /var/www/snap_old
    ```
 
-4. Download the new Drupal core tar.gz file. These instructions will assume you downloaded it to:
-
-   /tmp/drupal-#.##.tar.gz.
-
-5. Change to the /var/www directory to extract the tar file. Files extracted directly into the /var/www directory will inherit the "httpd_sys_content_t" SELinux context. Apache will not be able to serve files without this context.
+1. Download the new Drupal core tar.gz file:
 
    ```bash
-   cd /var/www
-   sudo tar zxvf /tmp/drupal-#.##.tar.gz
+   wget -O /tmp/drupalcore.tar.gz 'http://ftp.drupal.org/files/projects/drupal-7.##.tar.gz'
+   ```   
+
+1. Change to the /var/www directory to extract the tar file. Files extracted directly into the /var/www directory will inherit the "httpd_sys_content_t" SELinux context. Apache will not be able to serve files without this context.
+
+   ```bash
+   sudo tar zxvf /tmp/drupalcore.tar.gz
    ```
 
-6. Change file ownership to "drupal" user and group:
+   To make the rest of this documentation easier and less accident prone, change the extracted folder's name to remove the version number:
 
    ```bash
-   sudo chown -R drupal:drupal /var/www/drupal-#.##
+   sudo mv /var/www/drupal-7.## /var/www/drupalcore
    ```
 
-7. Remove the "sites" directory that came with extracted files:
+1. Change file ownership to "drupal" user and group:
 
    ```bash
-   sudo -u drupal rm -fr /var/www/drupal-#.##/sites
+   sudo chown -R drupal:drupal /var/www/drupalcore
    ```
 
-8. Double check that nothing important was added to the .htaccess file in this Drupal core update:
+1. Remove the "sites" directory that came with extracted files:
 
    ```bash
-   diff /var/www/snap/.htaccess /var/www/drupal-#.##/.htaccess
+   sudo -u drupal rm -fr /var/www/drupalcore/sites
    ```
 
-   If this diff reveals anything other than SNAP-specific additions, take note and investigate if we need to copy the changes into our custom .htaccess file.
-
-9. **This step will break the website if something goes wrong, so be very careful and make sure you are free of distractions.** This step combines three small steps into one so they can run one after the other instantly, essentially eliminating any website downtime. First, we rename the old SNAP website directory to "snap_old". Second, we rename the new Drupal core directory to "snap". Third, we move the "sites" subdirectory out of "snap_old" and into "snap":
+1. Double check that nothing important was added to the .htaccess file in this Drupal core update:
 
    ```bash
-   sudo mv snap snap_old && sudo mv drupal-#.## snap && sudo mv snap_old/sites snap/
+   diff /var/www/snap/.htaccess /var/www/drupalcore/.htaccess
+   ```
+
+   If this diff reveals anything other than SNAP-specific additions, take note and investigate if we need to copy the changes into our custom .htaccess file. If no changes need to be copied, or after they have been copied, make sure to delete the new Drupal core's .htaccess file:
+
+   ```bash
+   sudo -u drupal rm /var/www/drupalcore/.htaccess
+   ```
+
+1. **This step will break the website if something goes wrong, so be very careful and make sure you are free of distractions.** This step combines three small steps into one so they can run one after the other instantly, essentially eliminating any website downtime. First, we rename the old SNAP website directory to "snap_old". Second, we rename the new Drupal core directory to "snap". Third, we move the "sites" subdirectory out of "snap_old" and into "snap":
+
+   ```bash
+   sudo mv snap snap_old && sudo mv drupalcore snap && sudo mv snap_old/sites snap/
    ```
 
    If something goes wrong, remember you backed up the website files to your home directory in Step 1.
 
-10. Set up symbolic links inside our new website directory:
+1. Set up symbolic links inside our new website directory:
 
    ```bash
    cd /var/www/snap
@@ -378,11 +395,11 @@ Now we create block views for each staff category.  For each staff category: Str
    sudo -u drupal ln -s sites/all/themes/snap_bootstrap/snap.ico favicon.ico
    ```
 
-11. Run the Drupal update script by accessing this URL from your web browser and clicking Continue, etc:
+1. Run the Drupal update script by accessing this URL from your web browser and clicking Continue, etc:
 
    https://www.snap.uaf.edu/update.php
 
-12. Clear all caches from here to make sure what you're seeing reflects the new Drupal files:
+1. Clear all caches from here to make sure what you're seeing reflects the new Drupal files:
 
    https://www.snap.uaf.edu/#overlay=admin/config/development/performance
 
