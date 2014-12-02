@@ -3926,11 +3926,11 @@ $snap_data_downloads_content = <<<html
 
 					<tr>
 						<td>
-							<a class="metadataLink" data-geonetwork-metadata-id="106" href="#">Monthly Observed Estimates of Sea Ice Concentration in Alaska Waters</a>
+							<a class="metadataLink" data-geonetwork-metadata-id="106" href="#">Observed Estimates of Sea Ice Concentration in Alaska Waters</a>
 						</td>
 
 						<td>
-							<a href="/files/data/monthly/sic_con_pct_monthly_historical_01_1850-12_2013.zip">1850&ndash;2013</a> (5.6 MB)
+							<a href="/files/data/monthly/sic_con_pct_historical_01_1850-12_2013.zip">1850&ndash;2013</a> (5.6 MB)
 						</td>
 					</tr>
 				</table>
