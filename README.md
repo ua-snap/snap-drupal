@@ -4,13 +4,11 @@ This README contains first-time dev setup instructions as well as a narrative se
 
 ## Initial setup
 
-We use VDD for the local setup.  [Follow their tutorial](https://drupal.org/node/2008792), using [the 7.x-1.3 version](http://ftp.drupal.org/files/projects/vdd-7.x-1.3.tar.gz) configuration.  There's some hiccups to overcome here due to some bugs in the VDD project at this time, though.  Here's the steps to follow:
+We use VDD for the local setup.  [Follow their tutorial](https://drupal.org/node/2008792), using [the 8.x-1.0-alpha4 version](http://ftp.drupal.org/files/projects/vdd-8.x-1.0-alpha4.tar.gz) configuration.  There's some hiccups to overcome here due to some bugs in the VDD project at this time, though.  Here's the steps to follow:
 
- 1. Download [the 7.x-1.3 version](http://ftp.drupal.org/files/projects/vdd-7.x-1.3.tar.gz) of the project.
- 1. Move the file to wherever you keep other work projects/repositories, then unpack it: ```tar -zxvf vdd-7.x-1.3.tar.gz```
+ 1. Download [the 8.x-1.0-alpha4 version](http://ftp.drupal.org/files/projects/vdd-8.x-1.0-alpha4.tar.gz) of the project.
+ 1. Move the file to wherever you keep other work projects/repositories, then unpack it: ```tar -zxvf vdd-8.x-1.0-alpha4.tar.gz```
  1. Enter that directory, referred to hereafter as ```work/vdd```: ```cd work/vdd```
- 1. Download [this patchfile](https://drupal.org/files/issues/vdd-install-drush-master-2116195-10.patch) to that directory. (Use the name here, or whatever name you gave the file when you saved it.)
- 1. Apply the patch: ```patch -p 1 < vdd-install-drush-master-2116195-10.patch```
  1. Disconnect from VPN if you are connected - Vagrant doesn't play well with VPN (3/4/14 - this issue may get fixed soon)
  1. ```vagrant up```
  1. Get coffee.  When the image has launched...
