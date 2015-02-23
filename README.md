@@ -85,6 +85,18 @@ cd /path/to/sites/all/themes/snap_bootstrap
 compass watch
 ```
 
+##### Refreshing database from Cerberus
+
+After you have a copy of the database on Cerberus, copy it to `work/vdd/sites/snapdb.sql`
+
+```bash
+cd work/vdd/
+vagrant ssh
+cd sites
+mysql -u root -p drupal7 < snapdb.sql
+exit
+```
+
 ### Install Compass
 
 Compass is used for the SASS development.  On OSX, first [install Homebrew](http://brew.sh/) then ```brew install ruby```, then [install Compass](http://compass-style.org/install/).
