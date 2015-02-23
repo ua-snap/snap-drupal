@@ -10,6 +10,45 @@ We use VDD for the local setup.  [Follow their tutorial](https://drupal.org/node
  1. Move the file to wherever you keep other work projects/repositories, then unpack it: ```tar -zxvf vdd-8.x-1.0-alpha4.tar.gz```
  1. Enter that directory, referred to hereafter as ```work/vdd```: ```cd work/vdd```
  1. Disconnect from VPN if you are connected - Vagrant doesn't play well with VPN (3/4/14 - this issue may get fixed soon)
+ 1. Replace ```work/vdd/config.json``` with this:
+ 
+ ```json
+{
+  "vm": {
+    "ip": "192.168.44.44",
+    "memory": "2048",
+    "synced_folders": [
+      {
+        "host_path": "data/",
+        "guest_path": "/var/www",
+        "type": "default"
+      }
+    ],
+    "forwarded_ports": [
+      {
+        "guest_port": 80,
+        "host_port": 8000,
+        "protocol": "tcp"
+      }
+    ]
+  },
+  "vdd": {
+    "sites": {
+      "drupal7": {
+        "account_name": "root",
+        "account_pass": "root",
+        "account_mail": "box@example.com",
+        "site_name": "Drupal 7",
+        "site_mail": "box@example.com",
+        "vhost": {
+          "document_root": "drupal7",
+          "url": "localhost:8000",
+          "alias": ["localhost:8000"]
+        }
+      }
+    }
+  }
+```
  1. ```vagrant up```
  1. Get coffee.  When the image has launched...
  1. ```vagrant ssh```
@@ -17,17 +56,12 @@ We use VDD for the local setup.  [Follow their tutorial](https://drupal.org/node
  1. ```rm -rf drupal7```
  1. ```drush dl drupal-7 --drupal-project-rename="drupal7"```
  1. ```drush @drupal7 si standard```
- 1. In a web browser on your host machine, go to ```192.168.44.44``` then click the ```drupal7``` link.  Verify that you get a Drupal site, then log in with user/password root/root.
- 1. Now we hook up the Github repo for our SNAP work.  ```cd drupal7/sites/```
- 1. ```rm -rf all/```
+ 1. Now we hook up our git repository.  First, exit the virtual machine.
+ 2. ```exit```
+ 3. ```cd data/drupal7/sites```
+ 4. ```rm -rf all```
  1. ```git clone https://github.com/ua-snap/snap-drupal.git```  (enter your Github username and password)
  1. ```mv snap-drupal all```
- 1. By default, the VDD project makes a few extra directories in the web root that we don't need.  To change this:
-   1. Continue working inside the VM as per previous steps, or ```vagrant ssh```.
-   1. ```nano /etc/apache2/sites-enabled/localhost.conf```
-   1. Change the 2nd line to: ```DocumentRoot /var/www/drupal7/```
-   1. ```control-o``` to save then ```control-x``` to exit
-   1. ```sudo /etc/init.d/apache2 reload```
  1. Check the page again in your web browser.  If it loads the Drupal page, all is well and you can proceed to the next set of setup directions!
 
 #### Post-install steps
@@ -39,13 +73,12 @@ cd /path/to/snap_bootstrap/
 bower install
 ```
 
-Three more steps need to happen here (first, install Compass per the note below, then pick it up here).
+Four more steps need to happen here (first, install Compass per the note below, then pick it up here).
 
+ 1. Log into the Drupal web interface and switch the theme to "Snap Bootstrap"
  1. Grab current Drupal DB copy.  You probably can wrangle that with no more hints, but I'll prowl email and send one to you shortly.
-
- 2. Grab current copy of "drupal-managed files."  These are files that live in /sites/default/files.  Get a sysadmin-type to grab you a fresh copy, then unzip that into the same spot locally.
-
- 3. Compile the SASS:
+ 1. Grab current copy of "drupal-managed files."  These are files that live in /sites/default/files.  Get a sysadmin-type to grab you a fresh copy, then unzip that into the same spot locally.
+ 1. Compile the SASS:
 
 ```bash
 cd /path/to/sites/all/themes/snap_bootstrap
