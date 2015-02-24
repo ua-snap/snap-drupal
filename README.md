@@ -48,6 +48,7 @@ We use VDD for the local setup.  [Follow their tutorial](https://drupal.org/node
       }
     }
   }
+}
 ```
  1. ```vagrant up```
  1. Get coffee.  When the image has launched...
