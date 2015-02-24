@@ -88,7 +88,7 @@ compass watch
 
 ##### Refreshing database from Cerberus
 
-After you have a copy of the database on Cerberus, copy it to `work/vdd/sites/snapdb.sql`
+To update the database on your local dev instance, you need to get a copy of the production database, move it to a shared folder that your virtual machine can see, and then load the database from within the virtual machine.  After you have a copy of the database on Cerberus, copy it (on your host computer) to `work/vdd/data/snapdb.sql`, then:
 
 ```bash
 cd work/vdd/
