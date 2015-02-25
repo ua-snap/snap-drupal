@@ -50,6 +50,11 @@ We use VDD for the local setup.  [Follow their tutorial](https://drupal.org/node
   }
 }
 ```
+ 1. Change Apache's main DocumentRoot to ```/var/www/drupal7``` near the top of ```~/assw2016/chef/cookbooks/core/vdd/templates/default/localhost.conf.erb```:
+
+   ```
+   DocumentRoot /var/www/drupal7
+   ```
  1. ```vagrant up```
  1. Get coffee.  When the image has launched...
  1. ```vagrant ssh```
