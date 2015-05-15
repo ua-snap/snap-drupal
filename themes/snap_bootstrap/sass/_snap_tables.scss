@@ -1,5 +1,79 @@
 //Table styling
 
+table {		//for tables that are text only
+	margin: 1em 0;
+	width: 100%;
+	border-collapse: collapse;
+	
+	/* Zebra striping */
+	tr:nth-of-type(odd) { 
+		background: lighten($snapGrey, 15%); 
+	}
+	
+	th { 
+	  background: $snapGrey; 
+	  color: $snapDarkGrey; 
+	  font-weight: bold; 
+	}
+	
+	td, th { 
+		border: 1px solid $snapGrey; 
+		text-align: left; 
+		font-size: .9em;
+		line-height: 1.2;
+		padding: .2em .5em;
+	}
+}
+
+/* 
+Max width before this PARTICULAR table gets nasty
+This query will take effect for any screen smaller than 760px
+and also iPads specifically.
+*/
+@media 
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+	/* Force table to not be like tables anymore */
+	table, thead, tbody, th, td, tr { 
+		display: block; 
+	}
+	
+	/* Hide table headers (but not display: none;, for accessibility) */
+	thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	
+	
+	
+	td { 
+		/* Behave  like a "row" */
+		border: none;
+		position: relative;
+		padding: .2em .5em;
+	}
+	
+	td:before { 
+		/* Now like a table header */
+		position: static;
+		width: 15%; 
+		white-space: nowrap;
+		font-weight: bold;
+	}
+	
+	/*
+	Label the data
+	*/
+	td:nth-of-type(1):before { content: "Project:"; }
+	td:nth-of-type(2):before { content: "Center:"; }
+	td:nth-of-type(3):before { content: "Model:"; }
+	td:nth-of-type(4):before { content: "Acronym:"; }
+}
+
+
+
 table.expertise {
 	margin-top: 2em;
 	width: 100%;
@@ -36,39 +110,7 @@ table.expertise {
 	}
 }
 
-table.texttable {		//for tables that are text only
-	margin: 1em 0 1em 0;
-	width: 100%;
-	border: 1px solid $snapGrey;
-	
-	th {
-		text-align: center;
-		background-color: $snapGreen;
-		color: white;
-		padding: .05em;
-		font-size: 1em;
-		letter-spacing: .05em;
-	}
-	
-	td {
-		vertical-align: text-top;
-		text-align: left;
-		padding: .1em .5em .1em .5em;
-		border: 1px dotted $snapGrey;
-		font-size: .9em;
-		
-		h1 {
-			font-size: 1.3em;
-		}
-		
-		&.code {
-			font-family: $lekton;
-			color: black;
-			background-color: lighten($snapGrey, 12%);
-			font-size: .9em;			
-		}		
-	}
-}
+
 
 table.imagetable {		//for tables with images in cells
 	margin-top: 1em;
