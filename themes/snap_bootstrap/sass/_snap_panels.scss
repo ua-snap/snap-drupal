@@ -49,12 +49,16 @@
 	
 	ul, ol {
 		padding-left: 1em;
+		font-size: .85em;
 	}
 	
 	ul li, ol li {
-		font-size: .85em;
 		line-height: ($line-height-base * .75);
 		margin-bottom: .4em;
+	}
+	
+	ul li li, ol li li {
+		font-size: 1.15em;
 	}
 }
 
