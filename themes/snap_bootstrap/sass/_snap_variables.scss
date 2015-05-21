@@ -45,6 +45,9 @@ $font-size-h4: ($font-size-h1 * .68);
 $font-size-h5: ($font-size-h1 * .45); 
 $font-size-h6: ($font-size-h1 * .4); 
 
+//Icon fonts
+$icon-font-path: "../bower_components/bootstrap-sass/vendor/assets/fonts/bootstrap/";
+
 //Media query dimensions
 $screen-sm-min: 768px;		//Small devices (tablets, 768px and up)
 $screen-md-min: 992px;		//Medium devices (desktops, 992px and up)
