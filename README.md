@@ -442,6 +442,7 @@ Now we create block views for each staff category.  For each staff category: Str
    sudo -u drupal ln -s sites/all/misc/.htaccess
    sudo -u drupal ln -s /files
    sudo -u drupal ln -s sites/all/themes/snap_bootstrap/snap.ico favicon.ico
+   sudo -u drupal ln -s /var/www/attachments /var/www/snap/attachments
    ```
 
 1. Run the Drupal update script by accessing this URL from your web browser and clicking Continue, etc:
