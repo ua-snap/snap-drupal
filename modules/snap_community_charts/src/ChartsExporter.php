@@ -27,7 +27,7 @@ class ChartsExporter {
 		  	'command' => 'cp %s %s', // just move the SVG file and rename it as appropriate
 		  	'extension' => '.svg'
 		)
-	
+
 	);
 
 	public $communityId;
@@ -36,6 +36,9 @@ class ChartsExporter {
 	public $variability;
 	public $type;
 	public $svg;
+	public $units;
+	public $baseline;
+	public $resolution;
 	private $community = array();
 
 	/**
@@ -50,7 +53,10 @@ class ChartsExporter {
 			!isset($params['variability']) ||
 			!isset($params['scenario']) ||
 			!isset($params['svg']) ||
-			!isset($params['type'])
+			!isset($params['units']) ||
+			!isset($params['type']) ||
+			!isset($params['baseline']) ||
+			!isset($params['resolution'])
 		) {
 			throw new SnapException('Parameters not set in ChartsExporter->setProps');
 		}
@@ -59,7 +65,10 @@ class ChartsExporter {
 		$this->dataset = $params['dataset'] == 1 ? 'temperature' : 'precipitation';
 		$this->scenario = $params['scenario'];
 		$this->variability = $params['variability'] == 1 ? '_var' : '';
+		$this->units = '_'.$params['units'];
 		$this->type = $params['type'];
+		$this->baseline = '_'.$params['baseline'];
+		$this->resolution = '_'.$params['resolution'];
 		$this->svg = $params['svg'];
 	}
 
@@ -78,11 +87,11 @@ class ChartsExporter {
 	* Do a DB lookup to fetch the correct community name.
 	*/
 	public function getFilenameBase() {
-		
+
 		if(empty($this->community)) { $this->getCommunity(); }
 
 		// TODO: may need to enrich this further to protect from special characters
-		$base = 'SNAP_Chart_'.$this->community['community'].'_'.$this->community['region'].'_'.$this->dataset.'_'.$this->scenario.$this->variability;
+		$base = 'SNAP_Chart_'.$this->community['community'].'_'.$this->community['region'].'_'.$this->dataset.'_'.$this->scenario.$this->variability.$this->units.$this->baseline.$this->resolution;
 
 		$base = preg_replace('/\s+/', '_', $base); // remove spaces
 		$base = str_replace("'",'', $base); // remove quotes
@@ -90,7 +99,7 @@ class ChartsExporter {
 	}
 
 	public function export() {
-		
+
 		// Is the file already in the cache?
 		if( false === $this->fileExistsInCache()) {
 
@@ -119,12 +128,12 @@ class ChartsExporter {
 					throw new Exception('Err2: Failed to write temporary SVG');
 				}
 			}
-			
+
 			switch($this->type) {
 				case 'png/hires': // fallthru
 					$command = sprintf($this->featureMap[$this->type]['command'], $tempSvg, $chartTemp, Config::$images, $chartTemp, $chart);
 					break;
-				
+
 				case 'svg':
 					$command = sprintf($this->featureMap[$this->type]['command'], $tempSvg, $chart);
 					break;
@@ -138,9 +147,9 @@ class ChartsExporter {
 			@unlink($tempSvg);
 			@unlink($chartTemp);
 			return $result;
-			
+
 		} catch (Exception $e) {
-			
+
 			$error = '';
 			try {
 				// Cleanup
