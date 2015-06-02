@@ -36,6 +36,7 @@ body#charts {
 
 		#comm_select {
 			width: 100%;
+			background-color: #c0d9af;
 		}
 
 		.ui-widget {
@@ -62,7 +63,8 @@ body#charts {
 		.buttonset#variable_buttons,
 		.buttonset#unit_buttons,
 		.buttonset#scenario_buttons,
-		.buttonset#variability_buttons {
+		.buttonset#variability_buttons,
+    .buttonset#baseline_buttons {
 			margin: 0 2em 1em 0;
 			padding-right: 1em;
 			font-size: .85em;
@@ -101,6 +103,7 @@ body#charts {
 	#derive_help {
 		font-weight: 300;
 		margin-top: 1em;
+    color: #000;
 	}
 
 	.ui-dialog {

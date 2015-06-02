@@ -23,7 +23,7 @@ $(function() {
 		$('#about_scenarios').show().dialog({
 			draggable: false,
 			modal: true,
-			title: 'About scenarios',
+			title: 'Representative Concentration Pathways',
 			resizable: false,
 			show: 'fade',
 			position: { my: 'top', at: 'top+25', of: window},
@@ -37,7 +37,30 @@ $(function() {
 			}
 		});
 	});
-	$('#variability_help').button({
+	$('#baseline_help').button({
+		text: false,
+		icons: {
+			primary: 'ui-icon-help'
+		}
+	}).click(function(e) {
+		$('#about_baselines').show().dialog({
+			draggable: false,
+			modal: true,
+			title: 'Historical Baselines',
+			resizable: false,
+			show: 'fade',
+			position: { my: 'top', at: 'top+25', of: window},
+			hide: 'fade',
+			width: '700px',
+			zindex: 50000,
+			buttons: {
+				'Close': function(e) {
+					$(this).dialog('close');
+				}
+			}
+		});
+	});
+ $('#variability_help').button({
 		text: false,
 		icons: {
 			primary: 'ui-icon-help'
@@ -46,7 +69,7 @@ $(function() {
 		$('#about_variability').show().dialog({
 			draggable: false,
 			modal: true,
-			title: 'About inter-model variability',
+			title: 'Variability Among Models',
 			resizable: false,
 			show: 'fade',
 			position: { my: 'top', at: 'top+25', of: window},
@@ -143,8 +166,13 @@ snapCharts = {
 		// Alaska, Manitoba, etc
 		country: null,
 		// USA or CAN
-		scenario: 'a1b',
-		// string, 'a1b','b1','a2'
+		scenario: 'rcp60',
+		// string, 'rcp45','rcp60','rcp85'
+		units: 'standard',
+    resolution: '10min',
+    // string, '10min','2km'
+    baseline: 'cru32',
+    // string, 'cru32', 'prism'
 		variability: 0,
 		// default 0=off, 1=on
 		dataset: 1,
@@ -217,14 +245,17 @@ snapCharts = {
 	refreshState: function() {
 		var params = $.bbq.getState(true); // perform type coercion
 		snapCharts.data.community = params.community || null;
-		snapCharts.data.scenario = params.scenario || 'a1b'; // default scenario a1b
+		snapCharts.data.scenario = params.scenario || 'rcp60'; // default scenario RCP 6.0
 		snapCharts.data.variability = params.variability || 0; // default no variability
 		snapCharts.data.dataset = params.dataset || 1; // default temp
 		snapCharts.data.units = params.units || 'standard'; // default units
+    snapCharts.data.baseline = params.baseline || 'cru32'; // default historical baseline
+    //snapCharts.data.resolution = params.resolution || '10min'; 
 		$('#variable_buttons input[value="' + snapCharts.data.dataset + '"]').prop('checked', 'checked').button('refresh');
 		$('#scenario_buttons input[value="' + snapCharts.data.scenario + '"]').prop('checked', 'checked').button('refresh');
 		$('#variability_buttons input[value="' + snapCharts.data.variability + '"]').prop('checked', 'checked').button('refresh');
 		$('#unit_buttons input[value="' + snapCharts.data.units + '"]').prop('checked', 'checked').button('refresh');
+    $('#baseline_buttons input[value="' + snapCharts.data.baseline + '"]').prop('checked', 'checked').button('refresh');
 		// Flash for the user if no community is selected, and lock out the
 		// controls for changing parameters.
 		if (null === snapCharts.data.community) {
@@ -233,6 +264,8 @@ snapCharts = {
 			$('#scenario_buttons').buttonset('disable');
 			$('#variability_buttons').buttonset('disable');
 			$('#unit_buttons').buttonset('disable');
+      $('#baseline_buttons').buttonset('disable');
+      $('#baseline_help').button('disable');
 			$('#dataset_help').button('disable');
 			$('#variability_help').button('disable');
 		} else {
@@ -241,6 +274,8 @@ snapCharts = {
 			$('#variable_buttons').buttonset('enable');
 			$('#scenario_buttons').buttonset('enable');
 			$('#variability_buttons').buttonset('enable');
+      $('#baseline_buttons').buttonset('enable');
+      $('#baseline_help').button('enable');
 			$('#dataset_help').button('enable');
 			$('#variability_help').button('enable');
 		}
@@ -256,7 +291,9 @@ snapCharts = {
 			dataset: snapCharts.data.dataset,
 			scenario: snapCharts.data.scenario,
 			variability: snapCharts.data.variability,
-			units: snapCharts.data.units
+			units: snapCharts.data.units,
+      baseline: snapCharts.data.baseline
+      //resolution: snapCharts.data.resolution
 		});
 	},
 	fetchData: function() {
@@ -267,7 +304,9 @@ snapCharts = {
 				community: snapCharts.data.community,
 				dataset: snapCharts.data.dataset,
 				scenario: snapCharts.data.scenario,
-				variability: snapCharts.data.variability
+				variability: snapCharts.data.variability,
+        baseline: snapCharts.data.baseline
+        //resolution: snapCharts.data.resolution
 			}, function(data) {
 				snapCharts.data = data;
 				$('#placeholderImage').remove();
@@ -301,30 +340,30 @@ snapCharts = {
 		}; // null conversion
 		if ('metric' === snapCharts.data.units) {
 			if (1 === snapCharts.data.dataset) {
-				snapCharts.unitConversionMapper = function(value) {
-					return snapCharts.round((value - 32) * (5 / 9), 1);
-				};
-				snapCharts.sdUnitConversionMapper = function(sd) {
-					return snapCharts.round(sd * (5 / 9), 1);
-				};
 				snapCharts.unitName = '°C';
 				snapCharts.yAxisTitle = 'Temperature (' + snapCharts.unitName + ')';
 			} else {
-				// in to mm
-				snapCharts.unitConversionMapper = function(value) {
-					return snapCharts.round(value * 25.4, 0);
-				};
-				snapCharts.sdUnitConversionMapper = function(value) {
-					return snapCharts.round(value * 25.4, 0);
-				};
 				snapCharts.unitName = 'mm';
 				snapCharts.yAxisTitle = 'Total Precipitation (' + snapCharts.unitName + ')';
 			}
 		} else {
 			if (1 === snapCharts.data.dataset) {
+				snapCharts.unitConversionMapper = function(value) {
+					return snapCharts.round((value * (9 / 5) + 32), 1);
+				};
+				snapCharts.sdUnitConversionMapper = function(sd) {
+					return snapCharts.round(sd * (9 / 5), 1);
+				};
+
 				snapCharts.unitName = '°F';
 				snapCharts.yAxisTitle = 'Temperature (' + snapCharts.unitName + ')';
 			} else {
+				snapCharts.unitConversionMapper = function(value) {
+					return snapCharts.round(value / 25.4, 2);
+				};
+				snapCharts.sdUnitConversionMapper = function(value) {
+					return snapCharts.round(value / 25.4, 2);
+				};
 				snapCharts.unitName = 'in';
 				snapCharts.yAxisTitle = 'Total Precipitation (' + snapCharts.unitName + ')';
 			}
@@ -333,15 +372,25 @@ snapCharts = {
 		// transformed from the source data into different units.
 		snapCharts.unitConvertedData = {
 			series: {},
-			standardDeviations: {}
+			seriesRange: {}
 		};
+
 		// Transform the units
 		_.each(snapCharts.data.series, function(e, i, l) {
 			snapCharts.unitConvertedData.series[i] = _.map(e, snapCharts.unitConversionMapper);
 		});
-		_.each(snapCharts.data.standardDeviations, function(e, i, l) {
-			snapCharts.unitConvertedData.standardDeviations[i] = _.map(e, snapCharts.sdUnitConversionMapper);
+
+		_.each(snapCharts.data.seriesMins, function(e, i, l) {
+			snapCharts.unitConvertedData.seriesRange[i] = _.map(e, snapCharts.unitConversionMapper);
 		});
+
+		_.each(snapCharts.data.seriesMaxs, function(e, i, l) {
+			for(j = 0; j < 12; j++) {
+				snapCharts.unitConvertedData.seriesRange[i][j] = new Array(2);
+				snapCharts.unitConvertedData.seriesRange[i][j] = [snapCharts.unitConversionMapper(snapCharts.data.seriesMins[i][j]),snapCharts.unitConversionMapper(e[j]) ];
+			}
+		});
+
 		snapCharts.unitConvertedData.minimum = snapCharts.unitConversionMapper(snapCharts.data.minimum);
 		snapCharts.unitConvertedData.maximum = snapCharts.unitConversionMapper(snapCharts.data.maximum);
 		// Update the GUI button unit names as appropriate
@@ -358,12 +407,17 @@ snapCharts = {
 	// can be removed from this, but it needs to be called whenever
 	// the chart is drawn.
 	drawChart: function() {
+    if (snapCharts.data.communityRegion == "NWT" && snapCharts.data.baseline == "prism") {
+      alert('Sorry, the Northwest Territories are only available for the CRU 3.2 baseline choice.');
+      location.assign(snapConfig.url);
+    } 
+
 		if (_.isUndefined(snapCharts.data.series)) {
 			alert('Sorry, an error occurred, and the chart could not be loaded.');
 			location.assign(snapConfig.url);
 		}
 		// Define a baseline configuration for the Highcharts y-axis.
-		// This will be varied depending on dataset (below).
+		// This will be varied depending on dataset (below)
 		yAxis = {
 			min: snapCharts.unitConvertedData.minimum,
 			max: snapCharts.unitConvertedData.maximum,
@@ -380,22 +434,23 @@ snapCharts = {
 				}
 			}
 		};
+		if (snapCharts.data.variability === 0) {
 		// Vary colors and other options depending on dataset,
 		// by updating the Highcharts global configuration object.
 		if (1 === snapCharts.data.dataset) {
 			Highcharts.setOptions({
-				colors: ['#999999', '#FECC5C', '#999999', '#FD8D3C', '#999999', '#F03B20', '#999999', '#BD0026', '#999999'],
+				colors: ['#999999', '#FECC5C', '#FD8D3C', '#F03B20', '#BD0026'],
 				style: {
 					fontFamily: 'Lato, Lato-Regular'
 				}
 			});
 			// Add a horizontal line indicating freezing point
 			yAxis.plotBands = [{
-				value: snapCharts.unitConversionMapper(32),
+				value: snapCharts.unitConversionMapper(0),
 				color: '#000',
 				width: 1,
 				label: {
-					text: snapCharts.unitConversionMapper(32) + '°',
+					text: snapCharts.unitConversionMapper(0) + '°',
 					align: 'right',
 					style: {
 						fontFamily: 'Lato',
@@ -406,7 +461,7 @@ snapCharts = {
 		} else {
 			// Precipitation
 			Highcharts.setOptions({
-				colors: ['#999999', '#BAE4BC', '#999999', '#7BCCC4', '#999999', '#43A2CA', '#999999', '#0868AC', '#999999'],
+				colors: ['#999999', '#BAE4BC', '#7BCCC4', '#43A2CA', '#0868AC'],
 				style: {
 					fontFamily: 'Lato, Lato-Regular'
 				}
@@ -420,32 +475,20 @@ snapCharts = {
 				height: 400,
 				border: 'none',
 				renderTo: 'chart_div',
-				defaultSeriesType: 'column',
-				margin: [100, 30, 70, 50]
+				type: 'column',
+				margin: [100, 30, 70, 70]
 			},
 			tooltip: {
 				formatter: function() {
-					return '<span style="color: #999; font-family: Lato">' + this.x + ' ' + this.series.name + '</span><br/><span>' + this.y + ' ' + snapCharts.unitName + '</span>';
+					return '<span style="color: #000; font-family: Lato">' + this.x + ' ' + this.series.name + '</span><br/><span>' + this.y + ' ' + snapCharts.unitName + '</span>';
 				}
 			},
-			credits: {
-				enabled: true,
-				href: '',
-				position: {
-					y: -35,
-					x: 0,
-					align: 'center'
-				},
-				style: {
-					'fontFamily': 'Lato, Lato-Regular',
-					'fontSize': '9px',
-					'width': '750px',
-					'padding': '10px'
-				},
-				text: 'Due to variability among climate models and among years in a natural climate system, these graphs are useful for examining trends over time, rather than for precisely predicting monthly or yearly values. For more information on derivation, reliability, and variability among these projections, please visit www.snap.uaf.edu.'
-			},
+      credits: {
+        enabled: false
+      },
 			legend: {
-				verticalAlign: top,
+				verticalAlign: 'top',
+				align: 'center',
 				y: 40,
 				labelFormatter: function() {
 					return '<span style="font-family: Lato; baseline-shift: .1ex">' + this.name + '</span>';
@@ -457,6 +500,7 @@ snapCharts = {
 					borderWidth: 0,
 					shadow: false,
 					animation: false,
+					threshold: snapCharts.unitConversionMapper(0),
 					groupPadding: 0.1,
 					events: {
 						legendItemClick: false
@@ -465,6 +509,7 @@ snapCharts = {
 			},
 			title: {
 				y: 10,
+				align: 'center',
 				style: {
 					fontFamily: 'Lato'
 				},
@@ -472,6 +517,7 @@ snapCharts = {
 			},
 			subtitle: {
 				y: 30,
+				align: 'center',
 				style: {
 					fontFamily: 'Lato'
 				},
@@ -492,8 +538,47 @@ snapCharts = {
 			},
 			exporting: {
 				enabled: true,
+				scale: 1,
+				chartOptions: {
+          credits: {
+            enabled: true,
+            position: {
+              align: 'center',
+              y: -35,
+              x: 60,
+              verticalAlign: 'bottom'
+            },
+            style: {
+              'fontFamily': 'Lato, Lato-Regular',
+              'fontSize': '8px',
+              'width': '450px',
+              'padding': '10px'
+            },
+				    text: 'Due to variability among climate models and among years in a natural climate system, these graphs are useful for examining trends over time, rather than for precisely predicting monthly or yearly values. '
+          },
+					title: {
+            align: 'center',
+            y: 10,
+            style: {
+              'fontSize': '14px'
+            }
+					},
+          legend: {
+            align: 'center'
+          },
+          subtitle: {
+            y: 30,
+            align: 'center',
+            style: {
+              'fontSize': '10px'
+            }
+          },
+				},
 				url: './charts_export.php',
 				buttons: {
+					contextButton: {
+						enabled: false
+					},
 					exportButton: {
 						enabled: false
 					},
@@ -507,79 +592,376 @@ snapCharts = {
 				data: snapCharts.unitConvertedData.series.Historical
 			}, {
 				name: '2010-2019',
-				data: snapCharts.unitConvertedData.series['2011-2020']
-			}, {
-				name: '2010-2019 Standard Deviations',
-				visible: false,
-				showInLegend: false,
-				data: snapCharts.unitConvertedData.standardDeviations['2011-2020']
+				data: snapCharts.unitConvertedData.series['2010-2019']
 			}, {
 				name: '2040-2049',
-				data: snapCharts.unitConvertedData.series['2031-2040']
-			}, {
-				name: '2040-2049 Standard Deviations',
-				visible: false,
-				showInLegend: false,
-				data: snapCharts.unitConvertedData.standardDeviations['2041-2050']
+				data: snapCharts.unitConvertedData.series['2040-2049']
 			}, {
 				name: '2060-2069',
-				data: snapCharts.unitConvertedData.series['2061-2070']
-			}, {
-				name: '2060-2069 Standard Deviations',
-				visible: false,
-				showInLegend: false,
-				data: snapCharts.unitConvertedData.standardDeviations['2061-2070']
+				data: snapCharts.unitConvertedData.series['2060-2069']
 			}, {
 				name: '2090-2099',
-				data: snapCharts.unitConvertedData.series['2091-2100']
-			}, {
-				name: '2090-2099 Standard Deviations',
-				visible: false,
-				showInLegend: false,
-				data: snapCharts.unitConvertedData.standardDeviations['2091-2100']
+				data: snapCharts.unitConvertedData.series['2090-2099']
 			}]
-		}, function(chart) {
-			snapCharts.customChartsRenderer(chart);
 		});
+	   }
+	   if (snapCharts.data.variability === 1) {
+		if (1 === snapCharts.data.dataset) {
+			Highcharts.setOptions({
+				colors: ['#999999', '#FECC5C', '#FD8D3C', '#F03B20', '#BD0026'],
+				style: {
+					fontFamily: 'Lato, Lato-Regular'
+				}
+			});
+			// Add a horizontal line indicating freezing point
+			yAxis.plotBands = [{
+				value: snapCharts.unitConversionMapper(0),
+				color: '#000',
+				width: 1,
+				label: {
+					text: snapCharts.unitConversionMapper(0) + '°',
+					align: 'right',
+					style: {
+						fontFamily: 'Lato',
+						fontSize: '10px'
+					}
+				}
+			}];
+		} else {
+			// Precipitation
+			Highcharts.setOptions({
+				colors: ['#999999', '#BAE4BC', '#7BCCC4', '#43A2CA', '#0868AC', '#0868AC'],
+				style: {
+					fontFamily: 'Lato, Lato-Regular'
+				}
+			});
+		}
+		snapCharts.chart = new Highcharts.Chart({
+			yAxis: yAxis,
+			// defined above
+			chart: {
+				height: 400,
+				border: 'none',
+				renderTo: 'chart_div',
+				type: 'column',
+				margin: [100, 30, 70, 70],
+			},
+			tooltip: {
+				formatter: function() {
+					if (this.series.name.indexOf("Range") === -1) {
+						return '<span style="color: #000; font-family: Lato">' + this.x + ' ' + this.series.name + '</span><br/><span>' + this.y + ' ' + snapCharts.unitName + '</span>';
+					} else {
+						return '<span style="color: #000; font-family: Lato">' + this.x + ' ' + this.series.name + '</span><br/><span>' + this.point.low + snapCharts.unitName + ' to ' + this.point.high + ' ' + snapCharts.unitName + '</span>';
+					}
+				}
+			},
+      credits: {
+        enabled: false
+      },
+			legend: {
+				verticalAlign: 'top',
+				align: 'center',
+				y: 40,
+				labelFormatter: function() {
+					return '<span style="font-family: Lato; baseline-shift: .1ex">' + this.name + '</span>';
+				}
+			},
+			plotOptions: {
+				column: {
+					pointPadding: 0.05,
+					borderWidth: 0,
+					shadow: false,
+					animation: false,
+					threshold: snapCharts.unitConversionMapper(0),
+					groupPadding: 0.1,
+					events: {
+						legendItemClick: false
+					}
+				},
+				errorbar: {
+					animation: false
+				}
+			},
+			title: {
+				y: 10,
+				align: 'center',
+				style: {
+					fontFamily: 'Lato'
+				},
+				text: snapCharts.data.title
+			},
+			subtitle: {
+				y: 30,
+				align: 'center',
+				style: {
+					fontFamily: 'Lato'
+				},
+				text: snapCharts.data.subtitle
+			},
+			xAxis: {
+				categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+				labels: {
+					style: {
+						fontFamily: 'Lato'
+					}
+				},
+				title: {
+					style: {
+						fontFamily: 'Lato'
+					}
+				}
+			},
+			exporting: {
+				enabled: true,
+				scale: 1,
+				chartOptions: {
+          credits: {
+            enabled: true,
+            position: {
+              align: 'center',
+              y: -35,
+              x: 60,
+              verticalAlign: 'bottom'
+            },
+            style: {
+              'fontFamily': 'Lato, Lato-Regular',
+              'fontSize': '8px',
+              'width': '450px',
+              'padding': '10px'
+            },
+            text: 'Due to variability among climate models and among years in a natural climate system, these graphs are useful for examining trends over time, rather than for precisely predicting monthly or yearly values. '
+          },
+					title: {
+            align: 'center',
+            y: 10,
+            style: {
+              'fontSize': '14px'
+            }
+					},
+          legend: {
+            align: 'center'
+          },
+          subtitle: {
+            y: 30,
+            align: 'center',
+            style: {
+              'fontSize': '10px'
+            }
+          }
+				},
+				url: './charts_export.php',
+				buttons: {
+					contextButton: {
+						enabled: false
+					},
+					exportButton: {
+						enabled: false
+					},
+					printButton: {
+						enabled: false
+					}
+				}
+			},
+			series: [{
+				name: '1961-1990',
+				data: snapCharts.unitConvertedData.series.Historical
+			}, {
+				name: '2010-2019',
+				data: snapCharts.unitConvertedData.series['2010-2019']
+			}, {
+				name: '2010-2019 Range',
+				type: 'errorbar',
+				data: snapCharts.unitConvertedData.seriesRange['2010-2019']
+			}, {
+				name: '2040-2049',
+				data: snapCharts.unitConvertedData.series['2040-2049']
+			}, {
+				name: '2040-2049 Range',
+				type: 'errorbar',
+				data: snapCharts.unitConvertedData.seriesRange['2040-2049']
+			}, {
+				name: '2060-2069',
+				data: snapCharts.unitConvertedData.series['2060-2069']
+			}, {
+				name: '2060-2069 Range',
+				type: 'errorbar',
+				data: snapCharts.unitConvertedData.seriesRange['2060-2069']
+			}, {
+				name: '2090-2099',
+				data: snapCharts.unitConvertedData.series['2090-2099']
+			}, {
+				name: '2090-2099 Range',
+				type: 'errorbar',
+				data: snapCharts.unitConvertedData.seriesRange['2090-2099']
+			}]
+		});
+	   }
+	   if (snapCharts.data.variability === 2) {
+		if (1 === snapCharts.data.dataset) {
+			Highcharts.setOptions({
+				colors: ['#999999', '#FECC5C', '#FD8D3C', '#F03B20', '#BD0026'],
+				style: {
+					fontFamily: 'Lato, Lato-Regular'
+				}
+			});
+			// Add a horizontal line indicating freezing point
+			yAxis.plotBands = [{
+				value: snapCharts.unitConversionMapper(0),
+				color: '#000',
+				width: 1,
+				label: {
+					text: snapCharts.unitConversionMapper(0) + '°',
+					align: 'right',
+					style: {
+						fontFamily: 'Lato',
+						fontSize: '10px'
+					}
+				}
+			}];
+		} else {
+			// Precipitation
+			Highcharts.setOptions({
+				colors: ['#999999', '#BAE4BC', '#7BCCC4', '#43A2CA', '#0868AC', '#0868AC'],
+				style: {
+					fontFamily: 'Lato, Lato-Regular'
+				}
+			});
+		}
+		snapCharts.chart = new Highcharts.Chart({
+			yAxis: yAxis,
+			// defined above
+			chart: {
+				height: 400,
+				border: 'none',
+				renderTo: 'chart_div',
+				type: 'columnrange',
+				margin: [100, 30, 70, 70]
+			},
+			tooltip: {
+				formatter: function() {
+					return '<span style="color: #000; font-family: Lato">' + this.x + ' ' + this.series.name + '</span><br/><span>' + this.point.low + snapCharts.unitName + ' to ' + this.point.high + snapCharts.unitName + '</span>';
+				}
+			},
+      credits: {
+        enabled: false
+      },
+			legend: {
+				verticalAlign: 'top',
+				align: 'center',
+				y: 40,
+				labelFormatter: function() {
+					return '<span style="font-family: Lato; baseline-shift: .1ex">' + this.name + '</span>';
+				}
+			},
+			plotOptions: {
+				columnrange: {
+					pointPadding: 0.1,
+					borderWidth: 0,
+					shadow: false,
+					animation: true,
+					groupPadding: 0.1,
+					events: {
+						legendItemClick: false
+					}
+				}
+			},
+			title: {
+				y: 10,
+				align: 'center',
+				style: {
+					fontFamily: 'Lato'
+				},
+				text: snapCharts.data.title
+			},
+			subtitle: {
+				y: 30,
+				align: 'center',
+				style: {
+					fontFamily: 'Lato'
+				},
+				text: snapCharts.data.subtitle
+			},
+			xAxis: {
+				categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+				labels: {
+					style: {
+						fontFamily: 'Lato'
+					}
+				},
+				title: {
+					style: {
+						fontFamily: 'Lato'
+					}
+				}
+			},
+			exporting: {
+				enabled: true,
+				scale: 1,
+				chartOptions: {
+          credits: {
+            enabled: true,
+            position: {
+              align: 'center',
+              y: -35,
+              x: 60,
+              verticalAlign: 'bottom'
+            },
+            style: {
+              'fontFamily': 'Lato, Lato-Regular',
+              'fontSize': '8px',
+              'width': '450px',
+              'padding': '10px'
+            },
+            text: 'Due to variability among climate models and among years in a natural climate system, these graphs are useful for examining trends over time, rather than for precisely predicting monthly or yearly values. '
+          },
+					title: {
+            align: 'center',
+            y: 10,
+            style: {
+              'fontSize': '14px'
+            }
+					},
+          legend: {
+            align: 'center'
+          },
+          subtitle: {
+            y: 30,
+            align: 'center',
+            style: {
+              'fontSize': '10px'
+            }
+          }
+				},
+				url: './charts_export.php',
+				buttons: {
+					contextButton: {
+						enabled: false
+					},
+					exportButton: {
+						enabled: false
+					},
+					printButton: {
+						enabled: false
+					}
+				}
+			},
+			series: [{
+				name: '1961-1990',
+				data: snapCharts.unitConvertedData.seriesRange['Historical']
+			}, {
+				name: '2010-2019',
+				data: snapCharts.unitConvertedData.seriesRange['2010-2019']
+			}, {
+				name: '2040-2049',
+				data: snapCharts.unitConvertedData.seriesRange['2040-2049']
+			}, {
+				name: '2060-2069',
+				data: snapCharts.unitConvertedData.seriesRange['2060-2069']
+			}, {
+				name: '2090-2099',
+				data: snapCharts.unitConvertedData.seriesRange['2090-2099']
+			}]
+		});
+	   }
 	}
 };
-// This code is responsible for drawing the variability
-// bars on the chart.  It's a callback referenced in the
-// invocation of the HighCharts object above.
-snapCharts.customChartsRenderer = function(chart) {
-	if (1 === snapCharts.data.variability) {
-		var extremes = chart.yAxis[0].getExtremes();
-		var multiplier = chart.plotHeight / (extremes.max - extremes.min);
-		for (i = 1; i < chart.series.length; i += 2) {
-			for (j = 0; j < chart.series[i].data.length; j++) {
-				// The magic constants 32, 5.75, and 100 here are related to absolute
-				// pixel sizes of the rendered bars.  (32 is confusing because it happens
-				// to be identical to part of the temperature conversions, but it's not).
-				var x = chart.series[i].data[j].plotX + 32 + i * 5.75;
-				var y = chart.series[i].data[j].plotY + 100;
-				var y1 = chart.series[i].data[j].plotY + 100 - chart.series[i + 1].data[j].y * multiplier;
-				var y2 = chart.series[i].data[j].plotY + 100 + chart.series[i + 1].data[j].y * multiplier;
-				var liney1 = chart.renderer.path(['M', x, y, 'L', x, y, x, y1]).attr({
-					strokeWidth: 1,
-					zIndex: 5,
-					stroke: 'Black'
-				}).add();
-				var linex1 = chart.renderer.path(['M', x, y1, 'L', x - 2, y1, x + 2, y1]).attr({
-					strokeWidth: 1,
-					zIndex: 5,
-					stroke: 'Black'
-				}).add();
-				var liney2 = chart.renderer.path(['M', x, y, 'L', x, y, x, y2]).attr({
-					strokeWidth: 1,
-					zIndex: 5,
-					stroke: 'Black'
-				}).add();
-				var linex2 = chart.renderer.path(['M', x, y2, 'L', x - 2, y2, x + 2, y2]).attr({
-					strokeWidth: 1,
-					zIndex: 5,
-					stroke: 'Black'
-				}).add();
-			}
-		}
-	}
-}
