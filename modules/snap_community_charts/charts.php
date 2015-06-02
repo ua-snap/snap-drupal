@@ -49,7 +49,7 @@
 <div class="buttonset" id="unit_buttons"><input checked="checked" id="unit_standard" name="units" type="radio" value="standard" /><label for="unit_standard">°F</label> <input id="unit_metric" name="units" type="radio" value="metric" /><label for="unit_metric">°C</label></div>
 </div>
 
-<div class="inline-controls pull-left" style='padding-top: 19px;'>
+<div class="inline-controls pull-left-padded">
   <p>Historical Baseline</p>
 
   <div class="buttonset" id="baseline_buttons"><input checked="checked" id="baseline_cru" name="baseline" type="radio" value="cru32" /><label for="baseline_cru">CRU 3.2</label><input id="baseline_prism" name="baseline" type="radio" value="prism" /><label for="baseline_prism">PRISM</label></div>
@@ -73,7 +73,7 @@
 <div class="inline-controls pull-left">
 <p>Inter-model variability</p>
 
-<div class="buttonset" id="variability_buttons"><input checked="checked" id="variability_off" name="variability" type="radio" value="0" /><label for="variability_off">Off</label> <input id="variability_overlay" name="variability" type="radio" value="1" /><label for="variability_overlay">Range</label><!--<input id="variability_exclusive" name="variability" type="radio" value="2" /><label for="variability_exclusive">Exclusive Range</label>--></div>
+<div class="buttonset" id="variability_buttons"><input checked="checked" id="variability_off" name="variability" type="radio" value="0" /><label for="variability_off">Off</label> <input id="variability_overlay" name="variability" type="radio" value="1" /><label for="variability_overlay">Range</label></div>
 
 <div class="helpbuttons"><button id="variability_help">Variability Among Models</button></div>
 </div>
@@ -113,7 +113,7 @@
 
 <ul>
     <li>modeling of atmospheric and oceanic movements used to create <abbr title="General Circulation Models">GCMs</abbr></li>
-    <li>the downscaling process&gt;</li>
+    <li>the downscaling process</li>
     <li>the assumptions made regarding greenhouse gas levels for each emissions scenario</li>
     <li><a href="https://www.snap.uaf.edu/methods/uncertainty">Learn more about uncertainty in SNAP’s climate research work.</a></li>
 </ul>
@@ -182,13 +182,13 @@
 </div>
    <script src="js/jquery.ba-bbq.min.js"></script><script src="js/charts.js"></script><script type="text/javascript">
         window.snapCharts.communities = <?php echo ChartsFetcher::fetchCommunitiesAsJson(); ?>;
-    </script><!--<script>
+    </script><script>
         (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
             function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
         e=o.createElement(i);r=o.getElementsByTagName(i)[0];
         e.src='//www.google-analytics.com/analytics.js';
         r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
         ga('create','-UA-3978613-1');ga('send','pageview');
-    </script>-->
+    </script>
 </body>
 </html>

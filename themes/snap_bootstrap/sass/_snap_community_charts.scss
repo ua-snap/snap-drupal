@@ -55,6 +55,16 @@ body#charts {
 			text-transform: uppercase;
 		}
 
+    p,
+    .inline-controls.pull-left-padded {
+			font-size: 1em;
+			font-weight: bold;
+			margin: 0;
+			padding: 0;
+			text-transform: uppercase;
+      padding-top: 19px;
+     }
+
 		.buttonset, .helpbuttons {
 			display: inline-block;
 			font-size: .85em;
