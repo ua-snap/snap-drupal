@@ -194,7 +194,7 @@ snapCharts = {
 		$('#comm_select').focus().autocomplete({
 			source: function(req, responseFn) {
 				var re = $.ui.autocomplete.escapeRegex(req.term);
-				var matcher = new RegExp("^" + re, "i");
+				var matcher = new RegExp(re, "i");
 				var a = $.grep(snapCharts.communities, function(item, index) {
 					return matcher.test(item.label);
 				});
