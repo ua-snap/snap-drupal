@@ -6,7 +6,7 @@
 <meta content="" name="description" />
 <meta content="width=device-width, initial-scale=1" name="viewport" />
 <link href="/sites/all/themes/snap_bootstrap/css/styles.css" rel="stylesheet" />
-<link href="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/themes/smoothness/jquery-ui.css" rel="stylesheet" /><script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.js"></script><script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.js"></script><script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script><script src="//cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/1.4.11/jquery.scrollTo.min.js"></script><!--<script src="//cdnjs.cloudflare.com/ajax/libs/highcharts/2.1.5/highcharts.min.js"></script>--><script src="http://code.highcharts.com/4.1.5/highcharts.js"></script><script src="http://code.highcharts.com/4.1.5/highcharts-more.js"></script><script src="js/exporting.src.js"></script>
+<link href="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/themes/smoothness/jquery-ui.css" rel="stylesheet" /><script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.js"></script><script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.js"></script><script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script><script src="//cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/1.4.11/jquery.scrollTo.min.js"></script><!--<script src="//cdnjs.cloudflare.com/ajax/libs/highcharts/2.1.5/highcharts.min.js"></script>--><script src="https://code.highcharts.com/4.1.5/highcharts.js"></script><script src="https://code.highcharts.com/4.1.5/highcharts-more.js"></script><script src="js/exporting.src.js"></script>
 
 <?php
             require_once 'src/ChartsFetcher.php';
