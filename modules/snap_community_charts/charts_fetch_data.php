@@ -7,7 +7,8 @@ echo ChartsFetcher::fetchChart(
     $_GET['community'],
     $_GET['dataset'],
     $_GET['scenario'],
-    $_GET['variability']
+    $_GET['variability'],
+    $_GET['baseline']
 );
 
 ?>
