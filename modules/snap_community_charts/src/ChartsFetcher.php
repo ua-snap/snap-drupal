@@ -197,18 +197,6 @@ class ChartsFetcher {
 			);
 		}
 
-		/*$sth = $dbh->prepare(<<<sql
-
-SELECT MIN(minimum) minimum, MAX(maximum) maximum FROM
-	(
-	SELECT LEAST(`JanMean` - `JanSd`, `FebMean` - `FebSd`, `MarMean` - `MarSd`, `AprMean` - `AprSd`, `JunMean` - `JunSd`, `JulMean` - `JulSd`, `AugMean` - `AugSd`, `SepMean` - `SepSd`, `OctMean` - `OctSd`, `NovMean` - `NovSd`, `DecMean` - `DecSd`) minimum,
-	GREATEST(`JanMean` + `JanSd`, `FebMean` + `FebSd`, `MarMean` + `MarSd`, `AprMean` + `AprSd`, `JunMean` + `JunSd`, `JulMean` + `JulSd`, `AugMean` + `AugSd`, `SepMean` + `SepSd`, `OctMean` + `OctSd`, `NovMean` + `NovSd`, `DecMean` + `DecSd`)  maximum
-	FROM charts_data
-	WHERE `communityId` = :community AND `type` = :dataset
-	) AS `values`
-
-sql
-);*/
 		$sth = $dbh->prepare(<<<sql
 
 SELECT MIN(minimum) minimum, MAX(maximum) maximum FROM
