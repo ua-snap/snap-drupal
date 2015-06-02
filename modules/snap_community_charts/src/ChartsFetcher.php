@@ -55,7 +55,7 @@ class ChartsFetcher {
 		return json_encode($arr);
 	}
 
-	static public function fetchChart($community, $dataset, $scenario, $variability, $baseline, $resolution) {
+	static public function fetchChart($community, $dataset, $scenario, $variability, $baseline, $resolution = null) {
 
 		// Juggle types
 		$community = (int) $community;
