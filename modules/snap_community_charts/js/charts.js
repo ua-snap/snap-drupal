@@ -407,7 +407,7 @@ snapCharts = {
   // can be removed from this, but it needs to be called whenever
   // the chart is drawn.
   drawChart: function() {
-    if (snapCharts.data.communityRegion == "NWT" && snapCharts.data.baseline == "prism") {
+    if (snapCharts.data.communityRegion == "Northwest Territories" && snapCharts.data.baseline == "prism") {
         alert('Sorry, the Northwest Territories are only available for the CRU 3.2 baseline choice.');
         location.assign(snapConfig.url);
     }
