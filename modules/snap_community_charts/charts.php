@@ -56,7 +56,7 @@
 
 <div class="helpbuttons"><button id="baseline_help">Historical Baselines</button></div>
 <br/>
-<span style="font-size: 10px;">* Northwest Territory communities only available for CRU 3.2 baseline choice. </span>
+<span style="font-size: 10px;">* Northwest Territories communities only available for CRU 3.2 baseline choice. </span>
 </div>
 </div>
 </div>
