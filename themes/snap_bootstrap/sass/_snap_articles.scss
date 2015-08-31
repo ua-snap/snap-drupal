@@ -100,16 +100,11 @@
 
 
 
-	
-
-
-
 //for when the article is archived on the "News" page
 .view.view-archived-articles {
 	padding: 0;
 	
 	.node.node-article.node-teaser {
-		border-bottom: 1px solid $snapGrey;
 		border-top: none;
 		border-right: none;
 		border-left: none;
@@ -124,23 +119,23 @@
 			display: inline;
 			font-size: ($font-size-base * .9);
 			border: none;
+			margin: 0;
 		}
 
-		h2 a {
-			margin: 0;
-			color: $snapDarkGrey;
-
-			&:hover,
-			&:focus {
+		h2 {
+			margin: 1.5em 0 0 0;
+			
+				& a:hover,
+				& a:focus {
 				color: $snapGreen;
 				@include link-transition;
 			}
 		}
 
 		p {
-			font-size: .85em;
+			font-size: .9em;
 			line-height: 1.3em;
-			margin: -2em 0 0 7em;
+			margin: -2em 4em 0 7em;
 		}
 
 		.read-more {
@@ -155,3 +150,39 @@
 	}
 }
 
+
+// SNAP on the web sidebar news items styling -- list of links, by date
+#block-views-snap-on-the-web-block {
+	margin: 0;
+	
+	h2.block-title {
+		color: $snapDarkGrey;
+		margin: .5em 0 .1em 0;
+		font-weight: 400;
+	}
+	
+	.item-list {
+		
+		ul {
+			padding: 0;
+		
+			li {
+				list-style-type: none;
+				font-size: .85em;
+				font-style: italic;
+				margin: 1em 0;
+				
+				a {
+					font-size: 1.3em;
+					line-height: 1.4em;
+				}
+			}
+		}
+	}
+	
+	.views-field.views-field-title {
+		font-size: .85em;
+		line-height: 1.3em;
+		margin-right: 1em;
+	}
+}
