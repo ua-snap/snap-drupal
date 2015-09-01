@@ -56,6 +56,7 @@ We use VDD for the local setup.  [Follow their tutorial](https://drupal.org/node
    DocumentRoot /var/www/drupal7
    ```
  1. ```vagrant up```
+   1. If you receive the following error: ```ERROR: Cookbook vdd not found. If you're loading vdd from another cookbook, make sure you configure the dependency in your metadata```, add this to your **chef/solo.rb** in VDD: ```cookbook_path ["/vagrant/chef/cookbooks/berks", "/vagrant/chef/cookbooks/core", "/vagrant/chef/cookbooks/custom"]``` and comment out the line **chef.cookbook_paths** in the **Vagrantfile**.
  1. Get coffee.  When the image has launched...
  1. ```vagrant ssh```
  1. ```cd sites```
