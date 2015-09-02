@@ -1,6 +1,6 @@
-//Styling for Articles content type, which are published on a temporary basis on the SNAP home page and on a page called SNAP stories, which lists archived articles as a View.
+//Styling for Articles content type, which are published on a temporary basis on the SNAP home page and on a page called SNAP stories, which lists archived articles as a View. 
 
-//Styling for box that holds the article on the home page
+//Styling for box that holds the article on the home page. These styles are for the "Masthead" view.
 .front .view-id-masthead .node.node-article.node-teaser {	
 	margin: 13em auto 1em auto;
 	border: 2px solid #fff;
@@ -100,54 +100,52 @@
 
 
 
-//for when the article is archived on the "News" page
+//for when the article is archived on the "News" page as a teaser
 .view.view-archived-articles {
 	padding: 0;
 	
-	.node.node-article.node-teaser {
-		border-top: none;
-		border-right: none;
-		border-left: none;
-		background-color: #fff;
-		margin: 1em 0 0 0;
+	ul {
 		padding: 0;
-		@include no-shadow;
-
-		.date-display-single {
-			font-weight: 300;
+		margin: 0;
+	
+		li.views-row {
+			list-style-type: none;
+		}
+		
+		.views-field.views-field-created {
 			font-style: italic;
-			display: inline;
-			font-size: ($font-size-base * .9);
-			border: none;
-			margin: 0;
+			font-size: .85em;
+			margin-top: 3em;
 		}
 
-		h2 {
-			margin: 1.5em 0 0 0;
+		.views-field {
+		
+			a {
+				font-size: 1.2em;
+			}
+		
+			img {
+				float: left;
+				clear: left;
+				margin: .25em .5em 2em 0;
+			}
 			
-				& a:hover,
-				& a:focus {
-				color: $snapGreen;
-				@include link-transition;
+			p {
+				font-size: .9em;
+				line-height: 1.4em;
+				margin: 0 2em 0 0;
+				
+				a {
+					font-size: 1em;
+				}
 			}
 		}
-
-		p {
-			font-size: .9em;
-			line-height: 1.3em;
-			margin: -2em 4em 0 7em;
-		}
-
-		.read-more {
-			display: inline-block;
-			margin: 0;
-			font-size: .85em;
-			border: $border;
-			border-radius: $border-radius;
-			@include shadow($x, $y, $blur, $shadow-color);
-			padding: 0 .5em;
-		}
 	}
+	
+	
+	
+	
+
 }
 
 
