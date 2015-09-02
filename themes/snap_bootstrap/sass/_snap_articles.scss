@@ -208,6 +208,7 @@
 	}
 	
 	ul.views-fluid-grid-list {
+		text-align: center;
 		
 		li.views-fluid-grid-inline {
 			border: $border;
@@ -217,7 +218,7 @@
 			padding: .5em;
 			box-shadow: $box-shadow;
 			height: 120px;
-			vertical-align: middle;
+			text-align: center;
 		}
 		
 		.views-field.views-field-title a {
