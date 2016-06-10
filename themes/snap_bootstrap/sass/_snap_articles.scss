@@ -68,16 +68,14 @@
 .node.node-article {	
 	
 	img {
-		width: 45%;
-		height: auto;
-		float: right;
-		margin: 0 0 2em 2em;
-		border: $border;
-		border-radius: $border-radius;
-		@include shadow($x, $y, $blur, $shadow-color);
-		padding: .3em;
-		background: #fff;
-	}
+			float: right;
+			margin: 0 0 2em 2em;
+			border: $border;
+			border-radius: $border-radius;
+			@include shadow($x, $y, $blur, $shadow-color);
+			padding: .3em;
+			background: #fff;
+		}
 	
 	.date-display-single {
 		font-weight: bold;
@@ -85,17 +83,6 @@
 		font-size: ($font-size-base * .9);
 		padding: .2em 0 .2em 0;
 	}	
-
-	.caption.right p {
-		font-size: .85em;
-		margin: -2em 0	1em	8em;
-		line-height: ($line-height-base * .8);
-		font-style: italic;
-		color: lighten($snapDarkGrey, 15%);
-		text-align: left;
-		float: right;
-		max-width: 45%;
-	}
 }
 
 
