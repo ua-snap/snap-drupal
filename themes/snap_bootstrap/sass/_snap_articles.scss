@@ -67,6 +67,11 @@
 //Styling for when the article is in full view, linked from home page
 .node.node-article {	
 	
+	h2 {
+		font-size: 1.75em;
+		margin: 1em 0 -.5em 0;
+	}
+	
 	p {
 		max-width: 75%;
 	}
@@ -103,6 +108,7 @@
 				margin: 0;
 				font-size: 1em;
 				line-height: 1.3;
+				min-width: 100%;
 			}
 		}
 	}
