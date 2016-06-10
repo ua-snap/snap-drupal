@@ -67,6 +67,10 @@
 //Styling for when the article is in full view, linked from home page
 .node.node-article {	
 	
+	p {
+		max-width: 75%;
+	}
+	
 	img {
 			float: right;
 			margin: 0 0 2em 2em;
