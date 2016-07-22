@@ -28,36 +28,19 @@ div.node-page {
 		@include shadow($x, $y, $blur, $shadow-color);
 		padding: .3em;
 		background: #fff;
-		
-		&.pull-left {
-			margin: 0 1.5em 1em 0;
-		}
-		
-		&.pull-right {
-			margin: 0 0 1em 2.5em;
-		}
-		&.fullwidth {
-			width: 100%;
-			margin: .5em 0 0 0;
-		}
+		float: right;
+		clear: both;
+		margin: 1em 0 1em 3em;
 	}
 	
-	img.plain {
-		border: none;
-		@include no-shadow;
-		
-		&.pull-left {
-			margin: 0 1.5em .5em 0;
-		}
-		
-		&.pull-right {
-			margin: 0 0 .5em 1.5em;
-		}
-		
-		&.fullwidth {
-			width: 100%;
-			margin: 0;
-		}
+	img.fullwidth {
+		border: $border;
+		border-radius: $border-radius;
+		@include shadow($x, $y, $blur, $shadow-color);
+		padding: .3em;
+		background: #fff;
+		width: 100%;
+		margin: .5em 0 0 0;
 	}
 	
 	.row h2 {
@@ -102,26 +85,6 @@ figure {
 				border: none;
 				@include no-shadow;
 			}
-	}
-}
-
-figcaption {
-    display: table-caption;
-    caption-side: bottom;
-    margin: .5em .2em 1.5em .2em;
-	line-height: ($line-height-base * .8);
-	font-style: italic;
-	color: lighten($snapDarkGrey, 15%);
-	
-	&.border-above {
-		margin-top: .3em;
-	}
-	
-	a.larger {
-		font-size: 1.2em;
-		text-transform: uppercase;
-		font-weight: 400;
-		font-style: normal;
 	}
 }
 
