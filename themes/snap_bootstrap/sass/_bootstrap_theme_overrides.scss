@@ -275,15 +275,16 @@ blockquote.image-field-caption {
 	float: right;
 	clear: right;
 	max-width: 30%;	
+	margin: -.5em 0 1em 2em;
+	padding: 0;
 	border: none;
 	
 	p {
 		color: $snapGreen;
 		font-size: .75em;
 		line-height: 1.2;
-		margin: -1.25em -1.25em 3em 4em;
-		padding: 0;
 		font-style: italic;
+		margin: 0;
 	}
 	
  	a {
