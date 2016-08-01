@@ -106,3 +106,26 @@
 	}
 }
 
+
+// Accordion panel styling  //
+.eco-models {
+	margin: 1em 0 0 0;
+	
+	.panel-default {
+		border: 2px solid $snapGreen;
+		
+		> .panel-heading {
+			background: $snapGreen;
+			
+			a {
+			color: white;
+			
+			&:hover,
+			&:focus {
+				color: $snaplink;
+				}
+			}
+		}
+	}
+}
+
