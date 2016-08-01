@@ -33,14 +33,9 @@ div.node-page {
 		margin: 1em 0 1em 3em;
 	}
 	
-	img.fullwidth {
-		border: $border;
-		border-radius: $border-radius;
-		@include shadow($x, $y, $blur, $shadow-color);
-		padding: .3em;
-		background: #fff;
-		width: 100%;
-		margin: .5em 0 0 0;
+	.tools img {
+		float: left;
+		margin: 0 1em 0 0;
 	}
 	
 	.row h2 {
