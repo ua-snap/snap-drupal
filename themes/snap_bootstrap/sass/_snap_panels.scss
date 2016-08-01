@@ -1,4 +1,4 @@
-// Panel (sidebar) styling
+// Panel and sidebar styling
 
 //panel-info: green box
 .panel-info {
@@ -59,6 +59,39 @@
 	
 	ul li li, ol li li {
 		font-size: 1.15em;
+	}
+}
+
+
+// Secondary region sidebar styling //
+.region.region-sidebar-second {
+	border-left: 1px solid $snapGrey;
+	padding-left: 1em;
+	
+	img {
+		float: left;
+		clear: right;
+		margin: 1.5em 1em 1em 0;
+	}
+	
+	h2 {
+		font-size: 1.2em;
+		margin: 1em 0 .25em 0;
+	}
+	
+	p {
+		font-size: .9em;
+		line-height: 1.3;
+		margin: 0 0 .5em 0;
+	}
+	
+	#block-block-6,
+	#block-block-7 {
+		border: $border;
+		border-radius: $border-radius;
+		background: lighten($snapGreen, 45%);
+		margin: 0 0 1.5em 0;
+		padding: 0 1em 1em 1em;
 	}
 }
 
