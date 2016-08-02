@@ -52,7 +52,6 @@ hr.shadow {
 }
 
 	
-//Figures and figcaptions
 figure {
 	background-color: none;
 	font-size: .875em;
@@ -81,6 +80,20 @@ figure {
 				@include no-shadow;
 			}
 	}
+}
+
+
+// People pages (user accounts) //
+
+.field.field-name-field-body-image img {
+	border: $border;
+	border-radius: $border-radius;
+	@include shadow($x, $y, $blur, $shadow-color);
+	padding: .3em;
+	background: #fff;
+	float: right;
+	clear: right;
+	margin: 1em 0 1em 3em;
 }
 
 // Pad out the main container that wraps most content
