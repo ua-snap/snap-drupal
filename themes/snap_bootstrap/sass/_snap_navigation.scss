@@ -24,7 +24,7 @@ body {
             @include border-radius(0);
             border-bottom: 1px solid $snapDarkGrey;
 			padding: 0;
-			background: url('/sites/default/files/pictures/satinweave_@2X.png');
+			background:#fff;
 			@include shadow(0, 0, 10px, $shadow-color);
 			
 			nav {

@@ -1,8 +1,7 @@
 /* Home page only styling. */
 
 .front .page-wrapper {	//patterns from subtlepatterns.com
-	background: url('/sites/default/files/pictures/redox_01_@2X.png');
-	background-size: auto, cover;
+	background: $snapDarkGrey; 
 	margin: 0;
 	padding: 0;
 
@@ -27,8 +26,7 @@
 	.row {
 		margin: 0;
 		width: 100%;
-		background: url('/sites/default/files/pictures/crossed_stripes.png');
-		background-size: auto, cover;
+		background: $snapDarkGrey;
 		padding: 0 0 .5em 0;
 		
 		.col-md-12.tagline {
