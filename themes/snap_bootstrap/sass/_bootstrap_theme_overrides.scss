@@ -268,29 +268,30 @@ h5, h6 {
 p:last-child {
   margin-bottom: 0;
 }
-
-blockquote.image-field-caption {
-	text-align: right;
 	
+
+	
+blockquote {
+	padding: 0;
+	margin: -.5em 0 2em 4em;
+	border: none;
 	float: right;
 	clear: right;
-	max-width: 30%;	
-	margin: -.5em 0 1em 2em;
-	padding: 0;
-	border: none;
+	text-align: right;
+	max-width: 35%;
 	
 	p {
-		color: $snapGreen;
-		font-size: .75em;
-		line-height: 1.2;
+		font-size: 75%;
 		font-style: italic;
+		line-height: 1.2;
+		color: $snapGreen;
 		margin: 0;
-	}
-	
- 	a {
-		font-size: 1em;
+		padding: 0;
 	}
 }
+
+
+
 
 //Tables {
 .table > thead > tr > th,
