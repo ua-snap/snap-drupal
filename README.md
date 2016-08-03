@@ -541,6 +541,7 @@ The Lightbox2 module is a simple, unobtrusive script used to overlay images on t
 
 
 ## Install and configure External links module
+
 External Links is a small module used to differentiate between internal and external links. Using jQuery, it will find all external links on a page and add an external icon  indicating it will take you offsite or a mail icon  for mailto: links.
 *	Uncheck place an icon next to external links
 *	Check open external links in a new window
@@ -548,6 +549,7 @@ External Links is a small module used to differentiate between internal and exte
 
 
 ## Install and configure Read More module
+
 This module allows you to move the "Read more" link from the node's links area to the end of the teaser text.
 *	Install and enable the module as usual, but configure it in Configuration > Content Authoring > Read More link
 *	Default setting for Link Behavior is: inline. Leave this.
@@ -556,6 +558,7 @@ This module allows you to move the "Read more" link from the node's links area t
 
    
 ## Configure jCaption module for image captions
+
 Provides a caption for images from the alt or title attribute using jQuery. This module  uses whatever text a content creator puts in the "Title" field for the image. So you just have to make sure "Enable Title field" is checked for the image field you use. Then you go into the jCaption configuration settings to add the selectors you want to be captionized. jQuery handles the rest.
 
 Content types that have Image fields include Article, Organizations, and Projects. HOWEVER we don't want captions to appear for Organization logos, so disable Alt and Title fields for the logos in the Organizations content type (Collaborator logo element).
@@ -567,3 +570,16 @@ Content types that have Image fields include Article, Organizations, and Project
 *	Check require text, copy style, copy class, remove align, copy foat, auto width, keep link
 *	Uncheck remove style, remove class, copy alignment
 *	Style the markup for Image Caption paragraph (.caption.left p, .caption.right p, .caption.none p)
+
+
+## Install and configure Minify module
+
+Minify is designed to improve the website performance. This module provides the mechanism to render the page using minified version of HTML and JavaScript files. Minified HTML is generated using regular expression, and JavaScript files are generated using GOOGLE Closure Compiler webservice. Minify also works perfectly with Boost module.
+
+* Enable the module
+* Goto Configuration > Performance in Bandwidth optimization section, select Minify HTML and Use Minified JavaScript files (may have to actually minify files; follow on-screen instructions)
+* Hit Save configuration
+* Selecting the Use Minified JavaScript files does not enough to improve performance, select Minify JavaScript files tab at top of the page to generate minified JavaScript files
+* If Boost module is already enabled, clear Boost caches to regenerate page with Minify
+
+
