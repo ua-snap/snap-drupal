@@ -203,7 +203,7 @@
 
 // SNAP on the web footer news items styling -- list of links, by date (fluid grid)
 #block-views-snap-on-the-web-block-1 {
-	background: url('/sites/default/files/pictures/crossed_stripes.png');
+	background: $snapGrey; 
 	padding: 0 0 .75em 0;
 	
 	
@@ -227,7 +227,7 @@
 			border: $border;
 			margin: .5em;
 			border-radius: $border-radius;
-			background: url('/sites/default/files/pictures/satinweave_@2X.png');
+			background: lighten($snapDarkGrey, 65%);
 			padding: .5em;
 			box-shadow: $box-shadow;
 			height: 120px;
@@ -242,7 +242,6 @@
 			&:focus {
 				@include link-transition;
 				color: $snaplink;
-				font-size: 1.05em;
 			}
 		}
 		
