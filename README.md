@@ -583,3 +583,12 @@ Minify is designed to improve the website performance. This module provides the 
 * If Boost module is already enabled, clear Boost caches to regenerate page with Minify
 
 
+## Install and configure AdvAgg CSS/JS aggregation module
+
+AdvAgg allows you to improve the frontend performance of your site and get better PageSpeed results from Google Analytics. Several modules to enable after install; enable all of them except Async Font Loader (site does not use external fonts).
+
+*	Configuration: Enable DNS prefetch; AdvAgg cache settings: normal; combine CSS files by using media queries; all other settings default
+*	Per http://drupal.stackexchange.com/questions/107311/eliminate-render-blocking-javascript-and-css-in-above-the-fold-content/107332 - follow instructions for the Modification sub-module settings
+
+
+
