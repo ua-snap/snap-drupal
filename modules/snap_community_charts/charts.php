@@ -21,7 +21,7 @@
         <img class="logo" src="/sites/all/themes/snap_bootstrap/images/SNAP_acronym_color_lato.png" alt="" />
     </a>
     <h1>Community Charts</h1>
-    <p>Explore temperature and precipitation projections for communities across Alaska and Canada shown here. <a href="https://www.snap.uaf.edu">Or, return to the SNAP home page.</a></p>
+    <p>Explore temperature and precipitation projections for communities across Alaska and Canada shown here. <a href="http://ckan.snap.uaf.edu/dataset/community-charts-temperature-and-precipitation">Download all community charts data</a> from SNAP's data site. <a href="https://www.snap.uaf.edu">Or, return to the SNAP home page.</a></p>
 </div>
 <div class="col-md-7">
 <img alt="alaska-canada" class="plain" src="/sites/default/files/pictures/akcanada_extent.png" style="width: 579px; height: 313px;" />
