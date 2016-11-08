@@ -29,11 +29,11 @@
 		line-height: 1em;
 	}
 
-	.views-field.views-field-field-title {
+	.views-field.views-field-field-title p {
 		font-size: .85em;
 		line-height: 1.2em;
 		font-style: italic;
-		margin-right: 2em;
+		margin: 0 2em 0 0;
 	}
 	
 //Overrides the views_fluid_grid default styling for each list item
