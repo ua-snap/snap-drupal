@@ -61,28 +61,31 @@
 }
 
 
+// Styles for individual bio pages
+
 .profile img {	/*main square user picture */
 	border: $border;
+	padding: 3px;
 	border-radius: $border-radius;
 	@include shadow($x, $y, $blur, $shadow-color);
 	float: left;
-	margin: .8em 1.5em 1em 0;	
+	margin: .5em 1.5em 1em 0;
 	
 	&.biopic {	/*picture found within the biography section */
 		float: right;
-		margin: 0 0 1em 1.5em;
+		margin: 0 0 1em 4em;
 	}
 }
 
-.field-name-field-title {
-	font-size: 2em;
+.field.field-name-field-title p {
+	font-size: 1.5em;
 	color: $snapDarkGrey;
 	font-weight: 300;
 	margin-bottom: 0;
 }
 
 .field-name-field-email,
-.field-name-feld-phone {
+.field-name-field-phone p {
 	font-style: italic;
 	margin: 0;
 }
@@ -99,3 +102,5 @@
 	display: inline-block;
 	margin: 1em 0 0 0;
 }
+
+
