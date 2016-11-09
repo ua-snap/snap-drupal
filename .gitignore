@@ -7,3 +7,5 @@ themes/snap_bootstrap/css
 themes/snap_bootstrap/.sass-cache
 
 modules/snap_community_charts/src/Config.php
+
+modules/snap_community_charts/charts/
