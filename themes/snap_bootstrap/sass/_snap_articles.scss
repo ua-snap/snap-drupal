@@ -159,10 +159,21 @@
 		}
 	}
 	
-	.views-field.views-field-title {
-		font-size: .85em;
+	.views-field.views-field-title,
+	.views-field.views-field-title a {
+		font-size: 1.1em;
 		line-height: 1.3em;
 		margin-right: 1em;
+	}
+	
+	.views-field.views-field-field-downloads a {
+		font-size: 1.1em;
+		line-height: 1.3em;
+		margin: 0 1em 0 -.5em;
+	}
+	
+	.date-display-single {
+		font-weight: bold;
 	}
 }
 
@@ -196,13 +207,15 @@
 			background: lighten($snapDarkGrey, 65%);
 			padding: .5em;
 			box-shadow: $box-shadow;
-			height: 120px;
+			height: 150px;
 			text-align: center;
 		}
 		
-		.views-field.views-field-title a {
+		.views-field.views-field-title a,
+		.file a {
 			color: $snapGreen;
 			font-weight: bold;
+			margin: .5em 0;
 			
 			&:hover,
 			&:focus {
@@ -214,12 +227,12 @@
 		.views-field.views-field-field-news-source {
 			text-transform: uppercase;
 			font-size: .85em;
-			margin: .5em 0 0 0;
+			margin: 1em 0 0 0;
 		}
 		
 		.date-display-single {
 			font-style: italic;
-			font-size: .85em;
+			font-size: .9em;
 		}
 	}
 }
