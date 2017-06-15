@@ -2,192 +2,58 @@
 
 This README contains first-time dev setup instructions as well as a narrative section describing how to configure Drupal, through its GUI, to create the content types/views/etc as required to support development.
 
-## Initial setup
+## Local development instance with Docker
 
-We use VDD for the local setup.  [Follow their tutorial](https://drupal.org/node/2008792), using [the 8.x-1.0-alpha4 version](http://ftp.drupal.org/files/projects/vdd-8.x-1.0-alpha4.tar.gz) configuration.  There's some hiccups to overcome here due to some bugs in the VDD project at this time, though.  Here's the steps to follow:
+### Setup Docker containers
 
- 1. Download [the 8.x-1.0-alpha4 version](http://ftp.drupal.org/files/projects/vdd-8.x-1.0-alpha4.tar.gz) of the project.
- 1. Move the file to wherever you keep other work projects/repositories, then unpack it: ```tar -zxvf vdd-8.x-1.0-alpha4.tar.gz```
- 1. Enter that directory, referred to hereafter as ```work/vdd```: ```cd work/vdd```
- 1. Disconnect from VPN if you are connected - Vagrant doesn't play well with VPN (3/4/14 - this issue may get fixed soon)
- 1. Replace ```work/vdd/config.json``` with this:
- 
- ```json
-{
-  "vm": {
-    "ip": "192.168.44.44",
-    "memory": "2048",
-    "synced_folders": [
-      {
-        "host_path": "data/",
-        "guest_path": "/var/www",
-        "type": "default"
-      }
-    ],
-    "forwarded_ports": [
-      {
-        "guest_port": 80,
-        "host_port": 8000,
-        "protocol": "tcp"
-      }
-    ]
-  },
-  "vdd": {
-    "sites": {
-      "drupal7": {
-        "account_name": "root",
-        "account_pass": "root",
-        "account_mail": "box@example.com",
-        "site_name": "Drupal 7",
-        "site_mail": "box@example.com",
-        "vhost": {
-          "document_root": "drupal7",
-          "url": "localhost:8000",
-          "alias": ["localhost:8000"]
-        }
-      }
-    }
-  }
-}
-```
- 1. Change Apache's main DocumentRoot to ```/var/www/drupal7``` near the top of ```work/vdd/chef/cookbooks/core/vdd/templates/default/localhost.conf.erb```:
-
+1. Install [Docker](https://www.docker.com/) if you have not already.
+1. Grab database and files and save them to your `~/Downloads` folder as `snapdb.sql` and `files.bz2` respectively.
+1. Prepare some directories, files, and the SNAP web repository:
+   ```bash
+   mkdir -p ~/docker-snap && cd ~/docker-snap
+   curl -O 'https://ftp.drupal.org/files/projects/drupal-7.55.tar.gz'
+   tar -xzvf drupal-7.55.tar.gz
+   mv drupal-7.55 drupal
+   cd drupal/sites
+   rm -rf all
+   git clone https://github.com/ua-snap/snap-drupal.git
+   mv snap-drupal all
+   cd ~/docker-snap/drupal/sites/default
+   tar -jxvf ~/Downloads/files.bz2
+   chmod -R 777 files
    ```
-   DocumentRoot /var/www/drupal7
+1. Download Drupal settings file that reads MySQL host and root password from Docker environment variables.
+   ```bash
+   cd ~/docker-snap/drupal/sites/default
+   curl -O 'https://raw.githubusercontent.com/ua-snap/docker-drupal-settings/master/settings.php'
    ```
- 1. ```vagrant up```
-   1. If you receive the following error: ```ERROR: Cookbook vdd not found. If you're loading vdd from another cookbook, make sure you configure the dependency in your metadata```, add this to your **chef/solo.rb** in VDD: ```cookbook_path ["/vagrant/chef/cookbooks/berks", "/vagrant/chef/cookbooks/core", "/vagrant/chef/cookbooks/custom"]``` and comment out the line **chef.cookbook_paths** in the **Vagrantfile**.
- 1. Get coffee.  When the image has launched...
- 1. ```vagrant ssh```
- 1. ```cd sites```
- 1. ```rm -rf drupal7```
- 1. ```drush dl drupal-7 --drupal-project-rename="drupal7"```
- 1. ```drush @drupal7 si standard```
- 1. Now we hook up our git repository.  First, exit the virtual machine.
- 2. ```exit```
- 3. ```cd data/drupal7/sites```
- 4. ```rm -rf all```
- 1. ```git clone https://github.com/ua-snap/snap-drupal.git```  (enter your Github username and password)
- 1. ```mv snap-drupal all```
- 1. Check the page again in your web browser.  If it loads the Drupal page, all is well and you can proceed to the next set of setup directions!
-
-#### Post-install steps
-
-The snap_bootstrap theme has external requirements on the ```bootstrap-sass``` project in Bower.  To install it:
-
-```bash
-cd /path/to/snap_bootstrap/
-bower install
-```
-
-Four more steps need to happen here (first, install Compass per the note below, then pick it up here).
-
- 1. Log into the Drupal web interface and switch the theme to "Snap Bootstrap"
- 1. Grab current Drupal DB copy.  You probably can wrangle that with no more hints, but I'll prowl email and send one to you shortly.
- 1. Grab current copy of "drupal-managed files."  These are files that live in /sites/default/files.  Get a sysadmin-type to grab you a fresh copy, then unzip that into the same spot locally.
- 1. Compile the SASS:
-
-```bash
-cd /path/to/sites/all/themes/snap_bootstrap
-compass watch
-```
-
-##### Refreshing database from Cerberus
-
-To update the database on your local dev instance, you need to get a copy of the production database, move it to a shared folder that your virtual machine can see, and then load the database from within the virtual machine.  After you have a copy of the database on Cerberus, copy it (on your host computer) to `work/vdd/data/snapdb.sql`, then:
-
-```bash
-cd work/vdd/
-vagrant ssh
-cd sites
-mysql -u root -p drupal7 < snapdb.sql
-exit
-```
+1. Set up persistent MySQL database container. **Note:** you may need to **wait 10-20 seconds** after this command returns before you can connect to the MySQL server in the next step.
+   ```bash
+   docker run --name snap-mysql -e MYSQL_ROOT_PASSWORD=root -d mysql:latest
+   ```
+1. Spawn temporary container that links to MySQL container and creates database.
+   ```bash
+   docker run -it --link snap-mysql:mysql --rm mysql sh -c 'exec mysql \-h "$MYSQL_PORT_3306_TCP_ADDR" -P "$MYSQL_PORT_3306_TCP_PORT" -uroot -p"$MYSQL_ENV_MYSQL_ROOT_PASSWORD" -e "CREATE DATABASE drupal7;"'
+   ```
+1. Spawn temporary container that links to MySQL container and imports database dump.
+   ```bash
+   docker run -i --link snap-mysql:mysql --rm mysql sh -c 'exec mysql \-h "$MYSQL_PORT_3306_TCP_ADDR" -P "$MYSQL_PORT_3306_TCP_PORT" -uroot -p"$MYSQL_ENV_MYSQL_ROOT_PASSWORD" drupal7' < ~/Downloads/snapdb.sql
+   ```
+1. Set up persistent Drupal container that links to MySQL container.
+   ```bash
+   docker run --name snap-drupal -p 8080:80 --link snap-mysql:mysql -v ~/docker-snap/drupal:/var/www/html -d drupal:7
+   ```
+At this point, the SNAP website should be available locally at `http://localhost:8080`.
 
 ### Install Compass
 
 Compass is used for the SASS development.  On OSX, first [install Homebrew](http://brew.sh/) then ```brew install ruby```, then [install Compass](http://compass-style.org/install/).
 
-### Editing files and connecting with Github
-
-Vagrant and VDD together configure the virtual machine so that your host OS can see the files that are running on the virtual machine, so that you can use your preferred editor to make changes and push them to Github as usual.
-
-The relevant directory where work happens is the Github repo we checked out in the directions above.  On your local machine, relative to the ```vdd``` directory, it's here:
+When editing styles:
 
 ```bash
-vdd/data/drupal7/sites/all/
-```
-
-So, you can configure your editor to have a project based in that directory and work with it normally.
-
-Since that's a normal Git repository, all the usual branch/push/pull operations happen as expected there.  In OSX Terminal:
-
-```bash
-cd vdd/data/drupal7/all
-git status
-git checkout -b new_branch
-git commit -am"made some changes"
-git push origin new_branch
-git pull
-```
-
-These types of operations should work as expected.  VDD/Vagrant are taking care of the magic so that your code is running in the VM while you can interact with it easily in your host OS.
- 
-### Editing SASS, coding standards
-
-Editing SASS is done by adding new includes to ```themes/snap/sass/styles.scss``` as required, at the bottom of that file.
-
-Main site variables (colors, fonts, etc) are controlled in the ```_init.scss``` file.
-
-Use the [guidelines on this page](git reset --hard remotes/origin/HEAD) regarding units for sizing fonts, etc.
-
-### Apache Setup
-
-To allow Apache to use the .htaccess file that comes with Drupal, change the following line in Apache's httpd.conf file inside the &lt;Directory "/var/www/snap"&gt; section:
-
-```
-AllowOverride All
-```
-
-To:
-
-```
-AllowOverride None
-```
-
-Then restart Apache so this change takes effect:
-
-```bash
-sudo service httpd restart
-```
-
-### Enabling Clean URLs
-
-Clean URLs will not work unless the "AllowOverride All" directive has been set in the Apache configuration file. Refer to the Apache Setup step for more details. You can confirm that clean URLs are working by going to a Drupal page WITHOUT "?q=" in the URL. E.g.:
-
-http://cerberus.snap.uaf.edu/about
-
-Also, you must create a symbolic link to the .htaccess file found in this Git repo like below:
-
-```bash
-cd /path/to/drupal/
-ln -s /path/to/drupal/sites/all/misc/.htaccess .htaccess
-```
-
-After you have confirmed that you can access a page in this way, visit the following page WITHOUT "?q=" in the URL (or this won't work):
-
-http://cerberus.snap.uaf.edu/admin/config/search/clean-urls
-
-Check the "Enable clean URLs" box and click the "Save configuration" button. From now on, Drupal will use clean URLs by default.
-
-### Adding .htaccess file to Git repository
-
-Drupal comes with an .htaccess file in the Drupal root directory. Our repository starts in the /sites/all directory. So, to set up the .htaccess file for version control (used for redirects, for example), we copied Drupal's .htaccess file into the /sites/all/misc directory and replaced the original path with a symbolic link:
-
-```bash
-cd /var/www/snap
-sudo -u drupal rm .htaccess
-sudo -u drupal ln -s sites/all/misc/.htaccess
+cd ~/docker-snap/drupal/sites/all/themes/snap_bootstrap
+compass watch
 ```
 
 ## Site structure and configuration notes
@@ -296,7 +162,6 @@ config.allowedContent = true;
 config.height = '500px';  
 ```
 
-
 ### Configuring Collaborators view
 
 Create a block-level view that displays all content of type Organization.  Then, configure the view this way to get the logos displayed as links:
@@ -357,8 +222,189 @@ Now we create block views for each staff category.  For each staff category: Str
 	6.	 Rinse and repeat: create a view for each of the other 4 staff category types (Faculty, Students, Staff, Alumni).
 	7.	 Once all 5 new views have been created: Structure > Blocks > move View: Staff Category [category] (all 5 of them) to Content block, Save Blocks then click Configure for that block, Block title: [category], Show Block On Specific Pages -- only the listed page: [target page for people], Content types / Show block for specific content types, choose people.
 
+## Setting up the Articles content type to enable publishing of Articles on the Home page
 
-## Drupal core upgrade
+1.	In Structure > Content types, Edit tab, edit the Article content type:
+*	Edit tab, lower left block:
+*	Publishing options: uncheck "Published" 
+*	Display settings: Uncheck 'display author and date information"
+
+Manage Fields tab:
+*	Add new field, Masthead Image (machine name: field_article_image), Field Type Image, Widget Image.	Save, leave Field settings at defaults.
+
+Manage display tab, Default mode:
+*	Reorder fields: Article Date, Masthead image, Body.
+*	Change Masthead Image Label to <Hidden>.
+*	Change Body Format to Default.
+*	Save.
+
+Manage display tab, Teaser mode:
+*	Reorder: Article date, Masthead Image, Body.
+*	Change Masthead Image format to Background image; move to top of Field list.	Change label to <Hidden>, link to original image URL.
+*	To configure Masthead, click gear icon and:
+**	Image style: None
+**	Selector: .highlighted.jumbotron
+**	Color: #FFFFFF
+**	Horizontal alignment: left; vertical: top
+**	Background attachment: scroll; Background repeat: no repeat; Background size: cover, add support for IE8
+**	Media query: all; add !important
+*	Change Body Format to Summary or Trimmed; trim length 350.
+*	Save.
+
+
+### Install Views Slideshow, Views Slideshow:Cycle, Libraries modules
+
+Views Slideshow provides a View style that displays rows as a jQuery slideshow. This is an API and requires Views Slideshow Cycle or another module that supports the API. 
+
+Related installs/dependencies:
+*	Views Slideshow: Cycle. Adds a Rotating slideshow mode to Views Slideshow. Requires the jQuery Cycle Plugin, available at [http://malsup.com/jquery/cycle/download.html] - you will be prompted to install this plugin if you try to enable Views Slideshow: Cycle; instructions are given in the Drupal prompt/warning window.
+
+*	Libraries: Required for Views Slideshow: Cycle and houses the jQuery Cycle plugin.
+
+View: Featured Projects settings
+Display as Block
+Title: Featured Projects
+Fields: 
+*	Content: Project Image (links to Content)
+*	Content: Title
+*	Content: Body (summary or trimmed)
+Sort criteria: Global: Random (asc)
+Pager: Display a specified number of items (1 item)
+
+
+### Install Menu Block module
+
+Provides configurable blocks of menu trees starting with any level of any menu. Access through Structure > Blocks > Add Menu Block. Help for configuration can be found at /admin/help/menu_block
+
+Example given for the Projects/UAS-RITA project:
+*	Create new menu, "More about UAS"
+*	Edit Content Type: Basic Page > Menu Settings (bottom of page): check the box to include your new menu as an Available Menu.
+*	Structure > Menus > Settings. Choose  a Source for the secondary links: Main menu
+*	Create a basic page. Under Menu Settings, check "Provide a menu link" with the parent item, More about UAS
+
+
+### Create menu block in Structure > Blocks:
+*	Block title: More about UAS
+*	Admin title: UAS-RITA subnavigation
+*	Menu: More about UAS
+*	Starting level: 1st level (primary)
+*	Check box, "expand all children of this tree" (advanced options tab)
+*	Region settings: choose region for menu block for display
+*	Show block only on listed pages: projects/uas-rita
+
+
+### Install and configure Lightbox2 module
+The Lightbox2 module is a simple, unobtrusive script used to overlay images on the current page. 
+*	Leave all Lightbox settings at defaults.
+
+### Edit Basic Page content type to work with Lightbox
+*	Basic page, Manage Field tab: Add new field, Image (machine name: field_basic_page_image), help text: "Add an image to display on the page. Images added this way can be clicked on and enlarged via the Lightbox2 module, which works for  individual and multiple images." Enable Alt and Title fields, Number of values: unlimited. Save.
+*	Basic page, Default Tab > Manage Display: Image Label: Hidden; Format: Lightbox2: lightbox: thumbnail large
+*	Basic page, Default Tab > Manage Display: Image Label: Hidden; Format: Lightbox2: lightbox: thumbnail medium
+
+
+### Install and configure External links module
+
+External Links is a small module used to differentiate between internal and external links. Using jQuery, it will find all external links on a page and add an external icon  indicating it will take you offsite or a mail icon  for mailto: links.
+*	Uncheck place an icon next to external links
+*	Check open external links in a new window
+*	Leave other checkboxes at defaults
+
+
+### Install and configure Read More module
+
+This module allows you to move the "Read more" link from the node's links area to the end of the teaser text.
+*	Install and enable the module as usual, but configure it in Configuration > Content Authoring > Read More link
+*	Default setting for Link Behavior is: inline. Leave this.
+*	Can add custom link text if you wish.
+*	Link can be styled (.read more) in theme stylesheet, _snap.css
+
+   
+### Configure jCaption module for image captions
+
+Provides a caption for images from the alt or title attribute using jQuery. This module  uses whatever text a content creator puts in the "Title" field for the image. So you just have to make sure "Enable Title field" is checked for the image field you use. Then you go into the jCaption configuration settings to add the selectors you want to be captionized. jQuery handles the rest.
+
+Content types that have Image fields include Article, Organizations, and Projects. HOWEVER we don't want captions to appear for Organization logos, so disable Alt and Title fields for the logos in the Organizations content type (Collaborator logo element).
+*	Set to use TITLE attribute
+*	Choose selectors on which it will run: 
+**	.content .content img
+**	.field-name-field-project-image .field-item.even img
+**	.field-name-field-project-image .field-item.odd img
+*	Check require text, copy style, copy class, remove align, copy foat, auto width, keep link
+*	Uncheck remove style, remove class, copy alignment
+*	Style the markup for Image Caption paragraph (.caption.left p, .caption.right p, .caption.none p)
+
+
+### Install and configure Minify module
+
+Minify is designed to improve the website performance. This module provides the mechanism to render the page using minified version of HTML and JavaScript files. Minified HTML is generated using regular expression, and JavaScript files are generated using GOOGLE Closure Compiler webservice. Minify also works perfectly with Boost module.
+
+* Enable the module
+* Goto Configuration > Performance in Bandwidth optimization section, select Minify HTML and Use Minified JavaScript files (may have to actually minify files; follow on-screen instructions)
+* Hit Save configuration
+* Selecting the Use Minified JavaScript files does not enough to improve performance, select Minify JavaScript files tab at top of the page to generate minified JavaScript files
+* If Boost module is already enabled, clear Boost caches to regenerate page with Minify
+
+
+### Install and configure AdvAgg CSS/JS aggregation module
+
+AdvAgg allows you to improve the frontend performance of your site and get better PageSpeed results from Google Analytics. Several modules to enable after install; enable all of them except Async Font Loader (site does not use external fonts).
+
+*	Configuration: Enable DNS prefetch; AdvAgg cache settings: normal; combine CSS files by using media queries; all other settings default
+*	Per http://drupal.stackexchange.com/questions/107311/eliminate-render-blocking-javascript-and-css-in-above-the-fold-content/107332 - follow instructions for the Modification sub-module settings
+
+## Production configuration notes
+
+### Apache Setup
+
+To allow Apache to use the .htaccess file that comes with Drupal, change the following line in Apache's httpd.conf file inside the &lt;Directory "/var/www/snap"&gt; section:
+
+```
+AllowOverride All
+```
+
+To:
+
+```
+AllowOverride None
+```
+
+Then restart Apache so this change takes effect:
+
+```bash
+sudo service httpd restart
+```
+
+### Enabling Clean URLs
+
+Clean URLs will not work unless the "AllowOverride All" directive has been set in the Apache configuration file. Refer to the Apache Setup step for more details. You can confirm that clean URLs are working by going to a Drupal page WITHOUT "?q=" in the URL. E.g.:
+
+http://cerberus.snap.uaf.edu/about
+
+Also, you must create a symbolic link to the .htaccess file found in this Git repo like below:
+
+```bash
+cd /path/to/drupal/
+ln -s /path/to/drupal/sites/all/misc/.htaccess .htaccess
+```
+
+After you have confirmed that you can access a page in this way, visit the following page WITHOUT "?q=" in the URL (or this won't work):
+
+http://cerberus.snap.uaf.edu/admin/config/search/clean-urls
+
+Check the "Enable clean URLs" box and click the "Save configuration" button. From now on, Drupal will use clean URLs by default.
+
+### Adding .htaccess file to Git repository
+
+Drupal comes with an .htaccess file in the Drupal root directory. Our repository starts in the /sites/all directory. So, to set up the .htaccess file for version control (used for redirects, for example), we copied Drupal's .htaccess file into the /sites/all/misc directory and replaced the original path with a symbolic link:
+
+```bash
+cd /var/www/snap
+sudo -u drupal rm .htaccess
+sudo -u drupal ln -s sites/all/misc/.htaccess
+```
+
+## Drupal core upgrade (Production)
 
 1. Change directories to the Apache document root:
 
@@ -457,138 +503,3 @@ Now we create block views for each staff category.  For each staff category: Str
 13. If all went as planned, Drupal will report that it's using the new Drupal core on this page:
 
    https://www.snap.uaf.edu/#overlay=admin/reports/updates
-
-
-## Setting up the Articles content type to enable publishing of Articles on the Home page
-
-1.	In Structure > Content types, Edit tab, edit the Article content type:
-*	Edit tab, lower left block:
-*	Publishing options: uncheck "Published" 
-*	Display settings: Uncheck 'display author and date information"
-
-Manage Fields tab:
-*	Add new field, Masthead Image (machine name: field_article_image), Field Type Image, Widget Image.	Save, leave Field settings at defaults.
-
-Manage display tab, Default mode:
-*	Reorder fields: Article Date, Masthead image, Body.
-*	Change Masthead Image Label to <Hidden>.
-*	Change Body Format to Default.
-*	Save.
-
-Manage display tab, Teaser mode:
-*	Reorder: Article date, Masthead Image, Body.
-*	Change Masthead Image format to Background image; move to top of Field list.	Change label to <Hidden>, link to original image URL.
-*	To configure Masthead, click gear icon and:
-**	Image style: None
-**	Selector: .highlighted.jumbotron
-**	Color: #FFFFFF
-**	Horizontal alignment: left; vertical: top
-**	Background attachment: scroll; Background repeat: no repeat; Background size: cover, add support for IE8
-**	Media query: all; add !important
-*	Change Body Format to Summary or Trimmed; trim length 350.
-*	Save.
-
-
-## Install Views Slideshow, Views Slideshow:Cycle, Libraries modules
-
-Views Slideshow provides a View style that displays rows as a jQuery slideshow. This is an API and requires Views Slideshow Cycle or another module that supports the API. 
-
-Related installs/dependencies:
-*	Views Slideshow: Cycle. Adds a Rotating slideshow mode to Views Slideshow. Requires the jQuery Cycle Plugin, available at [http://malsup.com/jquery/cycle/download.html] - you will be prompted to install this plugin if you try to enable Views Slideshow: Cycle; instructions are given in the Drupal prompt/warning window.
-
-*	Libraries: Required for Views Slideshow: Cycle and houses the jQuery Cycle plugin.
-
-View: Featured Projects settings
-Display as Block
-Title: Featured Projects
-Fields: 
-*	Content: Project Image (links to Content)
-*	Content: Title
-*	Content: Body (summary or trimmed)
-Sort criteria: Global: Random (asc)
-Pager: Display a specified number of items (1 item)
-
-
-## Install Menu Block module
-
-Provides configurable blocks of menu trees starting with any level of any menu. Access through Structure > Blocks > Add Menu Block. Help for configuration can be found at /admin/help/menu_block
-
-Example given for the Projects/UAS-RITA project:
-*	Create new menu, "More about UAS"
-*	Edit Content Type: Basic Page > Menu Settings (bottom of page): check the box to include your new menu as an Available Menu.
-*	Structure > Menus > Settings. Choose  a Source for the secondary links: Main menu
-*	Create a basic page. Under Menu Settings, check "Provide a menu link" with the parent item, More about UAS
-
-
-### Create menu block in Structure > Blocks:
-*	Block title: More about UAS
-*	Admin title: UAS-RITA subnavigation
-*	Menu: More about UAS
-*	Starting level: 1st level (primary)
-*	Check box, "expand all children of this tree" (advanced options tab)
-*	Region settings: choose region for menu block for display
-*	Show block only on listed pages: projects/uas-rita
-
-
-##Install and configure Lightbox2 module
-The Lightbox2 module is a simple, unobtrusive script used to overlay images on the current page. 
-*	Leave all Lightbox settings at defaults.
-
-### Edit Basic Page content type to work with Lightbox
-*	Basic page, Manage Field tab: Add new field, Image (machine name: field_basic_page_image), help text: "Add an image to display on the page. Images added this way can be clicked on and enlarged via the Lightbox2 module, which works for  individual and multiple images." Enable Alt and Title fields, Number of values: unlimited. Save.
-*	Basic page, Default Tab > Manage Display: Image Label: Hidden; Format: Lightbox2: lightbox: thumbnail large
-*	Basic page, Default Tab > Manage Display: Image Label: Hidden; Format: Lightbox2: lightbox: thumbnail medium
-
-
-## Install and configure External links module
-
-External Links is a small module used to differentiate between internal and external links. Using jQuery, it will find all external links on a page and add an external icon  indicating it will take you offsite or a mail icon  for mailto: links.
-*	Uncheck place an icon next to external links
-*	Check open external links in a new window
-*	Leave other checkboxes at defaults
-
-
-## Install and configure Read More module
-
-This module allows you to move the "Read more" link from the node's links area to the end of the teaser text.
-*	Install and enable the module as usual, but configure it in Configuration > Content Authoring > Read More link
-*	Default setting for Link Behavior is: inline. Leave this.
-*	Can add custom link text if you wish.
-*	Link can be styled (.read more) in theme stylesheet, _snap.css
-
-   
-## Configure jCaption module for image captions
-
-Provides a caption for images from the alt or title attribute using jQuery. This module  uses whatever text a content creator puts in the "Title" field for the image. So you just have to make sure "Enable Title field" is checked for the image field you use. Then you go into the jCaption configuration settings to add the selectors you want to be captionized. jQuery handles the rest.
-
-Content types that have Image fields include Article, Organizations, and Projects. HOWEVER we don't want captions to appear for Organization logos, so disable Alt and Title fields for the logos in the Organizations content type (Collaborator logo element).
-*	Set to use TITLE attribute
-*	Choose selectors on which it will run: 
-**	.content .content img
-**	.field-name-field-project-image .field-item.even img
-**	.field-name-field-project-image .field-item.odd img
-*	Check require text, copy style, copy class, remove align, copy foat, auto width, keep link
-*	Uncheck remove style, remove class, copy alignment
-*	Style the markup for Image Caption paragraph (.caption.left p, .caption.right p, .caption.none p)
-
-
-## Install and configure Minify module
-
-Minify is designed to improve the website performance. This module provides the mechanism to render the page using minified version of HTML and JavaScript files. Minified HTML is generated using regular expression, and JavaScript files are generated using GOOGLE Closure Compiler webservice. Minify also works perfectly with Boost module.
-
-* Enable the module
-* Goto Configuration > Performance in Bandwidth optimization section, select Minify HTML and Use Minified JavaScript files (may have to actually minify files; follow on-screen instructions)
-* Hit Save configuration
-* Selecting the Use Minified JavaScript files does not enough to improve performance, select Minify JavaScript files tab at top of the page to generate minified JavaScript files
-* If Boost module is already enabled, clear Boost caches to regenerate page with Minify
-
-
-## Install and configure AdvAgg CSS/JS aggregation module
-
-AdvAgg allows you to improve the frontend performance of your site and get better PageSpeed results from Google Analytics. Several modules to enable after install; enable all of them except Async Font Loader (site does not use external fonts).
-
-*	Configuration: Enable DNS prefetch; AdvAgg cache settings: normal; combine CSS files by using media queries; all other settings default
-*	Per http://drupal.stackexchange.com/questions/107311/eliminate-render-blocking-javascript-and-css-in-above-the-fold-content/107332 - follow instructions for the Modification sub-module settings
-
-
-
