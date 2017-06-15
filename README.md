@@ -45,11 +45,19 @@ This README contains first-time dev setup instructions as well as a narrative se
    ```
 At this point, the SNAP website should be available locally at `http://localhost:8080`.
 
-### Install Compass
+### Compiling styles
 
-Compass is used for the SASS development.  On OSX, first [install Homebrew](http://brew.sh/) then ```brew install ruby```, then [install Compass](http://compass-style.org/install/).
+[Install Compass](http://compass-style.org/install/).  Compass is used for the SASS development.  [Bower](https://bower.io) is needed to pull in some dependencies.  Depending on your environment, you may need to install a few other things first.
 
-When editing styles:
+The first time you compile the styles, do this:
+
+```bash
+cd ~/docker-snap/drupal/sites/all/themes/snap_bootstrap
+bower install
+compass compile
+```
+
+During normal development, it's easy to have Compass recompile when you make changes:
 
 ```bash
 cd ~/docker-snap/drupal/sites/all/themes/snap_bootstrap
