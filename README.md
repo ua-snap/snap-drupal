@@ -2,6 +2,12 @@
 
 This README contains first-time dev setup instructions as well as a narrative section describing how to configure Drupal, through its GUI, to create the content types/views/etc as required to support development.
 
+## Deploying updates to `cerberus.snap.uaf.edu`
+
+To pull the latest code from the `master` branch of this repository and recompile the Sass stylesheets, do this on your local machine:
+
+`ssh -t username@cerberus.snap.uaf.edu update_drupal.sh`
+
 ## Local development instance with Docker
 
 ### Setup Docker containers
