@@ -7,24 +7,18 @@ This README contains first-time dev setup instructions as well as a narrative se
 ### Setup Docker containers
 
 1. Install [Docker](https://www.docker.com/) if you have not already.
-1. Grab database and files and save them to your `~/Downloads` folder as `snapdb.sql` and `files.bz2` respectively.
+1. Grab SNAP files and database dump from http://snap.uaf.edu/sites/all/gimme.php, save them to your ~/Downloads folder.
 1. Prepare some directories, files, and the SNAP web repository:
    ```bash
-   mkdir -p ~/docker-snap && cd ~/docker-snap
-   curl -O 'https://ftp.drupal.org/files/projects/drupal-7.55.tar.gz'
-   tar -xzvf drupal-7.55.tar.gz
-   mv drupal-7.55 drupal
-   cd drupal/sites
-   rm -rf all
-   git clone https://github.com/ua-snap/snap-drupal.git
-   mv snap-drupal all
-   cd ~/docker-snap/drupal/sites/default
-   tar -jxvf ~/Downloads/files.bz2
-   chmod -R 777 files
+   mkdir -p ~/docker/snap-www/sites/default
+   cd ~/docker/snap-www/sites
+   git clone https://github.com/ua-snap/snap-drupal.git all
+   cd ~/docker/snap-www/sites/default
+   tar -jxvf ~/Downloads/files-snap.bz2
    ```
 1. Download Drupal settings file that reads MySQL host and root password from Docker environment variables.
    ```bash
-   cd ~/docker-snap/drupal/sites/default
+   cd ~/docker/snap-www/sites/default
    curl -O 'https://raw.githubusercontent.com/ua-snap/docker-drupal-settings/master/settings.php'
    ```
 1. Set up persistent MySQL database container. **Note:** you may need to **wait 10-20 seconds** after this command returns before you can connect to the MySQL server in the next step.
@@ -37,13 +31,55 @@ This README contains first-time dev setup instructions as well as a narrative se
    ```
 1. Spawn temporary container that links to MySQL container and imports database dump.
    ```bash
-   docker run -i --link snap-mysql:mysql --rm mysql sh -c 'exec mysql \-h "$MYSQL_PORT_3306_TCP_ADDR" -P "$MYSQL_PORT_3306_TCP_PORT" -uroot -p"$MYSQL_ENV_MYSQL_ROOT_PASSWORD" drupal7' < ~/Downloads/snapdb.sql
+   docker run -i --link snap-mysql:mysql --rm mysql sh -c 'exec mysql \-h "$MYSQL_PORT_3306_TCP_ADDR" -P "$MYSQL_PORT_3306_TCP_PORT" -uroot -p"$MYSQL_ENV_MYSQL_ROOT_PASSWORD" drupal7' < ~/Downloads/snap.sql
    ```
 1. Set up persistent Drupal container that links to MySQL container.
    ```bash
-   docker run --name snap-drupal -p 8080:80 --link snap-mysql:mysql -v ~/docker-snap/drupal:/var/www/html -d drupal:7
+   docker run --name snap-drupal -p 8080:80 --link snap-mysql:mysql -v ~/docker/snap-www/sites:/var/www/html/sites -d drupal:7
    ```
 At this point, the SNAP website should be available locally at `http://localhost:8080`.
+
+### Stop Docker containers
+
+The Docker containers can be stopped at any time with the following command:
+
+```bash
+docker stop snap-drupal snap-mysql
+```
+
+This is useful if you need to start the Docker containers for a different website.
+
+### Start Docker containers
+
+Stopped Docker containers can be started with the following command:
+
+```bash
+docker start snap-drupal snap-mysql
+```
+
+### List Docker containers
+
+The following command will list all of the Docker containers on your machine, both running and not running:
+
+```bash
+docker ps -a
+```
+
+### Remove Docker containers
+
+If something goes wrong with your Docker containers and you would like to go through the setup instructions again, you will first need to remove your existing Docker containers for the Week of the Arctic website with the following commands.
+
+1. Stop the Drupal and MySQL containers:
+
+   ```bash
+   docker stop snap-drupal snap-mysql
+   ```
+
+1. Remove the Drupal and MySQL containers:
+
+   ```bash
+   docker rm snap-drupal snap-mysql
+   ```
 
 ### Compiling styles
 
@@ -52,7 +88,7 @@ At this point, the SNAP website should be available locally at `http://localhost
 The first time you compile the styles, do this:
 
 ```bash
-cd ~/docker-snap/drupal/sites/all/themes/snap_bootstrap
+cd ~/docker/snap-www/sites/all/themes/snap_bootstrap
 bower install
 compass compile
 ```
@@ -60,7 +96,7 @@ compass compile
 During normal development, it's easy to have Compass recompile when you make changes:
 
 ```bash
-cd ~/docker-snap/drupal/sites/all/themes/snap_bootstrap
+cd ~/docker/snap-www/sites/all/themes/snap_bootstrap
 compass watch
 ```
 
