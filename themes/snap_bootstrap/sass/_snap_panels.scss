@@ -12,24 +12,23 @@
 	padding: 0 1em 1em 1em;
 	border-radius: $border-radius;
 	border: $border;
-	background: #fff;
+	background: lighten($snapDarkGrey, 60%);
 	@include shadow($x, $y, $blur, $shadow-color);
 	
-	h2.panel-heading {
-		color: $snapDarkGrey;
-		font-weight: 400;
-		line-height: 1.2em;
+	h2 {
+		font-weight: bold;
+        color: $snapDarkGrey;
+		line-height: 1.3em;
 		font-size: 1.2em;
-		margin: .75em 0 .25em 0;
+		margin: .75em 0 .5em 0;
 		background: none;
 		padding: 0;
 		border-bottom: none;
 	}
 	
 	h3 {
-		color: $snapDarkGrey;
-		font-size: 1em;
-		font-weight: 400;
+		font-size: 1.05em;
+		font-weight: bold;
 		margin: 1.2em 0 .25em 0;
 	}
 
@@ -41,10 +40,8 @@
 	}
 	
 	p {
-		font-size: .85em;
-		line-height: ($line-height-base * .75);
-		margin: 0 0 .5em 0;
-		font-weight: 400;
+		font-size: 1em;
+		margin: 0 0 1em 0;
 	}
 	
 	ul, ol {

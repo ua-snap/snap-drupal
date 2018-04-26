@@ -62,10 +62,8 @@ a {
 /* typography  */
 
 p {
-	margin: 1.25em 0 0 0;
+	margin: .25em 0 1em 0;
 	font-size: $font-size-base;
-	line-height: $line-height-base;
-	font-weight: 400;
 	
 	abbr {
 		text-decoration: none;
@@ -75,22 +73,6 @@ p {
 		color: $snapGreen;
 		font-style: italic;
 		font-size: 1.1em;
-	}
-	
-	&.intro {
-		font-weight: 400;
-		font-size: 1.15em;
-		margin-top: 1em;
-		color: lighten($snapDarkGrey, 10%);
-		line-height: 1.5;
-		
-		a {
-			font-weight: 400;
-		}
-		
-		strong {
-			font-weight: 400;
-		}
 	}
 		.read-more {
 		font-size: ($font-size-base * .9);

@@ -147,18 +147,6 @@ aside.col-sm-2 {		//left sidebar for UAS project sub menu
 		.field-name-body {
 			@extend .col-sm-7;
 			padding: 0 2em 0 0;
-			
-			.intro {
-				margin: .5em 0 .5em 0;
-				font-size: 1.1em;
-				line-height: 1.35em;
-				color: darken($snapGreen, 10%);
-				background: lighten($snapGrey, 18%);
-				display: inline-block;
-				padding: .5em;
-				margin: 13px 0 0 0;
-				border-radius: 5px;
-			}
 		}
 		
 		#node-projects-full-group-right-sidebar.group-right-sidebar.field-group-div {
