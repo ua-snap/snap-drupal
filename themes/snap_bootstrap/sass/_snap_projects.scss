@@ -86,7 +86,7 @@ aside.col-sm-2 {		//left sidebar for UAS project sub menu
 	padding: 0;
 	
 	.region.region-sidebar-first.well {
-		padding: 0;
+		padding: 0 0 1em 0;
 		margin: 0;
 		border: none;
 		border-radius: $border-radius;
@@ -104,7 +104,7 @@ aside.col-sm-2 {		//left sidebar for UAS project sub menu
 		}
 		
 		ul.menu.nav li a {
-			font-size: .85em;
+			font-size: 1em;
 		}
 		
 		.nav > li > a {
