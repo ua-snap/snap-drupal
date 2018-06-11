@@ -1,0 +1,39 @@
+/*
+ * jQuery Nivo Slider v3.2
+ * http://nivo.dev7studios.com
+ *
+ * Copyright 2012, Dev7studios
+ * Free to use and abuse under the MIT license.
+ * http://www.opensource.org/licenses/mit-license.php
+ */
+ 
+/* overrides for the Nivo Slider dark theme */
+#block-nivo-slider-nivo-slider h2.block-title {
+    font-size: 2.5em;
+    color: $snapGreen;
+    text-align: center;
+    margin: 1em 0 .15em 0;
+}
+    .nivo-caption p {
+        padding: 0;
+        font-size: 1em;
+        font-family: $lato;
+        margin: -1em 0 0 0;
+        }
+
+
+    @media only screen and (max-width: 769px) {
+    .nivo-caption { 
+        display: none !important; 
+        }
+    }
+
+.theme-dark .nivo-caption a {
+    color: $snapGreen;
+    border-bottom: none;
+
+    &:hover,
+    &:focus {
+        color: #fff;
+    }
+}
