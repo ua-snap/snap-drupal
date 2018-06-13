@@ -16,26 +16,33 @@
     margin: 1em 0 .15em 0;
 }
 
-    .nivo-caption p {
-        padding: 1em;
-        font-size: 1.4em;
+#slider.nivoSlider p {
         font-family: $lato;
+        text-align: center;
+        color: #fff;
+        padding: .5em 0 0 .5em;
+        font-size: 1.3em;
+    
+    
+    a {
+        color: $snapGreen;
+        border-bottom: none;
+
+        &:hover,
+        &:focus {
+            color: #fff;
+        }
     }
+}
+    
+
 
     @media only screen and (max-width: 769px) {
     .nivo-caption { 
         display: none !important; 
         }
     }
+    
 
 
 
-.theme-dark .nivo-caption a {
-    color: $snapGreen;
-    border-bottom: none;
-
-    &:hover,
-    &:focus {
-        color: #fff;
-    }
-}
