@@ -1,4 +1,4 @@
-# SNAP Drupal 
+# SNAP Drupal
 
 This README contains first-time dev setup instructions as well as a narrative section describing how to configure Drupal, through its GUI, to create the content types/views/etc as required to support development.
 
@@ -13,44 +13,37 @@ To pull the latest code from the `master` branch of this repository and recompil
 ### Setup Docker containers
 
 1. Install [Docker](https://www.docker.com/) if you have not already.
-1. Grab SNAP files and database dump from http://snap.uaf.edu/sites/all/gimme.php, save them to your ~/Downloads folder.
-1. Prepare some directories, files, and the SNAP web repository:
+
+1. [Grab SNAP website files and database dump](https://www.snap.uaf.edu/sites/all/gimme.php), save them to your `~/Downloads` folder.  These directions assume these files are named `snap.sql` and `files-snap.bz2` respectively.
+
+1. Clone this repository and extract the Drupal files into their proper location:
+
    ```bash
-   mkdir -p ~/docker/snap-www/sites/default
-   cd ~/docker/snap-www/sites
-   git clone https://github.com/ua-snap/snap-drupal.git all
-   cd ~/docker/snap-www/sites/default
-   tar -jxvf ~/Downloads/files-snap.bz2
+   git clone https://github.com/ua-snap/snap-drupal.git
+   cd snap-drupal
+
+   # Put the database into a folder where it will be ingested.
+   mv ~/Downloads/snap.sql database/
+
+   # Add site files and proper settings for local dev.
+   tar -jxvf ~/Downloads/files-snap.bz2 --strip-components=1 -C files/
+
+   # Compile styles (see below for more details)
+   cd themes/snap_bootstrap && compass compile
+
+   # Launch containers and disable IP restrictions
+   # NOTE -- sometimes the name of the Docker image (snap-drupal_drupal_1) may be different.
+   # Use `docker ps` to find the right name of the image..
+   docker-compose up &
+   docker exec -i snap-drupal_drupal_1 php /usr/bin/drush.phar -y dis restrict_by_ip securepages
    ```
-1. Download Drupal settings file that reads MySQL host and root password from Docker environment variables.
-   ```bash
-   cd ~/docker/snap-www/sites/default
-   curl -O 'https://raw.githubusercontent.com/ua-snap/docker-drupal-settings/master/settings.php'
-   ```
-1. Set up persistent MySQL database container. **Note:** you may need to **wait 10-20 seconds** after this command returns before you can connect to the MySQL server in the next step.
-   ```bash
-   docker run --name snap-mysql -e MYSQL_ROOT_PASSWORD=root -d mysql:latest
-   ```
-1. Spawn temporary container that links to MySQL container and creates database.
-   ```bash
-   docker run -it --link snap-mysql:mysql --rm mysql sh -c 'exec mysql \-h "$MYSQL_PORT_3306_TCP_ADDR" -P "$MYSQL_PORT_3306_TCP_PORT" -uroot -p"$MYSQL_ENV_MYSQL_ROOT_PASSWORD" -e "CREATE DATABASE drupal7;"'
-   ```
-1. Spawn temporary container that links to MySQL container and imports database dump.
-   ```bash
-   docker run -i --link snap-mysql:mysql --rm mysql sh -c 'exec mysql \-h "$MYSQL_PORT_3306_TCP_ADDR" -P "$MYSQL_PORT_3306_TCP_PORT" -uroot -p"$MYSQL_ENV_MYSQL_ROOT_PASSWORD" drupal7' < ~/Downloads/snap.sql
-   ```
-1. Set up persistent Drupal container that links to MySQL container.
-   ```bash
-   docker run --name snap-drupal -p 8080:80 --link snap-mysql:mysql -v ~/docker/snap-www/sites:/var/www/html/sites -d drupal:7
-   ```
-At this point, the SNAP website should be available locally at `http://localhost:8080`.
 
 ### Stop Docker containers
 
 The Docker containers can be stopped at any time with the following command:
 
 ```bash
-docker stop snap-drupal snap-mysql
+docker-compose stop
 ```
 
 This is useful if you need to start the Docker containers for a different website.
@@ -60,41 +53,25 @@ This is useful if you need to start the Docker containers for a different websit
 Stopped Docker containers can be started with the following command:
 
 ```bash
-docker start snap-drupal snap-mysql
-```
-
-### List Docker containers
-
-The following command will list all of the Docker containers on your machine, both running and not running:
-
-```bash
-docker ps -a
+docker-compose up
 ```
 
 ### Remove Docker containers
 
-If something goes wrong with your Docker containers and you would like to go through the setup instructions again, you will first need to remove your existing Docker containers for the Week of the Arctic website with the following commands.
+If something goes wrong with your Docker containers and you would like to go through the setup instructions again, you will first need to remove your existing Docker containers for the AK CSC website with the following commands.
 
-1. Stop the Drupal and MySQL containers:
-
-   ```bash
-   docker stop snap-drupal snap-mysql
-   ```
-
-1. Remove the Drupal and MySQL containers:
-
-   ```bash
-   docker rm snap-drupal snap-mysql
-   ```
+ ```bash
+ docker-compose down --rmi all
+ ```
 
 ### Compiling styles
 
 [Install Compass](http://compass-style.org/install/).  Compass is used for the SASS development.  [Bower](https://bower.io) is needed to pull in some dependencies.  Depending on your environment, you may need to install a few other things first.
 
-The first time you compile the styles, do this:
+The first time you compile the styles, do this (from your `snap-drupal` folder):
 
 ```bash
-cd ~/docker/snap-www/sites/all/themes/snap_bootstrap
+cd themes/snap_bootstrap
 bower install
 compass compile
 ```
@@ -266,9 +243,9 @@ Now we create block views for each staff category.  For each staff category: Str
 
 	1.	 Title: set to [staff category], ex. Leadership.
 	2.	 Filter Criteria > Add > User: Staff Category > Apply > Selection type Dropdown > Continue > Operator Is One Of, pick [staff category name], ex. Leadership, do not expose filter to visitors, Apply.
-	3.	 Fields > Add > User: Picture > Apply.  Uncheck "Create a Label," leave other things default.  Apply. 
+	3.	 Fields > Add > User: Picture > Apply.  Uncheck "Create a Label," leave other things default.  Apply.
 	4.	 Fields > Add widget, select Rearrange > drag Picture to be above Name.  Apply.
-	5.	 Save the view.	
+	5.	 Save the view.
 	6.	 Rinse and repeat: create a view for each of the other 4 staff category types (Faculty, Students, Staff, Alumni).
 	7.	 Once all 5 new views have been created: Structure > Blocks > move View: Staff Category [category] (all 5 of them) to Content block, Save Blocks then click Configure for that block, Block title: [category], Show Block On Specific Pages -- only the listed page: [target page for people], Content types / Show block for specific content types, choose people.
 
@@ -276,7 +253,7 @@ Now we create block views for each staff category.  For each staff category: Str
 
 1.	In Structure > Content types, Edit tab, edit the Article content type:
 *	Edit tab, lower left block:
-*	Publishing options: uncheck "Published" 
+*	Publishing options: uncheck "Published"
 *	Display settings: Uncheck 'display author and date information"
 
 Manage Fields tab:
@@ -304,7 +281,7 @@ Manage display tab, Teaser mode:
 
 ### Install Views Slideshow, Views Slideshow:Cycle, Libraries modules
 
-Views Slideshow provides a View style that displays rows as a jQuery slideshow. This is an API and requires Views Slideshow Cycle or another module that supports the API. 
+Views Slideshow provides a View style that displays rows as a jQuery slideshow. This is an API and requires Views Slideshow Cycle or another module that supports the API.
 
 Related installs/dependencies:
 *	Views Slideshow: Cycle. Adds a Rotating slideshow mode to Views Slideshow. Requires the jQuery Cycle Plugin, available at [http://malsup.com/jquery/cycle/download.html] - you will be prompted to install this plugin if you try to enable Views Slideshow: Cycle; instructions are given in the Drupal prompt/warning window.
@@ -314,7 +291,7 @@ Related installs/dependencies:
 View: Featured Projects settings
 Display as Block
 Title: Featured Projects
-Fields: 
+Fields:
 *	Content: Project Image (links to Content)
 *	Content: Title
 *	Content: Body (summary or trimmed)
@@ -344,7 +321,7 @@ Example given for the Projects/UAS-RITA project:
 
 
 ### Install and configure Lightbox2 module
-The Lightbox2 module is a simple, unobtrusive script used to overlay images on the current page. 
+The Lightbox2 module is a simple, unobtrusive script used to overlay images on the current page.
 *	Leave all Lightbox settings at defaults.
 
 ### Edit Basic Page content type to work with Lightbox
@@ -369,14 +346,14 @@ This module allows you to move the "Read more" link from the node's links area t
 *	Can add custom link text if you wish.
 *	Link can be styled (.read more) in theme stylesheet, _snap.css
 
-   
+
 ### Configure jCaption module for image captions
 
 Provides a caption for images from the alt or title attribute using jQuery. This module  uses whatever text a content creator puts in the "Title" field for the image. So you just have to make sure "Enable Title field" is checked for the image field you use. Then you go into the jCaption configuration settings to add the selectors you want to be captionized. jQuery handles the rest.
 
 Content types that have Image fields include Article, Organizations, and Projects. HOWEVER we don't want captions to appear for Organization logos, so disable Alt and Title fields for the logos in the Organizations content type (Collaborator logo element).
 *	Set to use TITLE attribute
-*	Choose selectors on which it will run: 
+*	Choose selectors on which it will run:
 **	.content .content img
 **	.field-name-field-project-image .field-item.even img
 **	.field-name-field-project-image .field-item.odd img

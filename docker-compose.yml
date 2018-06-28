@@ -1,0 +1,26 @@
+version: '3.1'
+
+services:
+
+  drupal:
+    build:
+      dockerfile: ./Drupal.Dockerfile
+      context: .
+    ports:
+      - 8080:80
+    volumes:
+      - .:/var/www/html/sites/all
+      - ./files:/var/www/html/sites/default/files
+    restart: always
+
+  mysql:
+    image: mysql:5
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+      MYSQL_DATABASE: "drupal"
+      MYSQL_USER: "drupal"
+      MYSQL_PASSWORD: "drupal"
+      MYSQL_ROOT_PASSWORD: "drupal"
+    volumes:
+      - ./database:/docker-entrypoint-initdb.d
+    restart: always
