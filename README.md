@@ -29,7 +29,8 @@ To pull the latest code from the `master` branch of this repository and recompil
    tar -jxvf ~/Downloads/files-snap.bz2 --strip-components=1 -C files/
 
    # Compile styles (see below for more details)
-   cd themes/snap_bootstrap && compass compile
+
+   cd themes/snap_bootstrap && bower install && compass compile
 
    # Launch containers and disable IP restrictions
    # NOTE -- sometimes the name of the Docker image (snap-drupal_drupal_1) may be different.
