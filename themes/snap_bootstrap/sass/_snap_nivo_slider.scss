@@ -43,8 +43,11 @@
         }
     }
 
+/* Hides configuration gear for the slider, that shows up for non logged in users (!) - on click it throws a 404 error, but is still not good to have visible. This hides the gear for logged in users too. So, workaround for editing slider is Modules > Nivo Slider. */
 
-
+#block-nivo-slider-nivo-slider div.contextual-links-processed.contextual-links-wrapper { 
+    display: none;
+}
     
 
 
