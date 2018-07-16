@@ -16,13 +16,18 @@
 		width: 100%;
 		position: absolute;
 		top: 0;
-		left: 0;
+		left: -40px;
 		border: none;
 		border-radius: 0;
 		padding: 0;
 		@include no-shadow;
 		z-index: -1;
 	}
+    
+    h1 {
+        font-weight: bold;
+        font-size: 3em;
+    }
 }
 
 
