@@ -1,4 +1,4 @@
-/* Styles for main project list page, currently a 2-column grid */
+/* Styles for main project list page, a 2-column grid */
 #block-views-project-category-current2-block,
 #block-views-project-category-current-block,
 .views-view-grid cols-2 {
@@ -45,6 +45,146 @@
 
 
 
+/* Styles for individual project pages */
+.node-projects {
+
+    .field-name-body {
+        @extend .col-sm-8;
+        padding: 0 2em 0 0;
+    }
+
+    .field.field-name-field-project-image img {
+        margin: 0 1em 1em 0;
+        @include shadow($x, $y, $blur, $shadow-color);
+        @include border-radius ($border-radius);
+        float: left;
+        width: auto ;
+    }
+    
+    .caption.left {
+        width: auto;
+        
+        p {
+            font-style: italic;
+            margin: 0;
+            font-size: 1.4em;
+            color: $snapGrey;
+            font-weight: 300;
+        }
+    }
+    
+    #node-projects-full-group-right-sidebar.group-right-sidebar {
+        padding: 0 1em 1em 1em;
+        @extend .col-sm-4;
+        border-radius: $border-radius;
+        font-size: .9em;
+        background: $paleGrey;
+        border: 1px solid $color;
+        
+    .field-label {
+			text-transform: uppercase;
+			padding: 0 .5em 0 0;
+			margin: 1em 0 0 0;
+		}
+
+    table {
+        margin: 0 0 1em 0;
+        padding: 0;
+        max-width: 100%;
+        background: none;
+
+        th {
+            display: none;
+        }
+
+        td, td.file {
+            padding: .25em;
+            margin: 0;
+            vertical-align: middle;
+            background: #fff;
+
+        a {
+            margin: 0;
+            }
+        }
+    }
+}
+    
+}
+
+
+//left sidebar for UAS project sub menu
+aside.col-sm-2 {		
+	margin: 5.75em 0 0 0;
+	padding: 0;
+	
+	.region.region-sidebar-first.well {
+		padding: 0 0 1em 0;
+		margin: 0;
+		border: none;
+		border-radius: $border-radius;
+				
+		h2.block-title {
+			color: #fff;
+			font-size: .95em;
+			font-weight: bold;
+			text-transform: uppercase;
+			letter-spacing: .08em;
+			padding: 10px 0 10px 10px;
+			background: $snapGreen;
+			border-radius: 5px;
+			margin: 0 0 .25em 0;
+		}
+		
+		ul.menu.nav li a {
+			font-size: 1em;
+		}
+		
+		.nav > li > a {
+			padding: 5px 5px 5px 8px;
+		}
+	}
+}
+
+//styling for featured projects on expertise pages	
+.region.region-sidebar-first.well {
+
+	 h2.block-title {
+		 font-size: 1.2em;
+		 font-weight: 400;
+		 margin: .5em 0 .25em -.25em;
+		 line-height: 1.2em;
+	 }
+
+	 .views-field.views-field-title {
+		font-size: .95em;
+		margin: .25em .5em;
+		line-height: 1.2em;
+	}
+
+	.views-field-field-project-image img {
+		border-radius: $border-radius;
+		border: 1px solid $snapGrey;
+		@include shadow($x, $y, $blur, $shadow-color);
+		float: left;
+		display: block;
+		max-width: 100%;
+		margin: .25em .5em .5em 0; 
+	}
+
+	 p {
+		font-size: .85em;
+		margin: 0 .5em;
+		line-height: 1.4em;
+	 }
+
+	 .view-footer a {
+		 font-size: .9em;
+		 margin: 1em .5em;
+	 }
+ }
+
+
 /* Styles for Featured project at the top of the main project list page */
 
 /*Style for the "help" block in which the featured project block lives */
@@ -89,199 +229,6 @@
 		margin: 0 0 .25em 0;
 	}
 }
-
-
-/* Styles for individual project pages */
-aside.col-sm-2 {		//left sidebar for UAS project sub menu
-	margin: 5.75em 0 0 0;
-	padding: 0;
-	
-	.region.region-sidebar-first.well {
-		padding: 0 0 1em 0;
-		margin: 0;
-		border: none;
-		border-radius: $border-radius;
-				
-		h2.block-title {
-			color: #fff;
-			font-size: .95em;
-			font-weight: bold;
-			text-transform: uppercase;
-			letter-spacing: .08em;
-			padding: 10px 0 10px 10px;
-			background: $snapGreen;
-			border-radius: 5px;
-			margin: 0 0 .25em 0;
-		}
-		
-		ul.menu.nav li a {
-			font-size: 1em;
-		}
-		
-		.nav > li > a {
-			padding: 5px 5px 5px 8px;
-		}
-	}
-}
-
-.node-projects:not(.node-teaser) {
-	
-	ul, ol {
-		color: $color;
-		font-size: $font-size-base;
-		margin-top: .5em;
-
-	li {
-		margin: 0 5em .5em 0;
-
-		li {
-			margin: .5em 5em 0 0;
-		}
-	}
-}
-	
-	.field-items img {
-		margin: 0 0 1em 1em;
-		height: auto;
-	}
-
-	
-	@extend .container;
-	
-
-	
-	.content {
-				
-		@extend .row;
-		
-
-		.field-name-body {
-			@extend .col-sm-7;
-			padding: 0 2em 0 0;
-		}
-		
-		#node-projects-full-group-right-sidebar.group-right-sidebar.field-group-div {
-			padding: 0 1em .5em 1em;
-			@extend .col-sm-3;
-			border-radius: $border-radius;
-			font-size: .85em;
-
-			
-			.field-items {
-				color: lighten($snapDarkGrey, 15%);
-			
-				a {
-				padding: 0;
-				line-height: 1.2em;
-				}
-			}
-			
-			.field-label {
-					margin: 0;
-				}
-			
-			.field.field-name-field-learn-more.field-type-link-field {
-				line-height: 1.2em;
-				margin-bottom: 1em;
-			}
-		}
-		
-		.field-name-field-project-image .field-item.even img,
-		.field-name-field-project-image .field-item.odd img {
-			margin: 1em 0 1em 0;
-			@include shadow($x, $y, $blur, $shadow-color);
-			max-width: 100%;
-			@include border-radius ($border-radius);
-		}
-		
-		.caption.none p {
-			font-size: 1em;
-			margin: -.5em 0	1em	0;
-			line-height: ($line-height-base * .8);
-			font-style: italic;
-			color: lighten($snapDarkGrey, 15%);
-		}
-		
-		.read-more a {
-			display: none;
-		}
-		
-		 a img {
-			 display: inline;
-		}
-		
-		.field-label {
-			text-transform: uppercase;
-			padding: 0 .5em 0 0;
-			margin: 0 0 .5em 0;
-		}
-		
-
-		
-		table {
-			color: lighten($snapDarkGrey, 40%);
-			margin: 0 0 1em 0;
-			padding: 0;
-			max-width: 100%;
-		
-			th {
-				display: none;
-			}
-			
-			td, td.file {
-				padding: .25em;
-				margin: 0;
-				vertical-align: middle;
-				
-				a {
-					margin: 0;
-				}
-			}
-		}
-		
-		.node.node-organizations.node-teaser h2 {
-			display: none;
-		}
-	}
-}
-
-//styling for featured projects on expertise pages	
-.region.region-sidebar-first.well {
-
-	 h2.block-title {
-		 font-size: 1.2em;
-		 font-weight: 400;
-		 margin: .5em 0 .25em -.25em;
-		 line-height: 1.2em;
-	 }
-
-	 .views-field.views-field-title {
-		font-size: .95em;
-		margin: .25em .5em;
-		line-height: 1.2em;
-	}
-
-	.views-field-field-project-image img {
-		border-radius: $border-radius;
-		border: 1px solid $snapGrey;
-		@include shadow($x, $y, $blur, $shadow-color);
-		float: left;
-		display: block;
-		max-width: 100%;
-		margin: .25em .5em .5em 0; 
-	}
-
-	 p {
-		font-size: .85em;
-		margin: 0 .5em;
-		line-height: 1.4em;
-	 }
-
-	 .view-footer a {
-		 font-size: .9em;
-		 margin: 1em .5em;
-	 }
- }
 
 
 

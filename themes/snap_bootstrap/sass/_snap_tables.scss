@@ -5,9 +5,12 @@ table {		//for tables that are text only
 	width: 100%;
 	border-collapse: collapse;
 	
-	/* Zebra striping */
-	tr:nth-of-type(odd) { 
-		background: none; 
+	/* removes striping on tables */
+    .table-striped {
+        tr:nth-of-type(odd),
+        tr:nth-of-type(even) { 
+            background: none; 
+        }
 	}
 	
 	th { 
