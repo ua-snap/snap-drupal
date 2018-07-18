@@ -7,7 +7,7 @@ table {		//for tables that are text only
 	
 	/* Zebra striping */
 	tr:nth-of-type(odd) { 
-		background: lighten($snapGrey, 15%); 
+		background: none; 
 	}
 	
 	th { 
