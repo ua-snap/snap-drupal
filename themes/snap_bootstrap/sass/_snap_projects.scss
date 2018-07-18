@@ -24,13 +24,15 @@
 	
 	.views-field-field-project-image img {
 		@include shadow($x, $y, $blur, $shadow-color);
-		margin-bottom: .5em;
 		border: 1px solid $snapGrey;
         float: left;
         clear: left;
         margin: 0 1em 1em 0;
-        
 	}
+    
+    .image-field-caption {
+        display: none;
+    }
 	
 	.views-field.views-field-title {
 		font-size: 1.15em;
@@ -46,40 +48,40 @@
 
 
 /* Styles for individual project pages */
-.node-projects {
-
-    .field-name-body {
-        @extend .col-sm-8;
-        padding: 0 2em 0 0;
-    }
+#project-left-section {
+    float: left;
+    @extend .col-sm-8;
+    padding: 0 2em 0 0;
 
     .field.field-name-field-project-image img {
-        margin: 0 1em 1em 0;
+        margin: 0 0 1em 2em;
+        padding: 1em;
         @include shadow($x, $y, $blur, $shadow-color);
         @include border-radius ($border-radius);
-        float: left;
-        width: auto ;
+        float: right;
     }
     
-    .caption.left {
-        width: auto;
-        
-        p {
-            font-style: italic;
-            margin: 0;
-            font-size: 1.4em;
-            color: $snapGrey;
-            font-weight: 300;
-        }
+    .image-field-caption {
+        display: none;
     }
     
-    #node-projects-full-group-right-sidebar.group-right-sidebar {
+    .caption.right p {
+        font-style: italic;
+        margin-bottom: 6em;
+        font-size: 1.4em;
+        color: $snapGrey;
+        font-weight: 300;
+    }    
+}
+
+ #project-right-sidebar {
         padding: 0 1em 1em 1em;
         @extend .col-sm-4;
         border-radius: $border-radius;
         font-size: .9em;
         background: $paleGrey;
         border: 1px solid $color;
+     float: right;
         
     .field-label {
 			text-transform: uppercase;
@@ -109,8 +111,7 @@
         }
     }
 }
-    
-}
+
 
 
 //left sidebar for UAS project sub menu
