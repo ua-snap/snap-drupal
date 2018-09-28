@@ -95,6 +95,8 @@ class ChartsExporter {
 
 		$base = preg_replace('/\s+/', '_', $base); // remove spaces
 		$base = str_replace("'",'', $base); // remove quotes
+		$base = str_replace('(','_',$base); // remove left parentheses 
+                $base = str_replace(')','_',$base); // remove right paretheses
 		return $base;
 	}
 
