@@ -91,6 +91,13 @@ $handler->display->display_options['style_options']['info'] = array(
     'separator' => '',
     'empty_column' => 0,
   ),
+  'usage' => array(
+    'sortable' => 1,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
   'delete' => array(
     'sortable' => 0,
     'default_sort_order' => 'asc',
@@ -155,10 +162,10 @@ $handler->display->display_options['fields']['views_bulk_operations']['vbo_opera
     'override_label' => 1,
     'label' => 'Change value',
     'settings' => array(
-      'show_all_tokens' => 1,
-      'display_values' => array(
-        '_all_' => '_all_',
-      ),
+        'show_all_tokens' => 1,
+        'display_values' => array(
+            '_all_' => '_all_',
+        ),
     ),
   ),
   'action::views_bulk_operations_argument_selector_action' => array(
@@ -189,45 +196,64 @@ $handler->display->display_options['fields']['views_bulk_operations']['vbo_opera
 $handler->display->display_options['fields']['filename']['id'] = 'filename';
 $handler->display->display_options['fields']['filename']['table'] = 'file_managed';
 $handler->display->display_options['fields']['filename']['field'] = 'filename';
+$handler->display->display_options['fields']['filename']['label'] = 'Title';
 /* Field: File: Type */
 $handler->display->display_options['fields']['type']['id'] = 'type';
 $handler->display->display_options['fields']['type']['table'] = 'file_managed';
 $handler->display->display_options['fields']['type']['field'] = 'type';
 $handler->display->display_options['fields']['type']['machine_name'] = 0;
+/* Field: File: Size */
+$handler->display->display_options['fields']['filesize']['id'] = 'filesize';
+$handler->display->display_options['fields']['filesize']['table'] = 'file_managed';
+$handler->display->display_options['fields']['filesize']['field'] = 'filesize';
+$handler->display->display_options['fields']['filesize']['empty'] = '0 bytes';
 /* Field: User: Name */
 $handler->display->display_options['fields']['name']['id'] = 'name';
 $handler->display->display_options['fields']['name']['table'] = 'users';
 $handler->display->display_options['fields']['name']['field'] = 'name';
 $handler->display->display_options['fields']['name']['relationship'] = 'uid';
-$handler->display->display_options['fields']['name']['label'] = 'User';
-/* Field: File: Size */
-$handler->display->display_options['fields']['filesize']['id'] = 'filesize';
-$handler->display->display_options['fields']['filesize']['table'] = 'file_managed';
-$handler->display->display_options['fields']['filesize']['field'] = 'filesize';
+$handler->display->display_options['fields']['name']['label'] = 'Author';
 /* Field: File: Upload date */
 $handler->display->display_options['fields']['timestamp']['id'] = 'timestamp';
 $handler->display->display_options['fields']['timestamp']['table'] = 'file_managed';
 $handler->display->display_options['fields']['timestamp']['field'] = 'timestamp';
-$handler->display->display_options['fields']['timestamp']['label'] = 'Uploaded';
+$handler->display->display_options['fields']['timestamp']['label'] = 'Updated';
 $handler->display->display_options['fields']['timestamp']['date_format'] = 'short';
+$handler->display->display_options['fields']['timestamp']['second_date_format'] = 'long';
+/* Field: File: Usage link */
+$handler->display->display_options['fields']['usage']['id'] = 'usage';
+$handler->display->display_options['fields']['usage']['table'] = 'file_managed';
+$handler->display->display_options['fields']['usage']['field'] = 'usage';
+$handler->display->display_options['fields']['usage']['label'] = 'Used in';
+$handler->display->display_options['fields']['usage']['element_label_colon'] = FALSE;
 /* Field: File: Edit link */
 $handler->display->display_options['fields']['edit']['id'] = 'edit';
 $handler->display->display_options['fields']['edit']['table'] = 'file_managed';
 $handler->display->display_options['fields']['edit']['field'] = 'edit';
 $handler->display->display_options['fields']['edit']['label'] = '';
+$handler->display->display_options['fields']['edit']['exclude'] = TRUE;
 $handler->display->display_options['fields']['edit']['element_label_colon'] = FALSE;
-/* Field: File: Usage link */
-$handler->display->display_options['fields']['usage']['id'] = 'usage';
-$handler->display->display_options['fields']['usage']['table'] = 'file_managed';
-$handler->display->display_options['fields']['usage']['field'] = 'usage';
-$handler->display->display_options['fields']['usage']['label'] = '';
-$handler->display->display_options['fields']['usage']['element_label_colon'] = FALSE;
 /* Field: File: Delete link */
 $handler->display->display_options['fields']['delete']['id'] = 'delete';
 $handler->display->display_options['fields']['delete']['table'] = 'file_managed';
 $handler->display->display_options['fields']['delete']['field'] = 'delete';
 $handler->display->display_options['fields']['delete']['label'] = '';
+$handler->display->display_options['fields']['delete']['exclude'] = TRUE;
+$handler->display->display_options['fields']['delete']['alter']['text'] = '<ul class="links inline">
+<li>[edit]</li>
+<li>[delete]</li>
+</ul>';
 $handler->display->display_options['fields']['delete']['element_label_colon'] = FALSE;
+/* Field: Global: Custom text */
+$handler->display->display_options['fields']['nothing']['id'] = 'nothing';
+$handler->display->display_options['fields']['nothing']['table'] = 'views';
+$handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+$handler->display->display_options['fields']['nothing']['label'] = 'Operations';
+$handler->display->display_options['fields']['nothing']['alter']['text'] = '<ul class="links inline">
+<li>[edit]</li>
+<li>[delete]</li>
+</ul>';
+$handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
 /* Filter criterion: File: Name */
 $handler->display->display_options['filters']['filename']['id'] = 'filename';
 $handler->display->display_options['filters']['filename']['table'] = 'file_managed';
