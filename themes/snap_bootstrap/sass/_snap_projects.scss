@@ -59,19 +59,19 @@
         @include shadow($x, $y, $blur, $shadow-color);
         @include border-radius ($border-radius);
         float: right;
-    }
-    
-    .image-field-caption {
-        display: none;
-    }
-    
-    .caption.right p {
-        font-style: italic;
-        margin-bottom: 6em;
-        font-size: 1.4em;
-        color: $snapGrey;
-        font-weight: 300;
     }    
+}
+
+.caption.right p {
+    float: right;
+    clear: right;
+    width: 30%;
+    text-align: right;
+    margin: -.5em 0 2em 5em;
+    color: $snapDarkGrey;
+    font-style: italic;
+    font-size: 1em;
+    font-weight: 300;
 }
 
  #project-right-sidebar {
