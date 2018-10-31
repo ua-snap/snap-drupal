@@ -2,55 +2,51 @@
 
 //Styling for box that holds the article on the home page. These styles are for the "Masthead" view.
 .front .view-id-masthead .node.node-article.node-teaser {	
-	margin: 13em auto 1em auto;
-	border: 2px solid #fff;
-	text-align: center;
-	background: $snapGreen;
+	margin: 0;
+	border: 1px solid $snapGreen;
+	text-align: left;
+	background: #fff;
 	opacity: 0.9;
-	max-width: 30em;
+	max-width: 25em;
 	min-height: 5em;
 	padding: .5em;
 	border-radius: $border-radius;
 	@include shadow($x, $y, $blur, $shadow-color);
 	
 	.content {
+        
+        p {
+            font-size: 1em;
+            text-align:left;
+            margin: 1em 0 0 0;
+            padding: 0;
+        }
 		
-		p {
+		.read-more {
 			display: none;
-		}
-		
-		.read-more a {
-			text-transform: uppercase;
-			margin: 0;
-			font-size: .85em;
-			color: #fff;
-			font-style: italic;
-			letter-spacing: .05em;
-			
-			&:hover,
-			&:focus {
-				border: 1px solid #fff;
-				padding: .25em .4em;
-				@include link-transition;
-				border-radius: 5px;
-			}
 		}
 	}
 	
 	
 	h2 {
-		font-size: 1.2em;
-		margin: 0 0 .75em 0;
+		font-size: 1.5em;
+		margin: 0 0 .25em 0;
+
 		
 		a {
-			color: #fff;	
+			font-weight: bold;
+            color: $snapGreen;
+            
+            &:hover,
+            &:focus {
+                color: $snapDarkGrey;
+            }
 		}
 	}
-
-	
-	.date-display-single {
-		display: none;
-	}	
+    
+    .field.field-name-field-byline {
+        display: none;
+    }
 }
 
 .node.node-article {
