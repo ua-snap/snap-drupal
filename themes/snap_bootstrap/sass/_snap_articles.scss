@@ -16,15 +16,22 @@
 	.content {
         
         p {
-            font-size: 1em;
+            font-size: 1.1em;
+            line-height: 1.4;
             text-align:left;
             margin: 1em 0 0 0;
             padding: 0;
         }
+        
+        em {
+            font-size: .9em;
+        }
 		
-		.read-more {
+		.read-more,
+        .date-display-single {
 			display: none;
 		}
+        
 	}
 	
 	
