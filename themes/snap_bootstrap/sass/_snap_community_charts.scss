@@ -40,7 +40,7 @@ body#charts {
 		}
 
 		.ui-widget {
-			font-family: $lato;
+			font-family: $opensans;
 			font-size: .9em;
 			font-style: italic;
 		}
@@ -106,7 +106,7 @@ body#charts {
 		display: inline-block;
 		font-size: .85em;
 		margin-top: 1em;
-		font-family: $lato;
+		font-family: $opensans;
 		font-size: .9em;
 	}
 
@@ -117,7 +117,7 @@ body#charts {
 	}
 
 	.ui-dialog {
-		font-family: $lato;
+		font-family: $opensans;
 
 		a {
 			text-decoration: none;
