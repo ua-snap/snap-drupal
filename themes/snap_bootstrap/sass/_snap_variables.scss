@@ -39,12 +39,12 @@ $font-size-base: 14px;		//make absolute unit to avoid nesting nightmares
 $color: $snapDarkGrey;
 
 //Headings
-$font-size-h1: 24px;		//make absolute unit to avoid nesting nightmares
-$font-size-h2: ($font-size-h1 * .8);
-$font-size-h3: ($font-size-h1 * .74);
-$font-size-h4: ($font-size-h1 * .68); 
-$font-size-h5: ($font-size-h1 * .45); 
-$font-size-h6: ($font-size-h1 * .4); 
+$font-size-h1: 28px;		//make absolute unit to avoid nesting nightmares
+$font-size-h2: ($font-size-h1 * .75);
+$font-size-h3: ($font-size-h1 * .65);
+$font-size-h4: ($font-size-h1 * .3); 
+$font-size-h5: ($font-size-h1 * .25); 
+$font-size-h6: ($font-size-h1 * .15); 
 
 //Icon fonts
 $icon-font-path: "../bower_components/bootstrap-sass/vendor/assets/fonts/bootstrap/";
