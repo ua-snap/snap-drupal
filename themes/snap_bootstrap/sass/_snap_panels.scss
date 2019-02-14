@@ -62,13 +62,19 @@
 
 // Secondary region sidebar styling //
 .region.region-sidebar-second {
-	border-left: 1px solid $snapGrey;
-	padding-left: 1em;
+	border: 1px solid $snapGrey;
+
+		border-radius: $border-radius;
+		background: lighten($snapGreen, 45%);
+		margin: 0 0 1.5em 0;
+		padding: .5em .25em;
 	
 	img {
-		float: left;
-		clear: right;
-		margin: 1.5em 1em 1em 0;
+		float: right;
+		clear: left;
+		margin: 0 0 1em 1em;
+        width: 45%;
+        height: auto;
 	}
 	
 	h2 {
@@ -90,17 +96,6 @@
 			line-height: 1.3;
 			margin: 0 0 0 -1em;
 		}
-	}
-	
-	#block-block-6,  //data portal block  //
-	#block-block-7,   //citation and attribution block //
-	#block-block-8,    //model term defs block //
-    #block-block-9 {  //climate data sources block //
-		border: $border;
-		border-radius: $border-radius;
-		background: lighten($snapGreen, 45%);
-		margin: 0 0 1.5em 0;
-		padding: 0 1em 1em 1em;
 	}
 }
 
