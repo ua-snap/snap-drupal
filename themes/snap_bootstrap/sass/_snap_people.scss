@@ -102,4 +102,15 @@
 	margin: 1em 0 0 0;
 }
 
+.field.field-name-field-website,
+.field.field-name-field-downloads {
+    margin: 1em 0;
+    padding: .5em 1em;
+    border-radius: $border-radius;
+    background: lighten($snapGreen, 50%);
+}
+
+.field.field-name-field-downloads .field-items .file a {
+    margin: 0;
+}
 
