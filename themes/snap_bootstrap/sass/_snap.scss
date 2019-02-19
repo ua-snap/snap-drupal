@@ -40,10 +40,10 @@ html {
 /* Links  */
 a {
 	text-decoration: none;
+    font-weight: bold;
 	
 	&:link {
 		color: $snaplink;
-		font-weight: 500;
 	}
 	
 	&:visited {
@@ -56,6 +56,13 @@ a {
 		@include link-transition;
 		color: $snapGreen;
 	}
+}
+
+.btn-warning:hover,
+.btn-warning:focus {
+    background: $snapGreen;
+    @include link-transition;
+    border: $snapGreen;
 }
 
 
