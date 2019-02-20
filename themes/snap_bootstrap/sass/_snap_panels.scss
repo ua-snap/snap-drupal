@@ -9,6 +9,16 @@
 		background: lighten($snapGreen, 45%);
 		margin: 0 0 1.5em 0;
 		padding: .5em .5em;
+            min-width: 25%;
+        float: right;
+        clear: none;
+        border: 1px solid $snapGreen;
+    
+    @media screen and (max-width: 767px) {
+        float: none;
+        width: 100%;
+        float: right;
+    }
 	
 	img {
 		border: $border;
@@ -76,62 +86,5 @@
 
 
 
-//panel-info: green box
-.panel-info {
-	border: none;
-}
 
-.panel.panel-info {
-	width: auto;
-	clear: right;
-	margin: 1.9em 0 2em 2em;
-	padding: 0 1em 1em 1em;
-	border-radius: $border-radius;
-	border: $border;
-	background: lighten($snapDarkGrey, 60%);
-	@include shadow($x, $y, $blur, $shadow-color);
-	
-	h2 {
-		font-weight: bold;
-        color: $snapDarkGrey;
-		line-height: 1.3em;
-		font-size: 1.2em;
-		margin: .75em 0 .5em 0;
-		background: none;
-		padding: 0;
-		border-bottom: none;
-	}
-	
-	h3 {
-		font-size: 1.05em;
-		font-weight: bold;
-		margin: 1.2em 0 .25em 0;
-	}
-
-	h4 {
-		font-size: .9em;
-		font-weight: bold;
-		color: $snapDarkGrey;
-		margin: 1em 0 .25em 0;
-	}
-	
-	p {
-		font-size: 1em;
-		margin: 0 0 1em 0;
-	}
-	
-	ul, ol {
-		padding-left: 1em;
-		font-size: .85em;
-	}
-	
-	ul li, ol li {
-		line-height: ($line-height-base * .75);
-		margin-bottom: .4em;
-	}
-	
-	ul li li, ol li li {
-		font-size: 1.15em;
-	}
-}
 
