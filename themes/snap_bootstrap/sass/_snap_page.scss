@@ -89,12 +89,12 @@ figure {
 	border: $border;
 	border-radius: $border-radius;
 	@include shadow($x, $y, $blur, $shadow-color);
-	padding: .3em;
+	padding: .5em;
 	background: #fff;
 	float: right;
 	clear: right;
 	margin: 1em 0 1em 3em;
-    max-width: 70%;
+    max-width: 45%;
     height: auto;
 }
 
